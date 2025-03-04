@@ -53,7 +53,7 @@ astfel:
   PO căutate.
 
 Putem genera codul HTML al documentației folosind scriptul 
-**compilarea_documentatiei.ps1** din acest proiect. Astfel,
+**scripturi/compilarea_documentatiei.ps1** din acest proiect. Astfel,
 într-un terminal Windows cu **drepturi de administrator**
 (tastele Win + X, A), deschis din directorul unde se găsește
 scriptul Python, executăm comenzile:
