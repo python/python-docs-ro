@@ -54,7 +54,7 @@ astfel:
   **Doc**. Acesta conține fișierele PO căutate.
 
 Putem genera codul HTML al documentației folosind scriptul 
-**scripturi/compilarea_documentatiei.ps1** din acest proiect. Astfel,
+**scripturi/compilarea_traducerii.ps1** din acest proiect. Astfel,
 într-un terminal Windows cu **drepturi de administrator**
 (tastele Win + X, A), deschis din directorul unde se găsește
 scriptul PowerShell, executăm comenzile:
@@ -62,7 +62,7 @@ scriptul PowerShell, executăm comenzile:
 ::
 
     Set-ExecutionPolicy Unrestricted
-    ./compilarea_documentatiei
+    ./compilarea_traducerii
 
 
 
