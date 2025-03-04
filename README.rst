@@ -40,7 +40,8 @@ astfel:
 
      ./make gettext
 
-  Ea va genera subdirectorul **build/gettext**, care conține fișiere
+  Ea va genera subdirectorul **build/gettext** al directorului **Doc**, 
+  care conține fișiere
   `POT <https://www.drupal.org/community/contributor-guide/reference-information/localize-drupal-org/working-with-offline/po-and-pot-files>`_.
 
 - în același terminal, comanda
@@ -49,14 +50,14 @@ astfel:
 
      sphinx-intl update -p build/gettext -l ro
 
-  va produce subdirectorul **locale/ro/LC_MESSAGES**. Acesta conține fișierele
-  PO căutate.
+  va produce subdirectorul **locale/ro/LC_MESSAGES** al directorului
+  **Doc**. Acesta conține fișierele PO căutate.
 
 Putem genera codul HTML al documentației folosind scriptul 
 **scripturi/compilarea_documentatiei.ps1** din acest proiect. Astfel,
 într-un terminal Windows cu **drepturi de administrator**
 (tastele Win + X, A), deschis din directorul unde se găsește
-scriptul Python, executăm comenzile:
+scriptul PowerShell, executăm comenzile:
 
 ::
 
