@@ -62,7 +62,6 @@ scriptul Python, executăm comenzile :
 
     Set-ExecutionPolicy Unrestricted
     ./compilarea_documentatiei
-     Set-ExecutionPolicy Restricted
 
 
 
