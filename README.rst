@@ -17,7 +17,7 @@ astfel:
   `sphinx-intl <https://www.sphinx-doc.org/en/master/usage/advanced/intl.html>`_;
 - descărcăm într-un director convenabil codul-sursă al celei mai recente
   versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, 
-  `3.13.2 <https://www.python.org/downloads/source/>`_ ;
+  `3.13.2 <https://www.python.org/downloads/source/>`_;
 - în subdirectorul **Doc** al codului-sursă Python se găsește fișierul
   **conf.py**, la sfârșitul căruia adăugăm
 
@@ -56,7 +56,7 @@ Putem genera codul HTML al documentației folosind scriptul
 **compilarea_documentatiei.ps1** din acest proiect. Astfel,
 într-un terminal Windows cu **drepturi de administrator**
 (tastele Win + X, A), deschis din directorul unde se găsește
-scriptul Python, executăm comenzile :
+scriptul Python, executăm comenzile:
 
 ::
 
