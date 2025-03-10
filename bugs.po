@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
+# PRIVIND ERORILE.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../bugs.rst:5
 msgid "Dealing with Bugs"
-msgstr ""
+msgstr "Privind erorile"
 
 #: ../../bugs.rst:7
 msgid ""
@@ -30,6 +30,9 @@ msgid ""
 "reputation for stability.  In order to maintain this reputation, the "
 "developers would like to know of any deficiencies you find in Python."
 msgstr ""
+"Python-ul este un limbaj de programare matur care se bucură de "
+"reputația de a fi stabil. Pentru a păstra această reputație, "
+"dezvoltatorii doresc să afle ce deficiențe i-ați găsit Python-ului."
 
 #: ../../bugs.rst:11
 msgid ""
@@ -37,10 +40,14 @@ msgid ""
 " Python as it streamlines the process and involves less people. Learn how"
 " to :ref:`contribute <contributing-to-python>`."
 msgstr ""
+"Uneori poate fi mai rapid dacă rezolvați chiar dumneavoastră erorile și "
+"contribuiți cu adăugări la codul Python deoarece aceasta simplifică "
+"procedurile și implică mai puține persoane. Aflați cum să "
+":ref:`contribuiți <contributing-to-python>`."
 
 #: ../../bugs.rst:16
 msgid "Documentation bugs"
-msgstr ""
+msgstr "Erori de documentație"
 
 #: ../../bugs.rst:18
 msgid ""
@@ -49,12 +56,18 @@ msgid ""
 "tracker>`.  If you have a suggestion on how to fix it, include that as "
 "well."
 msgstr ""
+"Dacă găsiți o eroare în această documentație și doriți să propuneți o "
+"îmbunătățire, vă rugăm să transmiteți un raport de eroare la "
+":ref:`urmăritor <using-the-tracker>`. Dacă aveți o sugestie despre cum "
+"să o rezolvăm, includeți-o în raport."
 
 #: ../../bugs.rst:22
 msgid ""
 "You can also open a discussion item on our `Documentation Discourse forum"
 " <https://discuss.python.org/c/documentation/26>`_."
 msgstr ""
+"Puteți, de asemeni, introduce un început de discuție pe forumul nostru "
+"`Discursul documentației <https://discuss.python.org/c/documentation/26>`_."
 
 #: ../../bugs.rst:25
 msgid ""
@@ -62,6 +75,10 @@ msgid ""
 "documentation, please submit a bug report on the `python-doc-theme bug "
 "tracker <https://github.com/python/python-docs-theme>`_."
 msgstr ""
+"Dacă găsiți o eroare în tema documentației (HTML / CSS / JavaScript), "
+"vă rugăm să transmiteți un raport de eroare la "
+"`urmăritorul de erori de la python-doc-theme "
+"<https://github.com/python/python-docs-theme>`_."
 
 #: ../../bugs.rst:29
 msgid ""
@@ -70,54 +87,75 @@ msgid ""
 "'docs@' is a mailing list run by volunteers; your request will be "
 "noticed, though it may take a while to be processed."
 msgstr ""
+"Dacă nu aveți mai mult timp la dispoziție, puteți trimite rapoartele de "
+"eroare privind documentația și la docs@python.org (erorile de funcționare "
+"pot fi trimise la python-list@python.org). 'docs@' este o listă de "
+"corespondență îngrijită de voluntari; cererea dumneavoastră va fi "
+"remarcată de îndată, însă procesarea ei vă necesita un anume timp."
 
 #: ../../bugs.rst:36
 msgid "`Documentation bugs`_"
-msgstr ""
+msgstr "`Erori de documentație`_"
 
 #: ../../bugs.rst:37
 msgid ""
 "A list of documentation bugs that have been submitted to the Python issue"
 " tracker."
 msgstr ""
+"O listă a erorilor de documentație care au fost transmise urmăritorului "
+"de probleme ale Python-ului."
 
 #: ../../bugs.rst:39
 msgid "`Issue Tracking <https://devguide.python.org/tracker/>`_"
 msgstr ""
+"`Urmăritorul de probleme "
+"<https://devguide.python.org/tracker/>`_"
 
 #: ../../bugs.rst:40
 msgid ""
 "Overview of the process involved in reporting an improvement on the "
 "tracker."
 msgstr ""
+"O sinteză a procesului privind raportarea unei îmbunătățiri la "
+"urmăritor."
 
 #: ../../bugs.rst:42
 msgid ""
 "`Helping with Documentation <https://devguide.python.org/docquality"
 "/#helping-with-documentation>`_"
 msgstr ""
+"`Ajutor la documentație <https://devguide.python.org/docquality"
+"/#helping-with-documentation>`_"
 
 #: ../../bugs.rst:43
 msgid ""
 "Comprehensive guide for individuals that are interested in contributing "
 "to Python documentation."
 msgstr ""
+"Ghid comprehensiv pentru persoanele interesate să contribuie la "
+"documentația Python."
 
 #: ../../bugs.rst:45
 msgid ""
 "`Documentation Translations "
 "<https://devguide.python.org/documentation/translating/>`_"
 msgstr ""
+""
+"`Traduceri ale documentației "
+"<https://devguide.python.org/documentation/translating/>`_"
 
 #: ../../bugs.rst:46
 msgid ""
 "A list of GitHub pages for documentation translation and their primary "
 "contacts."
 msgstr ""
+"O listă de pagini GitHub pentru traducerea documentației și persoanele "
+"de contact ale acestora."
 
 #: ../../bugs.rst:52
 msgid "Using the Python issue tracker"
 msgstr ""
+"Cum folosim urmăritorul de probleme al Python-ului"
 
 #: ../../bugs.rst:54
 msgid ""
@@ -126,6 +164,12 @@ msgid ""
 "tracker offers a web form which allows pertinent information to be "
 "entered and submitted to the developers."
 msgstr ""
+"Rapoartele de eroare privitoare la codul Python propriu-zis trebuie "
+"transmise via urmăritorul de probleme disponibil pe GitHub "
+"(https://github.com/python/cpython/issues). Urmăritorul de probleme "
+"de pe GitHub deține un formular cu interfață web care permite ca "
+"informațiile pertinente să poată fi introduse și trimise de către "
+"dezvoltatori."
 
 #: ../../bugs.rst:59
 msgid ""
@@ -137,6 +181,14 @@ msgid ""
 "provide it if you can!). To do this, search the tracker using the search "
 "box at the top of the page."
 msgstr ""
+"Primul pas în completarea unui raport constă în a stabili dacă problema "
+"întâlnită a fost deja raportată. Avantajul acestei acțiuni, dincolo de "
+"faptul că economisește timpul dezvoltatorilor, este că vă permite să "
+"aflați ceea ce s-a făcut pentru a rezolva problema; se poate întâmpla ca "
+"problema să fie deja rezolvată de către versiunea următoare, sau poate "
+"că problema necesită informații suplimentare (caz în care sunteți "
+"binevenit să le oferiți dacă ele vă sunt la îndemână!). Pentru aceasta, "
+"căutați în urmăritor folosind caseta de căutare din susul paginii."
 
 #: ../../bugs.rst:66
 msgid ""
@@ -145,22 +197,31 @@ msgid ""
 "using the \"Sign up\" link. It is not possible to submit a bug report "
 "anonymously."
 msgstr ""
+"Dacă problema pe care o raportați nu se găsește deja în listă, logați-vă "
+"la GitHub. Dacă nu aveți deja un cont GitHub, creați-vă un cont nou "
+"folosind linkul \"Sign up\". Nu este posibil să trimiteți un raport de "
+"eroare ca anonim."
 
 #: ../../bugs.rst:71
 msgid ""
 "Being now logged in, you can submit an issue. Click on the \"New issue\" "
 "button in the top bar to report a new issue."
 msgstr ""
+"Fiind logat acum, puteți transmite o problemă. Apăsați pe butonul "
+"\"New issue\" din bara de sus pentru a raporta o problemă nouă."
 
 #: ../../bugs.rst:74
 msgid "The submission form has two fields, \"Title\" and \"Comment\"."
 msgstr ""
+"Formularul de submitere are două câmpuri, \"Title\" și \"Comment\"."
 
 #: ../../bugs.rst:76
 msgid ""
 "For the \"Title\" field, enter a *very* short description of the problem;"
 " fewer than ten words is good."
 msgstr ""
+"La câmpul \"Title\", introduceți o *foarte* scurtă descriere a problemei;"
+" este bine ca ea să fie de sub zece cuvinte."
 
 #: ../../bugs.rst:79
 msgid ""
@@ -169,6 +230,11 @@ msgid ""
 "any extension modules were involved, and what hardware and software "
 "platform you were using (including version information as appropriate)."
 msgstr ""
+"La câmpul \"Comment\", descrieți problema în detaliu, incluzând ceea ce "
+"v-ați fi așteptat să se întâmple și ceea ce s-a întâmplat. Asigurați-vă "
+"că ați precizat dacă au fost folosite module de extindere, precum și ce "
+"platformă hardware și software ați folosit (incluzând, dacă este cazul, "
+"informații despre versiuni)."
 
 #: ../../bugs.rst:84
 msgid ""
@@ -176,12 +242,18 @@ msgid ""
 " needs to be done to correct the problem. You will receive an update each"
 " time an action is taken on the issue."
 msgstr ""
+"Fiecare raport de eroare va fi recenzat de către un dezvoltator care va "
+"stabili ce trebuie făcut pentru corectarea problemei. Veți primi o "
+"actualizare de fiecare dată când va fi întreprinsă o acțiune în "
+"această privință."
 
 #: ../../bugs.rst:91
 msgid ""
 "`How to Report Bugs Effectively "
 "<https://www.chiark.greenend.org.uk/~sgtatham/bugs.html>`_"
 msgstr ""
+"`Cum să raportezi erori în mod eficient "
+"<https://www.chiark.greenend.org.uk/~sgtatham/bugs.html>`_"
 
 #: ../../bugs.rst:92
 msgid ""
@@ -189,22 +261,31 @@ msgid ""
 "report. This describes what kind of information is useful and why it is "
 "useful."
 msgstr ""
+"Un articol care intră în detalii privind crearea unui raport de "
+"eroare util. Acesta descrie ce tip de informație este folositoare și "
+"de ce este folositoare."
 
 #: ../../bugs.rst:95
 msgid ""
 "`Bug Writing Guidelines <https://bugzilla.mozilla.org/page.cgi?id=bug-"
 "writing.html>`_"
 msgstr ""
+"`Recomandări pentru cum se scrie despre erori "
+"<https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html>`_"
 
 #: ../../bugs.rst:96
 msgid ""
 "Information about writing a good bug report.  Some of this is specific to"
 " the Mozilla project, but describes general good practices."
 msgstr ""
+"Informații despre cum se scrie un raport de eroare bun. Deși unele "
+"chestiuni îi sunt specifice proiectului Mozilla, se descriu practici "
+"bune general valabile."
 
 #: ../../bugs.rst:102
 msgid "Getting started contributing to Python yourself"
 msgstr ""
+"Începând să contribuiți la Python dumneavoastră înșivă"
 
 #: ../../bugs.rst:104
 msgid ""
@@ -215,4 +296,13 @@ msgid ""
 " answers to any and all questions pertaining to the process of fixing "
 "issues in Python."
 msgstr ""
+"În afară de a raporta erorile pe care le-ați găsit, sunteți binevenit și "
+"să submiteți adăugări de cod pentru repararea lor. Puteți găsi mai multe "
+"informații despre cum să începeți să adăugați corecturi la Python în "
+"`Python Developer's Guide`_. Dacă aveți întrebări, "
+"`core-mentorship mailing list`_ este un loc propice pentru aflarea "
+"răspunsurilor la orice fel de întrebare privitoare la procesul "
+"reparării erorilor din Python."
+
+
 
