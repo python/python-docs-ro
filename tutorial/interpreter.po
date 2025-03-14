@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
+# INTERPRETORUL DE PYTHON.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../../tutorial/interpreter.rst:5
 msgid "Using the Python Interpreter"
-msgstr ""
+msgstr "Utilizarea interpretorului de Python"
 
 #: ../../tutorial/interpreter.rst:11
 msgid "Invoking the Interpreter"
-msgstr ""
+msgstr "Invocarea interpretorului"
 
 #: ../../tutorial/interpreter.rst:13
 msgid ""
@@ -35,10 +35,15 @@ msgid ""
 "available; putting :file:`/usr/local/bin` in your Unix shell's search "
 "path makes it possible to start it by typing the command:"
 msgstr ""
+"Interpretorul de Python este instalat de obicei ca "
+"|usr_local_bin_python_x_dot_y_literal| în mașinile de calcul pe care "
+"este disponibil; dacă adăugați :file:`/usr/local/bin` la calea de "
+"căutare a interpretorului dumneavoastră de comenzi Unix, atunci veți "
+"putea să-l porniți tastând comanda:"
 
 #: ../../tutorial/interpreter.rst:17
 msgid "python3.13"
-msgstr ""
+msgstr "python3.13"
 
 #: ../../tutorial/interpreter.rst:21
 msgid ""
@@ -47,6 +52,11 @@ msgid ""
 "check with your local Python guru or system administrator.  (E.g., "
 ":file:`/usr/local/python` is a popular alternative location.)"
 msgstr ""
+"în terminal. [#]_ Deoarece alegerea directorului în care se găsește "
+"interpretorul este o opțiune de instalare, există și alte locuri "
+"posibile; întrebați-l de ele fie pe gurul de Python din partea locului "
+" fie pe administratorul de sistem. (De exemplu, :file:`/usr/local/python` "
+"este o locație alternativă populară.)"
 
 #: ../../tutorial/interpreter.rst:26
 msgid ""
@@ -56,6 +66,12 @@ msgid ""
 "<launcher>` installed, you can use the :file:`py` command. See :ref"
 ":`setting-envvars` for other ways to launch Python."
 msgstr ""
+"Pe mașinile Windows pe care ați instalat Python-ul luat din "
+":ref:`Microsoft Store <windows-store>` este disponibilă comanda "
+"|python_x_dot_y_literal|. Dacă ați instalat :ref:`lansatorul py.exe "
+"<launcher>`, atunci puteți folosi comanda :file:`py`. Vedeți "
+":ref:`setting-envvars` pentru alte modalități de a lansa "
+"în execuție Python-ul."
 
 #: ../../tutorial/interpreter.rst:31
 msgid ""
@@ -64,6 +80,11 @@ msgid ""
 " to exit with a zero exit status.  If that doesn't work, you can exit the"
 " interpreter by typing the following command: ``quit()``."
 msgstr ""
+"Tastarea caracterului sfârșit-de-fișier (:kbd:`Control-D` în Unix, "
+":kbd:`Control-Z` în Windows) la promptul primar va face ca interpretorul "
+"să încheie execuția cu codul de ieșire zero. Dacă această acțiune nu "
+"are niciun efect, atunci veți putea ieși din interpretor tastând comanda: "
+"``quit()``."
 
 #: ../../tutorial/interpreter.rst:36
 msgid ""
@@ -78,6 +99,18 @@ msgid ""
 "you'll only be able to use backspace to remove characters from the "
 "current line."
 msgstr ""
+"Caracteristicile de editare a liniei de comandă ale interpretorului "
+"includ editarea interactivă, substituția istoricului și completarea "
+"codului pe sistemele care suportă biblioteca "
+"`GNU Readline <https://tiswww.case.edu/php/chet/readline/rltop.html>`_."
+" Cea mai rapidă cale de a vedea dacă este permisă editarea liniei de "
+"comandă este să tastați :kbd:`Control-P` la primul prompt de Python "
+"la care ajungeți. Dacă se aude un bip, atunci dispuneți de editare "
+"a liniei de comandă; vedeți Apendicele :ref:`tut-interacting` "
+"pentru o prezentare a tastelor. În schimb, dacă fie nu se întâmplă "
+"nimic fie ecoul va fi un ``^P``, nu aveți editare în linie de "
+"comandă; tot ce puteți face este să folosiți backspace-ul pentru "
+"eliminarea de caractere din linia curentă."
 
 #: ../../tutorial/interpreter.rst:46
 msgid ""
@@ -86,6 +119,12 @@ msgid ""
 "interactively; when called with a file name argument or with a file as "
 "standard input, it reads and executes a *script* from that file."
 msgstr ""
+"Interpretorul operează cumva asemănător modului în care o face "
+"interpretorul de comenzi Unix: atunci când îl apelați dintr-un "
+"input standard conectat la un dispozitiv tty, el citește și "
+"execută comenzile în mod interactiv; dacă îl apelați având ca "
+"argument un nume de fișier sau cu un fișier pe post de input standard, "
+"el citește și execută un *script* din respectivul fișier."
 
 #: ../../tutorial/interpreter.rst:51
 msgid ""
@@ -95,6 +134,10 @@ msgid ""
 "spaces or other characters that are special to the shell, it is usually "
 "advised to quote *command* in its entirety."
 msgstr ""
+"Al doilea mod de pornire a interpretorului este "
+"``python -c comanda [arg] ...``, ceea ce va produce execuția "
+"instrucțiunilor din *comanda*, la fel ca atunci când folosim opțiunea "
+":option:`-c` a interpretorului de comenzi."
 
 #: ../../tutorial/interpreter.rst:57
 msgid ""
@@ -102,6 +145,10 @@ msgid ""
 "using ``python -m module [arg] ...``, which executes the source file for "
 "*module* as if you had spelled out its full name on the command line."
 msgstr ""
+"Unele module Python sunt utile și ca scripturi. Ele pot fi invocate cu "
+"``python -m modulul [arg] ...``, ceea ce va produce execuția fișierului-"
+"sursă al modulului *modulul* la fel ca atunci când ați fi scris numele "
+"complet al acestuia în linia de comandă."
 
 #: ../../tutorial/interpreter.rst:61
 msgid ""
@@ -109,14 +156,18 @@ msgid ""
 "script and enter interactive mode afterwards.  This can be done by "
 "passing :option:`-i` before the script."
 msgstr ""
+"Când folosim fișierul unui script, este uneori util să putem mai întâi "
+"rula scriptul iar apoi reveni la modul interactiv de lucru. Aceasta se "
+"poate face inserând :option:`-i` înaintea scriptului."
 
 #: ../../tutorial/interpreter.rst:65
 msgid "All command line options are described in :ref:`using-on-general`."
-msgstr ""
+msgstr "Toate opțiunile din linia de comandă sunt descrise în "
+":ref:`using-on-general`."
 
 #: ../../tutorial/interpreter.rst:71
 msgid "Argument Passing"
-msgstr ""
+msgstr "Transmiterea argumentelor"
 
 #: ../../tutorial/interpreter.rst:73
 msgid ""
@@ -133,10 +184,25 @@ msgid ""
 "consumed  by the Python interpreter's option processing but left in "
 "``sys.argv`` for  the command or module to handle."
 msgstr ""
+"Atunci când îi sunt făcute cunoscute interpretorului, numele unui script "
+" și argumentele adiționale de după el sunt transformate într-o listă de "
+"șiruri care îi este atribuită variabilei ``argv`` din modulul ``sys``. "
+"Puteți accesa această listă executând ``import sys``. Lungimea listei "
+"trebuie să fie cel puțin 1; dacă nu sunt inserate nici scriptul nici "
+"argumentele, ``sys.argv[0]`` va fi șirul nul. Dacă numele "
+"scriptului este introdus ca ``'-'`` (ceea ce desemnează inputul "
+"standard), atunci ``sys.argv[0]`` va fi setat ca ``'-'``. Când se "
+"folosește :option:`-c` *comandă*, ``sys.argv[0]`` va fi setat la "
+"``'-c'``. Când se folosește :option:`-m` *modul*, ``sys.argv[0]`` va fi "
+"setat la numele complet al locației modulului. Opțiunile ce vor fi "
+"găsite după :option:`-c` *comandă* ori :option:`-m` *modul* nu vor fi "
+"consumate la procesarea de opțiuni a interpretorului de Python ci vor fi "
+"lăsate în ``sys.argv`` pentru a fi manevrate fie de către comandă fie "
+"de către modul."
 
 #: ../../tutorial/interpreter.rst:89
 msgid "Interactive Mode"
-msgstr ""
+msgstr "Modul interactiv"
 
 #: ../../tutorial/interpreter.rst:91
 msgid ""
@@ -148,6 +214,15 @@ msgid ""
 "its version number and a copyright notice before printing the first "
 "prompt:"
 msgstr ""
+"Atunci când comenzile se citesc dintr-un dispozitiv tty, se spune că "
+"interpretorul se găsește în *modul interactiv*. Când este în acest "
+"mod, el cere o comandă nouă afișând *promptul primar*, de obicei sub "
+"forma unui set de trei caractere mai-mare-ca (``>>>``); pentru a "
+"trece pe linia de continuare a unei comenzi, el afișează *promptul "
+"secundar*, format de obicei din trei puncte (``...``). Interpretorul "
+"printează un mesaj de bun-venit care cuprinde numărul versiunii sale "
+"și o informare despre drepturile de autor înainte să afișeze primul "
+"prompt:"
 
 #: ../../tutorial/interpreter.rst:98
 msgid ""
@@ -158,12 +233,22 @@ msgid ""
 "information.\n"
 ">>>"
 msgstr ""
+"$ python3.13\n"
+"Python 3.13 (default, April 4 2023, 09:25:04)\n"
+"[GCC 10.2.0] on linux\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more "
+"information.\n"
+">>>"
+
 
 #: ../../tutorial/interpreter.rst:108
 msgid ""
 "Continuation lines are needed when entering a multi-line construct. As an"
 " example, take a look at this :keyword:`if` statement::"
 msgstr ""
+"Liniile de continuare sunt necesare atunci când inserăm un construct de "
+"mai multe linii. De exemplu, să aruncăm o privire asupra următoarei "
+"declarații :keyword:`if`::"
 
 #: ../../tutorial/interpreter.rst:111
 msgid ""
@@ -173,18 +258,25 @@ msgid ""
 "...\n"
 "Be careful not to fall off!"
 msgstr ""
+">>> pământul_e_plat = True\n"
+">>> if pământul_e_plat:\n"
+"...     print(\"Atenție să nu cădeți de pe el!\")\n"
+"...\n"
+"Atenție să nu cădeți de pe el!"
+
 
 #: ../../tutorial/interpreter.rst:118
 msgid "For more on interactive mode, see :ref:`tut-interac`."
-msgstr ""
+msgstr "Pentru mai multe despre modul interactiv, vedeți "
+":ref:`tut-interac`."
 
 #: ../../tutorial/interpreter.rst:124
 msgid "The Interpreter and Its Environment"
-msgstr ""
+msgstr "Interpretorul și mediul său"
 
 #: ../../tutorial/interpreter.rst:130
 msgid "Source Code Encoding"
-msgstr ""
+msgstr "Codificarea codului-sursă"
 
 #: ../../tutorial/interpreter.rst:132
 msgid ""
@@ -196,6 +288,15 @@ msgid ""
 "characters properly, your editor must recognize that the file is UTF-8, "
 "and it must use a font that supports all the characters in the file."
 msgstr ""
+"În mod obișnuit, fișierele-sursă Python sunt considerate a fi codificate "
+"în UTF-8. Sub această codificare, caracterele majorității limbilor "
+"lumii pot fi folosite fără nicio restricție atât în constante de tip șir "
+"cât și în identificatori ori în comentarii --- chiar dacă biblioteca "
+"standard utilizează numai caractere ASCII pentru identificatori, "
+"convenție ce ar trebui îndeplinită de către orice fel de cod portabil. "
+"Pentru a afișa corect aceste caractere, editorul dumneavoastră trebuie "
+"să recunoască fișierul ca fiind UTF-8 și trebuie să utilizeze un font "
+"care suportă toate caracterele din fișier."
 
 #: ../../tutorial/interpreter.rst:140
 msgid ""
@@ -203,24 +304,32 @@ msgid ""
 " should be added as the *first* line of the file.  The syntax is as "
 "follows::"
 msgstr ""
+"Pentru declararea unei codificări diferite de cea implicită, o linie "
+"specială de comentarii trebuie inserată ca *prima* linie a fișierului. "
+"Sintaxa ei este după cum urmează::"
 
 #: ../../tutorial/interpreter.rst:143
 msgid "# -*- coding: encoding -*-"
-msgstr ""
+msgstr "# -*- coding: codificare -*-"
 
 #: ../../tutorial/interpreter.rst:145
 msgid "where *encoding* is one of the valid :mod:`codecs` supported by Python."
 msgstr ""
+"unde *codificare* este unul dintre :mod:`codecs`-urile valide permise de "
+"Python."
 
 #: ../../tutorial/interpreter.rst:147
 msgid ""
 "For example, to declare that Windows-1252 encoding is to be used, the "
 "first line of your source code file should be::"
 msgstr ""
+"De exemplu, pentru a declara că urmează să fie folosită codificarea "
+"Windows-1252, prima linie din codul-sursă al dumneavoastră trebuie să "
+"fie::"
 
 #: ../../tutorial/interpreter.rst:150
 msgid "# -*- coding: cp1252 -*-"
-msgstr ""
+msgstr "# -*- coding: cp1252 -*-"
 
 #: ../../tutorial/interpreter.rst:152
 msgid ""
@@ -229,16 +338,22 @@ msgid ""
 "encoding declaration should be added as the second line of the file.  For"
 " example::"
 msgstr ""
+"O excepție de la regula *primei linii* este atunci când codul-sursă "
+"începe cu o :ref:`linie \"shebang\" UNIX <tut-scripts>`. În această "
+"situație, declarația codificării trebuie inserată pe cea de-a doua "
+"linie a fișierului. De exemplu::"
 
 #: ../../tutorial/interpreter.rst:156
 msgid ""
 "#!/usr/bin/env python3\n"
 "# -*- coding: cp1252 -*-"
 msgstr ""
+"#!/usr/bin/env python3\n"
+"# -*- coding: cp1252 -*-"
 
 #: ../../tutorial/interpreter.rst:160
 msgid "Footnotes"
-msgstr ""
+msgstr "Note de subsol"
 
 #: ../../tutorial/interpreter.rst:161
 msgid ""
@@ -246,4 +361,8 @@ msgid ""
 "executable named ``python``, so that it does not conflict with a "
 "simultaneously installed Python 2.x executable."
 msgstr ""
+"În Unix, interpretorul de Python 3.x nu este instalat implicit cu "
+"numele de executabil ``python``, astfel că nu se va intra în conflict "
+"cu niciun executabil de Python 2.x deja instalat."
+
 
