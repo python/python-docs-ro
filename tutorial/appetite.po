@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
+# DESCHIZANDU-VA APETITUL.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../tutorial/appetite.rst:5
 msgid "Whetting Your Appetite"
-msgstr ""
+msgstr "Deschizându-vă apetitul"
 
 #: ../../tutorial/appetite.rst:7
 msgid ""
@@ -33,6 +33,12 @@ msgid ""
 " to write a small custom database, or a specialized GUI application, or a"
 " simple game."
 msgstr ""
+"Dacă lucrați mult pe calculator, atunci ați întâlnit activități pe care "
+"v-ar plăcea să le automatizați. De exemplu, poate că doriți să realizați "
+"o căutare-cu-înlocuire într-un număr mare de fișiere text, ori să "
+"redenumiți și să rearanjați un set de fișiere foto într-un fel "
+"sofisticat. Poate că v-ar plăcea să scrieți o mică bază de date "
+"personalizată, ori o aplicație GUI specializată, ori un joc simplu."
 
 #: ../../tutorial/appetite.rst:13
 msgid ""
@@ -44,10 +50,18 @@ msgid ""
 "don't want to design and implement a whole new language for your "
 "application."
 msgstr ""
+"Dacă sunteți un dezvoltator software profesionist, atunci poate că "
+"trebuie să utilizați anumite biblioteci C/C++/Java însă constatați "
+"că ciclul tipic scrie/compilează/testează/recompilează durează prea "
+"mult. Poate că scrieți o suită de teste pentru o asemenea bibliotecă "
+"și constatați că scrierea codului de testare este o sarcină sâcâitoare."
+" Ori poate că ați scris un program căruia i-ar fi de folos un limbaj de "
+"extindere dar nu doriți nici să proiectați și nici să implementați un "
+"întreg limbaj nou pentru o singură aplicație."
 
 #: ../../tutorial/appetite.rst:20
 msgid "Python is just the language for you."
-msgstr ""
+msgstr "Python-ul este limbajul potrivit pentru dumneavoastră."
 
 #: ../../tutorial/appetite.rst:22
 msgid ""
@@ -59,6 +73,14 @@ msgid ""
 "available on Windows, macOS, and Unix operating systems, and will help "
 "you get the job done more quickly."
 msgstr ""
+"Ați putea scrie un script de comenzi Unix ori niște fișiere de comenzi "
+"Windows pentru unele din aceste sarcini, doar că scripturile de "
+"comenzi se pricep cel mai bine la mutări de fișiere și la modificări de "
+"text și nu se prea potrivesc la aplicații GUI și nici la jocuri. Ați "
+"putea scrie un program C/C++/Java, numai că până și prima schiță a lui "
+"vă va înghiți o mulțime de timp. Python-ul se folosește mai simplu, este "
+"disponibil în sistemele de operare Windows, macOS și Unix și vă va "
+"ajuta să vă faceți treaba repede."
 
 #: ../../tutorial/appetite.rst:29
 msgid ""
@@ -71,6 +93,16 @@ msgid ""
 "larger problem domain than Awk or even Perl, yet many things are at least"
 " as easy in Python as in those languages."
 msgstr ""
+"Python-ul este simplu de folosit, însă este un limbaj de programare "
+"adevărat, care oferă mult mai multă structurare și suport pentru "
+"programele de dimensiuni mari decât o pot face script-urile de comenzi "
+"ori fișierele de comenzi. Pe de altă parte, Python-ul oferă și mult mai "
+"multă verificare a erorilor decât C-ul, apoi, fiind un *limbaj de nivel "
+"foarte înalt*, are încorporate tipuri de date de nivel înalt, precum "
+"tablourile flexibile și dicționarele. Datorită tipurilor sale de date "
+"mai generale, Python-ul este utilizabil într-o problematică mult mai "
+"largă decât Awk-ul sau chiar decât Perl-ul, iar multe chestiuni se "
+"rezolvă cel puțin la fel de ușor în Python ca în aceste limbaje."
 
 #: ../../tutorial/appetite.rst:37
 msgid ""
@@ -81,6 +113,14 @@ msgid ""
 "things like file I/O, system calls, sockets, and even interfaces to "
 "graphical user interface toolkits like Tk."
 msgstr ""
+"Python-ul vă permite să vă împărțiți programul în module care pot fi "
+"reutilizate în alte programe Python. El vine cu o mare colecție de "
+"module standard pe care le puteți folosi drept bază a programelor "
+"dumneavoastră --- sau ca exemple atunci când veți începe să învățați "
+"programarea în Python. Unele din aceste module oferă facilități pentru "
+"I/E de fișiere, apeluri de sistem, socluri și chiar interfețe cu "
+"seturile de unelte dedicate interfeței grafice cu utilizatorul cum ar "
+"fi Tk-ul."
 
 #: ../../tutorial/appetite.rst:44
 msgid ""
@@ -91,6 +131,13 @@ msgid ""
 "programs, or to test functions during bottom-up program development. It "
 "is also a handy desk calculator."
 msgstr ""
+"Python-ul este un limbaj interpretat, care vă poate economisi timp "
+"considerabil pe perioada dezvoltării unui program deoarece nu va fi "
+"nevoie nici de compilare și nici de link-are. Interpretorul poate fi "
+"utilizat în mod interactiv, ceea ce ușurează experimentarea "
+"caracteristicilor limbajului, scrierea unor programe de unică "
+"folosință, ori testarea de funcții în timpul dezvoltării unui program "
+"de-jos-în-sus. În plus, este un calculator de birou la îndemână."
 
 #: ../../tutorial/appetite.rst:50
 msgid ""
@@ -98,22 +145,30 @@ msgid ""
 "written in Python are typically much shorter than equivalent C,  C++, or "
 "Java programs, for several reasons:"
 msgstr ""
+"Python-ul permite ca programele să fie scrise compact și lizibil. "
+"Programele scrise în Python sunt de obicei mult mai scurte decât "
+"programele C, C++ sau Java echivalente lor, din mai multe motive:"
 
 #: ../../tutorial/appetite.rst:54
 msgid ""
 "the high-level data types allow you to express complex operations in a "
 "single statement;"
 msgstr ""
+"tipurile de date de nivel înalt vă permit să exprimați operații "
+"complexe într-o singură declarație;"
 
 #: ../../tutorial/appetite.rst:57
 msgid ""
 "statement grouping is done by indentation instead of beginning and ending"
 " brackets;"
 msgstr ""
+"gruparea declarațiilor se face prin indentare în loc de acolade de "
+"început și de sfârșit;"
 
 #: ../../tutorial/appetite.rst:60
 msgid "no variable or argument declarations are necessary."
 msgstr ""
+"nu sunt necesare declarațiile de variabile ori de argumente."
 
 #: ../../tutorial/appetite.rst:62
 msgid ""
@@ -125,6 +180,14 @@ msgid ""
 "Python interpreter into an application written in C and use it as an "
 "extension or command language for that application."
 msgstr ""
+"Python-ul este *extensibil*: dacă știți să programați în C, va fi ușor "
+"să adăugați o nouă funcție încorporată sau un nou modul la interpretor, "
+"fie pentru a efectua operații critice la viteză maximă, fie pentru a "
+"link-a programele Python la biblioteci ce pot fi accesate numai în formă "
+"binară (precum o bibliotecă grafică comercială). Iar când vă va prinde "
+"microbul Python-ului, îi veți putea link-a interpretorul la o aplicație "
+"scrisă în C ca să-l folosiți fie pe post de limbaj de extensie fie pe "
+"post de limbaj de comenzi pentru respectiva aplicație."
 
 #: ../../tutorial/appetite.rst:70
 msgid ""
@@ -133,6 +196,10 @@ msgid ""
 "to Monty Python skits in documentation is not only allowed, it is "
 "encouraged!"
 msgstr ""
+"Apropo, limbajul a fost denumit după emisiunea \"Circul zburător al lui "
+"Monty Python\" a canalului BBC și nu are nimic de-a face cu reptilele."
+" Referirile la scenetele din Monty Python în documentație nu numai că "
+"sunt permise, ele sunt încurajate!"
 
 #: ../../tutorial/appetite.rst:74
 msgid ""
@@ -140,6 +207,10 @@ msgid ""
 "some more detail.  Since the best way to learn a language is to use it, "
 "the tutorial invites you to play with the Python interpreter as you read."
 msgstr ""
+"Acum că sunteți nerăbdător să aflați despre Python, veți dori să-l "
+"examinați mai îndeaproape. Și cum cea mai bună metodă de a învăța un "
+"limbaj este să-l folosiți, tutorialul de față vă invită să vă jucați cu "
+"interpretorul de Python pe parcursul lecturii."
 
 #: ../../tutorial/appetite.rst:78
 msgid ""
@@ -147,6 +218,10 @@ msgid ""
 "explained.  This is rather mundane information, but essential for trying "
 "out the examples shown later."
 msgstr ""
+"În capitolul următor vă vor fi explicate  mecanismele de utilizare "
+"a interpretorului. Chiar dacă va părea ceva neimportant, aceste "
+"informații vor fi esențiale atunci când veți testa exemplele care vă "
+"vor fi prezentate."
 
 #: ../../tutorial/appetite.rst:82
 msgid ""
@@ -155,4 +230,9 @@ msgid ""
 "statements and data types, through functions and modules, and finally "
 "touching upon advanced concepts like exceptions and user-defined classes."
 msgstr ""
+"Restul tutorialului introduce diverse caracteristici ale limbajului și "
+"sistemului Python cu ajutorul exemplelor, începând cu expresii "
+"simple, declarații și tipuri de date, continuând cu funcții și "
+"module și în final atingând concepte avansate precum excepțiile și "
+"clasele definite de către utilizator."
 
