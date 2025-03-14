@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
+# TUTORIALUL DE PYTHON.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octawian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../tutorial/index.rst:5
 msgid "The Python Tutorial"
-msgstr ""
+msgstr "Tutorialul de Python"
 
 #: ../../tutorial/index.rst:7
 msgid ""
@@ -33,6 +33,12 @@ msgid ""
 "for scripting and rapid application development in many areas on most "
 "platforms."
 msgstr ""
+"Python-ul este un limbaj de programare puternic, ușor de învățat. "
+"El are structuri de date de nivel înalt eficiente și o abordare simplă "
+"dar eficientă a programării orientate-obiect. Sintaxa elegantă și "
+"tipizarea dinamică ale Python-ului, împreună cu natura sa interpretată, "
+"fac din el un limbaj ideal pentru scriptare și dezvoltarea rapidă de "
+"aplicații în multe domenii pe majoritatea platformelor de calcul."
 
 #: ../../tutorial/index.rst:13
 msgid ""
@@ -43,6 +49,12 @@ msgid ""
 "third party Python modules, programs and tools, and additional "
 "documentation."
 msgstr ""
+"Interpretorul de Python și biblioteca standard extinsă sunt disponibile "
+"liber în cod-sursă sau în format binar pentru toate platformele importante "
+"de calcul pe site-ul web Python, https://www.python.org/, și pot fi "
+"distribuite liber. Același site conține și distribuții de și pointeri "
+"către multe module Python libere ale altor părți, programe și unelte, "
+"precum și documentație adițională."
 
 #: ../../tutorial/index.rst:19
 msgid ""
@@ -51,6 +63,10 @@ msgid ""
 "Python is also suitable as an extension language for customizable "
 "applications."
 msgstr ""
+"Interpretorul de Python se extinde ușor cu funcții și tipuri de date "
+"noi implementate în C sau în C++ (ori în alte limbaje apelabile din C). "
+"Python-ul este potrivit, de asemenea, ca limbaj de extindere pentru "
+"aplicații personalizabile."
 
 #: ../../tutorial/index.rst:23
 msgid ""
@@ -59,6 +75,11 @@ msgid ""
 "interpreter handy for hands-on experience, but all examples are self-"
 "contained, so the tutorial can be read off-line as well."
 msgstr ""
+"Acest tutorial îl introduce informal pe cititor în conceptele de bază "
+"și în caracteristicile limbajului și sistemului Python. Este util să "
+"aveți la îndemână un interpretor de Python pentru experimentări "
+"imediate, însă toate exemplele sunt de sine stătătoare, astfel că "
+"tutorialul poate fi citit și fără interpretor."
 
 #: ../../tutorial/index.rst:28
 msgid ""
@@ -68,6 +89,11 @@ msgid ""
 "and :ref:`c-api-index`. There are also several books covering Python in "
 "depth."
 msgstr ""
+"Pentru o descriere a obiectelor și modulelor standard, vedeți "
+":ref:`library-index`. :ref:`reference-index` conține o definiție mai "
+"formalizată a limbajului. Pentru a scrie extensii în C sau în C++, "
+"citiți :ref:`extending-index` și :ref:`c-api-index`. Există, de asemenea, "
+"mai multe cărți care studiază Python-ul în profunzime."
 
 #: ../../tutorial/index.rst:33
 msgid ""
@@ -79,8 +105,16 @@ msgid ""
 "learn more about the various Python library modules described in :ref"
 ":`library-index`."
 msgstr ""
+"Acest tutorial nu încearcă să fie atotcuprinzător și nici să prezinte "
+"fiecare caracteristică, nici măcar fiecare caracteristică de uz frecvent. "
+"În schimb, el introduce multe din caracteristicile notabile ale Python-"
+"ului și vă veți putea face o părere consistentă despre stilul și "
+"specificul limbajului. După citirea lui, veți putea citi și scrie "
+"module și programe Python, respectiv veți fi pregătit să învățați mai "
+"multe despre diversele module de bibliotecă Python descrise în "
+":ref:`library-index`."
 
 #: ../../tutorial/index.rst:40
 msgid "The :ref:`glossary` is also worth going through."
-msgstr ""
+msgstr ":ref:`glossary`-ul merită, de asemenea, răsfoit."
 
