@@ -306,7 +306,7 @@ msgstr ""
 "Această variabilă trebuie considerată ca fiind doar-de-citit de către "
 "utilizator. Nu-i atribuiți în mod explicit nicio valoare --- dacă o "
 "veți face, atunci veți fi definit o variabilă locală, independentă, cu "
-"același nume, care va masca variabila încorporată în limbaj cu tot cu "
+"același nume, care va masca variabila predefinită în limbaj cu tot cu "
 "purtarea ei magică."
 
 #: ../../tutorial/introduction.rst:132
@@ -319,7 +319,7 @@ msgid ""
 msgstr ""
 "În afară de :class:`int` și de :class:`float`, Python-ul suportă și alte "
 "tipuri de numere, precum :class:`~decimal.Decimal` și "
-":class:`~fractions.Fraction`. De asemeni, Python-ul are suport încorporat "
+":class:`~fractions.Fraction`. De asemeni, Python-ul are suport predefinit "
 "pentru :ref:`numerele complexe <typesnumeric>` și folosește sufixul "
 "``j`` sau ``J`` pentru a desemna partea imaginară (ca în ``3+5j``)."
 
@@ -870,7 +870,7 @@ msgstr ""
 #: ../../tutorial/introduction.rst:354
 msgid "The built-in function :func:`len` returns the length of a string::"
 msgstr ""
-"Funcția încorporată :func:`len` returnează lungimea unui șir de caractere. "
+"Funcția predefinită :func:`len` returnează lungimea unui șir de caractere. "
 "Șirul de caractere `supercalifragilistic... "
 "<https://ro.wikipedia.org/wiki/Supercalifragilisticexpialidocious>`_ "
 "este intraductibil::"
@@ -974,7 +974,7 @@ msgid ""
 "be indexed and sliced::"
 msgstr ""
 "Aidoma șirurilor de caractere (și a tuturor tipurilor :term:`sequence` "
-"încorporate), listele pot fi atât indexate cât și feliate::"
+"predefinite), listele pot fi atât indexate cât și feliate::"
 
 #: ../../tutorial/introduction.rst:399
 msgid ""
@@ -1153,7 +1153,7 @@ msgstr ""
 #: ../../tutorial/introduction.rst:472
 msgid "The built-in function :func:`len` also applies to lists::"
 msgstr ""
-"Funcția încorporată :func:`len` se aplică și la liste::"
+"Funcția predefinită :func:`len` se aplică și la liste::"
 
 #: ../../tutorial/introduction.rst:474
 msgid ""
