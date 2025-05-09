@@ -33,7 +33,7 @@ msgstr ""
 "Documentația Python este generată din fișiere sursă `reStructuredText`_ "
 "folosind `Sphinx`_, un generator de documentații creat special pentru "
 "Python și a cărui mentenanță se face, în prezent, ca proiect de sine "
-"stătător. "
+"stătător."
 
 #: ../../about.rst:16
 msgid ""
