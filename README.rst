@@ -50,7 +50,7 @@ astfel:
 
      sphinx-intl update -p build/gettext -l ro
 
-  va produce subdirectorul **locale/ro/LC_MESSAGES** al directorului
+  va produce subdirectorul **locale_python_3_13_3/ro/LC_MESSAGES** al directorului
   **Doc**. Acesta conține fișierele PO căutate.
 
 Putem genera codul HTML al documentației folosind scriptul 
