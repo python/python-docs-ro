@@ -12,31 +12,33 @@ astfel:
 - instalăm cea mai recentă versiune **stabilă** de 
   `Python <https://www.python.org/>`_;
 - instalăm generatorul de documentație 
-  `Sphinx <https://www.sphinx-doc.org/en/master/usage/installation.html>`_;
+  `Sphinx <https://www.sphinx-doc.org/en/master/usage/installation.html>`_::
+
+     pip install -U sphinx
+
 - instalăm unealta
-  `sphinx-intl <https://www.sphinx-doc.org/en/master/usage/advanced/intl.html>`_;
+  `sphinx-intl <https://www.sphinx-doc.org/en/master/usage/advanced/intl.html>`_::
+
+     pip install sphinx-intl
+
 - descărcăm într-un director convenabil codul-sursă al celei mai recente
   versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, 
-  `3.13.2 <https://www.python.org/downloads/source/>`_;
+  `3.13.3 <https://www.python.org/downloads/source/>`_;
 - în subdirectorul **Doc** al codului-sursă Python se găsește fișierul
-  **conf.py**, la sfârșitul căruia adăugăm
-
-  ::
+  **conf.py**, la sfârșitul căruia adăugăm::
 
      # Optiuni pentru traducerea in romaneste
-     # Adaugat in [ 03.03.2025 ]
+     # Adaugat in [ 09.05.2025 ]
      # Conform [ https://www.sphinx-doc.org/en/master/usage/advanced/intl.html ]
      # -------------------------------------------------------------------------
 
-     locale_dirs = ['locale/']   # path is example but recommended.
-     gettext_compact = False     # optional.
+     locale_dirs = ['locale_python_3_13_3/']   # path is example but recommended.
+     gettext_compact = False                   # optional.
      language = 'ro'
 
 - din subdirectorul **Doc**, deschidem un 
   `terminal Windows <https://learn.microsoft.com/en-us/windows/terminal/>`_
-  și executăm comanda
-
-  ::
+  și executăm comanda::
 
      ./make gettext
 
@@ -44,9 +46,7 @@ astfel:
   care conține fișiere
   `POT <https://www.drupal.org/community/contributor-guide/reference-information/localize-drupal-org/working-with-offline/po-and-pot-files>`_.
 
-- în același terminal, comanda
-
-  ::
+- în același terminal, comanda::
 
      sphinx-intl update -p build/gettext -l ro
 
@@ -57,12 +57,11 @@ Putem genera codul HTML al documentației folosind scriptul
 **scripturi/compilarea_traducerii.ps1** din acest proiect. Astfel,
 într-un terminal Windows cu **drepturi de administrator**
 (tastele Win + X, A), deschis din directorul unde se găsește
-scriptul PowerShell, executăm comenzile:
-
-::
+scriptul PowerShell, executăm comenzile::
 
     Set-ExecutionPolicy Unrestricted
     ./compilarea_traducerii
+
 
 Acord asupra contribuției aduse la documentație
 -----------------------------------------------
@@ -91,6 +90,3 @@ binevenită și apreciată.
 Consfințiți acceptarea acestui acord prin transmiterea
 muncii dumneavoastră către PSF pentru a fi inclusă în
 documentație.
-
-
-
