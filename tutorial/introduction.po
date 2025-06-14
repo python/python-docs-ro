@@ -557,7 +557,7 @@ msgstr ""
 ">>> textul = ('Puneți mai multe șiruri de caractere între paranteze '\n"
 "...           'pentru ca ele să fie îmbinate.')\n"
 ">>> textul\n"
-"'Puneți mai multe șiruri de caractere între paranteze pentru ca ele să \n"
+"'Puneți mai multe șiruri de caractere între paranteze pentru ca ele să\n"
 "fie îmbinate.'"
 
 #: ../../tutorial/introduction.rst:234
