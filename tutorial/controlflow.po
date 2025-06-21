@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# MAI MULTE UNELTE DE CONTROL AL FLUXULUI.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 13:08+0200\n"
+"POT-Creation-Date: 2025-06-17 17:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,23 +22,28 @@ msgstr ""
 
 #: ../../tutorial/controlflow.rst:5
 msgid "More Control Flow Tools"
-msgstr ""
+msgstr "Mai multe unelte de control al fluxului"
 
 #: ../../tutorial/controlflow.rst:7
 msgid ""
 "As well as the :keyword:`while` statement just introduced, Python uses a "
 "few more that we will encounter in this chapter."
 msgstr ""
+"Pe lângă instrucțiunea de control :keyword:`while` introdusă anterior, "
+"Python-ul utilizează alte câteva asemenea instrucțiuni cu care ne vom "
+"întâlni în acest capitol."
 
 #: ../../tutorial/controlflow.rst:14
 msgid ":keyword:`!if` Statements"
-msgstr ""
+msgstr "Instrucțiuni :keyword:`!if`"
 
 #: ../../tutorial/controlflow.rst:16
 msgid ""
 "Perhaps the most well-known statement type is the :keyword:`if` "
 "statement.  For example::"
 msgstr ""
+"Probabil că cel mai cunoscut tip de instrucțiune de control este "
+"instrucțiunea :keyword:`if`. Ca, de exemplu::"
 
 #: ../../tutorial/controlflow.rst:19
 msgid ""
@@ -56,6 +61,19 @@ msgid ""
 "...\n"
 "More"
 msgstr ""
+">>> x = int(input(\"Vă rugăm să introduceți un număr întreg: \"))\n"
+"Vă rugăm să introduceți un număr întreg: 42\n"
+">>> if x < 0:\n"
+"...     x = 0\n"
+"...     print('Număr negativ, pe care îl transformăm în zero')\n"
+"... elif x == 0:\n"
+"...     print('Numărul zero')\n"
+"... elif x == 1:\n"
+"...     print('Numărul unu')\n"
+"... else:\n"
+"...     print('Număr mai mare ca unu')\n"
+"...\n"
+"Număr mai mare ca unu"
 
 #: ../../tutorial/controlflow.rst:33
 msgid ""
@@ -65,6 +83,12 @@ msgid ""
 ":keyword:`!elif` ... :keyword:`!elif` ... sequence is a substitute for "
 "the ``switch`` or ``case`` statements found in other languages."
 msgstr ""
+"Putem avea zero sau mai multe clauze :keyword:`elif`, în timp ce clauza "
+":keyword:`else` este opțională. Cuvântul-cheie ':keyword:`!elif`' este "
+"prescurtarea lui 'else if' și ne permite să evităm indentarea excesivă. "
+"O secvență :keyword:`!if` ... :keyword:`!elif` ... :keyword:`!elif` ... "
+"servește de substitut pentru instrucțiuni precum ``switch`` sau ``case`` "
+"disponibile în alte limbaje de programare."
 
 #: ../../tutorial/controlflow.rst:39
 msgid ""
@@ -72,10 +96,14 @@ msgid ""
 "specific types or attributes, you may also find the :keyword:`!match` "
 "statement useful. For more details see :ref:`tut-match`."
 msgstr ""
+"Dacă aveți de comparat o valoare cu mai multe constante, ori dacă "
+"verificați anumite tipuri de date sau atribute, s-ar putea să vă fie "
+"utilă instrucțiunea de control :keyword:`!match`. Pentru mai multe "
+"detalii, vedeți :ref:`tut-match`."
 
 #: ../../tutorial/controlflow.rst:46
 msgid ":keyword:`!for` Statements"
-msgstr ""
+msgstr "Instrucțiuni :keyword:`!for`"
 
 #: ../../tutorial/controlflow.rst:51
 msgid ""
@@ -87,6 +115,16 @@ msgid ""
 " or a string), in the order that they appear in the sequence.  For "
 "example (no pun intended):"
 msgstr ""
+"Instrucțiunea :keyword:`for` din Python diferă puțin de cele cu care "
+"poate că sunteți obișnuit din C ori din Pascal. În loc să itereze mereu "
+"după elementele numerice ale unei progresii aritmetice (precum în "
+"Pascal), ori să-i "
+"dea utilizatorului posibilitatea de a defini atât un pas de iterație cât "
+"și o condiție de oprire (ca în C), instrucțiunea :keyword:`!for` a "
+"Python-ului iterează după itemii oricărei secvențe (fie ea listă sau "
+"șir de caractere), în ordinea în care acești itemi apar în secvență. "
+"De exemplu (fără să facem vreun "
+"`joc de cuvinte <https://en.wikipedia.org/wiki/Pun>`_) :"
 
 #: ../../tutorial/controlflow.rst:63
 msgid ""
@@ -99,6 +137,14 @@ msgid ""
 "window 6\n"
 "defenestrate 12"
 msgstr ""
+">>> # Să evaluăm câteva șiruri de caractere:\n"
+">>> cuvinte = ['pisică', 'fereastră', 'defenestrare']\n"
+">>> for c in cuvinte:\n"
+"...     print(c, len(c))\n"
+"...\n"
+"pisică 6\n"
+"fereastră 9\n"
+"defenestrare 12"
 
 #: ../../tutorial/controlflow.rst:72
 msgid ""
@@ -107,6 +153,10 @@ msgid ""
 "forward to loop over a copy of the collection or to create a new "
 "collection::"
 msgstr ""
+"Codul care să modifice o colecție în timp ce iterează după itemii "
+"acelei colecții este greu de scris din prima încercare. În schimb, se "
+"dovedesc mai ușor de realizat atât o ciclare după itemii unei copii a "
+"colecției în cauză cât și crearea unei colecții noi::"
 
 #: ../../tutorial/controlflow.rst:76
 #, python-brace-format
@@ -125,10 +175,23 @@ msgid ""
 "    if status == 'active':\n"
 "        active_users[user] = status"
 msgstr ""
+"# Crearea unei colecții eșantion\n"
+"utilizatori = {'Hans': 'activ', 'Éléonore': 'inactiv', '景太郎': 'activ'}\n"
+"\n"
+"# Strategie:  să iterăm după itemii unei copii\n"
+"for utilizatorul, starea in utilizatori.copy().items():\n"
+"    if starea == 'inactiv':\n"
+"        del utilizatori[utilizatorul]\n"
+"\n"
+"# Strategie:  să creăm o nouă colecție\n"
+"utilizatori_activi = {}\n"
+"for utilizatorul, starea in utilizatori.items():\n"
+"    if starea == 'activ':\n"
+"        utilizatori_activi[utilizatorul] = starea"
 
 #: ../../tutorial/controlflow.rst:94
 msgid "The :func:`range` Function"
-msgstr ""
+msgstr "Funcția :func:`range`"
 
 #: ../../tutorial/controlflow.rst:96
 msgid ""
@@ -136,6 +199,9 @@ msgid ""
 "function :func:`range` comes in handy.  It generates arithmetic "
 "progressions::"
 msgstr ""
+"Dacă aveți de iterat după termenii unui șir de numere, atunci "
+"funcția predefinită :func:`range` vă este la îndemână. Ea generează "
+"progresii aritmetice::"
 
 #: ../../tutorial/controlflow.rst:99
 msgid ""
@@ -148,6 +214,14 @@ msgid ""
 "3\n"
 "4"
 msgstr ""
+">>> for i in range(5):\n"
+"...     print(i)\n"
+"...\n"
+"0\n"
+"1\n"
+"2\n"
+"3\n"
+"4"
 
 #: ../../tutorial/controlflow.rst:108
 msgid ""
@@ -157,6 +231,11 @@ msgid ""
 "number, or to specify a different increment (even negative; sometimes "
 "this is called the 'step')::"
 msgstr ""
+"Valoarea de final precizată nu va face niciodată parte din secvența "
+"generată; ``range(10)`` generează 10 valori, mai precis indecșii "
+"permiși ai itemilor unei secvențe de lungime 10. Este posibil să "
+"începem plaja de valori și de la alt număr, ori să specificăm un "
+"increment diferit (inclusiv negativ; uneori, el este numit 'pasul')::"
 
 #: ../../tutorial/controlflow.rst:113
 msgid ""
@@ -169,12 +248,24 @@ msgid ""
 ">>> list(range(-10, -100, -30))\n"
 "[-10, -40, -70]"
 msgstr ""
+">>> list(range(5, 10))\n"
+"[5, 6, 7, 8, 9]\n"
+"\n"
+">>> list(range(0, 10, 3))\n"
+"[0, 3, 6, 9]\n"
+"\n"
+">>> list(range(-10, -100, -30))\n"
+"[-10, -40, -70]"
 
 #: ../../tutorial/controlflow.rst:122
 msgid ""
 "To iterate over the indices of a sequence, you can combine :func:`range` "
 "and :func:`len` as follows::"
 msgstr ""
+"Pentru a itera după indicii unei secvențe, puteți combina :func:`range` "
+"și :func:`len` după cum urmează. Exemplul face referire la un "
+"`cântec de grădiniță american "
+"<https://en.wikipedia.org/wiki/Mary_Had_a_Little_Lamb>`_::"
 
 #: ../../tutorial/controlflow.rst:125
 msgid ""
@@ -188,22 +279,37 @@ msgid ""
 "3 little\n"
 "4 lamb"
 msgstr ""
+">>> a = ['Maria', 'avea', 'un', 'mieluț']\n"
+">>> for i in range(len(a)):\n"
+"...     print(i, a[i])\n"
+"...\n"
+"0 Maria\n"
+"1 avea\n"
+"2 un\n"
+"3 mieluț"
 
 #: ../../tutorial/controlflow.rst:135
 msgid ""
 "In most such cases, however, it is convenient to use the "
 ":func:`enumerate` function, see :ref:`tut-loopidioms`."
 msgstr ""
+"Pe de altă parte, în majoritatea unor asemenea cazuri, este "
+"convenabil să utilizați funcția :func:`enumerate`, a se "
+"vedea :ref:`tut-loopidioms`."
 
 #: ../../tutorial/controlflow.rst:138
 msgid "A strange thing happens if you just print a range::"
 msgstr ""
+"Ceva neobișnuit se va petrece atunci când printați o "
+"plajă de valori de-a dreptul::"
 
 #: ../../tutorial/controlflow.rst:140
 msgid ""
 ">>> range(10)\n"
 "range(0, 10)"
 msgstr ""
+">>> range(10)\n"
+"range(0, 10)"
 
 #: ../../tutorial/controlflow.rst:143
 msgid ""
@@ -212,6 +318,11 @@ msgid ""
 "items of the desired sequence when you iterate over it, but it doesn't "
 "really make the list, thus saving space."
 msgstr ""
+"În multe privințe, obiectul returnat de :func:`range` se comportă de "
+"parcă ar fi o listă, însă el nu este o listă. Este doar un obiect care "
+"întoarce itemii consecutivi ai secvenței care vă interesează atunci când "
+"iterați după itemii acesteia, însă el nu construiește cu adevărat o listă "
+"și prin aceasta economisește spațiu."
 
 #: ../../tutorial/controlflow.rst:148
 msgid ""
@@ -221,12 +332,20 @@ msgid ""
 " the :keyword:`for` statement is such a construct, while an example of a "
 "function that takes an iterable is :func:`sum`::"
 msgstr ""
+"Spunem despre un asemenea obiect că este :term:`iterable`, adică potrivit "
+"ca țintă pentru funcțiile și constructele care se așteaptă la ceva din care "
+"să extragă itemi succesivi până ce rezervorul acestor itemi se va goli. "
+"Am văzut deja că instrucțiunea :keyword:`for` este un asemenea construct, "
+"în timp ce o funcție care poate avea un iterabil drept argument este "
+":func:`sum`::"
 
 #: ../../tutorial/controlflow.rst:154
 msgid ""
 ">>> sum(range(4))  # 0 + 1 + 2 + 3\n"
 "6"
 msgstr ""
+">>> sum(range(4))  # 0 + 1 + 2 + 3\n"
+"6"
 
 #: ../../tutorial/controlflow.rst:157
 msgid ""
@@ -234,16 +353,21 @@ msgid ""
 " as arguments.  In chapter :ref:`tut-structures`, we will discuss in more"
 " detail about :func:`list`."
 msgstr ""
+"Vom vedea ulterior și alte funcții care întorc iterabili și care primesc "
+"iterabili ca argumente. În capitolul :ref:`tut-structures` vom discuta "
+"mai în detaliu despre :func:`list`."
 
 #: ../../tutorial/controlflow.rst:164
 msgid ":keyword:`!break` and :keyword:`!continue` Statements"
-msgstr ""
+msgstr "Instrucțiunile :keyword:`!break` și :keyword:`!continue`"
 
 #: ../../tutorial/controlflow.rst:166
 msgid ""
 "The :keyword:`break` statement breaks out of the innermost enclosing "
 ":keyword:`for` or :keyword:`while` loop::"
 msgstr ""
+"Instrucțiunea :keyword:`break` stopează cea mai din interior instrucțiune "
+"de ciclare :keyword:`for` sau :keyword:`while` care o include::"
 
 #: ../../tutorial/controlflow.rst:169
 #, python-brace-format, python-format
@@ -259,12 +383,24 @@ msgid ""
 "8 equals 2 * 4\n"
 "9 equals 3 * 3"
 msgstr ""
+">>> for n in range(2, 10):\n"
+"...     for x in range(2, n):\n"
+"...         if n % x == 0:\n"
+"...             print(f\"{n} este egal cu {x} * {n//x}\")\n"
+"...             break\n"
+"...\n"
+"4 este egal cu 2 * 2\n"
+"6 este egal cu 2 * 3\n"
+"8 este egal cu 2 * 4\n"
+"9 este egal cu 3 * 3"
 
 #: ../../tutorial/controlflow.rst:180
 msgid ""
 "The :keyword:`continue` statement continues with the next iteration of "
 "the loop::"
 msgstr ""
+"Instrucțiunea :keyword:`continue` trece la următoarea iterație a "
+"ciclului::"
 
 #: ../../tutorial/controlflow.rst:183
 #, python-brace-format
@@ -284,10 +420,24 @@ msgid ""
 "Found an even number 8\n"
 "Found an odd number 9"
 msgstr ""
+">>> for num in range(2, 10):\n"
+"...     if num % 2 == 0:\n"
+"...         print(f\"Găsit un număr par {num}\")\n"
+"...         continue\n"
+"...     print(f\"Găsit un număr impar {num}\")\n"
+"...\n"
+"Găsit un număr par 2\n"
+"Găsit un număr impar 3\n"
+"Găsit un număr par 4\n"
+"Găsit un număr impar 5\n"
+"Găsit un număr par 6\n"
+"Găsit un număr impar 7\n"
+"Găsit un număr par 8\n"
+"Găsit un număr impar 9"
 
 #: ../../tutorial/controlflow.rst:202
 msgid ":keyword:`!else` Clauses on Loops"
-msgstr ""
+msgstr "Clauzele :keyword:`!else` ale ciclurilor"
 
 #: ../../tutorial/controlflow.rst:204
 msgid ""
@@ -296,18 +446,27 @@ msgid ""
 "finishes without executing the :keyword:`!break`, the :keyword:`!else` "
 "clause executes."
 msgstr ""
+"Într-un ciclu :keyword:`!for` sau :keyword:`!while`, instrucțiunea "
+":keyword:`!break` poate fi utilizată în tandem cu clauza :keyword:`!else`. "
+"Astfel, dacă ciclul se încheie fără să fi fost executat "
+":keyword:`!break`-ul, atunci va fi executată clauza :keyword:`!else`."
 
 #: ../../tutorial/controlflow.rst:208
 msgid ""
 "In a :keyword:`for` loop, the :keyword:`!else` clause is executed after "
 "the loop finishes its final iteration, that is, if no break occurred."
 msgstr ""
+"Într-un ciclu :keyword:`for`, clauza :keyword:`!else` se execută după "
+"ce bucla își încheie iterația finală, adică dacă nu a intervenit "
+"nicio stopare pe parcurs."
 
 #: ../../tutorial/controlflow.rst:211
 msgid ""
 "In a :keyword:`while` loop, it's executed after the loop's condition "
 "becomes false."
 msgstr ""
+"Într-un ciclu :keyword:`while`, clauza se va executa după ce condiția "
+"buclei va deveni falsă."
 
 #: ../../tutorial/controlflow.rst:213
 msgid ""
@@ -316,12 +475,19 @@ msgid ""
 "of ending the loop early, such as a :keyword:`return` or a raised "
 "exception, will also skip execution of the :keyword:`else` clause."
 msgstr ""
+"Pentru ambele tipuri de ciclare, clauza :keyword:`!else` **nu** se va "
+"executa dacă ciclul în cauză s-a terminat cu un :keyword:`break`. "
+"Desigur, și alte cazuri de oprire timpurie a ciclării, precum un "
+":keyword:`return` sau lansarea (de la englezescul *to raise*) "
+"unei excepții, vor anula execuția clauzei :keyword:`else`."
 
 #: ../../tutorial/controlflow.rst:218
 msgid ""
 "This is exemplified in the following :keyword:`!for` loop, which searches"
 " for prime numbers::"
 msgstr ""
+"Toate acestea  se exemplifică în următorul ciclu :keyword:`!for`, cu care "
+"căutăm numere prime::"
 
 #: ../../tutorial/controlflow.rst:221
 #, python-format
@@ -344,12 +510,32 @@ msgid ""
 "8 equals 2 * 4\n"
 "9 equals 3 * 3"
 msgstr ""
+">>> for n in range(2, 10):\n"
+"...     for x in range(2, n):\n"
+"...         if n % x == 0:\n"
+"...             print(n, 'este egal cu', x, '*', n//x)\n"
+"...             break\n"
+"...     else:\n"
+"...         # cade până aici fără să fi găsit vreun divizor\n"
+"...         print(n, 'este număr prim')\n"
+"...\n"
+"2 este număr prim\n"
+"3 este număr prim\n"
+"4 este egal cu 2 * 2\n"
+"5 este număr prim\n"
+"6 este egal cu 2 * 3\n"
+"7 este număr prim\n"
+"8 este egal cu 2 * 4\n"
+"9 este egal cu 3 * 3"
 
 #: ../../tutorial/controlflow.rst:239
 msgid ""
 "(Yes, this is the correct code.  Look closely: the ``else`` clause "
 "belongs to the ``for`` loop, **not** the ``if`` statement.)"
 msgstr ""
+"(Da, acesta este codul corect. Uitați-vă îndeaproape: clauza "
+"``else`` ține de bucla ``for`` și **nu** de instrucțiunea "
+"``if``.)"
 
 #: ../../tutorial/controlflow.rst:242
 msgid ""
@@ -360,6 +546,14 @@ msgid ""
 "condition is never true, the ``else`` clause outside the loop will "
 "execute."
 msgstr ""
+"Este bine, atunci când vă gândiți la clauza else, să o socotiți ca făcând "
+"pereche cu ``if``-ul din buclă. Pe măsură ce bucla este executată, ea va "
+"rula o secvență de tipul if/if/if/else. Acest ``if`` este în interiorul "
+"buclei și va fi întâlnit de un număr oarecare de ori. Dacă condiția "
+"asociată lui va avea valoarea logică adevărat la un moment dat, "
+"atunci se va produce un ``break``. În schimb, dacă valoarea logică a "
+"condiției nu va fi niciodată adevărat, atunci se va executa clauza "
+"``else`` din afara buclei."
 
 #: ../../tutorial/controlflow.rst:248
 msgid ""
@@ -370,10 +564,17 @@ msgid ""
 "occurs. For more on the ``try`` statement and exceptions, see :ref:`tut-"
 "handling`."
 msgstr ""
+"Atunci când este folosită cu o instrucțiune de ciclare, clauza ``else`` "
+"seamănă mai degrabă cu clauza ``else`` a unei instrucțiuni :keyword:`try` "
+"decât cu cea a unor instrucțiuni ``if``: clauza ``else`` a unei "
+"instrucțiuni ``try`` va rula numai atunci când nu survine nicio excepție, "
+"pe când clauza ``else`` a unei bucle va rula atunci când nu intervine "
+"niciun ``break``. Pentru detalii privind instrucțiunea ``try`` și "
+"excepțiile, vedeți :ref:`tut-handling`."
 
 #: ../../tutorial/controlflow.rst:257
 msgid ":keyword:`!pass` Statements"
-msgstr ""
+msgstr "Instrucțiuni :keyword:`!pass`"
 
 #: ../../tutorial/controlflow.rst:259
 msgid ""
@@ -381,6 +582,9 @@ msgid ""
 "statement is required syntactically but the program requires no action. "
 "For example::"
 msgstr ""
+"Instrucțiunea :keyword:`pass` nu realizează nimic. Ea poate fi folosită "
+"atunci când sintaxa limbajului cere introducerea unei instrucțiuni dar "
+"programul propriu-zis nu are nimic de executat. De exemplu::"
 
 #: ../../tutorial/controlflow.rst:262
 msgid ""
@@ -388,10 +592,13 @@ msgid ""
 "...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)\n"
 "..."
 msgstr ""
+">>> while True:\n"
+"...     pass  # Ocupat-se așteaptă o întrerupere de la tastatură (Ctrl+C)\n"
+"..."
 
 #: ../../tutorial/controlflow.rst:266
 msgid "This is commonly used for creating minimal classes::"
-msgstr ""
+msgstr "Se folosește în mod uzual la crearea unor clase minimale::"
 
 #: ../../tutorial/controlflow.rst:268
 msgid ""
@@ -399,6 +606,9 @@ msgid ""
 "...     pass\n"
 "..."
 msgstr ""
+">>> class ClasaMeaVidă:\n"
+"...     pass\n"
+"..."
 
 #: ../../tutorial/controlflow.rst:272
 msgid ""
@@ -407,6 +617,10 @@ msgid ""
 "you to keep thinking at a more abstract level.  The :keyword:`!pass` is "
 "silently ignored::"
 msgstr ""
+"Altă întrebuințare pentru :keyword:`pass` este ca înlocuitor al corpului "
+"unei funcții sau al celui al unei instrucțiuni de selecție atunci când "
+"lucrați la un program nou, permițându-vă să gândiți programul la nivel "
+"abstract. Instrucțiunea :keyword:`!pass` este ignorată în mod silențios::"
 
 #: ../../tutorial/controlflow.rst:276
 msgid ""
@@ -414,10 +628,13 @@ msgid ""
 "...     pass   # Remember to implement this!\n"
 "..."
 msgstr ""
+">>> def initlog(*args):\n"
+"...     pass   # Nu uitați să o implementați!\n"
+"..."
 
 #: ../../tutorial/controlflow.rst:284
 msgid ":keyword:`!match` Statements"
-msgstr ""
+msgstr "Instrucțiuni :keyword:`!match`"
 
 #: ../../tutorial/controlflow.rst:286
 msgid ""
@@ -429,10 +646,24 @@ msgid ""
 "executed and it can also extract components (sequence elements or object "
 "attributes) from the value into variables."
 msgstr ""
+"O instrucțiune :keyword:`match` preia o expresie și îi compară valoarea "
+"cu modelele date de blocuri case de cod succesive. Aceasta o face să "
+"semene, la prima vedere, cu o instrucțiune switch din C, Java sau "
+"JavaScript (și din "
+"multe alte limbaje), doar că ea este mai degrabă similară cu potrivirea "
+"după model (de la englezescul *pattern matching*) din limbaje precum Rust "
+"ori Haskell. Va fi executat numai primul model care se potrivește și tot "
+"atunci vor putea fi salvate în variabile diverse componente (cum ar fi "
+"itemi de secvență ori atribute de obiect) ale valorii expresiei."
 
 #: ../../tutorial/controlflow.rst:294
 msgid "The simplest form compares a subject value against one or more literals::"
 msgstr ""
+"În cea mai simplă formă, ea compară valoarea unei mărimi cu "
+"valorile uneia sau mai multor date literale. În exemplul care urmează este "
+"introdus un cod de răspuns HTTP (418) folosit ca "
+"`păcăleală de întâi aprilie "
+"<https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/418>`_::"
 
 #: ../../tutorial/controlflow.rst:296
 msgid ""
@@ -447,6 +678,16 @@ msgid ""
 "        case _:\n"
 "            return \"Something's wrong with the internet\""
 msgstr ""
+"def http_error(stare):\n"
+"    match stare:\n"
+"        case 400:\n"
+"            return \"Cerere incorectă\"\n"
+"        case 404:\n"
+"            return \"Nu a fost găsită\"\n"
+"        case 418:\n"
+"            return \"Eu sunt un ceainic\"\n"
+"        case _:\n"
+"            return \"S-a întâmplat ceva cu conexiunea internet\""
 
 #: ../../tutorial/controlflow.rst:307
 msgid ""
@@ -454,24 +695,34 @@ msgid ""
 " never fails to match. If no case matches, none of the branches is "
 "executed."
 msgstr ""
+"Observați ultimul bloc: \"numele de variabilă\" ``_`` acționează ca un "
+"*caracter de înlocuire* (de la englezescul *wildcard*) care se va "
+"potrivi cu toate valorile. Dacă niciunul dintre case-uri nu se potrivește, "
+"niciuna din ramurile de cod nu se va executa."
 
 #: ../../tutorial/controlflow.rst:310
 msgid ""
 "You can combine several literals in a single pattern using ``|`` "
 "(\"or\")::"
 msgstr ""
+"Puteți combina mai mulți literali într-un singur model folosind ``|`` "
+"(\"sau\")::"
 
 #: ../../tutorial/controlflow.rst:312
 msgid ""
 "case 401 | 403 | 404:\n"
 "    return \"Not allowed\""
 msgstr ""
+"case 401 | 403 | 404:\n"
+"    return \"Nepermis\""
 
 #: ../../tutorial/controlflow.rst:315
 msgid ""
 "Patterns can look like unpacking assignments, and can be used to bind "
 "variables::"
 msgstr ""
+"Modelele pot semăna cu atribuirile cu despachetare (de la englezescul "
+"*unpacking assignment*), putând fi folosite la legarea variabilelor::"
 
 #: ../../tutorial/controlflow.rst:318
 #, python-brace-format
@@ -489,6 +740,18 @@ msgid ""
 "    case _:\n"
 "        raise ValueError(\"Not a point\")"
 msgstr ""
+"# punctul este un tuplu (x, y)\n"
+"match punctul:\n"
+"    case (0, 0):\n"
+"        print(\"Originea\")\n"
+"    case (0, y):\n"
+"        print(f\"Y={y}\")\n"
+"    case (x, 0):\n"
+"        print(f\"X={x}\")\n"
+"    case (x, y):\n"
+"        print(f\"X={x}, Y={y}\")\n"
+"    case _:\n"
+"        raise ValueError(\"Nu este punct\")"
 
 #: ../../tutorial/controlflow.rst:331
 msgid ""
@@ -499,6 +762,12 @@ msgid ""
 "captures two values, which makes it conceptually similar to the unpacking"
 " assignment ``(x, y) = point``."
 msgstr ""
+"Studiați exemplul cu atenție! Primul model are doi literali, și poate fi "
+"considerat ca o extensie a modelului literal prezentat înainte. "
+"Următoarele două modele, în schimb, combină o dată literală cu o "
+"variabilă, iar de variabilă se *leagă* o valoare din mărime (``punctul``"
+"). Cel de-al patrulea model captează două valori, ceea ce îl face "
+"conceptual echivalent atribuirii cu despachetare ``(x, y) = punctul``."
 
 #: ../../tutorial/controlflow.rst:338
 msgid ""
@@ -506,6 +775,10 @@ msgid ""
 "name followed by an argument list resembling a constructor, but with the "
 "ability to capture attributes into variables::"
 msgstr ""
+"Dacă folosiți clase pentru a vă structura datele în program, atunci veți "
+"putea utiliza numele clasei urmat de o listă de argumente asemănătoare "
+"celei a unui constructor, doar că având proprietatea de a salva atribute "
+"în variabile::"
 
 #: ../../tutorial/controlflow.rst:342
 #, python-brace-format
@@ -528,6 +801,23 @@ msgid ""
 "        case _:\n"
 "            print(\"Not a point\")"
 msgstr ""
+"class Punctul:\n"
+"    def __init__(self, x, y):\n"
+"        self.x = x\n"
+"        self.y = y\n"
+"\n"
+"def unde_este(punctul):\n"
+"    match punctul:\n"
+"        case Punctul(x=0, y=0):\n"
+"            print(\"Originea\")\n"
+"        case Punctul(x=0, y=y):\n"
+"            print(f\"Y={y}\")\n"
+"        case Punctul(x=x, y=0):\n"
+"            print(f\"X={x}\")\n"
+"        case Punctul():\n"
+"            print(\"Altundeva\")\n"
+"        case _:\n"
+"            print(\"Nu e punct\")"
 
 #: ../../tutorial/controlflow.rst:360
 msgid ""
@@ -538,6 +828,13 @@ msgid ""
 "(\"x\", \"y\"), the following patterns are all equivalent (and all bind "
 "the ``y`` attribute to the ``var`` variable)::"
 msgstr ""
+"Puteți utiliza argumente poziționale la unele din clasele predefinite, "
+" cele care oferă o ordonare a atributelor lor (precum clasele-de-date). "
+"De asemenea, puteți defini poziții specifice pentru atributele din "
+"modele prin setarea atributului special ``__match_args__`` pentru "
+"clasele dumneavoastră. Dacă acesta este setat la (\"x\", \"y\"), "
+"atunci următoarele modele sunt cu toatele echivalente (și toate leagă "
+"atributul ``y`` de variabila ``var``)::"
 
 #: ../../tutorial/controlflow.rst:366
 msgid ""
@@ -546,6 +843,10 @@ msgid ""
 "Point(x=1, y=var)\n"
 "Point(y=var, x=1)"
 msgstr ""
+"Punctul(1, var)\n"
+"Punctul(1, y=var)\n"
+"Punctul(x=1, y=var)\n"
+"Punctul(y=var, x=1)"
 
 #: ../../tutorial/controlflow.rst:371
 msgid ""
@@ -557,12 +858,25 @@ msgid ""
 "names (recognized by the \"(...)\" next to them like ``Point`` above) are"
 " never assigned to."
 msgstr ""
+"Atunci când citim un model este recomandat să-l privim ca pe forma extinsă "
+"a ceea ce se pune la stânga unei atribuiri, respectiv să înțelegem ce "
+"variabilă va fi setată la ce valoare. O instrucțiune match poate face "
+"atribuiri numai pentru numele de sine stătătoare (precum ``var``-ul de "
+"deasupra). Numelor-cu-punct (de la englezescul *dotted name*; ca, de "
+"exemplu, ``foo.bar``, o expresie intraductibilă, "
+"vedeți `foobar <https://en.wikipedia.org/wiki/Foobar>`_), numelor de "
+"atribute (``x=`` și ``y=`` de mai sus) ori numelor de clase (pe care le "
+"recunoaștem după \"(...)\"-ul așezat după ele, ca în cazul lui ``Punctul`` "
+"de deasupra) nu li se fac niciodată atribuiri."
 
 #: ../../tutorial/controlflow.rst:378
 msgid ""
 "Patterns can be arbitrarily nested.  For example, if we have a short list"
 " of Points, with ``__match_args__`` added, we could match it like this::"
 msgstr ""
+"Modelele pot fi imbricate de câte ori dorim. De exemplu, dacă avem o listă "
+"scurtă de Puncte, căreia i-am adăugat ``__match_args__``, îi putem aplica "
+"un match astfel::"
 
 #: ../../tutorial/controlflow.rst:381
 #, python-brace-format
@@ -585,6 +899,23 @@ msgid ""
 "    case _:\n"
 "        print(\"Something else\")"
 msgstr ""
+"class Punctul:\n"
+"    __match_args__ = ('x', 'y')\n"
+"    def __init__(self, x, y):\n"
+"        self.x = x\n"
+"        self.y = y\n"
+"\n"
+"match puncte:\n"
+"    case []:\n"
+"        print(\"Niciun punct\")\n"
+"    case [Punctul(0, 0)]:\n"
+"        print(\"Originea\")\n"
+"    case [Punctul(x, y)]:\n"
+"        print(f\"Un singur punct {x}, {y}\")\n"
+"    case [Punctul(0, y1), Punctul(0, y2)]:\n"
+"        print(f\"Două puncte pe axa Y la {y1}, {y2}\")\n"
+"    case _:\n"
+"        print(\"Altceva\")"
 
 #: ../../tutorial/controlflow.rst:399
 msgid ""
@@ -592,6 +923,10 @@ msgid ""
 "guard is false, ``match`` goes on to try the next case block.  Note that "
 "value capture happens before the guard is evaluated::"
 msgstr ""
+"Îi putem adăuga o clauză ``if``, numită \"gardă\" (de la englezescul "
+"*guard*), unui model. Dacă valoarea logică a gărzii este fals, atunci "
+"``match``-ul trece la următorul bloc case. Captarea valorilor, trebuie "
+"remarcat, se va petrece înainte de evaluarea gărzii::"
 
 #: ../../tutorial/controlflow.rst:403
 #, python-brace-format
@@ -602,10 +937,15 @@ msgid ""
 "    case Point(x, y):\n"
 "        print(f\"Not on the diagonal\")"
 msgstr ""
+"match punct:\n"
+"    case Punctul(x, y) if x == y:\n"
+"        print(f\"Y=X la {x}\")\n"
+"    case Punctul(x, y):\n"
+"        print(f\"Nu e pe diagonală\")"
 
 #: ../../tutorial/controlflow.rst:409
 msgid "Several other key features of this statement:"
-msgstr ""
+msgstr "Alte caracteristici-cheie ale acestei instrucțiuni:"
 
 #: ../../tutorial/controlflow.rst:411
 msgid ""
@@ -613,6 +953,10 @@ msgid ""
 " meaning and actually match arbitrary sequences.  An important exception "
 "is that they don't match iterators or strings."
 msgstr ""
+"În calitate de atribuiri cu despachetare, tuplurile și modelele de liste "
+"au aceeași semnificație și reușesc să se potrivească unor secvențe "
+"arbitrare. O excepție importantă este aceea că ele nu fac potriviri pentru "
+"iteratori sau șiruri de caractere."
 
 #: ../../tutorial/controlflow.rst:415
 msgid ""
@@ -621,6 +965,11 @@ msgid ""
 " may also be ``_``, so ``(x, y, *_)`` matches a sequence of at least two "
 "items without binding the remaining items."
 msgstr ""
+"Modelele de secvențe suportă despachetări extinse: ``[x, y, *restul]`` și "
+"``(x, y, *restul)`` se comportă similar cu atribuirile cu despachetare. "
+"Numele de după ``*`` poate fi inclusiv ``_``, astfel că ``(x, y, *_)`` "
+"se va potrivi unei secvențe de cel puțin doi itemi fără a mai lega itemii "
+"rămași."
 
 #: ../../tutorial/controlflow.rst:420
 #, python-brace-format
@@ -631,32 +980,46 @@ msgid ""
 "is also supported.  (But ``**_`` would be redundant, so it is not "
 "allowed.)"
 msgstr ""
+"Modele de mapare: ``{\"lățime_de_bandă\": b, \"latență\": l}`` "
+"capturează valorile lui ``\"lățime_de_bandă\"`` și ``\"latență\"`` "
+"dintr-un dicționar. Spre deosebire de cazul modelelor de secvențe, cheile "
+"suplimentare vor fi ignorate. Este suportată și o despachetare de tipul "
+"``**restul``. (Dat fiind că despachetarea ``**_`` ar fi redundantă, ea "
+"nu este permisă.)"
 
 #: ../../tutorial/controlflow.rst:425
 msgid "Subpatterns may be captured using the ``as`` keyword::"
 msgstr ""
+"Submodelele pot fi capturate folosind cuvântul-cheie ``as``::"
 
 #: ../../tutorial/controlflow.rst:427
 msgid "case (Point(x1, y1), Point(x2, y2) as p2): ..."
-msgstr ""
+msgstr "case (Punctul(x1, y1), Punctul(x2, y2) as p2): ..."
 
 #: ../../tutorial/controlflow.rst:429
 msgid ""
 "will capture the second element of the input as ``p2`` (as long as the "
 "input is a sequence of two points)"
 msgstr ""
+"va captura cel de-al doilea element al inputului ca ``p2`` (numai dacă "
+"inputul este o secvență de două puncte)"
 
 #: ../../tutorial/controlflow.rst:432
 msgid ""
 "Most literals are compared by equality, however the singletons ``True``, "
 "``False`` and ``None`` are compared by identity."
 msgstr ""
+"Majoritatea datelor literale sunt comparate folosind egalitatea, totuși "
+"valorile unice (de la englezescul *singleton*) ``True``, ``False`` "
+"și ``None`` se compară folosind identitatea."
 
 #: ../../tutorial/controlflow.rst:435
 msgid ""
 "Patterns may use named constants.  These must be dotted names to prevent "
 "them from being interpreted as capture variable::"
 msgstr ""
+"Modelele pot folosi constante cu nume. Acestea trebuie să fie nume-cu-"
+"punct pentru a se evita interpretarea lor drept variabile de captare::"
 
 #: ../../tutorial/controlflow.rst:438
 msgid ""
@@ -677,22 +1040,43 @@ msgid ""
 "    case Color.BLUE:\n"
 "        print(\"I'm feeling the blues :(\")"
 msgstr ""
+"from enum import Enum\n"
+"class Culoare(Enum):\n"
+"    ROȘU = 'roșu'\n"
+"    VERDE = 'verde'\n"
+"    ALBASTRU = 'albastru'\n"
+"\n"
+"culoare = Culoare( \\\n"
+"input(\"Alegeți între 'roșu', 'albastru' sau 'verde': \"))"
+"\n"
+"\n"
+"match culoare:\n"
+"    case Culoare.ROȘU:\n"
+"        print(\"Văd roșu!\")\n"
+"    case Culoare.VERDE:\n"
+"        print(\"Iarba este verde\")\n"
+"    case Culoare.ALBASTRU:\n"
+"        print(\"Cântă-mi de inimă albastră :(\")"
 
 #: ../../tutorial/controlflow.rst:454
 msgid ""
 "For a more detailed explanation and additional examples, you can look "
 "into :pep:`636` which is written in a tutorial format."
 msgstr ""
+"Pentru explicații detaliate și alte exemple, puteți răsfoi :pep:`636` "
+"care este redactat sub formă de tutorial."
 
 #: ../../tutorial/controlflow.rst:460
 msgid "Defining Functions"
-msgstr ""
+msgstr "Definirea funcțiilor"
 
 #: ../../tutorial/controlflow.rst:462
 msgid ""
 "We can create a function that writes the Fibonacci series to an arbitrary"
 " boundary::"
 msgstr ""
+"Puteți construi o funcție care să scrie toți termenii șirului lui Fibonacci "
+"care sunt mici decât o valoare dată::"
 
 #: ../../tutorial/controlflow.rst:465
 msgid ""
@@ -708,6 +1092,17 @@ msgid ""
 ">>> fib(2000)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597"
 msgstr ""
+">>> def fib(n):    # scriem termenii șirului lui Fibonacci mai mici ca n\n"
+"...     \"\"\"Afișez termenii șirului lui Fibonacci mai mici ca n.\"\"\"\n"
+"...     a, b = 0, 1\n"
+"...     while a < n:\n"
+"...         print(a, end=' ')\n"
+"...         a, b = b, a+b\n"
+"...     print()\n"
+"...\n"
+">>> # Acum apelăm funcția proaspăt definită:\n"
+">>> fib(2000)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597"
 
 #: ../../tutorial/controlflow.rst:482
 msgid ""
@@ -716,6 +1111,11 @@ msgid ""
 "parameters. The statements that form the body of the function start at "
 "the next line, and must be indented."
 msgstr ""
+"Cuvântul-cheie :keyword:`def` introduce *definiția* unei funcții. El "
+"trebuie urmat de numele funcției și de lista cuprinsă între paranteze "
+"a parametrilor formali ai funcției. Instrucțiunile care alcătuiesc "
+"corpul funcției vor începe de pe linia următoare, și vor trebui "
+"scrise ca alineate."
 
 #: ../../tutorial/controlflow.rst:487
 msgid ""
@@ -727,6 +1127,16 @@ msgid ""
 "interactively browse through code; it's good practice to include "
 "docstrings in code that you write, so make a habit of it."
 msgstr ""
+"Prima instrucțiune din corpul funcției poate fi o dată literală, "
+"opțională, sub forma unui șir de caractere; acest literal de tip șir de "
+"caractere este șirul de caractere al documentației funcției respective, "
+"așa-numitul :dfn:`docstring`. (Mai multe despre docstring-uri se pot "
+"afla în secțiunea :ref:`tut-docstrings`.) Există unelte informatice "
+"care folosesc docstring-urile pentru a produce în mod automat "
+"documentație, atât online cât și tipărită, ori pentru a-i permite "
+"utilizatorului să răsfoiască, interactiv, codul-sursă; este o bună "
+"practică să inserați docstring-uri în codul pe care îl construiți, "
+"așadar, făceți-vă un obicei din aceasta."
 
 #: ../../tutorial/controlflow.rst:494
 msgid ""
@@ -742,6 +1152,23 @@ msgid ""
 "functions, named in a :keyword:`nonlocal` statement), although they may "
 "be referenced."
 msgstr ""
+"La *execuția* unei funcții se construiește o nouă tabelă de simboluri "
+"ce va fi folosită pentru variabilele locale ale funcției. Mai precis, "
+"toate atribuirile făcute unor variabile în corpul unei funcții stochează "
+"valorile respective în tabela de simboluri locală; în ce le privește, "
+"referințele la variabile vor căuta mai întâi în tabela de simboluri "
+"locală, apoi în tabelele de simboluri locale ale funcțiilor în care este "
+"imbricată funcția, "
+"după care în tabela de simboluri globală și, în final, în tabela "
+"de nume predefinite. Astfel, nici variabilelor globale și nici "
+"variabilelor din funcțiile în care este imbricată funcția în cauză nu li "
+"se pot atribui în mod direct valori prin codul funcției (cu excepția, "
+"pentru variabilele globale, celor numite într-o instrucțiune "
+":keyword:`global` "
+"ori, pentru variabilele din funcțiile în care este imbricată funcția, "
+"a celor numite într-o "
+"instrucțiune :keyword:`nonlocal`), chiar dacă pot exista referințe la "
+"ele."
 
 #: ../../tutorial/controlflow.rst:505
 msgid ""
@@ -752,6 +1179,12 @@ msgid ""
 " calls another function, or calls itself recursively, a new local symbol "
 "table is created for that call."
 msgstr ""
+"Parametrii actuali (argumentele) dintr-un apel de funcție sunt introduși "
+"în tabela de simboluri locală a funcției apelate la apelul acesteia; "
+"astfel, argumentele sunt *transmise prin valoare* (unde *valoarea* este "
+"întotdeauna *referința* la un obiect, niciodată valoarea obiectului). "
+"[#]_ Când o funcție apelează altă funcție, ori se apelează recursiv pe "
+"ea-însăși, o tabelă de simboluri locale nouă va fi creată la apel."
 
 #: ../../tutorial/controlflow.rst:512
 msgid ""
@@ -761,6 +1194,11 @@ msgid ""
 "can also point to that same function object and can also be used to "
 "access the function::"
 msgstr ""
+"Definiția unei funcții asociază numele funcției cu obiectul-funcție în "
+"tabela de simboluri curentă. Interpretorul recunoaște obiectul către "
+"care țintește numele ca fiind o funcție definită-de-utilizator. Și alte "
+"nume pot ținti către același obiect-funcție și pot fi, de aceea, "
+"utilizate la accesarea funcției::"
 
 #: ../../tutorial/controlflow.rst:517
 msgid ""
@@ -770,6 +1208,11 @@ msgid ""
 ">>> f(100)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89"
 msgstr ""
+">>> fib\n"
+"<function fib at 10042ed0>\n"
+">>> f = fib\n"
+">>> f(100)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89"
 
 #: ../../tutorial/controlflow.rst:523
 msgid ""
@@ -781,6 +1224,15 @@ msgid ""
 "interpreter if it would be the only value written. You can see it if you "
 "really want to using :func:`print`::"
 msgstr ""
+"Dacă sunteți obișnuit cu alte limbaje de programare, atunci este posibil "
+"să considerați că ``fib`` nu poate fi funcție, ci procedură, deoarece "
+"ea nu returnează nicio valoare. În fapt, chiar și funcțiile care nu au "
+"nicio instrucțiune :keyword:`return` returnează o valoare, numai că "
+"valoarea respectivă nu înseamnă mai nimic. Această valoare se numește "
+"``None`` (adică ``Nimic``, un nume predefinit). Afișarea valorii "
+"``None`` este suprimată, în mod obișnuit, de către interpretor în cazul "
+"în care ea ar fi singura valoare afișată. O puteți vedea, dacă țineți "
+"neapărat, folosind :func:`print`::"
 
 #: ../../tutorial/controlflow.rst:530
 msgid ""
@@ -788,12 +1240,17 @@ msgid ""
 ">>> print(fib(0))\n"
 "None"
 msgstr ""
+">>> fib(0)\n"
+">>> print(fib(0))\n"
+"None"
 
 #: ../../tutorial/controlflow.rst:534
 msgid ""
 "It is simple to write a function that returns a list of the numbers of "
 "the Fibonacci series, instead of printing it::"
 msgstr ""
+"Este mai ușor să scrieți o funcție care returnează o listă de numere "
+"din șirul lui Fibonaci în loc de una care să afișeze aceste numere::"
 
 #: ../../tutorial/controlflow.rst:537
 msgid ""
@@ -811,10 +1268,24 @@ msgid ""
 ">>> f100                # write the result\n"
 "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
 msgstr ""
+">>> def fib2(n):  # întoarce șirul lui Fibonacci de până la n\n"
+"...     \"\"\"Întoarce o listă conținând termenii din șirul lui\n"
+"...     Fibonacci mai mici decât n.\"\"\"\n"
+"...     rezultat = []\n"
+"...     a, b = 0, 1\n"
+"...     while a < n:\n"
+"...         rezultat.append(a)    # vezi mai jos\n"
+"...         a, b = b, a+b\n"
+"...     return rezultat\n"
+"...\n"
+">>> f100 = fib2(100)    # apelul funcției\n"
+">>> f100                # afișarea rezultatului\n"
+"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
 
 #: ../../tutorial/controlflow.rst:550
 msgid "This example, as usual, demonstrates some new Python features:"
-msgstr ""
+msgstr "Acest exemplu, ca și până acum, probează câteva caracteristici "
+"noi ale Python-ului:"
 
 #: ../../tutorial/controlflow.rst:552
 msgid ""
@@ -822,6 +1293,10 @@ msgid ""
 ":keyword:`!return` without an expression argument returns ``None``. "
 "Falling off the end of a function also returns ``None``."
 msgstr ""
+"Instrucțiunea :keyword:`return` întoarce o valoare a funcției. "
+":keyword:`!return` neurmat de vreo expresie ca argument va întoarce "
+"``None``. De asemeni, la terminarea corpului de instrucțiuni al unei "
+"funcții se întoarce ``None``."
 
 #: ../../tutorial/controlflow.rst:556
 msgid ""
@@ -837,20 +1312,36 @@ msgid ""
 " of the list.  In this example it is equivalent to ``result = result + "
 "[a]``, but more efficient."
 msgstr ""
+"Intrucțiunea ``rezultat.append(a)`` apelează o *metodă* a obiectului listă "
+"``rezultat``. Metoda este acea funcție care îi 'aparține' unui obiect și "
+"care poartă numele de ``obiect.nume_de_metodă``, în care ``obiect`` "
+"desemnează un obiect oarecare (poate fi inclusiv o expresie) iar "
+"``nume_de_metodă`` este numele unei metode definite de către tipul "
+"obiectului. Unor tipuri diferite le corespund metode diferite. Metodele "
+"unor tipuri diferite pot avea același nume fără a da naștere la "
+"ambiguități. (Aveți posibilitatea să vă definiți propriile tipuri de "
+"obiecte și propriile metode, cu ajutorul *claselor*, vezi "
+":ref:`tut-classes`.) Metoda :meth:`!append`, folosită în exemplu, se "
+"definește pentru obiectele listă; ea adaugă un element nou la sfârșitul "
+"listei. În exemplul de față, această adăugare este echivalentă cu "
+"``rezultat = rezultat + [a]``, doar că se realizează mai eficient."
 
 #: ../../tutorial/controlflow.rst:571
 msgid "More on Defining Functions"
-msgstr ""
+msgstr "Mai multe despre definirea funcțiilor"
 
 #: ../../tutorial/controlflow.rst:573
 msgid ""
 "It is also possible to define functions with a variable number of "
 "arguments. There are three forms, which can be combined."
 msgstr ""
+"Este posibil să definim funcții care să aibă număr variabil de "
+"argumente. Aceasta poate fi realizată în trei feluri, care pot fi "
+"combinate."
 
 #: ../../tutorial/controlflow.rst:580
 msgid "Default Argument Values"
-msgstr ""
+msgstr "Valori implicite pentru argumente"
 
 #: ../../tutorial/controlflow.rst:582
 msgid ""
@@ -858,6 +1349,10 @@ msgid ""
 "arguments. This creates a function that can be called with fewer "
 "arguments than it is defined to allow.  For example::"
 msgstr ""
+"Modalitatea cea mai utilă este să specificăm valori prestabilite pentru "
+"unul sau mai multe argumente. Se creează o funcție ce va putea fi "
+"apelată cu mai puține argumente decât au fost folosite la definirea "
+"ei. Cum ar fi::"
 
 #: ../../tutorial/controlflow.rst:586
 #, python-brace-format
@@ -874,40 +1369,64 @@ msgid ""
 "            raise ValueError('invalid user response')\n"
 "        print(reminder)"
 msgstr ""
+"def cere_permisiunea(promptul, încercări=4, \\\n"
+"    atenționare='Încercați din nou, vă rog!'):\n"
+"    while True:\n"
+"        răspuns = input(promptul)\n"
+"        if răspuns in {'d', 'mda', 'da'}:\n"
+"            return True\n"
+"        if răspuns in {'n', 'nu', 'nț', 'nici pomeneală'}:\n"
+"            return False\n"
+"        încercări = încercări - 1\n"
+"        if încercări < 0:\n"
+"            raise ValueError('utilizatorul răspunde greșit')\n"
+"        print(atenționare)"
 
 #: ../../tutorial/controlflow.rst:598
 msgid "This function can be called in several ways:"
-msgstr ""
+msgstr "Această funcție poate fi apelată în mai multe moduri:"
 
 #: ../../tutorial/controlflow.rst:600
 msgid ""
 "giving only the mandatory argument: ``ask_ok('Do you really want to "
 "quit?')``"
 msgstr ""
+"precizând numai argumentul obligatoriu: ``cere_permisiunea('Chiar vreți "
+"să ieșiți?')``"
 
 #: ../../tutorial/controlflow.rst:602
 msgid ""
 "giving one of the optional arguments: ``ask_ok('OK to overwrite the "
 "file?', 2)``"
 msgstr ""
+"oferind și unul dintre argumentele opționale: ``cere_permisiunea('De "
+"acord cu suprascrierea fișierului?', 2)``"
 
 #: ../../tutorial/controlflow.rst:604
 msgid ""
 "or even giving all arguments: ``ask_ok('OK to overwrite the file?', 2, "
 "'Come on, only yes or no!')``"
 msgstr ""
+"ori introducând absolut toate argumentele: ``cere_permisiunea('De "
+"acord cu suprascrierea fișierului?', 2, 'Haideți, vă rog, numai da sau "
+"nu!')``"
 
 #: ../../tutorial/controlflow.rst:607
 msgid ""
 "This example also introduces the :keyword:`in` keyword. This tests "
 "whether or not a sequence contains a certain value."
 msgstr ""
+"Exemplul de față introduce și cuvântul-cheie :keyword:`in`. El verifică "
+"dacă o secvență conține sau nu o anumită valoare."
 
 #: ../../tutorial/controlflow.rst:610
 msgid ""
 "The default values are evaluated at the point of function definition in "
 "the *defining* scope, so that ::"
 msgstr ""
+"Valorile prestabilite sunt evaluate chiar acolo unde se definește "
+"funcția în domeniul de valabilitate (de la englezescul *scope*) al "
+"*definiției*, așa că::"
 
 #: ../../tutorial/controlflow.rst:613
 msgid ""
@@ -919,10 +1438,17 @@ msgid ""
 "i = 6\n"
 "f()"
 msgstr ""
+"i = 5\n"
+"\n"
+"def f(arg=i):\n"
+"    print(arg)\n"
+"\n"
+"i = 6\n"
+"f()"
 
 #: ../../tutorial/controlflow.rst:621
 msgid "will print ``5``."
-msgstr ""
+msgstr "va afișa ``5``."
 
 #: ../../tutorial/controlflow.rst:623
 msgid ""
@@ -931,6 +1457,11 @@ msgid ""
 "dictionary, or instances of most classes.  For example, the following "
 "function accumulates the arguments passed to it on subsequent calls::"
 msgstr ""
+"**Avertizare importantă:** Valoarea prestabilită se evaluează o singură "
+"dată. Acest fapt contează atunci când valoarea prestabilită este un "
+"obiect mutabil, precum o listă, un dicționar ori instanțe ale majorității "
+"claselor. De exemplu, funcția următoare pune laolaltă argumentele "
+"transmise ei în apeluri succesive::"
 
 #: ../../tutorial/controlflow.rst:628
 msgid ""
@@ -942,10 +1473,17 @@ msgid ""
 "print(f(2))\n"
 "print(f(3))"
 msgstr ""
+"def f(a, L=[]):\n"
+"    L.append(a)\n"
+"    return L\n"
+"\n"
+"print(f(1))\n"
+"print(f(2))\n"
+"print(f(3))"
 
 #: ../../tutorial/controlflow.rst:636
 msgid "This will print ::"
-msgstr ""
+msgstr "Se va afișa ::"
 
 #: ../../tutorial/controlflow.rst:638
 msgid ""
@@ -953,12 +1491,17 @@ msgid ""
 "[1, 2]\n"
 "[1, 2, 3]"
 msgstr ""
+"[1]\n"
+"[1, 2]\n"
+"[1, 2, 3]"
 
 #: ../../tutorial/controlflow.rst:642
 msgid ""
 "If you don't want the default to be shared between subsequent calls, you "
 "can write the function like this instead::"
 msgstr ""
+"Dacă nu doriți ca valoarea prestabilită să se păstreze între apeluri "
+"succesive, atunci puteți rescrie funcția după cum urmează::"
 
 #: ../../tutorial/controlflow.rst:645
 msgid ""
@@ -968,10 +1511,15 @@ msgid ""
 "    L.append(a)\n"
 "    return L"
 msgstr ""
+"def f(a, L=None):\n"
+"    if L is None:\n"
+"        L = []\n"
+"    L.append(a)\n"
+"    return L"
 
 #: ../../tutorial/controlflow.rst:655
 msgid "Keyword Arguments"
-msgstr ""
+msgstr "Argumentele cuvânt-cheie"
 
 #: ../../tutorial/controlflow.rst:657
 msgid ""
@@ -979,6 +1527,11 @@ msgid ""
 "argument>` of the form ``kwarg=value``.  For instance, the following "
 "function::"
 msgstr ""
+"Funcțiile mai pot fi apelate și folosind :term:`argumente cuvânt-cheie "
+"<keyword argument>` de forma ``arg_cvc=valoare``. De exemplu, funcția "
+"următoare, care face referire la un "
+"`scheci <https://en.wikipedia.org/wiki/Dead_Parrot_sketch>`_ "
+"Monty Python::"
 
 #: ../../tutorial/controlflow.rst:660
 msgid ""
@@ -989,6 +1542,12 @@ msgid ""
 "    print(\"-- Lovely plumage, the\", type)\n"
 "    print(\"-- It's\", state, \"!\")"
 msgstr ""
+"def papagal(voltaj, stare='țeapăn', acțiune='fâl-fâl', \\\n"
+"    tip='Albastrul de Norvegia'):\n"
+"    print(\"-- Papagalul acesta n-are cum să\", acțiune, end=' ')\n"
+"    print(\"dacă băgați\", voltaj, \"de volți în el.\")\n"
+"    print(\"-- Ce mai penaj, \", tip)\n"
+"    print(\"-- Doar că-i\", stare, \"!\")"
 
 #: ../../tutorial/controlflow.rst:666
 msgid ""
@@ -996,6 +1555,9 @@ msgid ""
 "(``state``, ``action``, and ``type``).  This function can be called in "
 "any of the following ways::"
 msgstr ""
+"are un argument obligatoriu (``voltaj``) și trei argumente opționale "
+"(``stare``, ``acțiune`` și ``tip``). Funcția poate fi apelată în oricare "
+"din modurile care urmează::"
 
 #: ../../tutorial/controlflow.rst:670
 msgid ""
@@ -1012,10 +1574,22 @@ msgid ""
 "parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 "
 "keyword"
 msgstr ""
+"papagal(1000)                                         # 1 argument "
+"pozițional\n"
+"papagal(voltaj=1000)                                  # 1 argument "
+"cuvânt-cheie\n"
+"papagal(voltaj=1000000, acțiune='FÂÂÂL-FÂÂÂL')        # 2 argumente "
+"cuvânt-cheie\n"
+"papagal(acțiune='FÂÂÂL-FÂÂÂL', voltaj=1000000)        # 2 argumente "
+"cuvânt-cheie\n"
+"papagal('un milion', 'lipsit de viață', 'sară')       # 3 argumente "
+"poziționale\n"
+"papagal('o mie', stare='pământ de flori')             # 1 pozițional, 1 "
+"cuvânt-cheie"
 
 #: ../../tutorial/controlflow.rst:677
 msgid "but all the following calls would be invalid::"
-msgstr ""
+msgstr "în schimb, următoarele apeluri vor fi invalidate::"
 
 #: ../../tutorial/controlflow.rst:679
 msgid ""
@@ -1025,6 +1599,11 @@ msgid ""
 "parrot(110, voltage=220)     # duplicate value for the same argument\n"
 "parrot(actor='John Cleese')  # unknown keyword argument"
 msgstr ""
+"papagal()                     # lipsește argumentul obligatoriu\n"
+"papagal(voltaj=5.0, 'mort')   # argument care nu e cuvânt-cheie\n"
+"                              # după un argument cuvânt-cheie\n"
+"papagal(110, voltaj=220)      # valoare duplicată a unui argument\n"
+"papagal(actor='John Cleese')  # argument cuvânt-cheie necunoscut"
 
 #: ../../tutorial/controlflow.rst:684
 msgid ""
@@ -1036,6 +1615,14 @@ msgid ""
 "too). No argument may receive a value more than once. Here's an example "
 "that fails due to this restriction::"
 msgstr ""
+"Într-un apel de funcție, argumentele cuvânt-cheie le urmează argumentelor "
+"poziționale. Orice argument cuvânt-cheie trebuie să-i corespundă unuia din "
+"argumentele acceptate de funcție (de exemplu, ``actor`` nu este un "
+"argument valid pentru funcția ``papagal``), ordinea acestor argumente "
+"nefiind importantă. Cerința privește și argumentele neopționale (astfel, "
+"``papagal(voltaj=1000)`` este o exprimare validă). Niciunui argument nu îi "
+"va fi atribuită valoarea de mai multe ori. Iată un exemplu de formulare "
+"neacceptată din cauza acestei restricții::"
 
 #: ../../tutorial/controlflow.rst:692
 msgid ""
@@ -1047,6 +1634,13 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: function() got multiple values for argument 'a'"
 msgstr ""
+">>> def funcție(a):\n"
+"...     pass\n"
+"...\n"
+">>> funcție(0, a=0)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: funcție() got multiple values for argument 'a'"
 
 #: ../../tutorial/controlflow.rst:700
 msgid ""
@@ -1059,6 +1653,15 @@ msgid ""
 "(``*name`` must occur before ``**name``.) For example, if we define a "
 "function like this::"
 msgstr ""
+"Atunci când parametrul formal final este de forma ``**nume``, lui i se "
+"va atribui un dicționar (vezi :ref:`typesmapping`) care să cuprindă "
+"toate argumentele cuvânt-cheie cu excepția celor corespunzând unui "
+"parametru formal. Acest fapt poate fi combinat cu un parametru "
+"formal exprimat ca ``*nume`` (care va fi descris în subsecțiunea "
+"următoare) și căruia i se atribuie un :ref:`tuplu <tut-tuples>` "
+"ce conține toate argumentele poziționale de după lista parametrilor "
+"formali (``*nume`` trebuie să apară înaintea lui ``**nume``.) De "
+"exemplu, să definim o funcție astfel::"
 
 #: ../../tutorial/controlflow.rst:708
 msgid ""
@@ -1071,10 +1674,18 @@ msgid ""
 "    for kw in keywords:\n"
 "        print(kw, \":\", keywords[kw])"
 msgstr ""
+"def magazin_de_brânzeturi(fel, *argumente, **cuvinte_cheie):\n"
+"    print(\"-- Aveți cumva\", fel, \"?\")\n"
+"    print(\"-- Scuze, am rămas fără\", fel)\n"
+"    for arg in argumente:\n"
+"        print(arg)\n"
+"    print(\"-\" * 40)\n"
+"    for cvc in cuvinte_cheie:\n"
+"        print(cvc, \":\", cuvinte_cheie[cvc])"
 
 #: ../../tutorial/controlflow.rst:717
 msgid "It could be called like this::"
-msgstr ""
+msgstr "Funcția poate fi apelată astfel::"
 
 #: ../../tutorial/controlflow.rst:719
 msgid ""
@@ -1084,10 +1695,15 @@ msgid ""
 "           client=\"John Cleese\",\n"
 "           sketch=\"Cheese Shop Sketch\")"
 msgstr ""
+"magazin_de_brânzeturi(\"Limburger\", \"E tare apoasă, domnule.\",\n"
+"                      \"Realmente, e tare, TARE apoasă, domnule.\",\n"
+"                      proprietar=\"Michael Palin\",\n"
+"                      client=\"John Cleese\",\n"
+"                      scheci=\"Cheese Shop Sketch\")"
 
 #: ../../tutorial/controlflow.rst:725
 msgid "and of course it would print:"
-msgstr ""
+msgstr "și, firește, va afișa:"
 
 #: ../../tutorial/controlflow.rst:727
 msgid ""
@@ -1100,6 +1716,14 @@ msgid ""
 "client : John Cleese\n"
 "sketch : Cheese Shop Sketch"
 msgstr ""
+"-- Aveți cumva Limburger ?\n"
+"-- Scuze, am rămas fără Limburger\n"
+"E tare apoasă, domnule.\n"
+"Realmente, e tare, TARE apoasă, domnule.\n"
+"----------------------------------------\n"
+"proprietar : Michael Palin\n"
+"client : John Cleese\n"
+"scheci : Cheese Shop Sketch"
 
 #: ../../tutorial/controlflow.rst:738
 msgid ""
@@ -1107,10 +1731,13 @@ msgid ""
 "guaranteed to match the order in which they were provided in the function"
 " call."
 msgstr ""
+"Remarcați că ordinea în care argumentele cuvânt-cheie sunt afișate este "
+"garantată ca urmând ordinea în care aceste argumente cuvânt-cheie au fost "
+"inserate în apelul funcției."
 
 #: ../../tutorial/controlflow.rst:742
 msgid "Special parameters"
-msgstr ""
+msgstr "Parametri speciali"
 
 #: ../../tutorial/controlflow.rst:744
 msgid ""
@@ -1120,10 +1747,17 @@ msgid ""
 "developer need only look at the function definition to determine if items"
 " are passed by position, by position or keyword, or by keyword."
 msgstr ""
+"Tipic, argumentele i se transmit unei funcții în Python fie prin poziție "
+"fie prin cuvinte-cheie date în mod explicit. Din motive de lizibilitate "
+"și performanță, modurile de transmitere a argumentelor au fost restrânse "
+"astfel încât unui dezvoltator de cod să-i fie suficient să se uite la "
+"definiția unei funcții pentru a ști dacă un argument trebuie transmis "
+"numai prin poziție, prin poziție sau prin cuvânt-cheie ori numai prin "
+"cuvânt-cheie."
 
 #: ../../tutorial/controlflow.rst:750
 msgid "A function definition may look like:"
-msgstr ""
+msgstr "Definiția unei funcții poate arăta ca aici:"
 
 #: ../../tutorial/controlflow.rst:752
 msgid ""
@@ -1134,6 +1768,14 @@ msgid ""
 "        |                                - Keyword only\n"
 "         -- Positional only"
 msgstr ""
+"def f(poz1, poz2, /, poz_sau_cvc, *, cvc1, cvc2):\n"
+"      ----------     -----------     ----------\n"
+"        |             |                  |\n"
+"        |         Pozițional             |\n"
+"        |            sau                 |\n"
+"        |         cuvânt-cheie           |\n"
+"        |                                - Numai cuvânt-cheie\n"
+"         -- Numai pozițional"
 
 #: ../../tutorial/controlflow.rst:761
 msgid ""
@@ -1142,20 +1784,28 @@ msgid ""
 "positional-only, positional-or-keyword, and keyword-only. Keyword "
 "parameters are also referred to as named parameters."
 msgstr ""
+"unde ``/`` și ``*`` sunt opționale. Dacă le folosiți, atunci aceste "
+"simboluri vor indica tipul de parametru prin chiar modul cum le sunt "
+"transmise argumentele funcției: numai pozițional, pozițional-sau-"
+"cuvânt-cheie ori numai cuvânt-cheie. Despre parametrii cuvânt-cheie "
+"spunem că sunt și parametri-cu-nume."
 
 #: ../../tutorial/controlflow.rst:768
 msgid "Positional-or-Keyword Arguments"
-msgstr ""
+msgstr "Argumente pozițional-sau-cuvânt-cheie"
 
 #: ../../tutorial/controlflow.rst:770
 msgid ""
 "If ``/`` and ``*`` are not present in the function definition, arguments "
 "may be passed to a function by position or by keyword."
 msgstr ""
+"Dacă nici ``/``, nici ``*`` nu sunt prezente în definiția funcției, "
+"atunci argumentele îi pot fi transmise acesteia atât prin poziție cât și "
+"prin cuvinte-cheie."
 
 #: ../../tutorial/controlflow.rst:775
 msgid "Positional-Only Parameters"
-msgstr ""
+msgstr "Parametri numai poziționali"
 
 #: ../../tutorial/controlflow.rst:777
 msgid ""
@@ -1167,16 +1817,26 @@ msgid ""
 "the rest of the parameters. If there is no ``/`` in the function "
 "definition, there are no positional-only parameters."
 msgstr ""
+"Intrând puțin în detalii, să observăm că este posibil să marcăm anumiți "
+"parametri cu *numai pozițional*. Atunci când aceștia sunt *numai "
+"poziționali*, ordinea parametrilor contează și parametrii nu pot fi "
+"transmiși prin cuvinte-cheie. Parametrii numai poziționali sunt plasați "
+"înaintea lui ``/`` (bara oblică). ``/``-ul este folosit pentru a separa "
+"din punct de vedere logic parametrii numai poziționali de restul "
+"parametrilor. Dacă nu există niciun ``/`` în definiția funcției, atunci "
+"nu există nici parametri numai poziționali ai acesteia."
 
 #: ../../tutorial/controlflow.rst:785
 msgid ""
 "Parameters following the ``/`` may be *positional-or-keyword* or "
 "*keyword-only*."
 msgstr ""
+"Parametrii care îi urmează lui ``/`` pot fi *poziționali-sau-cuvinte-"
+"cheie* ori *numai cuvinte-cheie*."
 
 #: ../../tutorial/controlflow.rst:789
 msgid "Keyword-Only Arguments"
-msgstr ""
+msgstr "Argumente numai cuvinte-cheie"
 
 #: ../../tutorial/controlflow.rst:791
 msgid ""
@@ -1184,16 +1844,22 @@ msgid ""
 "passed by keyword argument, place an ``*`` in the arguments list just "
 "before the first *keyword-only* parameter."
 msgstr ""
+"Ca să marcăm parametrii cu *numai cuvânt-cheie*, adică să indicăm că "
+"acești parametri trebuie transmiși prin argumente cuvinte-cheie, vom "
+"plasa un ``*`` în lista argumentelor, chiar înainte de primul "
+"parametru *numai cuvânt-cheie*."
 
 #: ../../tutorial/controlflow.rst:797
 msgid "Function Examples"
-msgstr ""
+msgstr "Exemple de funcții"
 
 #: ../../tutorial/controlflow.rst:799
 msgid ""
 "Consider the following example function definitions paying close "
 "attention to the markers ``/`` and ``*``::"
 msgstr ""
+"Să luăm în considerare următoarele definiții de funcții demonstrative, "
+"cu grijă la marcajele ``/`` și ``*``::"
 
 #: ../../tutorial/controlflow.rst:802
 msgid ""
@@ -1209,6 +1875,17 @@ msgid ""
 ">>> def combined_example(pos_only, /, standard, *, kwd_only):\n"
 "...     print(pos_only, standard, kwd_only)"
 msgstr ""
+">>> def argumente_uzuale(arg):\n"
+"...     print(arg)\n"
+"...\n"
+">>> def argumente_numai_poziționale(arg, /):\n"
+"...     print(arg)\n"
+"...\n"
+">>> def argumente_numai_cuvinte_cheie(*, arg):\n"
+"...     print(arg)\n"
+"...\n"
+">>> def exemplu_de_combinații(numai_poz, /, tipice, *, numai_cvc):\n"
+"...     print(numai_poz, tipice, numai_cvc)"
 
 #: ../../tutorial/controlflow.rst:815
 msgid ""
@@ -1216,6 +1893,10 @@ msgid ""
 "places no restrictions on the calling convention and arguments may be "
 "passed by position or keyword::"
 msgstr ""
+"Prima definiție de funcție, ``argumente_uzuale``, cu forma cea mai des "
+"întâlnită, nu impune nicio restricție asupra felului în care o apelăm "
+"pe aceasta iar argumentele funcției pot fi transmise atât prin poziție "
+"cât și prin cuvânte-cheie::"
 
 #: ../../tutorial/controlflow.rst:819
 msgid ""
@@ -1225,12 +1906,20 @@ msgid ""
 ">>> standard_arg(arg=2)\n"
 "2"
 msgstr ""
+">>> argumente_uzuale(2)\n"
+"2\n"
+"\n"
+">>> argumente_uzuale(arg=2)\n"
+"2"
 
 #: ../../tutorial/controlflow.rst:825
 msgid ""
 "The second function ``pos_only_arg`` is restricted to only use positional"
 " parameters as there is a ``/`` in the function definition::"
 msgstr ""
+"Cea de-a doua funcție, ``argumente_numai_poziționale``, este restrânsă la "
+"utilizarea doar a parametrilor numai poziționali deoarece în definiția "
+"funcției apare un ``/``::"
 
 #: ../../tutorial/controlflow.rst:828
 msgid ""
@@ -1243,12 +1932,23 @@ msgid ""
 "TypeError: pos_only_arg() got some positional-only arguments passed as "
 "keyword arguments: 'arg'"
 msgstr ""
+">>> argumente_numai_poziționale(1)\n"
+"1\n"
+"\n"
+">>> argumente_numai_poziționale(arg=1)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: argumente_numai_poziționale() got some positional-only "
+"arguments passed as keyword arguments: 'arg'"
 
 #: ../../tutorial/controlflow.rst:836
 msgid ""
 "The third function ``kwd_only_arg`` only allows keyword arguments as "
 "indicated by a ``*`` in the function definition::"
 msgstr ""
+"A treia funcție, ``argumente_numai_cuvinte_cheie``, permite doar "
+"argumente cuvinte-cheie, după cum ne indică acel ``*`` din definiția "
+"funcției::"
 
 #: ../../tutorial/controlflow.rst:839
 msgid ""
@@ -1260,12 +1960,21 @@ msgid ""
 ">>> kwd_only_arg(arg=3)\n"
 "3"
 msgstr ""
+">>> argumente_numai_cuvinte_cheie(3)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: argumente_numai_cuvinte_cheie() takes 0 positional arguments but 1 was given\n"
+"\n"
+">>> argumente_numai_cuvinte_cheie(arg=3)\n"
+"3"
 
 #: ../../tutorial/controlflow.rst:847
 msgid ""
 "And the last uses all three calling conventions in the same function "
 "definition::"
 msgstr ""
+"Iar ultimul exemplu întrebuințează toate cele trei convenții de apel "
+"în aceeași definiție de funcție::"
 
 #: ../../tutorial/controlflow.rst:850
 msgid ""
@@ -1287,6 +1996,23 @@ msgid ""
 "TypeError: combined_example() got some positional-only arguments passed "
 "as keyword arguments: 'pos_only'"
 msgstr ""
+">>> exemplu_de_combinații(1, 2, 3)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: exemplu_de_combinații() takes 2 positional arguments but 3 were "
+"given\n"
+"\n"
+">>> exemplu_de_combinații(1, 2, numai_cvc=3)\n"
+"1 2 3\n"
+"\n"
+">>> exemplu_de_combinații(1, tipice=2, numai_cvc=3)\n"
+"1 2 3\n"
+"\n"
+">>> exemplu_de_combinații(numai_poz=1, tipice=2, numai_cvc=3)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: exemplu_de_combinații() got some positional-only arguments passed "
+"as keyword arguments: 'pos_only'"
 
 #: ../../tutorial/controlflow.rst:867
 msgid ""
@@ -1294,18 +2020,27 @@ msgid ""
 "collision between the positional argument ``name``  and ``**kwds`` which "
 "has ``name`` as a key::"
 msgstr ""
+"În sfârșit, să considerăm o definiție de funcție care poate provoca o "
+"coliziune de nume între argumentul pozițional ``nume`` și argumentul "
+"``**cuvinte-cheie`` atunci când acesta din urmă va include ``nume`` "
+"pe post de cheie::"
 
 #: ../../tutorial/controlflow.rst:869
 msgid ""
 "def foo(name, **kwds):\n"
 "    return 'name' in kwds"
 msgstr ""
+"def foo(nume, **cuvinte_cheie):\n"
+"    return 'nume' in cuvinte_cheie"
 
 #: ../../tutorial/controlflow.rst:872
 msgid ""
 "There is no possible call that will make it return ``True`` as the "
 "keyword ``'name'`` will always bind to the first parameter. For example::"
 msgstr ""
+"Nu putem realiza niciun apel al funcției care să întoarcă ``True`` "
+"deoarece cuvântul-cheie ``'nume'`` se va lega întotdeauna la primul "
+"parametru. De exemplu::"
 
 #: ../../tutorial/controlflow.rst:875
 #, python-brace-format
@@ -1316,6 +2051,11 @@ msgid ""
 "TypeError: foo() got multiple values for argument 'name'\n"
 ">>>"
 msgstr ""
+">>> foo(1, **{'nume': 2})\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: foo() got multiple values for argument 'nume'\n"
+">>>"
 
 #: ../../tutorial/controlflow.rst:881
 msgid ""
@@ -1323,6 +2063,10 @@ msgid ""
 "allows ``name`` as a positional argument and ``'name'`` as a key in the "
 "keyword arguments::"
 msgstr ""
+"Însă, folosind ``/`` (plasat după argumentele numai poziționale), un "
+"asemenea apel este posibil deoarece acum putem distinge între ``nume`` "
+"ca parametru numai pozițional și cheia ``'nume'`` a unui argument cuvânt-"
+"cheie::"
 
 #: ../../tutorial/controlflow.rst:883
 #, python-brace-format
@@ -1333,30 +2077,39 @@ msgid ""
 ">>> foo(1, **{'name': 2})\n"
 "True"
 msgstr ""
+">>> def foo(nume, /, **cuvinte_cheie):\n"
+"...     return 'nume' in cuvinte_cheie\n"
+"...\n"
+">>> foo(1, **{'nume': 2})\n"
+"True"
 
 #: ../../tutorial/controlflow.rst:889
 msgid ""
 "In other words, the names of positional-only parameters can be used in "
 "``**kwds`` without ambiguity."
 msgstr ""
+"Altfel spus, numele parametrilor numai poziționali vor putea fi folosite "
+"în ``**cuvinte_cheie`` fără nicio ambiguitate."
 
 #: ../../tutorial/controlflow.rst:894
 msgid "Recap"
-msgstr ""
+msgstr "De reținut"
 
 #: ../../tutorial/controlflow.rst:896
 msgid ""
 "The use case will determine which parameters to use in the function "
 "definition::"
 msgstr ""
+"Modul de întrebuințare determină ce parametri să folosim la definiția "
+"unei funcții::"
 
 #: ../../tutorial/controlflow.rst:898
 msgid "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):"
-msgstr ""
+msgstr "def f(poz1, poz2, /, poz_sau_cvc, *, cvc1, cvc2):"
 
 #: ../../tutorial/controlflow.rst:900
 msgid "As guidance:"
-msgstr ""
+msgstr "Recomandări:"
 
 #: ../../tutorial/controlflow.rst:902
 msgid ""
@@ -1366,6 +2119,12 @@ msgid ""
 "function is called or if you need to take some positional parameters and "
 "arbitrary keywords."
 msgstr ""
+"Folosiți argumente numai poziționale dacă doriți ca numele parametrilor "
+"să nu le fie accesibile utilizatorului. Această întrebuințare ne este de "
+"folos atunci când numele parametrilor nu au nicio semnificație pentru "
+"program, atunci când dorim să impunem o anumită ordine a argumentelor la "
+"apelul funcției sau atunci când este nevoie să utilizăm câțiva parametri "
+"numai poziționali alături de niște cuvinte cheie arbitrare."
 
 #: ../../tutorial/controlflow.rst:907
 msgid ""
@@ -1373,16 +2132,23 @@ msgid ""
 "more understandable by being explicit with names or you want to prevent "
 "users relying on the position of the argument being passed."
 msgstr ""
+"Folosiți argumente numai cuvinte-cheie atunci când numele au semnificație "
+"pentru program iar definiția funcției se va înțelege mai ușor dacă "
+"conține nume ori atunci când doriți să-i împiedicați pe utilizatori "
+"să se bazeze pe pozițiile argumentelor ce trebuie transmise."
 
 #: ../../tutorial/controlflow.rst:910
 msgid ""
 "For an API, use positional-only to prevent breaking API changes if the "
 "parameter's name is modified in the future."
 msgstr ""
+"În cazul unui API, folosiți argumente numai poziționale pentru a "
+"evita funcționarea defectuoasă a viitoarelor transformări ale API-ului "
+"atunci când numele vreunui parametru va fi modificat."
 
 #: ../../tutorial/controlflow.rst:916
 msgid "Arbitrary Argument Lists"
-msgstr ""
+msgstr "Liste arbitrare de argumente"
 
 #: ../../tutorial/controlflow.rst:921
 msgid ""
@@ -1391,12 +2157,18 @@ msgid ""
 "will be wrapped up in a tuple (see :ref:`tut-tuples`).  Before the "
 "variable number of arguments, zero or more normal arguments may occur. ::"
 msgstr ""
+"La final, cea mai puțin utilizată variantă de definiție este cea în "
+"care precizăm că o funcție poate fi apelată cu un număr variabil de "
+"argumente. Aceste argumente vor fi încadrate într-un tuplu (vezi "
+":ref:`tut-tuples`)."
 
 #: ../../tutorial/controlflow.rst:926
 msgid ""
 "def write_multiple_items(file, separator, *args):\n"
 "    file.write(separator.join(args))"
 msgstr ""
+"def înscrie_mai_mulți_itemi(fișier, despărțitor, *argumente):\n"
+"    fișier.write(despărțitor.join(argumente))"
 
 #: ../../tutorial/controlflow.rst:930
 msgid ""
@@ -1406,6 +2178,12 @@ msgid ""
 "``*args`` parameter are 'keyword-only' arguments, meaning that they can "
 "only be used as keywords rather than positional arguments. ::"
 msgstr ""
+"După cum e de așteptat, aceste argumente *variadice* vor fi așezate la "
+"sfârșitul listei de parametri formali, dat fiind că ele vor cuprinde "
+"tot restul datelor de intrare care trebuie transmise funcției. Acei "
+"parametri formali care sunt poziționați după parametrul ``*argumente`` "
+"sunt argumente 'numai cuvânt-cheie', ceea ce înseamnă că vor putea fi "
+"folosiți doar pe post de cuvinte-cheie și nu ca argumente poziționale. ::"
 
 #: ../../tutorial/controlflow.rst:936
 msgid ""
@@ -1417,10 +2195,17 @@ msgid ""
 ">>> concat(\"earth\", \"mars\", \"venus\", sep=\".\")\n"
 "'earth.mars.venus'"
 msgstr ""
+">>> def concatenează(*argumente, despărțitor=\"/\"):\n"
+"...     return despărțitor.join(argumente)\n"
+"...\n"
+">>> concatenează(\"Pământ\", \"Marte\", \"Venus\")\n"
+"'Pământ/Marte/Venus'\n"
+">>> concatenează(\"Pământ\", \"Marte\", \"Venus\", despărțitor=\".\")\n"
+"'Pământ.Marte.Venus'"
 
 #: ../../tutorial/controlflow.rst:947
 msgid "Unpacking Argument Lists"
-msgstr ""
+msgstr "Despachetarea listelor de argumente"
 
 #: ../../tutorial/controlflow.rst:949
 msgid ""
@@ -1431,6 +2216,14 @@ msgid ""
 " separately, write the function call with the  ``*``\\ -operator to "
 "unpack the arguments out of a list or tuple::"
 msgstr ""
+"Situația inversă va fi întâlnită atunci când argumentele care ne "
+"interesează ne vor fi date sub formă fie de listă, fie de tuplu și "
+"va trebui să le despachetăm pentru a fi folosite într-un apel de "
+"funcție care necesită argumente poziționale introduse separat. De "
+"exemplu, funcția predefinită :func:`range` necesită argumente *start* "
+"și *stop* transmise separat. Dacă acestea nu sunt disponibile separat, "
+"atunci vom înscrie în apelul funcției operatorul ``*`` pentru a "
+"despacheta argumentele fie din listă fie din tuplu::"
 
 #: ../../tutorial/controlflow.rst:956
 msgid ""
@@ -1441,12 +2234,20 @@ msgid ""
 "list\n"
 "[3, 4, 5]"
 msgstr ""
+">>> list(range(3, 6))            # apel tipic, cu argumente date separat\n"
+"[3, 4, 5]\n"
+">>> argumente = [3, 6]\n"
+">>> list(range(*argumente))      # apel cu argumente despachetate dintr-o "
+"listă\n"
+"[3, 4, 5]"
 
 #: ../../tutorial/controlflow.rst:965
 msgid ""
 "In the same fashion, dictionaries can deliver keyword arguments with the "
 "``**``\\ -operator::"
 msgstr ""
+"La fel, dicționarele de date pot transmite argumente cuvinte-cheie cu "
+"ajutorul operatorului ``**``::"
 
 #: ../../tutorial/controlflow.rst:968
 #, python-brace-format
@@ -1462,10 +2263,20 @@ msgid ""
 "-- This parrot wouldn't VOOM if you put four million volts through it. "
 "E's bleedin' demised !"
 msgstr ""
+">>> def papagal(voltaj, stare='țeapăn', acțiune='fâl-fâl'):\n"
+"...     print(\"-- Papagalul acesta n-are cum să\", acțiune, end=' ')\n"
+"...     print(\"dacă băgați\", voltaj, \"de volți în el.\", end=' ')\n"
+"...     print(\"Zău că-i\", stare, \"!\")\n"
+"...\n"
+">>> d = {\"voltaj\": \"patru milioane\", \"stare\": \"al naibii de dus\", "
+"\"acțiune\": \"FÂL-FÂL\"}\n"
+">>> papagal(**d)\n"
+"-- Papagalul acesta n-are cum să FÂL-FÂL dacă băgați patru milioane de "
+"volți în el. Zău că-i al naibii de dus !"
 
 #: ../../tutorial/controlflow.rst:981
 msgid "Lambda Expressions"
-msgstr ""
+msgstr "Expresii lambda"
 
 #: ../../tutorial/controlflow.rst:983
 msgid ""
@@ -1477,6 +2288,15 @@ msgid ""
 "definition.  Like nested function definitions, lambda functions can "
 "reference variables from the containing scope::"
 msgstr ""
+"Funcții anonime, cu cod de dimensiuni reduse, pot fi create folosind "
+"cuvântul-cheie :keyword:`lambda`. Funcția care urmează va returna suma "
+"celor două argumente ale ei: ``lambda a, b: a+b``. Funcțiile lambda pot "
+"fi utilizate oriunde se cer obiecte funcție. Ele sunt restrânse dpdv. "
+"sintactic la o singură expresie. Dpdv. semantic, ele sunt doar zahăr "
+"sintactic pudrat peste o definiție obișnuită de funcție. Aidoma "
+"definițiilor imbricate de funcții, funcțiile lambda pot face referire "
+"la variabile dintr-un domeniu de valabilitate care include definițiile "
+"funcțiilor lambda în cauză::"
 
 #: ../../tutorial/controlflow.rst:991
 msgid ""
@@ -1489,32 +2309,53 @@ msgid ""
 ">>> f(1)\n"
 "43"
 msgstr ""
+">>> def construiește_un_incrementor(n):\n"
+"...     return lambda x: x + n\n"
+"...\n"
+">>> f = construiește_un_incrementor(42)\n"
+">>> f(0)\n"
+"42\n"
+">>> f(1)\n"
+"43"
 
 #: ../../tutorial/controlflow.rst:1000
 msgid ""
 "The above example uses a lambda expression to return a function.  Another"
-" use is to pass a small function as an argument::"
+" use is to pass a small function as an argument.  For instance, "
+":meth:`list.sort` takes a sorting key function *key* which can be a "
+"lambda function::"
 msgstr ""
+"Exemplul de deasupra întrebuințează o expresie lambda pentru a returna o "
+"funcție. Altă utilizare este dată de transmiterea unei funcții cu cod "
+"redus pe post de argument. Astfel, :meth:`list.sort` folosește ca valoare "
+"a cheii *key* o funcție de sortare iar aceasta poate fi inclusiv o funcție "
+"lambda::"
 
-#: ../../tutorial/controlflow.rst:1003
+#: ../../tutorial/controlflow.rst:1004
 msgid ""
 ">>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]\n"
 ">>> pairs.sort(key=lambda pair: pair[1])\n"
 ">>> pairs\n"
 "[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]"
 msgstr ""
+">>> perechi = [(1, 'unu'), (2, 'doi'), (3, 'trei'), (4, 'patru')]\n"
+">>> perechi.sort(key=lambda pereche: pereche[1])\n"
+">>> perechi\n"
+"[(2, 'doi'), (4, 'patru'), (3, 'trei'), (1, 'unu')]"
 
-#: ../../tutorial/controlflow.rst:1012
+#: ../../tutorial/controlflow.rst:1013
 msgid "Documentation Strings"
-msgstr ""
+msgstr "Șiruri de documentație"
 
-#: ../../tutorial/controlflow.rst:1019
+#: ../../tutorial/controlflow.rst:1020
 msgid ""
 "Here are some conventions about the content and formatting of "
 "documentation strings."
 msgstr ""
+"Iată câteva convenții privind conținutul și formatul șirurilor "
+"de documentație (în englezește, ca jargon, *docstring*)."
 
-#: ../../tutorial/controlflow.rst:1022
+#: ../../tutorial/controlflow.rst:1023
 msgid ""
 "The first line should always be a short, concise summary of the object's "
 "purpose.  For brevity, it should not explicitly state the object's name "
@@ -1522,16 +2363,29 @@ msgid ""
 "happens to be a verb describing a function's operation).  This line "
 "should begin with a capital letter and end with a period."
 msgstr ""
+"Primul rând trebuie să fie întotdeauna un sumar restrâns, concis al "
+"scopului pe care îl are obiectul în cauză. Pentru concizie, el nu "
+"trebuie să menționeze nici numele și nici tipul obiectului, dat "
+"fiind că acestea vor putea fi aflate prin alte mijloace (excepție face "
+"cazul când numele este chiar verbul care descrie modul de operare al "
+"funcției). Ar fi bine ca acest rând să înceapă cu o majusculă și să se "
+"încheie cu punct."
 
-#: ../../tutorial/controlflow.rst:1028
+#: ../../tutorial/controlflow.rst:1029
 msgid ""
 "If there are more lines in the documentation string, the second line "
 "should be blank, visually separating the summary from the rest of the "
 "description.  The following lines should be one or more paragraphs "
 "describing the object's calling conventions, its side effects, etc."
 msgstr ""
+"Dacă șirul de documentație conține mai multe rânduri, atunci cel de-al "
+"doilea rând este bine să fie gol, separând vizual sumarul de restul "
+"descrierii. Rândurile care urmează, în șirul de documentație, ar "
+"trebui grupate într-unul sau mai multe paragrafe referitoare la "
+"convențiile de apel ale obiectului, la diversele complicații date de "
+"utilizarea sa șamd."
 
-#: ../../tutorial/controlflow.rst:1033
+#: ../../tutorial/controlflow.rst:1034
 msgid ""
 "The Python parser does not strip indentation from multi-line string "
 "literals in Python, so tools that process documentation have to strip "
@@ -1546,12 +2400,29 @@ msgid ""
 "stripped.  Equivalence of whitespace should be tested after expansion of "
 "tabs (to 8 spaces, normally)."
 msgstr ""
+"Parserul Python-ului nu elimină indentația dintr-o dată literală de tip "
+"șir de caractere care se întinde pe mai multe rânduri de program Python, "
+"așa că uneltele informatice care vor procesa documentația trebuie să "
+"elimine ele-însele indentația, dacă acest lucru este dorit. Eliminarea "
+"se pregătește folosind următoarea convenție. Primul rând care nu este "
+"gol *de după* primul rând al datei literale va determina lățimea "
+"indentației pentru întregul șir de documentație. (Nu putem întrebuința "
+"în această privință primul rând deoarece el este adiacent, în general, "
+"ghilimelor din deschiderea șirului astfel că indentația acestui rând "
+"nu se observă în cuprinsul șirului literal.) Un spațiu gol "
+"\"echivalent\" cu lățimea acestei indentații va fi eliminat de la "
+"începutul tuturor rândurilor datei literale. Rânduri care să fie "
+"indentate cu o indentație mai scurtă nu ar trebui să existe în șirul de "
+"documentație, dar dacă există, atunci întregul spațiu gol de la "
+"începutul lor este bine să fie eliminat. Lățimea spațiului gol "
+"trebuie testată folosind expansiunea tabulatorului (de 8 spații, în mod "
+"normal)."
 
-#: ../../tutorial/controlflow.rst:1045
+#: ../../tutorial/controlflow.rst:1046
 msgid "Here is an example of a multi-line docstring::"
-msgstr ""
+msgstr "Iată un exemplu de docstring pe mai multe rânduri::"
 
-#: ../../tutorial/controlflow.rst:1047
+#: ../../tutorial/controlflow.rst:1048
 msgid ""
 ">>> def my_function():\n"
 "...     \"\"\"Do nothing, but document it.\n"
@@ -1563,21 +2434,36 @@ msgid ""
 ">>> print(my_function.__doc__)\n"
 "Do nothing, but document it.\n"
 "\n"
-"    No, really, it doesn't do anything."
+"No, really, it doesn't do anything."
 msgstr ""
+">>> def funcția_mea():\n"
+"...     \"\"\"Nu face nimica, dar precizează asta.\n"
+"...\n"
+"...     Zău, realmente, nu face nimica.\n"
+"...     \"\"\"\n"
+"...     pass\n"
+"...\n"
+">>> print(funcția_mea.__doc__)\n"
+"Nu face nimica, dar precizează asta.\n"
+"\n"
+"Zău, realmente, nu face nimica."
 
-#: ../../tutorial/controlflow.rst:1063
+#: ../../tutorial/controlflow.rst:1064
 msgid "Function Annotations"
-msgstr ""
+msgstr "Adnotarea funcțiilor"
 
-#: ../../tutorial/controlflow.rst:1071
+#: ../../tutorial/controlflow.rst:1072
 msgid ""
 ":ref:`Function annotations <function>` are completely optional metadata "
 "information about the types used by user-defined functions (see "
 ":pep:`3107` and :pep:`484` for more information)."
 msgstr ""
+":ref:`Adnotarea funcțiilor <function>` reprezintă informația opțională, "
+"de meta-date, care se referă la tipurile datelor întrebuințate de către "
+"funcțiile definite de utilizator (vezi :pep:`3107` și :pep:`484` pentru "
+"mai multe detalii)."
 
-#: ../../tutorial/controlflow.rst:1075
+#: ../../tutorial/controlflow.rst:1076
 msgid ""
 ":term:`Annotations <function annotation>` are stored in the "
 ":attr:`!__annotations__` attribute of the function as a dictionary and "
@@ -1589,8 +2475,18 @@ msgid ""
 "statement.  The following example has a required argument, an optional "
 "argument, and the return value annotated::"
 msgstr ""
+":term:`Adnotările <function annotation>` sunt memorate în atributul "
+":attr:`!__annotations__` al funcției sub formă de dicționar de date și "
+"nu au niciun efect asupra celorlalte componente ale funcției. "
+"Adnotările parametrilor se marchează prin două puncte așezate după numele "
+"parametrului, semnul de punctuație fiind urmat de o expresie a cărei "
+"evaluare va da valoarea adnotării. Adnotarea mărimilor returnate de "
+"funcție se definește prin ansamblul dat de constanta literală ``->`` "
+"urmată de o expresie de evaluat, ansamblu ce va fi poziționat între lista "
+"parametrilor funcției și semnul de punctuație două puncte ce denotă "
+"finalul instrucțiunii :keyword:`def`."
 
-#: ../../tutorial/controlflow.rst:1084
+#: ../../tutorial/controlflow.rst:1085
 #, python-brace-format
 msgid ""
 ">>> def f(ham: str, eggs: str = 'eggs') -> str:\n"
@@ -1604,12 +2500,22 @@ msgid ""
 "Arguments: spam eggs\n"
 "'spam and eggs'"
 msgstr ""
+">>> def f(șuncă: str, ouă: str = 'ouă') -> str:\n"
+"...     print(\"Adnotări:\", f.__annotations__)\n"
+"...     print(\"Argumente:\", șuncă, ouă)\n"
+"...     return șuncă + ' și ' + ouă\n"
+"...\n"
+">>> f('carne presată')\n"
+"Adnotări: {'șuncă': <class 'str'>, 'return': <class 'str'>, 'ouă': "
+"<class 'str'>}\n"
+"Argumente: carne presată ouă\n"
+"'carne presată și ouă'"
 
-#: ../../tutorial/controlflow.rst:1097
+#: ../../tutorial/controlflow.rst:1098
 msgid "Intermezzo: Coding Style"
-msgstr ""
+msgstr "Intermezzo: stilul în care scriem cod"
 
-#: ../../tutorial/controlflow.rst:1102
+#: ../../tutorial/controlflow.rst:1103
 msgid ""
 "Now that you are about to write longer, more complex pieces of Python, it"
 " is a good time to talk about *coding style*.  Most languages can be "
@@ -1618,57 +2524,81 @@ msgid ""
 "always a good idea, and adopting a nice coding style helps tremendously "
 "for that."
 msgstr ""
+"Acum, când puteți începe să scrieți fragmente mai lungi și mai complexe "
+"de programe în Python, este momentul potrivit să discutăm despre *stilul "
+"de scris cod*. Majoritatea limbajelor permite redactarea (ori, mai pe "
+"scurt, *formatarea*) în stiluri diferite; unele sunt mai lizibile ca "
+"altele. A ușura citirea de către alții a codului dumneavoastră este "
+"întotdeauna o idee bună, iar adoptarea unui stil de scriere prezentabil "
+"se dovedește de mare ajutor în acest scop."
 
-#: ../../tutorial/controlflow.rst:1108
+#: ../../tutorial/controlflow.rst:1109
 msgid ""
 "For Python, :pep:`8` has emerged as the style guide that most projects "
 "adhere to; it promotes a very readable and eye-pleasing coding style.  "
 "Every Python developer should read it at some point; here are the most "
 "important points extracted for you:"
 msgstr ""
+"În cazul Python-ului, :pep:`8` s-a impus ca ghidul stilistic la "
+"care a aderat majoritatea proiectelor; acesta promovează un stil de "
+"scriere a codului ușor citibil și plăcut ochiului. Orice programator "
+"în Python ar trebui să îl citească la un moment dat; iată un extras "
+"al celor mai importante elemente:"
 
-#: ../../tutorial/controlflow.rst:1113
+#: ../../tutorial/controlflow.rst:1114
 msgid "Use 4-space indentation, and no tabs."
-msgstr ""
+msgstr "Folosiți indentări de 4 spații goale, nu apelați la tabulator."
 
-#: ../../tutorial/controlflow.rst:1115
+#: ../../tutorial/controlflow.rst:1116
 msgid ""
 "4 spaces are a good compromise between small indentation (allows greater "
 "nesting depth) and large indentation (easier to read).  Tabs introduce "
 "confusion, and are best left out."
 msgstr ""
+"4 spații goale constituie un compromis bun între indentarea îngustă (care "
+"permite imbricarea pe mai multe niveluri) și indentarea lată (mai ușor de "
+"citit)."
 
-#: ../../tutorial/controlflow.rst:1119
+#: ../../tutorial/controlflow.rst:1120
 msgid "Wrap lines so that they don't exceed 79 characters."
-msgstr ""
+msgstr "Desfășurați rândurile de cod astfel încât ele să nu depășească 79 "
+"de caractere."
 
-#: ../../tutorial/controlflow.rst:1121
+#: ../../tutorial/controlflow.rst:1122
 msgid ""
 "This helps users with small displays and makes it possible to have "
 "several code files side-by-side on larger displays."
 msgstr ""
+"Aceasta le servește utilizatorilor cu terminale de dimensiuni mici și "
+"permite așezarea unul lângă celălalt a mai multor fișiere cu cod pe "
+"un ecran mai lat."
 
-#: ../../tutorial/controlflow.rst:1124
+#: ../../tutorial/controlflow.rst:1125
 msgid ""
 "Use blank lines to separate functions and classes, and larger blocks of "
 "code inside functions."
 msgstr ""
+"Folosiți rânduri goale pentru a separa funcțiile și clasele, precum și "
+"blocurile mai mari de cod din corpul funcțiilor."
 
-#: ../../tutorial/controlflow.rst:1127
+#: ../../tutorial/controlflow.rst:1128
 msgid "When possible, put comments on a line of their own."
-msgstr ""
+msgstr "Atunci când este posibil, plasați comentariile pe rânduri "
+"dedicate lor."
 
-#: ../../tutorial/controlflow.rst:1129
+#: ../../tutorial/controlflow.rst:1130
 msgid "Use docstrings."
-msgstr ""
+msgstr "Utilizați docstring-uri."
 
-#: ../../tutorial/controlflow.rst:1131
+#: ../../tutorial/controlflow.rst:1132
 msgid ""
 "Use spaces around operators and after commas, but not directly inside "
 "bracketing constructs: ``a = f(1, 2) + g(3, 4)``."
 msgstr ""
+"Inserați spații goale în jurul operatorilor și după virgule, dar nu "
+"și direct în constructele cu paranteze: ``a = f(1, 2) + g(3, 4)``."
 
-#: ../../tutorial/controlflow.rst:1134
+#: ../../tutorial/controlflow.rst:1135
 msgid ""
 "Name your classes and functions consistently; the convention is to use "
 "``UpperCamelCase`` for classes and ``lowercase_with_underscores`` for "
@@ -1676,89 +2606,106 @@ msgid ""
 "method argument (see :ref:`tut-firstclasses` for more on classes and "
 "methods)."
 msgstr ""
+"Denumiți-vă clasele și funcțiile într-un mod sistematic; convenția este "
+"de a folosi ``ScriereaCămilăCareÎncepeCuMajusculă`` pentru clase și "
+"``litere_mici_despărțite_de_bara_jos`` pentru funcții și "
+"metode. Întrebuințați întotdeauna ``self`` pe post de nume pentru "
+"cel dintâi argument al unei metode (vezi :ref:`tut-firstclasses` pentru "
+"mai multe informații despre clase și metode)."
 
-#: ../../tutorial/controlflow.rst:1139
+#: ../../tutorial/controlflow.rst:1140
 msgid ""
 "Don't use fancy encodings if your code is meant to be used in "
 "international environments.  Python's default, UTF-8, or even plain ASCII"
 " work best in any case."
 msgstr ""
+"Nu utilizați codificări de caractere sofisticate dacă programul pe care îl "
+"scrieți este destinat utilizării în medii internaționale. Codificarea "
+"prestabilită a Python-ului, UTF-8, ori chiar și simpla codificare ASCII, "
+"funcționează de minune în aproape orice caz."
 
-#: ../../tutorial/controlflow.rst:1143
+#: ../../tutorial/controlflow.rst:1144
 msgid ""
 "Likewise, don't use non-ASCII characters in identifiers if there is only "
 "the slightest chance people speaking a different language will read or "
 "maintain the code."
 msgstr ""
-
-#: ../../tutorial/controlflow.rst:1149
-msgid "Footnotes"
-msgstr ""
+"De asemeni, nu întrebuințați caractere non-ASCII în identificatori dacă "
+"există o oricât de neînsemnată șansă ca persoane care nu vă vorbesc "
+"limba să aibă de citit ori de întreținut codul pe care îl scrieți."
 
 #: ../../tutorial/controlflow.rst:1150
+msgid "Footnotes"
+msgstr "Note de sunsol"
+
+#: ../../tutorial/controlflow.rst:1151
 msgid ""
 "Actually, *call by object reference* would be a better description, since"
 " if a mutable object is passed, the caller will see any changes the "
 "callee makes to it (items inserted into a list)."
 msgstr ""
+"De fapt, *apel prin referință la obiect* ar fi o descriere mai potrivită, "
+"dat fiind că, dacă transmitem un obiect mutabil, atunci apelantul va vedea "
+"orice modificare făcută de apelat (cum ar fi niște itemi noi inserați "
+"într-o listă)."
 
 #: ../../tutorial/controlflow.rst:48
 msgid "statement"
-msgstr ""
+msgstr "instrucțiune"
 
 #: ../../tutorial/controlflow.rst:48
 msgid "for"
-msgstr ""
+msgstr "pentru"
 
-#: ../../tutorial/controlflow.rst:477 ../../tutorial/controlflow.rst:1014
+#: ../../tutorial/controlflow.rst:477 ../../tutorial/controlflow.rst:1015
 msgid "documentation strings"
-msgstr ""
+msgstr "șiruri de documentație"
 
-#: ../../tutorial/controlflow.rst:477 ../../tutorial/controlflow.rst:1014
+#: ../../tutorial/controlflow.rst:477 ../../tutorial/controlflow.rst:1015
 msgid "docstrings"
-msgstr ""
+msgstr "docstring-uri"
 
-#: ../../tutorial/controlflow.rst:477 ../../tutorial/controlflow.rst:1014
+#: ../../tutorial/controlflow.rst:477 ../../tutorial/controlflow.rst:1015
 msgid "strings, documentation"
-msgstr ""
+msgstr "șiruri de caractere, documentație"
 
 #: ../../tutorial/controlflow.rst:918
 msgid "* (asterisk)"
-msgstr ""
+msgstr "* (asterisc)"
 
 #: ../../tutorial/controlflow.rst:918 ../../tutorial/controlflow.rst:962
 msgid "in function calls"
-msgstr ""
+msgstr "în apeluri de funcție"
 
 #: ../../tutorial/controlflow.rst:962
 msgid "**"
-msgstr ""
+msgstr "**"
 
-#: ../../tutorial/controlflow.rst:1066
+#: ../../tutorial/controlflow.rst:1067
 msgid "function"
-msgstr ""
+msgstr "funcție"
 
-#: ../../tutorial/controlflow.rst:1066
+#: ../../tutorial/controlflow.rst:1067
 msgid "annotations"
-msgstr ""
+msgstr "adnotări"
 
-#: ../../tutorial/controlflow.rst:1066
+#: ../../tutorial/controlflow.rst:1067
 msgid "->"
-msgstr ""
+msgstr "->"
 
-#: ../../tutorial/controlflow.rst:1066
+#: ../../tutorial/controlflow.rst:1067
 msgid "function annotations"
-msgstr ""
+msgstr "adnotări de funcții"
 
-#: ../../tutorial/controlflow.rst:1066
+#: ../../tutorial/controlflow.rst:1067
 msgid ": (colon)"
-msgstr ""
+msgstr ": (două puncte)"
 
-#: ../../tutorial/controlflow.rst:1100
+#: ../../tutorial/controlflow.rst:1101
 msgid "coding"
-msgstr ""
+msgstr "scriere de cod"
 
-#: ../../tutorial/controlflow.rst:1100
+#: ../../tutorial/controlflow.rst:1101
 msgid "style"
-msgstr ""
+msgstr "stil"
 
