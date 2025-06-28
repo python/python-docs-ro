@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 18:20+0300\n"
+"POT-Creation-Date: 2025-06-17 17:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
@@ -45,17 +45,17 @@ msgstr ""
 
 #: ../../tutorial/introduction.rst:16
 msgid ""
-"You can toggle the display of prompts and output by clicking on ``>>>`` "
-"in the upper-right corner of an example box.  If you hide the prompts and"
-" output for an example, then you can easily copy and paste the input "
-"lines into your interpreter."
+"You can use the \"Copy\" button (it appears in the upper-right corner "
+"when hovering over or tapping a code example), which strips prompts and "
+"omits output, to copy and paste the input lines into your interpreter."
 msgstr ""
-"Puteți face să apară sau să dispară prompturile și ieșirea dând click pe "
-"pictograma ``>>>`` din colțul situat în dreapta sus a casetei exemplului. "
-"Făcând să dispară prompturile și ieșirea unui exemplu, veți putea selecta "
-"și copia cu ușurință liniile de introdus în interpretor."
+"Folosiți butonul \"Copy\" (acesta apare în colțul din dreapta-sus "
+"atunci când deplasați cursorul ori dați clic oriunde pe suprafața "
+"casetei exemplului), care șterge prompturile și elimină afișările de "
+"rezultate, pentru a copia și a insera liniile de cod ale exemplelor în "
+"interpretorul dumneavoastră."
 
-#: ../../tutorial/introduction.rst:23
+#: ../../tutorial/introduction.rst:22
 msgid ""
 "Many of the examples in this manual, even those entered at the "
 "interactive prompt, include comments.  Comments in Python start with the "
@@ -76,11 +76,11 @@ msgstr ""
 "codului și nu sunt interpretate de Python, le puteți omite atunci "
 "când veți tasta exemplele."
 
-#: ../../tutorial/introduction.rst:31
+#: ../../tutorial/introduction.rst:30
 msgid "Some examples::"
-msgstr "Câteva exemple::"
+msgstr "Câteva exemple"
 
-#: ../../tutorial/introduction.rst:33
+#: ../../tutorial/introduction.rst:32
 msgid ""
 "# this is the first comment\n"
 "spam = 1  # and this is the second comment\n"
@@ -92,11 +92,11 @@ msgstr ""
 "          # ... și acum un al treilea!\n"
 "text = \"# Acesta nu e un comentariu pentru că este pus între ghilimele.\""
 
-#: ../../tutorial/introduction.rst:42
+#: ../../tutorial/introduction.rst:41
 msgid "Using Python as a Calculator"
 msgstr "Folosind Python-ul pe post de calculator"
 
-#: ../../tutorial/introduction.rst:44
+#: ../../tutorial/introduction.rst:43
 msgid ""
 "Let's try some simple Python commands.  Start the interpreter and wait "
 "for the primary prompt, ``>>>``.  (It shouldn't take long.)"
@@ -105,11 +105,11 @@ msgstr ""
 "și așteptați să apară promptul principal, ``>>>``. (N-ar trebui să dureze "
 "mult.)"
 
-#: ../../tutorial/introduction.rst:51
+#: ../../tutorial/introduction.rst:50
 msgid "Numbers"
 msgstr "Numere"
 
-#: ../../tutorial/introduction.rst:53
+#: ../../tutorial/introduction.rst:52
 msgid ""
 "The interpreter acts as a simple calculator: you can type an expression "
 "at it and it will write the value.  Expression syntax is straightforward:"
@@ -122,7 +122,7 @@ msgstr ""
 "se folosesc la aritmetică; parantezele (``()``) se utilizează la "
 "subexpresii. De exemplu::"
 
-#: ../../tutorial/introduction.rst:59
+#: ../../tutorial/introduction.rst:58
 msgid ""
 ">>> 2 + 2\n"
 "4\n"
@@ -142,7 +142,7 @@ msgstr ""
 ">>> 8 / 5  # împărțirea întoarce întotdeauna numere în virgulă mobilă\n"
 "1.6"
 
-#: ../../tutorial/introduction.rst:68
+#: ../../tutorial/introduction.rst:67
 msgid ""
 "The integer numbers (e.g. ``2``, ``4``, ``20``) have type :class:`int`, "
 "the ones with a fractional part (e.g. ``5.0``, ``1.6``) have type "
@@ -153,7 +153,7 @@ msgstr ""
 "cele cu parte fracționară (cum ar fi ``5.0``, ``1.6``) de tipul "
 ":class:`float`. Vom reveni ulterior la tipurile numerice în tutorial."
 
-#: ../../tutorial/introduction.rst:72
+#: ../../tutorial/introduction.rst:71
 msgid ""
 "Division (``/``) always returns a float.  To do :term:`floor division` "
 "and get an integer result you can use the ``//`` operator; to calculate "
@@ -164,7 +164,7 @@ msgstr ""
 "folosiți operatorul ``//``; pentru calculul restului, utilizați-l pe "
 "``%``::"
 
-#: ../../tutorial/introduction.rst:76
+#: ../../tutorial/introduction.rst:75
 #, python-format
 msgid ""
 ">>> 17 / 3  # classic division returns a float\n"
@@ -187,14 +187,14 @@ msgstr ""
 ">>> 5 * 3 + 2  # câtul * împărțitorul + restul\n"
 "17"
 
-#: ../../tutorial/introduction.rst:86
+#: ../../tutorial/introduction.rst:85
 msgid ""
 "With Python, it is possible to use the ``**`` operator to calculate "
 "powers [#]_::"
 msgstr ""
 "În Python, puteți folosi operatorul ``**`` pentru a calcula puteri [#]_::"
 
-#: ../../tutorial/introduction.rst:88
+#: ../../tutorial/introduction.rst:87
 msgid ""
 ">>> 5 ** 2  # 5 squared\n"
 "25\n"
@@ -206,7 +206,7 @@ msgstr ""
 ">>> 2 ** 7  # 2 la puterea a 7-a\n"
 "128"
 
-#: ../../tutorial/introduction.rst:93
+#: ../../tutorial/introduction.rst:92
 msgid ""
 "The equal sign (``=``) is used to assign a value to a variable. "
 "Afterwards, no result is displayed before the next interactive prompt::"
@@ -215,7 +215,7 @@ msgstr ""
 "variabile. După aceasta, nu se se va afișa "
 "nimic până la apariția următorului prompt interactiv::"
 
-#: ../../tutorial/introduction.rst:96
+#: ../../tutorial/introduction.rst:95
 msgid ""
 ">>> width = 20\n"
 ">>> height = 5 * 9\n"
@@ -227,7 +227,7 @@ msgstr ""
 ">>> lățime * lungime\n"
 "900"
 
-#: ../../tutorial/introduction.rst:101
+#: ../../tutorial/introduction.rst:100
 msgid ""
 "If a variable is not \"defined\" (assigned a value), trying to use it "
 "will give you an error::"
@@ -235,7 +235,7 @@ msgstr ""
 "Dacă o variabilă nu este \"definită\" (nu i s-a atribuit o valoare), "
 "atunci când veți încerca să o folosiți vi se va semnala o eroare::"
 
-#: ../../tutorial/introduction.rst:104
+#: ../../tutorial/introduction.rst:103
 msgid ""
 ">>> n  # try to access an undefined variable\n"
 "Traceback (most recent call last):\n"
@@ -247,7 +247,7 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "NameError: name 'popescu' is not defined"
 
-#: ../../tutorial/introduction.rst:109
+#: ../../tutorial/introduction.rst:108
 msgid ""
 "There is full support for floating point; operators with mixed type "
 "operands convert the integer operand to floating point::"
@@ -256,7 +256,7 @@ msgstr ""
 "operanzi de tipuri diferite vor converti operandul întreg la un "
 "operand în virgulă mobilă corespunzător::"
 
-#: ../../tutorial/introduction.rst:112
+#: ../../tutorial/introduction.rst:111
 msgid ""
 ">>> 4 * 3.75 - 1\n"
 "14.0"
@@ -264,7 +264,7 @@ msgstr ""
 ">>> 4 * 3.75 - 1\n"
 "14.0"
 
-#: ../../tutorial/introduction.rst:115
+#: ../../tutorial/introduction.rst:114
 msgid ""
 "In interactive mode, the last printed expression is assigned to the "
 "variable ``_``.  This means that when you are using Python as a desk "
@@ -275,7 +275,7 @@ msgstr ""
 "calculator de birou, este cumva mai ușor să continuați calculele "
 "lungi, ca de exemplu::"
 
-#: ../../tutorial/introduction.rst:119
+#: ../../tutorial/introduction.rst:118
 msgid ""
 ">>> tax = 12.5 / 100\n"
 ">>> price = 100.50\n"
@@ -295,7 +295,7 @@ msgstr ""
 ">>> round(_, 2)\n"
 "113.06"
 
-#: ../../tutorial/introduction.rst:128
+#: ../../tutorial/introduction.rst:127
 msgid ""
 "This variable should be treated as read-only by the user.  Don't "
 "explicitly assign a value to it --- you would create an independent local"
@@ -308,7 +308,7 @@ msgstr ""
 "același nume, care va masca variabila predefinită în limbaj cu tot cu "
 "purtarea ei magică."
 
-#: ../../tutorial/introduction.rst:132
+#: ../../tutorial/introduction.rst:131
 msgid ""
 "In addition to :class:`int` and :class:`float`, Python supports other "
 "types of numbers, such as :class:`~decimal.Decimal` and "
@@ -322,11 +322,11 @@ msgstr ""
 "pentru :ref:`numerele complexe <typesnumeric>` și folosește sufixul "
 "``j`` sau ``J`` pentru a desemna partea imaginară (ca în ``3+5j``)."
 
-#: ../../tutorial/introduction.rst:142
+#: ../../tutorial/introduction.rst:141
 msgid "Text"
 msgstr "Text"
 
-#: ../../tutorial/introduction.rst:144
+#: ../../tutorial/introduction.rst:143
 msgid ""
 "Python can manipulate text (represented by type :class:`str`, so-called "
 "\"strings\") as well as numbers.  This includes characters \"``!``\", "
@@ -347,14 +347,16 @@ msgstr ""
 "`Paris rabbit got your back "
 "<https://en.wikipedia.org/wiki/Rabbit_of_Caerbannog>`_::"
 
-#: ../../tutorial/introduction.rst:150
-msgid ">>> 'spam eggs'  # single quotes\n"
+#: ../../tutorial/introduction.rst:149
+msgid ""
+">>> 'spam eggs'  # single quotes\n"
 "'spam eggs'\n"
 ">>> \"Paris rabbit got your back :)! Yay!\"  # double quotes\n"
 "'Paris rabbit got your back :)! Yay!'\n"
 ">>> '1975'  # digits and numerals enclosed in quotes are also strings\n"
 "'1975'"
-msgstr ">>> 'cărniță oușoare'  # ghilimele simple\n"
+msgstr ""
+">>> 'cărniță oușoare'  # ghilimele simple\n"
 "'cărniță oușoare'\n"
 ">>> \"Paris iepurașul ți-apără sălașul :)! Uraa!\"  # ghilimele duble\n"
 "'Paris iepurașul ți-apără sălașul :)! Uraa!'\n"
@@ -362,7 +364,7 @@ msgstr ">>> 'cărniță oușoare'  # ghilimele simple\n"
 "caractere\n"
 "'1975'"
 
-#: ../../tutorial/introduction.rst:157
+#: ../../tutorial/introduction.rst:158
 msgid ""
 "To quote a quote, we need to \"escape\" it, by preceding it with ``\\``. "
 "Alternatively, we can use the other type of quotation marks::"
@@ -374,7 +376,7 @@ msgstr ""
 "încadra textul respectiv cu celălalt tip de semne de punctuație pentru "
 "citare::"
 
-#: ../../tutorial/introduction.rst:160
+#: ../../tutorial/introduction.rst:161
 msgid ""
 ">>> 'doesn\\'t'  # use \\' to escape the single quote...\n"
 "\"doesn't\"\n"
@@ -398,7 +400,7 @@ msgstr ""
 ">>> '\"Omu\\' nostru,\" spuseră ei.'\n"
 "'\"Omu\\' nostru,\" spuseră ei.'"
 
-#: ../../tutorial/introduction.rst:171
+#: ../../tutorial/introduction.rst:172
 msgid ""
 "In the Python shell, the string definition and output string can look "
 "different.  The :func:`print` function produces a more readable output, "
@@ -411,7 +413,7 @@ msgstr ""
 "ghilimele care îl încadrează și tipărind caracterele escape, "
 "respectiv caracterele speciale::"
 
-#: ../../tutorial/introduction.rst:175
+#: ../../tutorial/introduction.rst:176
 msgid ""
 ">>> s = 'First line.\\nSecond line.'  # \\n means newline\n"
 ">>> s  # without print(), special characters are included in the string\n"
@@ -429,7 +431,7 @@ msgstr ""
 "Prima linie.\n"
 "A doua linie."
 
-#: ../../tutorial/introduction.rst:182
+#: ../../tutorial/introduction.rst:183
 msgid ""
 "If you don't want characters prefaced by ``\\`` to be interpreted as "
 "special characters, you can use *raw strings* by adding an ``r`` before "
@@ -440,7 +442,7 @@ msgstr ""
 "englezescul *raw*) de caractere "
 "adăugând un ``r`` înaintea ghilimelelor simple de început::"
 
-#: ../../tutorial/introduction.rst:186
+#: ../../tutorial/introduction.rst:187
 msgid ""
 ">>> print('C:\\some\\name')  # here \\n means newline!\n"
 "C:\\some\n"
@@ -454,7 +456,7 @@ msgstr ""
 ">>> print(r'C:\\prenume\\nume')  # remarcați r-ul dinaintea ghilimelelor\n"
 "C:\\prenume\\nume"
 
-#: ../../tutorial/introduction.rst:192
+#: ../../tutorial/introduction.rst:193
 msgid ""
 "There is one subtle aspect to raw strings: a raw string may not end in an"
 " odd number of ``\\`` characters; see :ref:`the FAQ entry <faq-"
@@ -465,7 +467,7 @@ msgstr ""
 ":ref:`rubrica FAQ <faq-programming-raw-string-backslash>` pentru mai "
 "multe informații și tehnici de evitare a dificultăților."
 
-#: ../../tutorial/introduction.rst:197
+#: ../../tutorial/introduction.rst:198
 msgid ""
 "String literals can span multiple lines.  One way is using triple-quotes:"
 " ``\"\"\"...\"\"\"`` or ``'''...'''``.  End-of-line characters are "
@@ -482,7 +484,7 @@ msgstr ""
 "final de linie. În exemplul următor, caracterul linie-nouă inițial nu va fi "
 "inserat::"
 
-#: ../../tutorial/introduction.rst:203
+#: ../../tutorial/introduction.rst:204
 msgid ""
 ">>> print(\"\"\"\\\n"
 "... Usage: thingy [OPTIONS]\n"
@@ -506,7 +508,7 @@ msgstr ""
 "\n"
 ">>>"
 
-#: ../../tutorial/introduction.rst:214
+#: ../../tutorial/introduction.rst:215
 msgid ""
 "Strings can be concatenated (glued together) with the ``+`` operator, and"
 " repeated with ``*``::"
@@ -514,7 +516,7 @@ msgstr ""
 "Șirurile de caractere pot fi concatenate (lipite unul de celălalt) cu "
 "operatorul ``+``, respectiv repetate cu operatorul ``*``::"
 
-#: ../../tutorial/introduction.rst:217
+#: ../../tutorial/introduction.rst:218
 msgid ""
 ">>> # 3 times 'un', followed by 'ium'\n"
 ">>> 3 * 'un' + 'ium'\n"
@@ -524,7 +526,7 @@ msgstr ""
 ">>> 3 * 'un' + 'ium'\n"
 "'unununium'"
 
-#: ../../tutorial/introduction.rst:221
+#: ../../tutorial/introduction.rst:222
 msgid ""
 "Two or more *string literals* (i.e. the ones enclosed between quotes) "
 "next to each other are automatically concatenated. ::"
@@ -533,7 +535,7 @@ msgstr ""
 "încadrate de semne de citare), odată ce sunt plasate unul lângă celălalt, "
 "vor fi concatenate automat::"
 
-#: ../../tutorial/introduction.rst:224
+#: ../../tutorial/introduction.rst:225
 msgid ""
 ">>> 'Py' 'thon'\n"
 "'Python'"
@@ -541,13 +543,13 @@ msgstr ""
 ">>> 'Py' 'thon'\n"
 "'Python'"
 
-#: ../../tutorial/introduction.rst:227
+#: ../../tutorial/introduction.rst:228
 msgid "This feature is particularly useful when you want to break long strings::"
 msgstr ""
 "Această caracteristică este utilă mai ales atunci când intenționați să "
 "porționați șirurile lungi de caractere::"
 
-#: ../../tutorial/introduction.rst:229
+#: ../../tutorial/introduction.rst:230
 msgid ""
 ">>> text = ('Put several strings within parentheses '\n"
 "...         'to have them joined together.')\n"
@@ -560,7 +562,7 @@ msgstr ""
 "'Puneți mai multe șiruri de caractere între paranteze pentru ca ele să\n"
 "fie îmbinate.'"
 
-#: ../../tutorial/introduction.rst:234
+#: ../../tutorial/introduction.rst:235
 msgid ""
 "This only works with two literals though, not with variables or "
 "expressions::"
@@ -568,7 +570,7 @@ msgstr ""
 "Această tehnică funcționează numai cu valori literale, deci nu cu "
 "variabile și nici cu expresii::"
 
-#: ../../tutorial/introduction.rst:236
+#: ../../tutorial/introduction.rst:237
 msgid ""
 ">>> prefix = 'Py'\n"
 ">>> prefix 'thon'  # can't concatenate a variable and a string literal\n"
@@ -594,7 +596,7 @@ msgstr ""
 "               ^^^^^\n"
 "SyntaxError: invalid syntax"
 
-#: ../../tutorial/introduction.rst:248
+#: ../../tutorial/introduction.rst:249
 msgid ""
 "If you want to concatenate variables or a variable and a literal, use "
 "``+``::"
@@ -602,7 +604,7 @@ msgstr ""
 "Dacă doriți să concatenați variabile ori o variabilă cu o valoare "
 "literală, atunci folosiți ``+``-ul::"
 
-#: ../../tutorial/introduction.rst:250
+#: ../../tutorial/introduction.rst:251
 msgid ""
 ">>> prefix + 'thon'\n"
 "'Python'"
@@ -610,7 +612,7 @@ msgstr ""
 ">>> prefixul + 'thon'\n"
 "'Python'"
 
-#: ../../tutorial/introduction.rst:253
+#: ../../tutorial/introduction.rst:254
 msgid ""
 "Strings can be *indexed* (subscripted), with the first character having "
 "index 0. There is no separate character type; a character is simply a "
@@ -620,7 +622,7 @@ msgstr ""
 "șir având indicele 0. Nu există tipul caracter de sine stătător; un "
 "caracter este doar un șir de caractere cu lungimea 1::"
 
-#: ../../tutorial/introduction.rst:257
+#: ../../tutorial/introduction.rst:258
 msgid ""
 ">>> word = 'Python'\n"
 ">>> word[0]  # character in position 0\n"
@@ -634,13 +636,13 @@ msgstr ""
 ">>> cuvântul[5]  # caracterul de pe poziția 5\n"
 "'n'"
 
-#: ../../tutorial/introduction.rst:263
+#: ../../tutorial/introduction.rst:264
 msgid "Indices may also be negative numbers, to start counting from the right::"
 msgstr ""
 "Indici pot fi și numerele negative, dacă dorim să începem numărătoarea de "
 "la dreapta::"
 
-#: ../../tutorial/introduction.rst:265
+#: ../../tutorial/introduction.rst:266
 msgid ""
 ">>> word[-1]  # last character\n"
 "'n'\n"
@@ -656,23 +658,24 @@ msgstr ""
 ">>> cuvântul[-6]\n"
 "'P'"
 
-#: ../../tutorial/introduction.rst:272
+#: ../../tutorial/introduction.rst:273
 msgid "Note that since -0 is the same as 0, negative indices start from -1."
 msgstr ""
 "Remarcați că, deoarece -0 este totuna cu 0, indicii negativi încep de "
 "la -1."
 
-#: ../../tutorial/introduction.rst:274
+#: ../../tutorial/introduction.rst:275
 msgid ""
 "In addition to indexing, *slicing* is also supported.  While indexing is "
 "used to obtain individual characters, *slicing* allows you to obtain a "
 "substring::"
 msgstr ""
-"În afară de indexare, este suportată și *felierea*. În timp ce indexarea "
-"se folosește la obținerea de caractere individuale, *felierea* vă "
-"permite să extrageți un subșir de caractere::"
+"În afară de indexare, este suportată și *tranșarea* (felierea, de la "
+"englezescul *slicing*). În timp ce indexarea se folosește la obținerea "
+"de caractere individuale, *tranșarea* vă permite să extrageți un subșir "
+"de caractere::"
 
-#: ../../tutorial/introduction.rst:277
+#: ../../tutorial/introduction.rst:278
 msgid ""
 ">>> word[0:2]  # characters from position 0 (included) to 2 (excluded)\n"
 "'Py'\n"
@@ -684,18 +687,18 @@ msgstr ""
 ">>> cuvântul[2:5]  # caractere de la poziția 2 (cu) până la 5 (fără)\n"
 "'tho'"
 
-#: ../../tutorial/introduction.rst:282
+#: ../../tutorial/introduction.rst:283
 msgid ""
 "Slice indices have useful defaults; an omitted first index defaults to "
 "zero, an omitted second index defaults to the size of the string being "
 "sliced. ::"
 msgstr ""
-"Indicii unei felii au valori implicite utile; un indice de început, "
+"Indicii unei tranșe au valori implicite utile; un indice de început, "
 "odată ce este omis, va fi implicit zero pe când un indice de final, "
 "omis, va lua în mod implicit ca valoare lungimea șirului de caractere "
-"în curs de feliere."
+"în curs de tranșare."
 
-#: ../../tutorial/introduction.rst:285
+#: ../../tutorial/introduction.rst:286
 msgid ""
 ">>> word[:2]   # character from the beginning to position 2 (excluded)\n"
 "'Py'\n"
@@ -711,7 +714,7 @@ msgstr ""
 ">>> cuvântul[-2:]  # caractere de la penultimul (cu) până la final\n"
 "'on'"
 
-#: ../../tutorial/introduction.rst:292
+#: ../../tutorial/introduction.rst:293
 msgid ""
 "Note how the start is always included, and the end always excluded.  This"
 " makes sure that ``s[:i] + s[i:]`` is always equal to ``s``::"
@@ -720,7 +723,7 @@ msgstr ""
 "întotdeauna lipsă. Această proprietate face ca ``s[:i] + s[i:]`` să "
 "fie egal întotdeauna cu ``s``::"
 
-#: ../../tutorial/introduction.rst:295
+#: ../../tutorial/introduction.rst:296
 msgid ""
 ">>> word[:2] + word[2:]\n"
 "'Python'\n"
@@ -732,20 +735,20 @@ msgstr ""
 ">>> cuvântul[:4] + cuvântul[4:]\n"
 "'Python'"
 
-#: ../../tutorial/introduction.rst:300
+#: ../../tutorial/introduction.rst:301
 msgid ""
 "One way to remember how slices work is to think of the indices as "
 "pointing *between* characters, with the left edge of the first character "
 "numbered 0. Then the right edge of the last character of a string of *n* "
 "characters has index *n*, for example::"
 msgstr ""
-"O metodă de a ține minte cum funcționează feliatul este să vă "
+"O metodă de a ține minte cum funcționează tranșatul este să vă "
 "imaginați indicii ca țintind *între* caractere, iar muchia stângă a "
 "primului caracter ca fiind numerotată cu 0. Atunci, muchia dreaptă a "
 "ultimului caracter al unui șir de caractere de *n* caractere va avea "
 "indexul *n*, ca de exemplu::"
 
-#: ../../tutorial/introduction.rst:305
+#: ../../tutorial/introduction.rst:306
 msgid ""
 " +---+---+---+---+---+---+\n"
 " | P | y | t | h | o | n |\n"
@@ -759,7 +762,7 @@ msgstr ""
 " 0   1   2   3   4   5   6\n"
 "-6  -5  -4  -3  -2  -1"
 
-#: ../../tutorial/introduction.rst:311
+#: ../../tutorial/introduction.rst:312
 msgid ""
 "The first row of numbers gives the position of the indices 0...6 in the "
 "string; the second row gives the corresponding negative indices. The "
@@ -768,25 +771,25 @@ msgid ""
 msgstr ""
 "Primul rând de numere dă poziția fiecăruia dintre indicii 0...6 ai "
 "șirului de caractere; cel de-al doilea rând pe cea a indicilor negativi "
-"corespunzători. Felia de la *i* la *j* constă din toate caracterele "
+"corespunzători. Tranșa de la *i* la *j* constă din toate caracterele "
 "situate între muchiile notate cu *i* și respectiv cu *j*."
 
-#: ../../tutorial/introduction.rst:316
+#: ../../tutorial/introduction.rst:317
 msgid ""
 "For non-negative indices, the length of a slice is the difference of the "
 "indices, if both are within bounds.  For example, the length of "
 "``word[1:3]`` is 2."
 msgstr ""
-"Pentru indicii nenegativi, lungimea unei felii este diferența indicilor, "
+"Pentru indicii nenegativi, lungimea unei tranșe este diferența indicilor, "
 "aceasta dacă amândoi sunt în limita valorilor permise. De exemplu, "
 "lungimea lui ``cuvântul[1:3]`` este 2."
 
-#: ../../tutorial/introduction.rst:320
+#: ../../tutorial/introduction.rst:321
 msgid "Attempting to use an index that is too large will result in an error::"
 msgstr ""
 "Încercarea de a folosi un indice prea mare va conduce la o eroare::"
 
-#: ../../tutorial/introduction.rst:322
+#: ../../tutorial/introduction.rst:323
 msgid ""
 ">>> word[42]  # the word only has 6 characters\n"
 "Traceback (most recent call last):\n"
@@ -798,15 +801,15 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "IndexError: string index out of range"
 
-#: ../../tutorial/introduction.rst:327
+#: ../../tutorial/introduction.rst:328
 msgid ""
 "However, out of range slice indexes are handled gracefully when used for "
 "slicing::"
 msgstr ""
 "Cu toate acestea, indicii care depășesc plaja valorilor permise vor fi "
-"rezolvați cu eleganță atunci când îi folosim la feliere::"
+"rezolvați cu eleganță atunci când îi folosim la tranșare::"
 
-#: ../../tutorial/introduction.rst:330
+#: ../../tutorial/introduction.rst:331
 msgid ""
 ">>> word[4:42]\n"
 "'on'\n"
@@ -818,7 +821,7 @@ msgstr ""
 ">>> cuvântul[42:]\n"
 "''"
 
-#: ../../tutorial/introduction.rst:335
+#: ../../tutorial/introduction.rst:336
 msgid ""
 "Python strings cannot be changed --- they are :term:`immutable`. "
 "Therefore, assigning to an indexed position in the string results in an "
@@ -828,7 +831,7 @@ msgstr ""
 ":term:`immutable`. De aceea, atribuirea de valori unei poziții indexate "
 "dintr-un șir de caractere va produce o eroare::"
 
-#: ../../tutorial/introduction.rst:338
+#: ../../tutorial/introduction.rst:339
 msgid ""
 ">>> word[0] = 'J'\n"
 "Traceback (most recent call last):\n"
@@ -848,13 +851,13 @@ msgstr ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "TypeError: 'str' object does not support item assignment"
 
-#: ../../tutorial/introduction.rst:347
+#: ../../tutorial/introduction.rst:348
 msgid "If you need a different string, you should create a new one::"
 msgstr ""
 "Dacă este nevoie să modificați un șir de caractere, atunci va trebui să "
 "creați un șir de caractere nou::"
 
-#: ../../tutorial/introduction.rst:349
+#: ../../tutorial/introduction.rst:350
 msgid ""
 ">>> 'J' + word[1:]\n"
 "'Jython'\n"
@@ -866,7 +869,7 @@ msgstr ""
 ">>> cuvântul[:2] + 'py'\n"
 "'Pypy'"
 
-#: ../../tutorial/introduction.rst:354
+#: ../../tutorial/introduction.rst:355
 msgid "The built-in function :func:`len` returns the length of a string::"
 msgstr ""
 "Funcția predefinită :func:`len` returnează lungimea unui șir de caractere. "
@@ -874,7 +877,7 @@ msgstr ""
 "<https://ro.wikipedia.org/wiki/Supercalifragilisticexpialidocious>`_ "
 "este intraductibil::"
 
-#: ../../tutorial/introduction.rst:356
+#: ../../tutorial/introduction.rst:357
 msgid ""
 ">>> s = 'supercalifragilisticexpialidocious'\n"
 ">>> len(s)\n"
@@ -884,11 +887,11 @@ msgstr ""
 ">>> len(s)\n"
 "34"
 
-#: ../../tutorial/introduction.rst:363
+#: ../../tutorial/introduction.rst:364
 msgid ":ref:`textseq`"
 msgstr ":ref:`textseq`"
 
-#: ../../tutorial/introduction.rst:364
+#: ../../tutorial/introduction.rst:365
 msgid ""
 "Strings are examples of *sequence types*, and support the common "
 "operations supported by such types."
@@ -896,11 +899,11 @@ msgstr ""
 "Șirurile de caractere sunt exemple ale *tipurilor secvență de date* și "
 "permit operațiile suportate în mod obișnuit de asemenea tipuri."
 
-#: ../../tutorial/introduction.rst:367
+#: ../../tutorial/introduction.rst:368
 msgid ":ref:`string-methods`"
 msgstr ":ref:`string-methods`"
 
-#: ../../tutorial/introduction.rst:368
+#: ../../tutorial/introduction.rst:369
 msgid ""
 "Strings support a large number of methods for basic transformations and "
 "searching."
@@ -908,29 +911,29 @@ msgstr ""
 "Șirurile de caractere suportă un număr mare de metode privind "
 "transformările uzuale și căutarea."
 
-#: ../../tutorial/introduction.rst:371
+#: ../../tutorial/introduction.rst:372
 msgid ":ref:`f-strings`"
 msgstr ":ref:`f-strings`"
 
-#: ../../tutorial/introduction.rst:372
+#: ../../tutorial/introduction.rst:373
 msgid "String literals that have embedded expressions."
 msgstr ""
 "Valori literale șir-de-caractere care includ expresii."
 
-#: ../../tutorial/introduction.rst:374
+#: ../../tutorial/introduction.rst:375
 msgid ":ref:`formatstrings`"
 msgstr ":ref:`formatstrings`"
 
-#: ../../tutorial/introduction.rst:375
+#: ../../tutorial/introduction.rst:376
 msgid "Information about string formatting with :meth:`str.format`."
 msgstr ""
 "Informații despre formatarea șirurilor de caractere cu :meth:`str.format`."
 
-#: ../../tutorial/introduction.rst:377
+#: ../../tutorial/introduction.rst:378
 msgid ":ref:`old-string-formatting`"
 msgstr ":ref:`old-string-formatting`"
 
-#: ../../tutorial/introduction.rst:378
+#: ../../tutorial/introduction.rst:379
 msgid ""
 "The old formatting operations invoked when strings are the left operand "
 "of the ``%`` operator are described in more detail here."
@@ -938,11 +941,11 @@ msgstr ""
 "Vechile operații de formatare invocate atunci când șiruri de caractere  îi "
 "sunt operand stâng operatorului ``%`` sunt descrise în detaliu aici."
 
-#: ../../tutorial/introduction.rst:385
+#: ../../tutorial/introduction.rst:386
 msgid "Lists"
 msgstr "Liste"
 
-#: ../../tutorial/introduction.rst:387
+#: ../../tutorial/introduction.rst:388
 msgid ""
 "Python knows a number of *compound* data types, used to group together "
 "other values.  The most versatile is the *list*, which can be written as "
@@ -957,7 +960,7 @@ msgstr ""
 "Listele pot conține itemi de tipuri diferite, însă cel mai adesea toți "
 "itemii sunt de același tip. ::"
 
-#: ../../tutorial/introduction.rst:392
+#: ../../tutorial/introduction.rst:393
 msgid ""
 ">>> squares = [1, 4, 9, 16, 25]\n"
 ">>> squares\n"
@@ -967,15 +970,15 @@ msgstr ""
 ">>> pătrate_perfecte\n"
 "[1, 4, 9, 16, 25]"
 
-#: ../../tutorial/introduction.rst:396
+#: ../../tutorial/introduction.rst:397
 msgid ""
 "Like strings (and all other built-in :term:`sequence` types), lists can "
 "be indexed and sliced::"
 msgstr ""
 "Aidoma șirurilor de caractere (și a tuturor tipurilor :term:`sequence` "
-"predefinite), listele pot fi atât indexate cât și feliate::"
+"predefinite), listele pot fi atât indexate cât și tranșate::"
 
-#: ../../tutorial/introduction.rst:399
+#: ../../tutorial/introduction.rst:400
 msgid ""
 ">>> squares[0]  # indexing returns the item\n"
 "1\n"
@@ -991,12 +994,12 @@ msgstr ""
 ">>> pătrate_perfecte[-3:]  # felierea returnează o listă nouă\n"
 "[9, 16, 25]"
 
-#: ../../tutorial/introduction.rst:406
+#: ../../tutorial/introduction.rst:407
 msgid "Lists also support operations like concatenation::"
 msgstr ""
 "De asemenea, listele suportă operații precum concatenarea::"
 
-#: ../../tutorial/introduction.rst:408
+#: ../../tutorial/introduction.rst:409
 msgid ""
 ">>> squares + [36, 49, 64, 81, 100]\n"
 "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
@@ -1004,7 +1007,7 @@ msgstr ""
 ">>> pătrate_perfecte + [36, 49, 64, 81, 100]\n"
 "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
 
-#: ../../tutorial/introduction.rst:411
+#: ../../tutorial/introduction.rst:412
 msgid ""
 "Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
 "type, i.e. it is possible to change their content::"
@@ -1013,7 +1016,7 @@ msgstr ""
 "listele sunt un tip :term:`mutable`, adică este posibil să le modificăm "
 "conținutul::"
 
-#: ../../tutorial/introduction.rst:414
+#: ../../tutorial/introduction.rst:415
 msgid ""
 ">>> cubes = [1, 8, 27, 65, 125]  # something's wrong here\n"
 ">>> 4 ** 3  # the cube of 4 is 64, not 65!\n"
@@ -1029,7 +1032,7 @@ msgstr ""
 ">>> cuburi_perfecte\n"
 "[1, 8, 27, 64, 125]"
 
-#: ../../tutorial/introduction.rst:421
+#: ../../tutorial/introduction.rst:422
 msgid ""
 "You can also add new items at the end of the list, by using the "
 ":meth:`!list.append` *method* (we will see more about methods later)::"
@@ -1038,7 +1041,7 @@ msgstr ""
 "*metoda* :meth:`!list.append` (vom discuta mai multe despre "
 "metode ulterior)::"
 
-#: ../../tutorial/introduction.rst:424
+#: ../../tutorial/introduction.rst:425
 msgid ""
 ">>> cubes.append(216)  # add the cube of 6\n"
 ">>> cubes.append(7 ** 3)  # and the cube of 7\n"
@@ -1050,7 +1053,7 @@ msgstr ""
 ">>> cuburi_perfecte\n"
 "[1, 8, 27, 64, 125, 216, 343]"
 
-#: ../../tutorial/introduction.rst:429
+#: ../../tutorial/introduction.rst:430
 msgid ""
 "Simple assignment in Python never copies data. When you assign a list to "
 "a variable, the variable refers to the *existing list*. Any changes you "
@@ -1063,7 +1066,7 @@ msgstr ""
 "variabile, schimbarea va fi vizibilă prin intermediul tuturor "
 "celorlalte variabile care se referă la prima variabilă.::"
 
-#: ../../tutorial/introduction.rst:434
+#: ../../tutorial/introduction.rst:435
 msgid ""
 ">>> rgb = [\"Red\", \"Green\", \"Blue\"]\n"
 ">>> rgba = rgb\n"
@@ -1081,18 +1084,18 @@ msgstr ""
 ">>> rgb\n"
 "[\"Roșu\", \"Verde\", \"Albastru\", \"Alf\"]"
 
-#: ../../tutorial/introduction.rst:442
+#: ../../tutorial/introduction.rst:443
 msgid ""
 "All slice operations return a new list containing the requested elements."
 "  This means that the following slice returns a :ref:`shallow copy "
 "<shallow_vs_deep_copy>` of the list::"
 msgstr ""
 "Toate operațiile de feliere vor returna o listă nouă conținând elementele "
-"cerute. Ceea ce înseamnă că următoarea feliere va returna o "
+"cerute. Ceea ce înseamnă că următoarea tranșare va returna o "
 ":ref:`copie superficială <shallow_vs_deep_copy>` (de la englezescul "
 "*shallow copy*) a listei::"
 
-#: ../../tutorial/introduction.rst:446
+#: ../../tutorial/introduction.rst:447
 msgid ""
 ">>> correct_rgba = rgba[:]\n"
 ">>> correct_rgba[-1] = \"Alpha\"\n"
@@ -1108,15 +1111,15 @@ msgstr ""
 ">>> rgba\n"
 "[\"Roșu\", \"Verde\", \"Albastru\", \"Alf\"]"
 
-#: ../../tutorial/introduction.rst:453
+#: ../../tutorial/introduction.rst:454
 msgid ""
 "Assignment to slices is also possible, and this can even change the size "
 "of the list or clear it entirely::"
 msgstr ""
-"Asignarea la felii este, de asemenea, posibilă iar aceasta poate schimba "
+"Asignarea la tranșe este, de asemenea, posibilă iar aceasta poate schimba "
 "până și mărimea listei ori șterge toate elementele ei::"
 
-#: ../../tutorial/introduction.rst:456
+#: ../../tutorial/introduction.rst:457
 msgid ""
 ">>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
 ">>> letters\n"
@@ -1150,12 +1153,12 @@ msgstr ""
 ">>> litere\n"
 "[]"
 
-#: ../../tutorial/introduction.rst:472
+#: ../../tutorial/introduction.rst:473
 msgid "The built-in function :func:`len` also applies to lists::"
 msgstr ""
 "Funcția predefinită :func:`len` se aplică și la liste::"
 
-#: ../../tutorial/introduction.rst:474
+#: ../../tutorial/introduction.rst:475
 msgid ""
 ">>> letters = ['a', 'b', 'c', 'd']\n"
 ">>> len(letters)\n"
@@ -1165,7 +1168,7 @@ msgstr ""
 ">>> len(litere)\n"
 "4"
 
-#: ../../tutorial/introduction.rst:478
+#: ../../tutorial/introduction.rst:479
 msgid ""
 "It is possible to nest lists (create lists containing other lists), for "
 "example::"
@@ -1173,7 +1176,7 @@ msgstr ""
 "Este posibil să imbricăm liste (de la englezescul *to nest*; adică să "
 "creăm liste care conțin alte liste), ca de exemplu::"
 
-#: ../../tutorial/introduction.rst:481
+#: ../../tutorial/introduction.rst:482
 msgid ""
 ">>> a = ['a', 'b', 'c']\n"
 ">>> n = [1, 2, 3]\n"
@@ -1195,11 +1198,11 @@ msgstr ""
 ">>> x[0][1]\n"
 "'b'"
 
-#: ../../tutorial/introduction.rst:494
+#: ../../tutorial/introduction.rst:495
 msgid "First Steps Towards Programming"
 msgstr "Primii pași în programare"
 
-#: ../../tutorial/introduction.rst:496
+#: ../../tutorial/introduction.rst:497
 msgid ""
 "Of course, we can use Python for more complicated tasks than adding two "
 "and two together.  For instance, we can write an initial sub-sequence of "
@@ -1211,7 +1214,7 @@ msgstr ""
 "`șirului lui Fibonacci "
 "<https://en.wikipedia.org/wiki/Fibonacci_sequence>`_ după cum urmează::"
 
-#: ../../tutorial/introduction.rst:501
+#: ../../tutorial/introduction.rst:502
 msgid ""
 ">>> # Fibonacci series:\n"
 ">>> # the sum of two elements defines the next\n"
@@ -1243,11 +1246,11 @@ msgstr ""
 "5\n"
 "8"
 
-#: ../../tutorial/introduction.rst:516
+#: ../../tutorial/introduction.rst:517
 msgid "This example introduces several new features."
 msgstr "Acest exemplu introduce mai multe caracteristici noi."
 
-#: ../../tutorial/introduction.rst:518
+#: ../../tutorial/introduction.rst:519
 msgid ""
 "The first line contains a *multiple assignment*: the variables ``a`` and "
 "``b`` simultaneously get the new values 0 and 1.  On the last line this "
@@ -1262,7 +1265,7 @@ msgstr ""
 "facă orice atribuire. Aceste expresii din partea dreaptă a atribuirii "
 "se evaluează de la stânga la dreapta."
 
-#: ../../tutorial/introduction.rst:524
+#: ../../tutorial/introduction.rst:525
 msgid ""
 "The :keyword:`while` loop executes as long as the condition (here: ``a < "
 "10``) remains true.  In Python, like in C, any non-zero integer value is "
@@ -1289,7 +1292,7 @@ msgstr ""
 "``<=`` (mai mic sau egal cu), ``>=`` (mai mare sau egal cu) și ``!=`` "
 "(neegal cu)."
 
-#: ../../tutorial/introduction.rst:533
+#: ../../tutorial/introduction.rst:534
 msgid ""
 "The *body* of the loop is *indented*: indentation is Python's way of "
 "grouping statements.  At the interactive prompt, you have to type a tab "
@@ -1313,7 +1316,7 @@ msgstr ""
 "liniile unui asemenea bloc de cod trebuie să aibă o indentare de aceeași "
 "lungime."
 
-#: ../../tutorial/introduction.rst:542
+#: ../../tutorial/introduction.rst:543
 msgid ""
 "The :func:`print` function writes the value of the argument(s) it is "
 "given. It differs from just writing the expression you want to write (as "
@@ -1330,7 +1333,7 @@ msgstr ""
 "sunt tipărite fără semne de citare, cu un spațiu inserat între itemi, "
 "astfel încât să puteți formata detaliile într-un mod plăcut, cum ar fi::"
 
-#: ../../tutorial/introduction.rst:549
+#: ../../tutorial/introduction.rst:550
 msgid ""
 ">>> i = 256*256\n"
 ">>> print('The value of i is', i)\n"
@@ -1340,7 +1343,7 @@ msgstr ""
 ">>> print('Valoarea lui i este', i)\n"
 "Valoarea lui i este 65536"
 
-#: ../../tutorial/introduction.rst:553
+#: ../../tutorial/introduction.rst:554
 msgid ""
 "The keyword argument *end* can be used to avoid the newline after the "
 "output, or end the output with a different string::"
@@ -1349,7 +1352,7 @@ msgstr ""
 "la o linie nouă după afișare, precum și atunci când dorim ca afișarea "
 "să se încheie cu un șir de caractere diferit de caracterul linie-nouă::"
 
-#: ../../tutorial/introduction.rst:556
+#: ../../tutorial/introduction.rst:557
 msgid ""
 ">>> a, b = 0, 1\n"
 ">>> while a < 1000:\n"
@@ -1365,11 +1368,11 @@ msgstr ""
 "...\n"
 "0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,"
 
-#: ../../tutorial/introduction.rst:565
+#: ../../tutorial/introduction.rst:566
 msgid "Footnotes"
 msgstr "Note de subsol"
 
-#: ../../tutorial/introduction.rst:566
+#: ../../tutorial/introduction.rst:567
 msgid ""
 "Since ``**`` has higher precedence than ``-``, ``-3**2`` will be "
 "interpreted as ``-(3**2)`` and thus result in ``-9``.  To avoid this and "
@@ -1380,7 +1383,7 @@ msgstr ""
 "rezultatul va fi ``-9``. Pentru a nu se întâmpla așa ceva și a obține "
 "``9``, puteți scrie ``(-3)**2``."
 
-#: ../../tutorial/introduction.rst:570
+#: ../../tutorial/introduction.rst:571
 msgid ""
 "Unlike other languages, special characters such as ``\\n`` have the same "
 "meaning with both single (``'...'``) and double (``\"...\"``) quotes. The"
@@ -1394,11 +1397,13 @@ msgstr ""
 "simple nu este nevoie să escapăm ghilimelele ``\"`` (cu toate că trebuie "
 "escapate ghilimelele simple ``\\'``) și viceversa."
 
-#: ../../tutorial/introduction.rst:21
+#: ../../tutorial/introduction.rst:20
 msgid "# (hash)"
 msgstr "# (haștag)"
 
-#: ../../tutorial/introduction.rst:21
+#: ../../tutorial/introduction.rst:20
 msgid "comment"
 msgstr "comentariu"
+
+
 
