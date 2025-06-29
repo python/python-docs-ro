@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# MODULE.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 13:08+0200\n"
+"POT-Creation-Date: 2025-06-17 17:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../tutorial/modules.rst:5
 msgid "Modules"
-msgstr ""
+msgstr "Module"
 
 #: ../../tutorial/modules.rst:7
 msgid ""
@@ -36,6 +36,21 @@ msgid ""
 "you've written in several programs without copying its definition into "
 "each program."
 msgstr ""
+"Dacă, atunci când lucrați în terminal, părăsiți interpretorul Python-ului, "
+"veți constata, la revenirea la promptul interpretorului, că toate "
+"definițiile scrise în "
+"`linia de comandă <https://en.wikipedia.org/wiki/Command-line_interface>`_ "
+"(fie ele definiții de funcții ori de variabile) s-au pierdut. Din acest "
+"motiv, atunci când vă pregătiți să scrieți un program mai lung de "
+"câteva linii de cod, ar fi mai bine să folosiți un editor de text pentru "
+"prepararea acestui program și apoi să rulați programul folosind fișierul "
+"în cauză pe post de date de intrare în interpretor. O asemenea "
+"întreprindere este numită creare de *script*. Pe măsură ce programul "
+"dumneavoastră se lungește, veți dori să-l împărțiți în mai multe "
+"fișiere pentru a-l întreține mai ușor. De asemeni, veți ajunge în "
+"situația de a dori să întrebuințați o funcție bine scrisă chiar de "
+"dumneavoastră în cadrul unor programe diverse fără să-i copiați, de "
+"fiecare dată, codul în vreunul din programele respective."
 
 #: ../../tutorial/modules.rst:16
 msgid ""
@@ -46,6 +61,16 @@ msgid ""
 " that you have access to in a script executed at the top level and in "
 "calculator mode)."
 msgstr ""
+"Pentru a vă ajuta în această privință, Python-ul dispune de o modalitate "
+"de a introduce definiții într-un fișier și apoi de a le utiliza fie "
+"într-un script fie într-o instanță interactivă a interpretorului. Un "
+"astfel de fișier este numit *modul*; definițiile dintr-un modul pot fi "
+"*importate* atât în alte module cât și în modulul *main* (modulul "
+"principal, adică acea colecție de variabile la care aveți acces dintr-un "
+"script executat la nivelul cel mai înalt precum și atunci când lucrați "
+"în modul calculator -- bucla `REPL "
+"<https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_"
+")."
 
 #: ../../tutorial/modules.rst:22
 msgid ""
@@ -56,19 +81,29 @@ msgid ""
 "favorite text editor to create a file called :file:`fibo.py` in the "
 "current directory with the following contents::"
 msgstr ""
+"Modulul constituie, așadar, un fișier conținând definiții și instrucțiuni "
+"scrise în Python. Numele fișierului este numele modulului la care "
+"adăugăm sufixul :file:`.py`. În interiorul (codului Python al) unui modul, "
+"numele modulului (sub forma unui șir de caractere) ne va fi accesibil "
+"ca valoare a variabilei globale ``__name__``. Ca să vedem aceasta, "
+"vă rugăm să întrebuințați editorul dumneavoastră favorit de text pentru "
+"a crea fișierul cu numele :file:`fibo.py`, situat în directorul "
+"curent și având următorul conținut::"
 
 #: ../../tutorial/modules.rst:28
 msgid ""
 "# Fibonacci numbers module\n"
 "\n"
-"def fib(n):    # write Fibonacci series up to n\n"
+"def fib(n):\n"
+"    \"\"\"Write Fibonacci series up to n.\"\"\"\n"
 "    a, b = 0, 1\n"
 "    while a < n:\n"
 "        print(a, end=' ')\n"
 "        a, b = b, a+b\n"
 "    print()\n"
 "\n"
-"def fib2(n):   # return Fibonacci series up to n\n"
+"def fib2(n):\n"
+"    \"\"\"Return Fibonacci series up to n.\"\"\"\n"
 "    result = []\n"
 "    a, b = 0, 1\n"
 "    while a < n:\n"
@@ -76,26 +111,51 @@ msgid ""
 "        a, b = b, a+b\n"
 "    return result"
 msgstr ""
+"# un modul cu numerele lui Fibonacci\n"
+"\n"
+"def fib(n):\n"
+"    \"\"\"Afișează termenii șirului lui Fibonacci de până la n.\"\"\"\n"
+"    a, b = 0, 1\n"
+"    while a < n:\n"
+"        print(a, end=' ')\n"
+"        a, b = b, a+b\n"
+"    print()\n"
+"\n"
+"def fib2(n):\n"
+"    \"\"\"Returnează termenii șirului lui Fibonacci de până la n.\"\"\"\n"
+"    rezultat = []\n"
+"    a, b = 0, 1\n"
+"    while a < n:\n"
+"        rezultat.append(a)\n"
+"        a, b = b, a+b\n"
+"    return rezultat"
 
-#: ../../tutorial/modules.rst:45
+#: ../../tutorial/modules.rst:47
 msgid ""
 "Now enter the Python interpreter and import this module with the "
 "following command::"
 msgstr ""
-
-#: ../../tutorial/modules.rst:48
-msgid ">>> import fibo"
-msgstr ""
+"Apoi, porniți interpretorul de Python și importați modulul tocmai "
+"scris cu comanda care urmează::"
 
 #: ../../tutorial/modules.rst:50
+msgid ">>> import fibo"
+msgstr ">>> import fibo"
+
+#: ../../tutorial/modules.rst:52
 msgid ""
 "This does not add the names of the functions defined in ``fibo``  "
 "directly to the current :term:`namespace` (see :ref:`tut-scopes` for more"
 " details); it only adds the module name ``fibo`` there. Using the module "
 "name you can access the functions::"
 msgstr ""
+"Execuția comenzii nu va adăuga numele funcțiilor definite în ``fibo``  "
+"direct la :term:`namespace` curent (vezi :ref:`tut-scopes` pentru mai "
+"multe detalii); tot ce va face va fi să adauge numele ``fibo`` spațiului "
+"de nume respectiv. Apelând la numele modulului, veți putea accesa "
+"funcțiile acestuia::"
 
-#: ../../tutorial/modules.rst:55
+#: ../../tutorial/modules.rst:57
 msgid ""
 ">>> fibo.fib(1000)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n"
@@ -104,23 +164,34 @@ msgid ""
 ">>> fibo.__name__\n"
 "'fibo'"
 msgstr ""
-
-#: ../../tutorial/modules.rst:62
-msgid "If you intend to use a function often you can assign it to a local name::"
-msgstr ""
+">>> fibo.fib(1000)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n"
+">>> fibo.fib2(100)\n"
+"[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n"
+">>> fibo.__name__\n"
+"'fibo'"
 
 #: ../../tutorial/modules.rst:64
+msgid "If you intend to use a function often you can assign it to a local name::"
+msgstr ""
+"Dacă intenționați să folosiți o anumită funcție în mod frecvent, atunci îi "
+"puteți atribui unei variabile locale numele acesteia::"
+
+#: ../../tutorial/modules.rst:66
 msgid ""
 ">>> fib = fibo.fib\n"
 ">>> fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
-
-#: ../../tutorial/modules.rst:72
-msgid "More on Modules"
-msgstr ""
+">>> fib = fibo.fib\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
 #: ../../tutorial/modules.rst:74
+msgid "More on Modules"
+msgstr "Mai multe despre module"
+
+#: ../../tutorial/modules.rst:76
 msgid ""
 "A module can contain executable statements as well as function "
 "definitions. These statements are intended to initialize the module. They"
@@ -128,8 +199,14 @@ msgid ""
 "import statement. [#]_ (They are also run if the file is executed as a "
 "script.)"
 msgstr ""
+"Orice modul poate conține atât instrucțiuni executabile cât și definiții "
+"de funcții. Aceste instrucțiuni sunt folosite la inițializarea modulului. "
+"Adică, ele vor fi executate doar *prima* dată când numele modulului în "
+"cauză va fi întâlnit de către interpretor într-o instrucțiune de import. "
+"[#]_ (Instrucțiunile vor fi rulate și atunci când fișierul -- modulul -- "
+"va fi executat ca script.)"
 
-#: ../../tutorial/modules.rst:79
+#: ../../tutorial/modules.rst:81
 msgid ""
 "Each module has its own private namespace, which is used as the global "
 "namespace by all functions defined in the module. Thus, the author of a "
@@ -139,8 +216,17 @@ msgid ""
 "with the same notation used to refer to its functions, "
 "``modname.itemname``."
 msgstr ""
+"Fiecare modul are propriul său spațiu de nume privat, care va fi utilizat "
+"ca spațiu de nume global de către toate funcțiile definite în modulul "
+"respectiv. Astfel, autorul unui modul poate întrebuința variabile "
+"globale în codul Python al modulului fără să se teamă de eventualele "
+"conflicte de nume dintre aceste variabile și variabilele globale ale "
+"utilizatorului (modulului). Pe de altă parte, dacă sunteți siguri pe "
+"ceea ce faceți, atunci veți putea întrebuința variabilele globale ale "
+"unui modul cu aceeași notație pe care o utilizați pentru a vă referi "
+"la funcțiile modulului, și anume ``nume_de_modul.nume_de_item``."
 
-#: ../../tutorial/modules.rst:86
+#: ../../tutorial/modules.rst:88
 msgid ""
 "Modules can import other modules.  It is customary but not required to "
 "place all :keyword:`import` statements at the beginning of a module (or "
@@ -148,85 +234,130 @@ msgid ""
 "top level of a module (outside any functions or classes), are added to "
 "the module's global namespace."
 msgstr ""
+"Modulele pot importa alte module. Se obișnuiește, fără a fi obligatoriu, "
+"să plasăm toate instrucțiunile :keyword:`import` la începutul oricărui "
+"modul (respectiv, al oricărui script). Numele de module importate, dacă "
+"sunt poziționate la nivelul cel mai de sus al modulului (adică, în "
+"exteriorul oricărui cod de funcție sau de clasă din modul), vor fi "
+"adăugate spațiului de nume global al modulului."
 
-#: ../../tutorial/modules.rst:91
+#: ../../tutorial/modules.rst:93
 msgid ""
 "There is a variant of the :keyword:`import` statement that imports names "
 "from a module directly into the importing module's namespace.  For "
 "example::"
 msgstr ""
+"Există o variantă a instrucțiunii :keyword:`import` care realizează "
+"importurile de nume dintr-un modul direct în spațiul de nume al modulului "
+"importator. Iată un exemplu de folosire a ei::"
 
-#: ../../tutorial/modules.rst:94
+#: ../../tutorial/modules.rst:96
 msgid ""
 ">>> from fibo import fib, fib2\n"
 ">>> fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> from fibo import fib, fib2\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
-#: ../../tutorial/modules.rst:98
+#: ../../tutorial/modules.rst:100
 msgid ""
 "This does not introduce the module name from which the imports are taken "
 "in the local namespace (so in the example, ``fibo`` is not defined)."
 msgstr ""
-
-#: ../../tutorial/modules.rst:101
-msgid "There is even a variant to import all names that a module defines::"
-msgstr ""
+"Varianta nu va introduce numele modulului din care facem importurile în "
+"spațiul de nume local (așa că, în exemplul anterior, ``fibo`` nu este "
+"definit)."
 
 #: ../../tutorial/modules.rst:103
+msgid "There is even a variant to import all names that a module defines::"
+msgstr ""
+"Dispunem chiar și de o modalitate de a importa toate numele pe care le "
+"definește un modul::"
+
+#: ../../tutorial/modules.rst:105
 msgid ""
 ">>> from fibo import *\n"
 ">>> fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> from fibo import *\n"
+">>> fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
-#: ../../tutorial/modules.rst:107
+#: ../../tutorial/modules.rst:109
 msgid ""
 "This imports all names except those beginning with an underscore (``_``)."
 " In most cases Python programmers do not use this facility since it "
 "introduces an unknown set of names into the interpreter, possibly hiding "
 "some things you have already defined."
 msgstr ""
+"Această variantă a instrucțiunii despre care discutăm va importa toate "
+"numele cu excepția celor care încep cu o bară jos (``_``). De cele mai "
+"multe ori, programatorii de Python nu vor apela la această facilitate a "
+"limbajului deoarece ea va introduce un set necunoscut de nume în spațiul "
+"de nume folosit de interpretor, putând astfel masca o serie de chestiuni "
+"deja definite de dumneavoastră."
 
-#: ../../tutorial/modules.rst:112
+#: ../../tutorial/modules.rst:114
 msgid ""
 "Note that in general the practice of importing ``*`` from a module or "
 "package is frowned upon, since it often causes poorly readable code. "
 "However, it is okay to use it to save typing in interactive sessions."
 msgstr ""
+"Să remarcăm, așadar, că obiceiul de a importa ``*`` fie dintr-un "
+"modul fie dintr-un pachet este descurajat de profesioniști, dat fiind "
+"că el cauzează, în majoritatea situațiilor, apariția unui cod greu de "
+"citit. Cu toate acestea, este permis să îl practicați în sesiunile "
+"interactive de lucru cu interpretorul de Python, ca să aveți mai puțin "
+"de tastat."
 
-#: ../../tutorial/modules.rst:116
+#: ../../tutorial/modules.rst:118
 msgid ""
 "If the module name is followed by :keyword:`!as`, then the name following"
 " :keyword:`!as` is bound directly to the imported module."
 msgstr ""
+"Dacă numele unui modul este urmat de :keyword:`!as`, atunci numele situat "
+"la dreapta lui :keyword:`!as` va fi legat direct de modulul importat."
 
-#: ../../tutorial/modules.rst:121
+#: ../../tutorial/modules.rst:123
 msgid ""
 ">>> import fibo as fib\n"
 ">>> fib.fib(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> import fibo as fib\n"
+">>> fib.fib(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
-#: ../../tutorial/modules.rst:125
+#: ../../tutorial/modules.rst:127
 msgid ""
 "This is effectively importing the module in the same way that ``import "
 "fibo`` will do, with the only difference of it being available as "
 "``fib``."
 msgstr ""
-
-#: ../../tutorial/modules.rst:128
-msgid "It can also be used when utilising :keyword:`from` with similar effects::"
-msgstr ""
+"Procedând astfel, importul modulului se va realiza la fel ca în urma "
+"execuției instrucțiunii ``import fibo``, singura deosebire fiind aceea "
+"că modulul va fi disponibil sub numele (modificat convenabil) de ``fib``."
 
 #: ../../tutorial/modules.rst:130
+msgid "It can also be used when utilising :keyword:`from` with similar effects::"
+msgstr ""
+"Efecte similare vor fi obținute dacă procedăm în acest mod și atunci când "
+"folosim versiunea cu :keyword:`from` a instrucțiunii de import::"
+
+#: ../../tutorial/modules.rst:132
 msgid ""
 ">>> from fibo import fib as fibonacci\n"
 ">>> fibonacci(500)\n"
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 msgstr ""
+">>> from fibo import fib as fibonacci\n"
+">>> fibonacci(500)\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377"
 
-#: ../../tutorial/modules.rst:137
+#: ../../tutorial/modules.rst:139
 msgid ""
 "For efficiency reasons, each module is only imported once per interpreter"
 " session.  Therefore, if you change your modules, you must restart the "
@@ -234,68 +365,94 @@ msgid ""
 "interactively, use :func:`importlib.reload`, e.g. ``import importlib; "
 "importlib.reload(modulename)``."
 msgstr ""
-
-#: ../../tutorial/modules.rst:147
-msgid "Executing modules as scripts"
-msgstr ""
+"Din rațiuni de eficiență, orice modul va fi importat o singură dată "
+"într-o sesiune de lucru cu interpretorul. Așa că, dacă îi aduceți "
+"modificări modulului, va trebui să reporniți interpretorul -- ori, dacă "
+"este vorba doar despre un singur modul ce trebuie testat interactiv, "
+"folosiți :func:`importlib.reload`, precum, de exemplu, în "
+"``import importlib; importlib.reload(numele_modulului)``."
 
 #: ../../tutorial/modules.rst:149
-msgid "When you run a Python module with ::"
-msgstr ""
+msgid "Executing modules as scripts"
+msgstr "Executând module ca scripturi"
 
 #: ../../tutorial/modules.rst:151
-msgid "python fibo.py <arguments>"
+msgid "When you run a Python module with ::"
 msgstr ""
+"Atunci când rulați un modul Python cu"
 
 #: ../../tutorial/modules.rst:153
+msgid "python fibo.py <arguments>"
+msgstr "python fibo.py <argumente>"
+
+#: ../../tutorial/modules.rst:155
 msgid ""
 "the code in the module will be executed, just as if you imported it, but "
 "with the ``__name__`` set to ``\"__main__\"``.  That means that by adding"
 " this code at the end of your module::"
 msgstr ""
+"codul modulului va fi executat ca și cum modulul ar fi fost importat, cu "
+"excepția faptului că variabila ``__name__`` va fi setată ca "
+"``\"__main__\"``. Ceea ce înseamnă că, dacă ați adăuga următoarele linii "
+"de cod la sfârșitul modulului dumneavoastră::"
 
-#: ../../tutorial/modules.rst:157
+#: ../../tutorial/modules.rst:159
 msgid ""
 "if __name__ == \"__main__\":\n"
 "    import sys\n"
 "    fib(int(sys.argv[1]))"
 msgstr ""
+"if __name__ == \"__main__\":\n"
+"    import sys\n"
+"    fib(int(sys.argv[1]))"
 
-#: ../../tutorial/modules.rst:161
+#: ../../tutorial/modules.rst:163
 msgid ""
 "you can make the file usable as a script as well as an importable module,"
 " because the code that parses the command line only runs if the module is"
 " executed as the \"main\" file:"
 msgstr ""
+"atunci ați face fișierul (modulului) utilizabil atât ca script cât și ca "
+"modul importabil doarece codul în care se parsează conținutul liniei de "
+"comandă va rula numai atunci când modulul se execută ca fișier \"main\":"
 
-#: ../../tutorial/modules.rst:165
+#: ../../tutorial/modules.rst:167
 msgid ""
 "$ python fibo.py 50\n"
 "0 1 1 2 3 5 8 13 21 34"
 msgstr ""
-
-#: ../../tutorial/modules.rst:170
-msgid "If the module is imported, the code is not run::"
-msgstr ""
+"$ python fibo.py 50\n"
+"0 1 1 2 3 5 8 13 21 34"
 
 #: ../../tutorial/modules.rst:172
+msgid "If the module is imported, the code is not run::"
+msgstr ""
+"În schimb, atunci când modulul este importat, codul nu va fi rulat::"
+
+#: ../../tutorial/modules.rst:174
 msgid ""
 ">>> import fibo\n"
 ">>>"
 msgstr ""
+">>> import fibo\n"
+">>>"
 
-#: ../../tutorial/modules.rst:175
+#: ../../tutorial/modules.rst:177
 msgid ""
 "This is often used either to provide a convenient user interface to a "
 "module, or for testing purposes (running the module as a script executes "
 "a test suite)."
 msgstr ""
+"Acest procedeu este frecvent întrebuințat fie pentru a-i adăuga "
+"modulului o interfață cu utilizatorul convenabilă fie în scop de "
+"testare (atunci când, la rularea modulului ca script, va fi executată "
+"o suită de teste)."
 
-#: ../../tutorial/modules.rst:182
+#: ../../tutorial/modules.rst:184
 msgid "The Module Search Path"
-msgstr ""
+msgstr "Calea de căutare a modulelor"
 
-#: ../../tutorial/modules.rst:186
+#: ../../tutorial/modules.rst:188
 msgid ""
 "When a module named :mod:`!spam` is imported, the interpreter first "
 "searches for a built-in module with that name. These module names are "
@@ -304,38 +461,59 @@ msgid ""
 "by the variable :data:`sys.path`.  :data:`sys.path` is initialized from "
 "these locations:"
 msgstr ""
+"Atunci când un modul numit :mod:`!cutare` este importat, interpretorul "
+"va începe prin a căuta un modul predefinit cu același nume. Numele "
+"acestor module sunt înșiruite în tuplul :data:`sys.builtin_module_names`. "
+"Dacă nu îl găsește, atunci interpretorul va căuta un fișier intitulat "
+":file:`cutare.py` într-o listă de directoare furnizată de variabila "
+":data:`sys.path`. :data:`sys.path` este inițializată cu una din următoarele "
+"locații:"
 
-#: ../../tutorial/modules.rst:192
+#: ../../tutorial/modules.rst:194
 msgid ""
 "The directory containing the input script (or the current directory when "
 "no file is specified)."
 msgstr ""
+"Directorul care conține scriptul folosit ca dată de intrare la interpretor "
+"(sau directorul curent dacă nu a fost precizat niciun fișier)."
 
-#: ../../tutorial/modules.rst:194
+#: ../../tutorial/modules.rst:196
 msgid ""
 ":envvar:`PYTHONPATH` (a list of directory names, with the same syntax as "
 "the shell variable :envvar:`PATH`)."
 msgstr ""
+":envvar:`PYTHONPATH` (o listă cu nume de directoare, având aceeași sintaxă "
+"ca variabila interpretorului de comenzi -- de la englezescul *shell* -- "
+":envvar:`PATH`)."
 
-#: ../../tutorial/modules.rst:196
+#: ../../tutorial/modules.rst:198
 msgid ""
 "The installation-dependent default (by convention including a ``site-"
 "packages`` directory, handled by the :mod:`site` module)."
 msgstr ""
+"Locația implicită, depinzând de modalitatea de instalare (incluzând, "
+"în mod convențional, un director ``site-packages``, manipulată de "
+"modulul :mod:`site`)."
 
-#: ../../tutorial/modules.rst:199
+#: ../../tutorial/modules.rst:201
 msgid "More details are at :ref:`sys-path-init`."
-msgstr ""
+msgstr "Mai multe detalii se găsesc în :ref:`sys-path-init`."
 
-#: ../../tutorial/modules.rst:202
+#: ../../tutorial/modules.rst:204
 msgid ""
 "On file systems which support symlinks, the directory containing the "
 "input script is calculated after the symlink is followed. In other words "
 "the directory containing the symlink is **not** added to the module "
 "search path."
 msgstr ""
+"În sistemele de fișiere care suportă "
+"`legături slabe <https://en.wikipedia.org/wiki/Symbolic_link>`_ "
+"(în englezește, ca jargon, *symlink*), directorul care conține scriptul "
+"de intrare va fi calculat numai după ce este urmată legătura. Cu alte "
+"cuvinte, directorul care conține legătura slabă **nu** îi va fi adăugat "
+"căii de căutare a modulelor."
 
-#: ../../tutorial/modules.rst:206
+#: ../../tutorial/modules.rst:208
 msgid ""
 "After initialization, Python programs can modify :data:`sys.path`.  The "
 "directory containing the script being run is placed at the beginning of "
@@ -344,12 +522,19 @@ msgid ""
 "name in the library directory. This is an error unless the replacement is"
 " intended.  See section :ref:`tut-standardmodules` for more information."
 msgstr ""
-
-#: ../../tutorial/modules.rst:219
-msgid "\"Compiled\" Python files"
-msgstr ""
+"Odată inițializate, programele Python pot modifica :data:`sys.path`-ul. "
+"Directorul care conține scriptul ce este rulat va fi plasat la începutul "
+"căii de căutare, înaintea căii bibliotecii standard. Ceea ce înseamnă că "
+"scripturile din directorul în cauză vor fi încărcate în locul modulelor "
+"cu același nume din directorul bibliotecii standard. Dacă aceasta nu este "
+"intenția dumneavoastră, atunci situația constituie o eroare serioasă. A se "
+"vedea :ref:`tut-standardmodules` pentru mai multe informații."
 
 #: ../../tutorial/modules.rst:221
+msgid "\"Compiled\" Python files"
+msgstr "Fișiere Python \"compilate\""
+
+#: ../../tutorial/modules.rst:223
 #, python-brace-format
 msgid ""
 "To speed up loading modules, Python caches the compiled version of each "
@@ -361,8 +546,17 @@ msgid ""
 "allows compiled modules from different releases and different versions of"
 " Python to coexist."
 msgstr ""
+"Pentru a accelera încărcarea modulelor, Python-ul salvează în directorul "
+"de *cache* ``__pycache__`` versiuni compilate ale tuturor modulelor, cu "
+"numele :file:`modulul.{versiunea}.pyc`, în care versiunea conține "
+"codificarea formatului pentru fișierul compilat; în general, ea include "
+"numărul de versiune al Python-ului. De exemplu, în ediția (de la "
+"englezescul *release*) 3.3 a CPython-ului, varianta compilată a lui "
+"cutare.py ar fi salvată drept ``__pycache__/cutare.cpython-33.pyc``. O "
+"atare convenție de nume le permite modulelor compilate ale diverselor "
+"ediții și diferitelor versiuni ale Python-ului să coexiste."
 
-#: ../../tutorial/modules.rst:229
+#: ../../tutorial/modules.rst:231
 msgid ""
 "Python checks the modification date of the source against the compiled "
 "version to see if it's out of date and needs to be recompiled.  This is a"
@@ -370,8 +564,14 @@ msgid ""
 "independent, so the same library can be shared among systems with "
 "different architectures."
 msgstr ""
+"Python-ul compară data modificării fișierelor-sursă cu cea a versiunilor "
+"compilate pentru a stabili dacă acestea din urmă sunt depășite cronologic "
+"și este nevoie să fie recompilate. Procesul de comparare și recompilare "
+"este complet automatizat. În plus, modulele compilate sunt independente de "
+"platforma de calcul, astfel că aceeași bibliotecă poate fi partajată (de la "
+"englezescul *shared*) cu sisteme de arhitecturi diferite."
 
-#: ../../tutorial/modules.rst:234
+#: ../../tutorial/modules.rst:236
 msgid ""
 "Python does not check the cache in two circumstances.  First, it always "
 "recompiles and does not store the result for the module that's loaded "
@@ -380,12 +580,20 @@ msgid ""
 "distribution, the compiled module must be in the source directory, and "
 "there must not be a source module."
 msgstr ""
-
-#: ../../tutorial/modules.rst:241
-msgid "Some tips for experts:"
-msgstr ""
+"Python-ul nu verifică zona de cache în două circumstanțe. În prima, pentru "
+"că el recompilează de fiecare dată, fără a stoca rezultatul recompilării în "
+"directorul de cache, modulul care se încarcă din linia de comandă. În cea "
+"de-a doua situație, el nu verifică zona de cache atunci când modulul nu "
+"dispune de fișier-sursă. Pentru ca Python-ul să suporte o distribuție fără "
+"cod-sursă (adică una doar compilată), modulul compilat trebuie să fie "
+"localizat în directorul-sursă și nu trebuie să existe în distribuție "
+"niciun fișier-sursă al modulului în cauză."
 
 #: ../../tutorial/modules.rst:243
+msgid "Some tips for experts:"
+msgstr "Ponturi pentru experți:"
+
+#: ../../tutorial/modules.rst:245
 msgid ""
 "You can use the :option:`-O` or :option:`-OO` switches on the Python "
 "command to reduce the size of a compiled module.  The ``-O`` switch "
@@ -395,31 +603,50 @@ msgid ""
 "doing.  \"Optimized\" modules have an ``opt-`` tag and are usually "
 "smaller.  Future releases may change the effects of optimization."
 msgstr ""
+"Puteți întrebuința opțiunile :option:`-O` sau :option:`-OO` ale unei "
+"comenzi Python pentru a reduce mărimea unui modul compilat. Opțiunea "
+"``-O`` elimină instrucțiunile de aserțiune (de la englezescul *assert*), "
+"iar opțiunea ``-OO`` elimină atât instrucțiunile de aserțiune cât și "
+"șirurile __doc__. Dat fiind că anumite programe se bazează pe existența "
+"acestora, ar trebui să utilizați această opțiune numai atunci când sunteți "
+"sigur pe ceea ce faceți. Modulele \"optimizate\" au eticheta ``opt-`` și "
+"sunt, de obicei, mai mici (decât originalele). Edițiile viitoare ale "
+"Python-ului pot modifica efectele acestor optimizări."
 
-#: ../../tutorial/modules.rst:251
+#: ../../tutorial/modules.rst:253
 msgid ""
 "A program doesn't run any faster when it is read from a ``.pyc`` file "
 "than when it is read from a ``.py`` file; the only thing that's faster "
 "about ``.pyc`` files is the speed with which they are loaded."
 msgstr ""
+"Niciun program nu va rula mai repede atunci când este citit dintr-un fișier "
+"``.pyc`` decât atunci când este citit dintr-un fișier ``.py``; tot ceea ce "
+"este mai rapid în privința fișierelor ``.pyc`` este viteza cu care sunt "
+"încărcate."
 
-#: ../../tutorial/modules.rst:255
+#: ../../tutorial/modules.rst:257
 msgid ""
 "The module :mod:`compileall` can create .pyc files for all modules in a "
 "directory."
 msgstr ""
+"Modulul :mod:`compileall` le poate crea fișiere .pyc tuturor modulelor "
+"dintr-un director."
 
-#: ../../tutorial/modules.rst:258
+#: ../../tutorial/modules.rst:260
 msgid ""
 "There is more detail on this process, including a flow chart of the "
 "decisions, in :pep:`3147`."
 msgstr ""
+"Mult mai multe detalii despre acest proces al compilării modulelor, "
+"inclusiv un "
+"`arbore de decizie <https://en.wikipedia.org/wiki/Decision_tree>`_ "
+"util, se găsesc în :pep:`3147`."
 
-#: ../../tutorial/modules.rst:265
+#: ../../tutorial/modules.rst:267
 msgid "Standard Modules"
-msgstr ""
+msgstr "Module standard"
 
-#: ../../tutorial/modules.rst:269
+#: ../../tutorial/modules.rst:271
 msgid ""
 "Python comes with a library of standard modules, described in a separate "
 "document, the Python Library Reference (\"Library Reference\" hereafter)."
@@ -434,8 +661,22 @@ msgid ""
 "``sys.ps1`` and ``sys.ps2`` define the strings used as primary and "
 "secondary prompts::"
 msgstr ""
+"Python-ul vine însoțit de o bibliotecă de module standard, descrisă într-un "
+"document separat, Referința bibliotecii Python (denumit \"Referința "
+"bibliotecii\" de aici înainte). Anumite module sunt construite ca parte a "
+"interpretorului; ele oferă acces la operații care nu fac parte din corpul "
+"(de la englezescul *core*) limbajului dar sunt, cu toate acestea, incluse "
+"în el, fie din rațiuni de eficiență fie pentru a-i da acces utilizatorului "
+"la primitive ale sistemului de operare precum apelurile (de) sistem. "
+"Setul acestor module este accesibil printr-o opțiune de configurare care "
+"depinde, la rândul ei, de platforma de calcul folosită. De exemplu, modulul "
+":mod:`winreg` va fi disponibil numai pe sistemele de calcul cu Windows. "
+"Un modul particular merită atenția dumneavoastră: :mod:`sys`, el fiind "
+"construit ca parte a oricărui interpretor de Python. Variabilele "
+"``sys.ps1`` și ``sys.ps2`` au drept valori șirurile de caractere folosite "
+"pe post de promptul primar, respectiv de promptul secundar::"
 
-#: ../../tutorial/modules.rst:281
+#: ../../tutorial/modules.rst:283
 msgid ""
 ">>> import sys\n"
 ">>> sys.ps1\n"
@@ -447,14 +688,25 @@ msgid ""
 "Yuck!\n"
 "C>"
 msgstr ""
+">>> import sys\n"
+">>> sys.ps1\n"
+"'>>> '\n"
+">>> sys.ps2\n"
+"'... '\n"
+">>> sys.ps1 = 'C> '\n"
+"C> print('Văleu!')\n"
+"Văleu!\n"
+"C>"
 
-#: ../../tutorial/modules.rst:292
+#: ../../tutorial/modules.rst:294
 msgid ""
 "These two variables are only defined if the interpreter is in interactive"
 " mode."
 msgstr ""
+"Aceste două variabile sunt definite doar dacă interpretorul lucrează în "
+"modul interactiv."
 
-#: ../../tutorial/modules.rst:294
+#: ../../tutorial/modules.rst:296
 msgid ""
 "The variable ``sys.path`` is a list of strings that determines the "
 "interpreter's search path for modules. It is initialized to a default "
@@ -462,24 +714,35 @@ msgid ""
 "built-in default if :envvar:`PYTHONPATH` is not set.  You can modify it "
 "using standard list operations::"
 msgstr ""
+"Variabila ``sys.path`` este o listă formată din șiruri de caractere "
+"care determină calea de căutare a modulelor. Este inițializată cu o "
+"cale implicită preluată din variabila de mediu :envvar:`PYTHONPATH`, "
+"ori dintr-o altă cale prestabilită atunci când :envvar:`PYTHONPATH` "
+"nu a fost setată. O puteți modifica folosind operațiile tipice cu "
+"liste::"
 
-#: ../../tutorial/modules.rst:300
+#: ../../tutorial/modules.rst:302
 msgid ""
 ">>> import sys\n"
 ">>> sys.path.append('/ufs/guido/lib/python')"
 msgstr ""
-
-#: ../../tutorial/modules.rst:307
-msgid "The :func:`dir` Function"
-msgstr ""
+">>> import sys\n"
+">>> sys.path.append('/ufs/guido/lib/python')"
 
 #: ../../tutorial/modules.rst:309
+msgid "The :func:`dir` Function"
+msgstr "Funcția :func:`dir`"
+
+#: ../../tutorial/modules.rst:311
 msgid ""
 "The built-in function :func:`dir` is used to find out which names a "
 "module defines.  It returns a sorted list of strings::"
 msgstr ""
+"Funcția predefinită :func:`dir` este întrebuințată la aflarea numelor "
+"pe care le definește un anumit modul. Ea returnează o listă sortată de "
+"șiruri de caractere::"
 
-#: ../../tutorial/modules.rst:312
+#: ../../tutorial/modules.rst:314
 msgid ""
 ">>> import fibo, sys\n"
 ">>> dir(fibo)\n"
@@ -516,14 +779,50 @@ msgid ""
 "'version_info',\n"
 " 'warnoptions']"
 msgstr ""
+">>> import fibo, sys\n"
+">>> dir(fibo)\n"
+"['__name__', 'fib', 'fib2']\n"
+">>> dir(sys)\n"
+"['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n"
+" '__interactivehook__', '__loader__', '__name__', '__package__', "
+"'__spec__',\n"
+" '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n"
+" '_clear_type_cache', '_current_frames', '_debugmallocstats', "
+"'_framework',\n"
+" '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n"
+" 'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n"
+" 'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n"
+" 'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', "
+"'exc_info',\n"
+" 'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', "
+"'float_info',\n"
+" 'float_repr_style', 'get_asyncgen_hooks', "
+"'get_coroutine_origin_tracking_depth',\n"
+" 'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',\n"
+" 'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n"
+" 'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n"
+" 'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n"
+" 'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n"
+" 'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n"
+" 'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', "
+"'pycache_prefix',\n"
+" 'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', "
+"'setdlopenflags',\n"
+" 'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', "
+"'stderr',\n"
+" 'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', "
+"'version_info',\n"
+" 'warnoptions']"
 
-#: ../../tutorial/modules.rst:338
+#: ../../tutorial/modules.rst:340
 msgid ""
 "Without arguments, :func:`dir` lists the names you have defined "
 "currently::"
 msgstr ""
+"Utilizată fără argumente, :func:`dir` va lista numele definite în sesiunea "
+"curentă::"
 
-#: ../../tutorial/modules.rst:340
+#: ../../tutorial/modules.rst:342
 msgid ""
 ">>> a = [1, 2, 3, 4, 5]\n"
 ">>> import fibo\n"
@@ -531,19 +830,30 @@ msgid ""
 ">>> dir()\n"
 "['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']"
 msgstr ""
+">>> a = [1, 2, 3, 4, 5]\n"
+">>> import fibo\n"
+">>> fib = fibo.fib\n"
+">>> dir()\n"
+"['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']"
 
-#: ../../tutorial/modules.rst:346
+#: ../../tutorial/modules.rst:348
 msgid "Note that it lists all types of names: variables, modules, functions, etc."
 msgstr ""
+"Remarcați faptul că ea listează toate tipurile de nume: pe cele de "
+"variabile, pe cele de module, de funcții șamd."
 
-#: ../../tutorial/modules.rst:350
+#: ../../tutorial/modules.rst:352
 msgid ""
 ":func:`dir` does not list the names of built-in functions and variables."
 "  If you want a list of those, they are defined in the standard module "
 ":mod:`builtins`::"
 msgstr ""
+":func:`dir` nu listează nici numele funcțiilor predefinite (în englezește, "
+"ca jargon, *built-in*) și nici pe cele ale variabilelor predefinite. Dacă "
+"vă interesează lista acestora, atunci aflați că ele sunt definite în "
+"modulul standard :mod:`builtins`::"
 
-#: ../../tutorial/modules.rst:354
+#: ../../tutorial/modules.rst:356
 msgid ""
 ">>> import builtins\n"
 ">>> dir(builtins)\n"
@@ -585,12 +895,51 @@ msgid ""
 "'vars',\n"
 " 'zip']"
 msgstr ""
-
-#: ../../tutorial/modules.rst:389
-msgid "Packages"
-msgstr ""
+">>> import builtins\n"
+">>> dir(builtins)\n"
+"['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n"
+" 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n"
+" 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n"
+" 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n"
+" 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n"
+" 'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n"
+" 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',\n"
+" 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n"
+" 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n"
+" 'MemoryError', 'NameError', 'None', 'NotADirectoryError', "
+"'NotImplemented',\n"
+" 'NotImplementedError', 'OSError', 'OverflowError',\n"
+" 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n"
+" 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n"
+" 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n"
+" 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n"
+" 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n"
+" 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', "
+"'UserWarning',\n"
+" 'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n"
+" '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n"
+" 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n"
+" 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n"
+" 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',"
+"\n"
+" 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', "
+"'hasattr',\n"
+" 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',"
+"\n"
+" 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n"
+" 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', "
+"'property',\n"
+" 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',"
+"\n"
+" 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', "
+"'vars',\n"
+" 'zip']"
 
 #: ../../tutorial/modules.rst:391
+msgid "Packages"
+msgstr "Pachete"
+
+#: ../../tutorial/modules.rst:393
 msgid ""
 "Packages are a way of structuring Python's module namespace by using "
 "\"dotted module names\".  For example, the module name :mod:`!A.B` "
@@ -600,8 +949,17 @@ msgid ""
 "names saves the authors of multi-module packages like NumPy or Pillow "
 "from having to worry about each other's module names."
 msgstr ""
+"Pachetele constituie o modalitate de structurare a spațiului de nume al "
+"modulelor Python folosind \"nume-cu-puncte de module\" (de la englezescul "
+"*dotted*). De exemplu, numele de modul :mod:`!A.B` se referă la "
+"(sub)modulul ``B`` din pachetul numit ``A``. Tot așa cum utilizarea "
+"modulelor îl scapă pe autorul unui modul de grija eventualelor conflicte "
+"de nume cu variabilele globale din modulul altui autor, întrebuințarea de "
+"nume-cu-puncte de module îi scapă pe autorii unor pachete multi-modul "
+"precum NumPy sau Pillow de grija numelor de module ale altor autori de "
+"pachete multi-modul."
 
-#: ../../tutorial/modules.rst:399
+#: ../../tutorial/modules.rst:401
 msgid ""
 "Suppose you want to design a collection of modules (a \"package\") for "
 "the uniform handling of sound files and sound data.  There are many "
@@ -615,8 +973,23 @@ msgid ""
 "of modules to perform these operations.  Here's a possible structure for "
 "your package (expressed in terms of a hierarchical filesystem):"
 msgstr ""
+"Să presupunem că doriți să proiectați o colecție de module (adică, un "
+"\"pachet\") dedicate manipulării sistematice a fișierelor de sunet și "
+"a datelor audio. Deoarece există numeroase formate de fișier de sunet "
+"(recunoscute, de obicei, după `extensiile "
+"<https://en.wikipedia.org/wiki/Filename_extension>`_ "
+"lor, cum ar fi: :file:`.wav`, :file:`.aiff`, :file:`.au`), veți avea de "
+"construit și de întreținut o colecție crescândă de module care să se "
+"ocupe cu conversia între diversele formate de fișier. De asemeni, există "
+"felurite operații pe care veți dori să le aplicați unor date audio (precum "
+"mixaje, adăugarea de ecouri, aplicarea unor funcții de egalizare, crearea "
+"unor efecte stereo artificiale), astfel că, pe lângă cele de dinainte, veți "
+"scrie în permanență noi module pentru aceste operații. Iată o structură "
+"posibilă a pachetului dumneavoastră (exprimată în stilul unui `sistem "
+"ierarhic de fișiere <https://en.wikipedia.org/wiki/File_system>`_ -- în "
+"englezește, ca jargon, *filesystem*):"
 
-#: ../../tutorial/modules.rst:410
+#: ../../tutorial/modules.rst:412
 msgid ""
 "sound/                          Top-level package\n"
 "      __init__.py               Initialize the sound package\n"
@@ -642,14 +1015,39 @@ msgid ""
 "              karaoke.py\n"
 "              ..."
 msgstr ""
+"sunet/                       Pachetul-rădăcină\n"
+"      __init__.py            Inițializarea pachetului de sunet\n"
+"      formate/               Subpachetul conversiilor de formate de fișier\n"
+"              __init__.py\n"
+"              citesc_wav.py\n"
+"              scriu_wav.py\n"
+"              citesc_aiff.py\n"
+"              scriu_aiff.py\n"
+"              citesc_au.py\n"
+"              scriu_au.py\n"
+"              ...\n"
+"      efecte/                 Subpachetul efectelor audio\n"
+"              __init__.py\n"
+"              ecou.py\n"
+"              înconjurător.py\n"
+"              inversare.py\n"
+"              ...\n"
+"      filtre/                 Subpachetul filtrelor\n"
+"              __init__.py\n"
+"              egalizator.py\n"
+"              codare_vo.py\n"
+"              karaoke.py\n"
+"              ..."
 
-#: ../../tutorial/modules.rst:436
+#: ../../tutorial/modules.rst:438
 msgid ""
 "When importing the package, Python searches through the directories on "
 "``sys.path`` looking for the package subdirectory."
 msgstr ""
+"Atunci când importăm un pachet, Python-ul va căuta subdirectorul "
+"pachetului în lista de directoare din ``sys.path``."
 
-#: ../../tutorial/modules.rst:439
+#: ../../tutorial/modules.rst:441
 msgid ""
 "The :file:`__init__.py` files are required to make Python treat "
 "directories containing the file as packages (unless using a "
@@ -660,66 +1058,95 @@ msgid ""
 "also execute initialization code for the package or set the ``__all__`` "
 "variable, described later."
 msgstr ""
+"Prezența unui fișier :file:`__init__.py` într-un director obligă "
+"Python-ul să trateze respectivul director drept pachet (un astfel de "
+"fișier lipsește dacă folosim directorul pe post de "
+":term:`namespace package`, adică o caracteristică oarecum avansată a "
+"Python-ului despre care nu discutăm chiar acum). Acest procedeu "
+"face ca directoare cu nume banale, cum ar fi ``string``, să nu poată "
+"conține, din pură întâmplare, module de interes ce ar trebui să fie "
+"găsite abia la locații ulterioare din calea de căutare a modulelor. "
+"În cel mai simplu caz, :file:`__init__.py` este doar un fișier gol, "
+"însă el poate include, în general, cod de inițializare a pachetului "
+"ori o setare a variabilei ``__all__``, la care ne vom referi mai "
+"târziu."
 
-#: ../../tutorial/modules.rst:447
+#: ../../tutorial/modules.rst:449
 msgid ""
 "Users of the package can import individual modules from the package, for "
 "example::"
 msgstr ""
-
-#: ../../tutorial/modules.rst:450
-msgid "import sound.effects.echo"
-msgstr ""
+"Utilizatorii unui pachet pot importa module individuale din acesta, ca de "
+"exemplu::"
 
 #: ../../tutorial/modules.rst:452
+msgid "import sound.effects.echo"
+msgstr "import sunet.efecte.ecou"
+
+#: ../../tutorial/modules.rst:454
 msgid ""
 "This loads the submodule :mod:`!sound.effects.echo`.  It must be "
 "referenced with its full name. ::"
 msgstr ""
-
-#: ../../tutorial/modules.rst:455
-msgid "sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)"
-msgstr ""
+"Această instrucțiune încarcă submodulul :mod:`!sunet.efecte.ecou`. Ne "
+"vom referi la el numai folosindu-i numele complet. ::"
 
 #: ../../tutorial/modules.rst:457
-msgid "An alternative way of importing the submodule is::"
+msgid "sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)"
 msgstr ""
+"sunet.efecte.ecou.filtru_de_ecou(intrare, ieșire, întârziere=0.7, "
+"atenuare=4)"
 
 #: ../../tutorial/modules.rst:459
-msgid "from sound.effects import echo"
+msgid "An alternative way of importing the submodule is::"
 msgstr ""
+"Alt fel de a importa submodulul anterior este dat de::"
 
 #: ../../tutorial/modules.rst:461
+msgid "from sound.effects import echo"
+msgstr "from sunet.efecte import ecou"
+
+#: ../../tutorial/modules.rst:463
 msgid ""
 "This also loads the submodule :mod:`!echo`, and makes it available "
 "without its package prefix, so it can be used as follows::"
 msgstr ""
-
-#: ../../tutorial/modules.rst:464
-msgid "echo.echofilter(input, output, delay=0.7, atten=4)"
-msgstr ""
+"Și această instrucțiune încarcă submodulul :mod:`!ecou`, pe care îl "
+"face accesibil fără prefixul cu nume de pachete, deci ne permite "
+"să-l întrebuințăm după cum urmează::"
 
 #: ../../tutorial/modules.rst:466
+msgid "echo.echofilter(input, output, delay=0.7, atten=4)"
+msgstr ""
+"ecou.filtru_de_ecou(intrare, ieșire, întârziere=0.7, "
+"atenuare=4)"
+
+#: ../../tutorial/modules.rst:468
 msgid ""
 "Yet another variation is to import the desired function or variable "
 "directly::"
 msgstr ""
-
-#: ../../tutorial/modules.rst:468
-msgid "from sound.effects.echo import echofilter"
-msgstr ""
+"Încă o variație a modului de a importa este să importăm direct "
+"fie funcția fie variabila dorită::"
 
 #: ../../tutorial/modules.rst:470
+msgid "from sound.effects.echo import echofilter"
+msgstr "from sunet.efecte.ecou import filtru_de_ecou"
+
+#: ../../tutorial/modules.rst:472
 msgid ""
 "Again, this loads the submodule :mod:`!echo`, but this makes its function"
 " :func:`!echofilter` directly available::"
 msgstr ""
-
-#: ../../tutorial/modules.rst:473
-msgid "echofilter(input, output, delay=0.7, atten=4)"
-msgstr ""
+"Ca și până acum, instrucțiunea va încărca submodulul :mod:`!ecou` însă "
+"ne va permite să folosim funcția :func:`!filtru_de_ecou` din acesta "
+"numai cu numele ei::"
 
 #: ../../tutorial/modules.rst:475
+msgid "echofilter(input, output, delay=0.7, atten=4)"
+msgstr "filtru_de_ecou(intrare, ieșire, întârziere=0.7, atenuare=4)"
+
+#: ../../tutorial/modules.rst:477
 msgid ""
 "Note that when using ``from package import item``, the item can be either"
 " a submodule (or subpackage) of the package, or some  other name defined "
@@ -728,20 +1155,33 @@ msgid ""
 " it assumes it is a module and attempts to load it.  If it fails to find "
 "it, an :exc:`ImportError` exception is raised."
 msgstr ""
+"Să remarcăm că, atunci când executăm instrucțiunea ``from pachet import "
+"element``, elementul poate fi sau un submodul (ori un subpachet) al "
+"pachetului sau orice alt nume definit în pachet, adică o funcție, o clasă "
+"ori o variabilă. Instrucțiunea ``import`` testează mai întâi dacă "
+"elementul este definit în pachet; dacă nu, atunci va presupune că elementul "
+"este numele unui modul și va încerca să-l încarce. În cazul în care "
+"presupusul modul nu va fi găsit, va fi ridicată o excepție "
+":exc:`ImportError`."
 
-#: ../../tutorial/modules.rst:482
+#: ../../tutorial/modules.rst:484
 msgid ""
 "Contrarily, when using syntax like ``import item.subitem.subsubitem``, "
 "each item except for the last must be a package; the last item can be a "
 "module or a package but can't be a class or function or variable defined "
 "in the previous item."
 msgstr ""
+"În schimb, atunci când facem uz de o sintaxă de felul "
+"``import element.sub_element.sub_sub_element``, fiecare (sub)element, cu "
+"excepția ultimului, trebuie să fie nume de pachet; ultimul element poate "
+"fi sau nume de modul sau nume de pachet însă nu și numele vreunei clase, "
+"funcții ori variabile definite în elementul precedent."
 
-#: ../../tutorial/modules.rst:491
+#: ../../tutorial/modules.rst:493
 msgid "Importing \\* From a Package"
-msgstr ""
+msgstr "Importând \\* dintr-un pachet"
 
-#: ../../tutorial/modules.rst:495
+#: ../../tutorial/modules.rst:497
 msgid ""
 "Now what happens when the user writes ``from sound.effects import *``?  "
 "Ideally, one would hope that this somehow goes out to the filesystem, "
@@ -750,8 +1190,15 @@ msgid ""
 "unwanted side-effects that should only happen when the sub-module is "
 "explicitly imported."
 msgstr ""
+"Ce se întâmplă însă atunci când utilizatorul folosește instrucțiunea "
+"``from sunet.efecte import *``? În mod ideal, putem spera că interpretorul "
+"se duce la sistemul de fișiere, găsește toate (sub)modulele prezente "
+"în pachet și le importă. O atare activitate este de așteptat să dureze "
+"mult iar importul de sub-module poate avea și efecte secundare nedorite pe "
+"care nu le-am produce dacă importul unui sub-modul oarecare ar fi realizat "
+"în mod explicit."
 
-#: ../../tutorial/modules.rst:501
+#: ../../tutorial/modules.rst:503
 msgid ""
 "The only solution is for the package author to provide an explicit index "
 "of the package.  The :keyword:`import` statement uses the following "
@@ -764,18 +1211,34 @@ msgid ""
 "example, the file :file:`sound/effects/__init__.py` could contain the "
 "following code::"
 msgstr ""
-
-#: ../../tutorial/modules.rst:511
-msgid "__all__ = [\"echo\", \"surround\", \"reverse\"]"
-msgstr ""
+"Singurul mod în care putem evita situațiile neplăcute este ca autorul "
+"pachetului să ofere un index explicit al acestuia. Instrucțiunea "
+":keyword:`import` folosește următoarea convenție: atunci când codul-sursă "
+"al fișierului :file:`__init__.py` dintr-un pachet definește o variabilă "
+"de tip listă numită ``__all__``, valoarea acestei variabile va fi folosită "
+"drept lista numelor de module ce vor trebui importate atunci când "
+"interpretorul va avea de executat instrucțiunea ``from pachet import *``. "
+"Actualizarea listei de nume, cu ocazia lansării unei noi versiuni a "
+"pachetului, rămâne numai la latitudinea autorului acestuia. Autorii de "
+"pachete pot decide chiar și să nu întrebuințeze această facilitate "
+"atunci când nu consideră că ar fi de vreun folos să se importe \\* din "
+"pachetele lor. Ca exemplu, să presupunem că fișierul "
+":file:`sunet/efecte/__init__.py` ar conține următoarea linie de cod::"
 
 #: ../../tutorial/modules.rst:513
+msgid "__all__ = [\"echo\", \"surround\", \"reverse\"]"
+msgstr "__all__ = [\"ecou\", \"înconjurător\", \"inversare\"]"
+
+#: ../../tutorial/modules.rst:515
 msgid ""
 "This would mean that ``from sound.effects import *`` would import the "
 "three named submodules of the :mod:`!sound.effects` package."
 msgstr ""
+"Aceasta ar însemna că, la execuția lui ``from sunet.efecte import *``, "
+"vor fi importate cele trei submodule mai sus numite ale pachetului "
+":mod:`!sunet.efecte`."
 
-#: ../../tutorial/modules.rst:516
+#: ../../tutorial/modules.rst:518
 msgid ""
 "Be aware that submodules might become shadowed by locally defined names. "
 "For example, if you added a ``reverse`` function to the "
@@ -784,8 +1247,17 @@ msgid ""
 "*not* the ``reverse`` submodule, because it is shadowed by the locally "
 "defined ``reverse`` function::"
 msgstr ""
+"Băgați de seamă că numele de (sub)module pot fi acoperite (de la "
+"englezescul *shadowed*; adică, au devenit *invizibile* pentru "
+"instrucțiunea curentă) de nume definite local. De exemplu, dacă ați "
+"adăugat definiția unei funcții ``inversare`` la codul-sursă al fișierului "
+":file:`sunet/efecte/__init__.py`, atunci execuția lui "
+"``from sunet.efecte import *`` va produce importul celor două submodule "
+"``ecou`` și ``înconjurător`` însă nu și importul submodulului "
+"``inversare`` deoarece numele acestuia este acoperit de cel al funcției "
+"``inversare`` definită local::"
 
-#: ../../tutorial/modules.rst:523
+#: ../../tutorial/modules.rst:525
 msgid ""
 "__all__ = [\n"
 "    \"echo\",      # refers to the 'echo.py' file\n"
@@ -798,8 +1270,18 @@ msgid ""
 "    return msg[::-1]    #     in the case of a 'from sound.effects import"
 " *'"
 msgstr ""
+"__all__ = [\n"
+"    \"ecou\",          # se referă la fișierul 'ecou.py'\n"
+"    \"înconjurător\",  # se referă la fișierul 'înconjurător.py'\n"
+"    \"inversare\",     # !!! se referă la funcția 'inversare' !!!\n"
+"]\n"
+"\n"
+"def inversare(mesaj: str):  # <-- acest nume îl acoperă pe cel al "
+"submodulului 'inversare.py'\n"
+"    return mesaj[::-1]    #       dacă se execută 'from sunet.efecte "
+"import *'"
 
-#: ../../tutorial/modules.rst:532
+#: ../../tutorial/modules.rst:534
 msgid ""
 "If ``__all__`` is not defined, the statement ``from sound.effects import "
 "*`` does *not* import all submodules from the package "
@@ -811,42 +1293,72 @@ msgid ""
 "any submodules of the package that were explicitly loaded by previous "
 ":keyword:`import` statements.  Consider this code::"
 msgstr ""
+"Atunci când ``__all__`` nu este definită, execuția instrucțiunii "
+"``from sunet.efecte import *`` *nu* va produce importul tuturor "
+"submodulelor din pachetul :mod:`!sunet.efecte` în spațiul de nume "
+"curent; tot ceea ce va face este să se asigure mai întâi că pachetul "
+":mod:`!sunet.efecte` a fost importat (ceea ce poate însemna inclusiv "
+"execuția codului de inițializare găsit în :file:`__init__.py`), după "
+"care va importa toate numele definite în pachet. Aceasta va include "
+"numele (precum și submodulele încărcate explicit) din "
+":file:`__init__.py`. Va include, desigur, și toate submodulele "
+"pachetului care au fost deja încărcate explicit prin execuția "
+"precedentelor instrucțiuni :keyword:`import`. Să luăm în considerare "
+"următoarele linii de cod::"
 
-#: ../../tutorial/modules.rst:541
+#: ../../tutorial/modules.rst:543
 msgid ""
 "import sound.effects.echo\n"
 "import sound.effects.surround\n"
 "from sound.effects import *"
 msgstr ""
+"import sunet.efecte.ecou\n"
+"import sunet.efecte.înconjurător\n"
+"from sunet.efecte import *"
 
-#: ../../tutorial/modules.rst:545
+#: ../../tutorial/modules.rst:547
 msgid ""
 "In this example, the :mod:`!echo` and :mod:`!surround` modules are "
 "imported in the current namespace because they are defined in the "
 ":mod:`!sound.effects` package when the ``from...import`` statement is "
 "executed.  (This also works when ``__all__`` is defined.)"
 msgstr ""
+"În exemplul de față, modulele :mod:`!ecou` și :mod:`!înconjurător` "
+"sunt importate în spațiul de nume curent deoarece ele sunt definite "
+"în pachetul :mod:`!sunet.efecte` la momentul execuției instrucțiunii "
+"``from...import``. (Ceea ce rămâne valabil și în cazul când ``__all__`` "
+"este definită.)"
 
-#: ../../tutorial/modules.rst:550
+#: ../../tutorial/modules.rst:552
 msgid ""
 "Although certain modules are designed to export only names that follow "
 "certain patterns when you use ``import *``, it is still considered bad "
 "practice in production code."
 msgstr ""
+"Cu toate că anumite module au fost proiectate să nu exporte decât acele "
+"nume care respectă șabloane precise atunci când dumneavoastră veți "
+"folosi instrucțiunea ``import *`` în raport de ele, întrebuințarea acestei "
+"instrucțiuni în codul destinat producției se socotește a fi o practică "
+"greșită."
 
-#: ../../tutorial/modules.rst:554
+#: ../../tutorial/modules.rst:556
 msgid ""
 "Remember, there is nothing wrong with using ``from package import "
 "specific_submodule``!  In fact, this is the recommended notation unless "
 "the importing module needs to use submodules with the same name from "
 "different packages."
 msgstr ""
-
-#: ../../tutorial/modules.rst:563
-msgid "Intra-package References"
-msgstr ""
+"Țineți minte, nu este nimic în neregulă dacă utilizați instrucțiunea "
+"``from pachet import submodulul_cutare``! De fapt, aceasta constituie "
+"chiar formularea recomandată a oricărei instrucțiuni de import, cu "
+"excepția situației în care modulul importator are de folosit submodule "
+"omonime din pachete diferite."
 
 #: ../../tutorial/modules.rst:565
+msgid "Intra-package References"
+msgstr "Referințe intra-pachet"
+
+#: ../../tutorial/modules.rst:567
 msgid ""
 "When packages are structured into subpackages (as with the :mod:`!sound` "
 "package in the example), you can use absolute imports to refer to "
@@ -855,35 +1367,56 @@ msgid ""
 " :mod:`!sound.effects` package, it can use ``from sound.effects import "
 "echo``."
 msgstr ""
+"Atunci când pachetele sunt organizate în subpachete (cum este cazul "
+"pachetului :mod:`!sunet` din exemplul de mai sus), puteți folosi "
+"importurile absolute pentru a vă referi la submodule din (sub)pachete "
+"înrudite. Astfel, dacă presupunem că modulul "
+":mod:`!sunet.filtre.codare_vo` trebuie să utilizeze modulul :mod:`!ecou` "
+"din pachetul :mod:`!sunet.efecte`, atunci putem întrebuința instrucțiunea "
+"``from sunet.efecte import ecou``."
 
-#: ../../tutorial/modules.rst:571
+#: ../../tutorial/modules.rst:573
 msgid ""
 "You can also write relative imports, with the ``from module import name``"
 " form of import statement.  These imports use leading dots to indicate "
 "the current and parent packages involved in the relative import.  From "
 "the :mod:`!surround` module for example, you might use::"
 msgstr ""
+"Puteți construi și instrucțiuni de import relativ, scrise sub forma "
+"``from modul import nume``. Aceste instrucțiuni de import vor folosi "
+"puncte de sine stătătoare pentru a indica fie pachetul curent fie "
+"pachetul-părinte al pachetului curent la care se referă importul "
+"relativ în cauză. Dacă scrieți cod situat, de exemplu, în modulul "
+":mod:`!înconjurător`, atunci ați putea utiliza formulele::"
 
-#: ../../tutorial/modules.rst:576
+#: ../../tutorial/modules.rst:578
 msgid ""
 "from . import echo\n"
 "from .. import formats\n"
 "from ..filters import equalizer"
 msgstr ""
+"from . import ecou\n"
+"from .. import formate\n"
+"from ..filtre import egalizator"
 
-#: ../../tutorial/modules.rst:580
+#: ../../tutorial/modules.rst:582
 msgid ""
 "Note that relative imports are based on the name of the current module.  "
 "Since the name of the main module is always ``\"__main__\"``, modules "
 "intended for use as the main module of a Python application must always "
 "use absolute imports."
 msgstr ""
-
-#: ../../tutorial/modules.rst:586
-msgid "Packages in Multiple Directories"
-msgstr ""
+"Să observăm că importurile relative se raportează la numele modulului "
+"curent. Dat fiind că numele modulului principal (de la englezescul "
+"*main*) este întotdeauna ``\"__main__\"``, modulele pe care intenționăm "
+"să le utilizăm pe post de modul principal al vreunei aplicații Python "
+"trebuie să folosească doar importuri absolute."
 
 #: ../../tutorial/modules.rst:588
+msgid "Packages in Multiple Directories"
+msgstr "Pachete situate în mai multe directoare"
+
+#: ../../tutorial/modules.rst:590
 msgid ""
 "Packages support one more special attribute, :attr:`~module.__path__`.  "
 "This is initialized to be a :term:`sequence` of strings containing the "
@@ -892,46 +1425,58 @@ msgid ""
 "so affects future searches for modules and subpackages contained in the "
 "package."
 msgstr ""
+"Pachetele dispun de încă un atribut special, și anume de "
+":attr:`~module.__path__`. El este inițializat cu o valoare de tipul "
+":term:`sequence` de șiruri de caractere care include numele directorului "
+"în care s-a aflat fișierul :file:`__init__.py` al unui anumit pachet "
+"înainte să înceapă execuția codului Python din fișierul respectiv. Valoarea "
+"acestui atribut poate fi modificată. Modificarea ei va afecta căutările de "
+"module și de subpachete ale pachetului în discuție."
 
-#: ../../tutorial/modules.rst:595
+#: ../../tutorial/modules.rst:597
 msgid ""
 "While this feature is not often needed, it can be used to extend the set "
 "of modules found in a package."
 msgstr ""
+"Deși este o caracteristică de care avem nevoie rar, o putem folosi cu "
+"succes la lărgirea setului de module conținute într-un pachet."
 
-#: ../../tutorial/modules.rst:600
+#: ../../tutorial/modules.rst:602
 msgid "Footnotes"
-msgstr ""
+msgstr "Note de subsol"
 
-#: ../../tutorial/modules.rst:601
+#: ../../tutorial/modules.rst:603
 msgid ""
 "In fact function definitions are also 'statements' that are 'executed'; "
 "the execution of a module-level function definition adds the function "
 "name to the module's global namespace."
 msgstr ""
+"De fapt, și definițiile de funcții sunt 'instrucțiuni' care se 'execută'; "
+"execuția unei definiții de funcție de la nivel de modul va adăuga numele "
+"acestei funcții la spațiul de nume global al modulului respectiv."
 
-#: ../../tutorial/modules.rst:184 ../../tutorial/modules.rst:267
-#: ../../tutorial/modules.rst:348
+#: ../../tutorial/modules.rst:186 ../../tutorial/modules.rst:269
+#: ../../tutorial/modules.rst:350
 msgid "module"
-msgstr ""
+msgstr "modul"
 
-#: ../../tutorial/modules.rst:184
+#: ../../tutorial/modules.rst:186
 msgid "search"
-msgstr ""
+msgstr "căutare"
 
-#: ../../tutorial/modules.rst:184
+#: ../../tutorial/modules.rst:186
 msgid "path"
-msgstr ""
+msgstr "cale"
 
-#: ../../tutorial/modules.rst:267
+#: ../../tutorial/modules.rst:269
 msgid "sys"
-msgstr ""
+msgstr "sys"
 
-#: ../../tutorial/modules.rst:348
+#: ../../tutorial/modules.rst:350
 msgid "builtins"
-msgstr ""
+msgstr "builtins"
 
-#: ../../tutorial/modules.rst:493
+#: ../../tutorial/modules.rst:495
 msgid "__all__"
-msgstr ""
+msgstr "__all__"
 
