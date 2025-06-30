@@ -716,10 +716,10 @@ msgid ""
 msgstr ""
 "Variabila ``sys.path`` este o listă formată din șiruri de caractere "
 "care determină calea de căutare a modulelor. Este inițializată cu o "
-"cale implicită preluată din variabila de mediu :envvar:`PYTHONPATH`, "
-"ori dintr-o altă cale prestabilită atunci când :envvar:`PYTHONPATH` "
-"nu a fost setată. O puteți modifica folosind operațiile tipice cu "
-"liste::"
+"cale de acces implicită preluată din variabila de mediu "
+":envvar:`PYTHONPATH`, ori dintr-o altă cale de acces prestabilită atunci "
+"când :envvar:`PYTHONPATH` nu a fost setată. O puteți modifica folosind "
+"operațiile tipice cu liste::"
 
 #: ../../tutorial/modules.rst:302
 msgid ""
@@ -1466,7 +1466,7 @@ msgstr "căutare"
 
 #: ../../tutorial/modules.rst:186
 msgid "path"
-msgstr "cale"
+msgstr "cale (de acces)"
 
 #: ../../tutorial/modules.rst:269
 msgid "sys"
