@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# INTRARI SI IESIRI.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 13:08+0200\n"
+"POT-Creation-Date: 2025-06-17 17:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../tutorial/inputoutput.rst:5
 msgid "Input and Output"
-msgstr ""
+msgstr "Intrări și ieșiri"
 
 #: ../../tutorial/inputoutput.rst:7
 msgid ""
@@ -30,10 +30,16 @@ msgid ""
 "printed in a human-readable form, or written to a file for future use. "
 "This chapter will discuss some of the possibilities."
 msgstr ""
+"Există mai multe moduri de a prezenta *rezultatul* (sau *ieșirea*, de la "
+"englezescul *output*) execuției unui program; datele conținute în acest "
+"rezultat pot fi afișate într-o formă ușor de citit de către utilizatorii "
+"umani (în englezește, ca jargon, *human-readable*) sau pot fi scrise "
+"într-un fișier pentru o întrebuințare ulterioară. În capitolul de față "
+"vom discuta despre câteva din aceste feluri de prezentare."
 
 #: ../../tutorial/inputoutput.rst:15
 msgid "Fancier Output Formatting"
-msgstr ""
+msgstr "Formatări elegante ale ieșirii"
 
 #: ../../tutorial/inputoutput.rst:17
 msgid ""
@@ -43,6 +49,11 @@ msgid ""
 "file can be referenced as ``sys.stdout``. See the Library Reference for "
 "more information on this.)"
 msgstr ""
+"Până acum am întâlnit două modalități de scriere a valorilor: formulările "
+"de *expresii* și funcția :func:`print`. (O a treia modalitate este să "
+"folosim metoda :meth:`~io.TextIOBase.write` a obiectelor fișier; fișierul "
+"standard de ieșire poate fi accesat ca ``sys.stdout``. Vedeți Referința "
+"bibliotecii pentru mai multe informații în această privință.)"
 
 #: ../../tutorial/inputoutput.rst:22
 msgid ""
@@ -50,6 +61,9 @@ msgid ""
 "simply printing space-separated values. There are several ways to format "
 "output."
 msgstr ""
+"Adesea, veți dori să aveți mai mult control asupra formatului datelor "
+"de afișat decât simpla posibilitate de a le tipări cu câte un spațiu gol "
+"între ele. Dispunem de diferite procedee de a formata ieșirile."
 
 #: ../../tutorial/inputoutput.rst:25
 #, python-brace-format
@@ -59,6 +73,12 @@ msgid ""
 " mark. Inside this string, you can write a Python expression between "
 "``{`` and ``}`` characters that can refer to variables or literal values."
 msgstr ""
+"Pentru a folosi "
+":ref:`șiruri de caractere literale formatate <tut-f-strings>`, începeți "
+"șirul cu ``f`` sau cu ``F``, poziționate înaintea ghilimelelor duble ori "
+"a celor triple de deschidere. În interiorul unui asemenea șir de "
+"caractere, puteți scrie o expresie Python încadrată de caracterele "
+"``{`` și ``}``, care să se refere la variabile ori la date literale."
 
 #: ../../tutorial/inputoutput.rst:32
 #, python-brace-format
@@ -68,6 +88,10 @@ msgid ""
 ">>> f'Results of the {year} {event}'\n"
 "'Results of the 2016 Referendum'"
 msgstr ""
+">>> anul = 2016\n"
+">>> evenimentul = 'referendumul'\n"
+">>> f'Rezultate la {evenimentul} din {anul}.'\n"
+"'Rezultate la referendumul din 2016.'"
 
 #: ../../tutorial/inputoutput.rst:37
 #, python-brace-format
@@ -78,6 +102,13 @@ msgid ""
 "also need to provide the information to be formatted. In the following "
 "code block there are two examples of how to format variables:"
 msgstr ""
+"Metoda :meth:`str.format` a șirurilor de caractere necesită puțin mai "
+"multă muncă de redactare. Și aici veți utiliza ``{`` și ``}`` la "
+"încadrarea locului în care va fi substituită o anumită variabilă, "
+"respectiv veți avea posibilitatea de a da indicații detaliate în "
+"privința formatării, doar că va trebui să oferiți și informația de "
+"formatat. În blocul de cod care urmează se află două exemple despre cum "
+"se formatează variabilele:"
 
 #: ../../tutorial/inputoutput.rst:46
 #, python-brace-format
@@ -88,6 +119,11 @@ msgid ""
 ">>> '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)\n"
 "' 42572654 YES votes  49.67%'"
 msgstr ""
+">>> voturi_pentru = 42_572_654\n"
+">>> voturi_in_total = 85_705_149\n"
+">>> procentaj = voturi_pentru / voturi_in_total\n"
+">>> '{:-9} voturi PENTRU  {:2.2%}'.format(voturi_pentru, procentaj)\n"
+"' 42572654 voturi PENTRU  49.67%'"
 
 #: ../../tutorial/inputoutput.rst:52
 msgid ""
@@ -96,6 +132,11 @@ msgid ""
 "multiplied by 100, with 2 decimal places and followed by a percent sign "
 "(see :ref:`formatspec` for details)."
 msgstr ""
+"Să remarcăm că valoarea lui ``voturi_pentru`` este precedată de un spațiu "
+"gol la numerele pozitive și de un semn minus la cele negative. În același "
+"timp, codul din exemplu va afișa valoarea lui ``procentaj`` înmulțită cu "
+"100 și urmată de două zecimale, respectiv de semnul procent (a se vedea "
+":ref:`formatspec` pentru detalii)."
 
 #: ../../tutorial/inputoutput.rst:57
 msgid ""
@@ -104,6 +145,12 @@ msgid ""
 "imagine.  The string type has some methods that perform useful operations"
 " for padding strings to a given column width."
 msgstr ""
+"În sfârșit, puteți să vă ocupați chiar dumneavoastră de întreaga "
+"manipulare a șirurilor de caractere folosind operațiile de tranșare și "
+"de concatenare a șirurilor pentru a crea orice machetă (de la "
+"englezescul *layout*) de afișare vă doriți. Tipul de date șir de "
+"caractere posedă diverse metode de spațiere a șirurilor la lățimi de "
+"caracter date."
 
 #: ../../tutorial/inputoutput.rst:62
 msgid ""
@@ -111,6 +158,11 @@ msgid ""
 "variables for debugging purposes, you can convert any value to a string "
 "with the :func:`repr` or :func:`str` functions."
 msgstr ""
+"Atunci când nu vă interesează nicio ieșire sofisticată ci, pur și simplu, "
+"vreți să afișați rapid valorile câtorva variabile în scopul depanării "
+"programului la care lucrați, ați putea converti orice valoare obținută "
+"într-un șir de caractere cu ajutorul funcțiilor "
+":func:`repr` și :func:`str`."
 
 #: ../../tutorial/inputoutput.rst:66
 msgid ""
@@ -124,10 +176,21 @@ msgid ""
 "representation using either function.  Strings, in particular, have two "
 "distinct representations."
 msgstr ""
+"Funcția :func:`str` a fost gândită să returneze reprezentări de valori "
+"care să fie ușor de citit de către utilizatorii umani, pe când funcția "
+":func:`repr` a primit rolul de a genera reprezentări de date care să "
+"fie citite de către interpretorul de Python (sau să ridice o excepție "
+":exc:`SyntaxError` atunci când reprezentările nu se potrivesc niciunui "
+"șablon sintactic). În cazul obiectelor care nu posedă nicio reprezentare "
+"distinctivă de oferit unui consumator uman, :func:`str` va întoarce "
+"aceeași valoare ca și :func:`repr`. Multe valori, cum ar fi numerele ori "
+"structurile de date de tipul listelor și al dicționarelor, primesc "
+"aceeași reprezentare de la amândouă funcțiile. Șirurile de caractere, pe "
+"de altă parte, posedă două reprezentări diferite."
 
 #: ../../tutorial/inputoutput.rst:75
 msgid "Some examples::"
-msgstr ""
+msgstr "Câteva exemple::"
 
 #: ../../tutorial/inputoutput.rst:77
 msgid ""
@@ -152,6 +215,28 @@ msgid ""
 ">>> repr((x, y, ('spam', 'eggs')))\n"
 "\"(32.5, 40000, ('spam', 'eggs'))\""
 msgstr ""
+">>> s = 'Salutare, lume.'\n"
+">>> str(s)\n"
+"'Salutare, lume.'\n"
+">>> repr(s)\n"
+"\"'Salutare, lume.'\"\n"
+">>> str(1/7)\n"
+"'0.14285714285714285'\n"
+">>> x = 10 * 3.25\n"
+">>> y = 200 * 200\n"
+">>> s = 'Valoarea lui x este ' + repr(x) + ', iar a lui y este ' + "
+"repr(y) + '...'\n"
+">>> print(s)\n"
+"Valoarea lui x is 32.5, iar a lui y este 40000...\n"
+">>> # Aplicarea lui repr() unui șir îi adaugă acestuia ghilimele simple\n"
+">>> # și linii oblice inverse:\n"
+">>> salut = 'salutare, lume\\n'\n"
+">>> salutări = repr(salut)\n"
+">>> print(salutări)\n"
+"'salutare, lume\\n'\n"
+">>> # Argumentul lui repr() poate fi orice obiect Python:\n"
+">>> repr((x, y, ('carne presată', 'ouă')))\n"
+"\"(32.5, 40000, ('carne presată', 'ouă'))\""
 
 #: ../../tutorial/inputoutput.rst:98
 msgid ""
@@ -160,10 +245,15 @@ msgid ""
 "placeholders like ``$x`` and replacing them with values from a "
 "dictionary, but offers much less control of the formatting."
 msgstr ""
+"Modulul :mod:`string` conține o clasă :class:`~string.Template` care oferă "
+"încă o metodă de substituire a valorilor în șirurile de caractere, pe baza "
+"unor substitute de forma ``$x`` ce vor fi înlocuite cu valori preluate "
+"dintr-un dicționar, însă care furnizează mult mai puțin control asupra "
+"formatării."
 
 #: ../../tutorial/inputoutput.rst:114
 msgid "Formatted String Literals"
-msgstr ""
+msgstr "Șiruri de caractere literale formatate"
 
 #: ../../tutorial/inputoutput.rst:116
 #, python-brace-format
@@ -173,6 +263,10 @@ msgid ""
 " prefixing the string with ``f`` or ``F`` and writing expressions as "
 "``{expression}``."
 msgstr ""
+":ref:`Șirurile de caractere literale formatate <f-strings>` (supranumite, "
+"pe scurt, *f-șiruri*) ne permit să introducem valoarea unei expresii Python "
+"în interiorul unui șir de caractere prefixând șirul cu ``f`` sau ``F`` și "
+"scriind expresia în cauză drept ``{expresia}``."
 
 #: ../../tutorial/inputoutput.rst:121
 msgid ""
@@ -180,6 +274,10 @@ msgid ""
 "greater control over how the value is formatted. The following example "
 "rounds pi to three places after the decimal::"
 msgstr ""
+"Un specificator de format opțional îi poate urma expresiei. Prezența lui "
+"oferă un control sporit asupra modulului în care valoarea expresiei este "
+"formatată. Exemplul dat în continuare prezintă rotunjirea lui pi la trei "
+"cifre după virgulă (punct)::"
 
 #: ../../tutorial/inputoutput.rst:125
 #, python-brace-format
@@ -188,6 +286,9 @@ msgid ""
 ">>> print(f'The value of pi is approximately {math.pi:.3f}.')\n"
 "The value of pi is approximately 3.142."
 msgstr ""
+">>> import math\n"
+">>> print(f'Valoarea lui pi este de aproximativ {math.pi:.3f}.')\n"
+"Valoarea lui pi este de aproximativ 3.142."
 
 #: ../../tutorial/inputoutput.rst:129
 msgid ""
@@ -195,6 +296,10 @@ msgid ""
 "minimum number of characters wide.  This is useful for making columns "
 "line up. ::"
 msgstr ""
+"Inserarea unui număr întreg imediat după semnul ``':'`` va avea ca "
+"efect printarea unui câmp lat de minim tot atâta caractere cât este "
+"valoarea inserată. O atare proprietate se dovedește utilă la "
+"alinierea coloanelor într-o afișare. ::"
 
 #: ../../tutorial/inputoutput.rst:132
 #, python-brace-format
@@ -207,6 +312,13 @@ msgid ""
 "Jack       ==>       4098\n"
 "Dcab       ==>       7678"
 msgstr ""
+">>> tabel = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n"
+">>> for nume, telefon in tabel.items():\n"
+"...     print(f'{nume:10} ==> {telefon:10d}')\n"
+"...\n"
+"Sjoerd     ==>       4127\n"
+"Jack       ==>       4098\n"
+"Dcab       ==>       7678"
 
 #: ../../tutorial/inputoutput.rst:140
 msgid ""
@@ -214,6 +326,9 @@ msgid ""
 "``'!a'`` applies :func:`ascii`, ``'!s'`` applies :func:`str`, and "
 "``'!r'`` applies :func:`repr`::"
 msgstr ""
+"Alți modificatori pot fi întrebuințați la conversia unei valori înainte de "
+"formatare. Astfel, ``'!a'`` îi aplică valorii funcția :func:`ascii`, "
+"``'!s'`` o aplică pe :func:`str` iar ``'!r'`` pe :func:`repr`::"
 
 #: ../../tutorial/inputoutput.rst:144
 #, python-brace-format
@@ -224,13 +339,35 @@ msgid ""
 ">>> print(f'My hovercraft is full of {animals!r}.')\n"
 "My hovercraft is full of 'eels'."
 msgstr ""
+">>> animale = 'țipari'\n"
+">>> print(f'Barca mea pe pernă de aer e plină de {animale}.')\n"
+"Barca mea pe pernă de aer e plină de țipari.\n"
+">>> print(f'Barca mea pe pernă de aer e plină de {animale!r}.')\n"
+"Barca mea pe pernă de aer e plină de 'țipari'."
 
 #: ../../tutorial/inputoutput.rst:150
 msgid ""
 "The ``=`` specifier can be used to expand an expression to the text of "
 "the expression, an equal sign, then the representation of the evaluated "
-"expression:"
+"expression::"
 msgstr ""
+"Specificatorul ``=`` poate fi utilizat la extinderea unei expresii sub "
+"formă de text al expresiei, urmat de semnul egal și de reprezentarea "
+"evaluării expresiei respective::"
+
+#: ../../tutorial/inputoutput.rst:153
+msgid ""
+">>> bugs = 'roaches'\n"
+">>> count = 13\n"
+">>> area = 'living room'\n"
+">>> print(f'Debugging {bugs=} {count=} {area=}')\n"
+"Debugging bugs='roaches' count=13 area='living room'"
+msgstr ""
+">>> dăunători = 'gândăcei'\n"
+">>> număr = 13\n"
+">>> zonă = 'supragerie'\n"
+">>> print(f'Deratizare {dăunători=} {număr=} {zonă=}')\n"
+"Deratizare dăunători='gândăcei' număr=13 zonă='sufragerie'"
 
 #: ../../tutorial/inputoutput.rst:159
 msgid ""
@@ -238,14 +375,22 @@ msgid ""
 "information on the ``=`` specifier. For a reference on these format "
 "specifications, see the reference guide for the :ref:`formatspec`."
 msgstr ""
+"A se vedea :ref:`expresii auto-documentate <bpo-36817-whatsnew>` pentru "
+"mai multe informații privind specificatorul ``=``. Pentru o descriere "
+"cuprinzătoare a tuturor acestor specificații de format, consultați "
+"ghidul de referință despre :ref:`formatspec`."
 
 #: ../../tutorial/inputoutput.rst:166
 msgid "The String format() Method"
-msgstr ""
+msgstr "Metoda format() a tipului șir de caractere"
 
 #: ../../tutorial/inputoutput.rst:168
 msgid "Basic usage of the :meth:`str.format` method looks like this::"
 msgstr ""
+"Utilizarea de bază a metodei :meth:`str.format` se face astfel "
+"-- apelând, ca de obicei, la o "
+"`scenetă <https://en.wikipedia.org/wiki/Knights_Who_Say_%22Ni!%22>`_ "
+"Monty Python::"
 
 #: ../../tutorial/inputoutput.rst:170
 #, python-brace-format
@@ -253,6 +398,8 @@ msgid ""
 ">>> print('We are the {} who say \"{}!\"'.format('knights', 'Ni'))\n"
 "We are the knights who say \"Ni!\""
 msgstr ""
+">>> print('Noi suntem {} care strigă \"{}!\"'.format('bravii', 'Bau'))\n"
+"Noi suntem bravii care strigă \"Bau!\""
 
 #: ../../tutorial/inputoutput.rst:173
 msgid ""
@@ -261,6 +408,10 @@ msgid ""
 "number in the brackets can be used to refer to the position of the object"
 " passed into the :meth:`str.format` method. ::"
 msgstr ""
+"Acoladele și caracterele încadrate de ele (care se numesc *câmpuri de "
+"format*) vor fi înlocuite de obiectele transmise metodei :meth:`str.format`. "
+"Un număr trecut între acolade poate fi utilizat ca referire la poziția "
+"obiectului ce trebuie transmis metodei :meth:`str.format`. ::"
 
 #: ../../tutorial/inputoutput.rst:178
 #, python-brace-format
@@ -270,12 +421,19 @@ msgid ""
 ">>> print('{1} and {0}'.format('spam', 'eggs'))\n"
 "eggs and spam"
 msgstr ""
+">>> print('{0} și {1}'.format('șuncă presată', 'ouă'))\n"
+"șuncă presată și ouă\n"
+">>> print('{1} și {0}'.format('șuncă presată', 'ouă'))\n"
+"ouă și șuncă presată"
 
 #: ../../tutorial/inputoutput.rst:183
 msgid ""
 "If keyword arguments are used in the :meth:`str.format` method, their "
 "values are referred to by using the name of the argument. ::"
 msgstr ""
+"Dacă vom întrebuința argumente cuvânt-cheie la apelul metodei "
+":meth:`str.format`, atunci ne vom referi la valorile acestora prin "
+"intermediul numelor argumentelor respective. ::"
 
 #: ../../tutorial/inputoutput.rst:186
 #, python-brace-format
@@ -284,10 +442,16 @@ msgid ""
 "...       food='spam', adjective='absolutely horrible'))\n"
 "This spam is absolutely horrible."
 msgstr ""
+">>> print('Această {aliment} este {nume_predicativ}.'.format(\n"
+"...       aliment='șuncă presată', nume_predicativ='absolut "
+"îngrozitoare'))\n"
+"Această șuncă presată este absolut îngrozitoare."
 
 #: ../../tutorial/inputoutput.rst:190
 msgid "Positional and keyword arguments can be arbitrarily combined::"
 msgstr ""
+"Argumentele poziționale și cele cuvânt-cheie pot fi combinate în mod "
+"arbitrar::"
 
 #: ../../tutorial/inputoutput.rst:192
 #, python-brace-format
@@ -297,6 +461,10 @@ msgid ""
 "...                                                    other='Georg'))\n"
 "The story of Bill, Manfred, and Georg."
 msgstr ""
+">>> print('Povestea lui {0}, {1} și {altul}.'.format('Bill', 'Manfred',"
+"\n"
+"...                                                    altul='Georg'))\n"
+"Povestea lui Bill, Manfred și Georg."
 
 #: ../../tutorial/inputoutput.rst:196
 msgid ""
@@ -305,6 +473,12 @@ msgid ""
 "name instead of by position.  This can be done by simply passing the dict"
 " and using square brackets ``'[]'`` to access the keys. ::"
 msgstr ""
+"În caz că aveți de manevrat un șir de format realmente lung și țineți "
+"neapărat să nu-l partiționați, ar fi util dacă v-ați putea referi la "
+"variabilele care trebuie formatate nu cu numărul -- indicele poziției -- "
+"ci cu numele. O atare rezolvare se obține transmițând, pur și simplu, "
+"un dicționar de date și folosind parantezele pătrate ``'[]'`` pentru a-i "
+"accesa cheile. ::"
 
 #: ../../tutorial/inputoutput.rst:201
 #, python-brace-format
@@ -314,12 +488,18 @@ msgid ""
 "...       'Dcab: {0[Dcab]:d}'.format(table))\n"
 "Jack: 4098; Sjoerd: 4127; Dcab: 8637678"
 msgstr ""
+">>> tabel = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n"
+">>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n"
+"...       'Dcab: {0[Dcab]:d}'.format(tabel))\n"
+"Jack: 4098; Sjoerd: 4127; Dcab: 8637678"
 
 #: ../../tutorial/inputoutput.rst:206
 msgid ""
 "This could also be done by passing the ``table`` dictionary as keyword "
 "arguments with the ``**`` notation. ::"
 msgstr ""
+"Același rezultat poate fi obținut transmițând dicționarul de date "
+"``tabel`` ca pe un argument cuvânt-cheie dat în notația ``**``. ::"
 
 #: ../../tutorial/inputoutput.rst:209
 #, python-brace-format
@@ -329,12 +509,19 @@ msgid ""
 "{Dcab:d}'.format(**table))\n"
 "Jack: 4098; Sjoerd: 4127; Dcab: 8637678"
 msgstr ""
+">>> tabel = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n"
+">>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: "
+"{Dcab:d}'.format(**tabel))\n"
+"Jack: 4098; Sjoerd: 4127; Dcab: 8637678"
 
 #: ../../tutorial/inputoutput.rst:213
 msgid ""
 "This is particularly useful in combination with the built-in function "
 ":func:`vars`, which returns a dictionary containing all local variables::"
 msgstr ""
+"Procedeul este extrem de folositor în combinație cu funcția predefinită "
+":func:`vars`, care returnează un dicționar de date cu toate variabilele "
+"locale::"
 
 #: ../../tutorial/inputoutput.rst:216
 #, python-brace-format
@@ -345,12 +532,20 @@ msgid ""
 ">>> print(message.format(**table))\n"
 "__name__: __main__; __doc__: None; __package__: None; __loader__: ..."
 msgstr ""
+">>> tabel = {k: str(v) for k, v in vars().items()}\n"
+">>> mesaj = \" \".join([f'{k}: ' + '{' + k +'};' for k in "
+"tabel.keys()])\n"
+">>> print(mesaj.format(**tabel))\n"
+"__name__: __main__; __doc__: None; __package__: None; __loader__: ..."
 
 #: ../../tutorial/inputoutput.rst:221
 msgid ""
 "As an example, the following lines produce a tidily aligned set of "
 "columns giving integers and their squares and cubes::"
 msgstr ""
+"Ca exemplu, liniile de cod următoare produc un set de coloane "
+"aliniate compact care afișează numere întregi împreună cu pătratele "
+"și cuburile lor::"
 
 #: ../../tutorial/inputoutput.rst:224
 #, python-brace-format
@@ -369,20 +564,37 @@ msgid ""
 " 9  81  729\n"
 "10 100 1000"
 msgstr ""
+">>> for x in range(1, 11):\n"
+"...     print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n"
+"...\n"
+" 1   1    1\n"
+" 2   4    8\n"
+" 3   9   27\n"
+" 4  16   64\n"
+" 5  25  125\n"
+" 6  36  216\n"
+" 7  49  343\n"
+" 8  64  512\n"
+" 9  81  729\n"
+"10 100 1000"
 
 #: ../../tutorial/inputoutput.rst:238
 msgid ""
 "For a complete overview of string formatting with :meth:`str.format`, see"
 " :ref:`formatstrings`."
 msgstr ""
+"Pentru o dare de seamă elaborată asupra formatării șirurilor de caractere "
+"folosind :meth:`str.format`, a se vedea :ref:`formatstrings`."
 
 #: ../../tutorial/inputoutput.rst:243
 msgid "Manual String Formatting"
-msgstr ""
+msgstr "Formatare manuală a șirurilor de caractere"
 
 #: ../../tutorial/inputoutput.rst:245
 msgid "Here's the same table of squares and cubes, formatted manually::"
 msgstr ""
+"Iată același tabel de pătrate și cuburi de numere întregi, însă formatat "
+"manual::"
 
 #: ../../tutorial/inputoutput.rst:247
 msgid ""
@@ -402,12 +614,31 @@ msgid ""
 " 9  81  729\n"
 "10 100 1000"
 msgstr ""
+">>> for x in range(1, 11):\n"
+"...     print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n"
+"...     # Remarcați folosirea lui 'end' pe linia anterioară\n"
+"...     print(repr(x*x*x).rjust(4))\n"
+"...\n"
+" 1   1    1\n"
+" 2   4    8\n"
+" 3   9   27\n"
+" 4  16   64\n"
+" 5  25  125\n"
+" 6  36  216\n"
+" 7  49  343\n"
+" 8  64  512\n"
+" 9  81  729\n"
+"10 100 1000"
 
 #: ../../tutorial/inputoutput.rst:263
 msgid ""
 "(Note that the one space between each column was added by the way "
 ":func:`print` works: it always adds spaces between its arguments.)"
 msgstr ""
+"(Luați în considerare faptul că un spațiu gol, între două coloane "
+"consecutive, i se datorează modului de funcționare al funcției "
+":func:`print`: aceasta adaugă întotdeauna spații goale între "
+"argumentele sale.)"
 
 #: ../../tutorial/inputoutput.rst:266
 msgid ""
@@ -421,12 +652,26 @@ msgid ""
 "really want truncation you can always add a slice operation, as in "
 "``x.ljust(n)[:n]``.)"
 msgstr ""
+"Metoda :meth:`str.rjust` a obiectelor șir de caractere aliniază *la "
+"dreapta* un șir într-un câmp de lățime dată inserând spații goale în "
+"stânga șirului. Python-ul dispune de încă două metode similare, și "
+"anume :meth:`str.ljust`, respectiv :meth:`str.center`. Ele nu "
+"inserează nimic (în vechiul șir), doar întorc un șir nou. Dacă șirul "
+"ce trebuie manipulat este prea lung, aceste metode nu-l vor trunchia, "
+"ci îl vor returna nemodificat; deși un asemenea comportament vă va "
+"afecta dpdv. estetic macheta coloanelor, alternativa ar fi mult mai "
+"rea, ea presupunând modificări de valori. (Dacă doriți, cu adevărat, "
+"o trunchiere a șirului manipulat, atunci puteți apela la operațiile de "
+"tranșare, cum ar fi ``x.ljust(n)[:n]``.)"
 
 #: ../../tutorial/inputoutput.rst:275
 msgid ""
 "There is another method, :meth:`str.zfill`, which pads a numeric string "
 "on the left with zeros.  It understands about plus and minus signs::"
 msgstr ""
+"Mai există o metodă, :meth:`str.zfill`, care completează *la stânga*, cu "
+"zerouri, șirurile de numere. Are capacitatea de a distinge cifrele de "
+"semnele plus și minus::"
 
 #: ../../tutorial/inputoutput.rst:278
 msgid ""
@@ -437,10 +682,16 @@ msgid ""
 ">>> '3.14159265359'.zfill(5)\n"
 "'3.14159265359'"
 msgstr ""
+">>> '12'.zfill(5)\n"
+"'00012'\n"
+">>> '-3.14'.zfill(7)\n"
+"'-003.14'\n"
+">>> '3.14159265359'.zfill(5)\n"
+"'3.14159265359'"
 
 #: ../../tutorial/inputoutput.rst:287
 msgid "Old string formatting"
-msgstr ""
+msgstr "Vechiul stil de formatare al șirurilor de caractere"
 
 #: ../../tutorial/inputoutput.rst:289
 #, python-format
@@ -451,6 +702,12 @@ msgid ""
 "*values*. This operation is commonly known as string interpolation. For "
 "example::"
 msgstr ""
+"Operatorul % (modulo) poate fi întrebuințat și la formatarea șirurilor "
+"de caractere. Fiind dată expresia ``formatul % valorile`` (unde *formatul* "
+"desemnează un șir de caractere), specificațiile conversiei ``%`` care sunt "
+"scrise în *formatul* vor fi înlocuite cu zero sau mai multe elemente din "
+"*valorile*. Această operație este cunoscută sub numele de *interpolarea "
+"șirurilor* (de caractere). De exemplu::"
 
 #: ../../tutorial/inputoutput.rst:296
 #, python-format
@@ -459,14 +716,18 @@ msgid ""
 ">>> print('The value of pi is approximately %5.3f.' % math.pi)\n"
 "The value of pi is approximately 3.142."
 msgstr ""
+">>> import math\n"
+">>> print('Valoarea lui pi este aproximativ %5.3f.' % math.pi)\n"
+"Valoarea lui pi este aproximativ 3.142."
 
 #: ../../tutorial/inputoutput.rst:300
 msgid "More information can be found in the :ref:`old-string-formatting` section."
 msgstr ""
+"Mai multe informații se găsesc în secțiunea :ref:`old-string-formatting`."
 
 #: ../../tutorial/inputoutput.rst:306
 msgid "Reading and Writing Files"
-msgstr ""
+msgstr "Citirea și scrierea fișierelor"
 
 #: ../../tutorial/inputoutput.rst:312
 msgid ""
@@ -474,10 +735,13 @@ msgid ""
 "with two positional arguments and one keyword argument: ``open(filename, "
 "mode, encoding=None)``"
 msgstr ""
+":func:`open` returnează un :term:`file object` și este utilizată de obicei "
+"cu două argumente poziționale și un argument cuvânt-cheie: ``open("
+"nume_de_fișier, mod_de_deschidere, encoding=None)``"
 
 #: ../../tutorial/inputoutput.rst:318
 msgid ">>> f = open('workfile', 'w', encoding=\"utf-8\")"
-msgstr ""
+msgstr ">>> f = open('fișier_șantier', 'w', encoding=\"utf-8\")"
 
 #: ../../tutorial/inputoutput.rst:325
 msgid ""
@@ -490,6 +754,15 @@ msgid ""
 "opens the file for both reading and writing. The *mode* argument is "
 "optional; ``'r'`` will be assumed if it's omitted."
 msgstr ""
+"Primul argument este un șir de caractere desemnând numele fișierului "
+"pe care dorim să-l deschidem. Cel de-al doilea argument este tot un șir "
+"de caractere, foarte scurt, ce descrie felul în care vom folosi fișierul. "
+"*mod_de_deschidere* va fi ``'r'`` dacă dorim doar să citim fișierul, "
+"``'w'`` dacă ne interesează numai să scriem în el (în caz că există "
+"fișierul omonim, acesta va fi șters), respectiv ``'a'`` pentru adăugare "
+"la sfârșitul fișierului. ``'r+'`` va deschide fișierul atât pentru citit "
+"cât și pentru scris. Argumentul *mod_de_deschidere* este opțional; dacă "
+"nu-l precizăm, atunci el va fi considerat ``'r'``."
 
 #: ../../tutorial/inputoutput.rst:334
 msgid ""
@@ -503,6 +776,18 @@ msgid ""
 ":class:`bytes` objects. You can not specify *encoding* when opening file "
 "in binary mode."
 msgstr ""
+"De obicei, fișierele se deschid în :dfn:`modul text`, ceea ce înseamnă că "
+"puteți citi șiruri de caractere din ele, respectiv scrie șiruri de "
+"caractere în ele, șiruri care sunt codificate (de la englezescul *encoding*) "
+"conform unei *codificări* anumite. Atunci când *codificarea* nu este "
+"precizată, codificarea implicită va depinde de platforma de calcul (vedeți "
+":func:`open`). Dat fiind că UTF-8 constituie, în zilele noastre, standardul "
+"*de facto* în domeniu, este recomandat să folosiți ``encoding=\"utf-8\"`` "
+"dacă nu aveți, realmente, nevoie de vreo codificare specială. Adăugând "
+"sufixul ``'b'`` la modul de deschidere, fișierul în cauză va fi deschis în "
+":dfn:`modul binar`. Datele accesate în modul binar sunt citite și scrise "
+"sub formă de obiecte :class:`bytes`. Nu vi se permite să specificați care "
+"este *codificarea* dacă deschideți fișierul în modul binar."
 
 #: ../../tutorial/inputoutput.rst:344
 msgid ""
@@ -514,6 +799,17 @@ msgid ""
 " data like that in :file:`JPEG` or :file:`EXE` files.  Be very careful to"
 " use binary mode when reading and writing such files."
 msgstr ""
+"Atunci când manevrăm fișierul în modul text, la citire din el, caracterele "
+"care marchează sfârșitul de rând se vor transforma implicit din caractere "
+"sfârșit de rând *specifice* platformei de calcul (adică, din ``\\n`` în "
+"Unix, respectiv din ``\\r\\n`` în Windows) în caracterul ``\\n``. Invers, "
+"la scrierea în fișier, toate aparițiile lui ``\\n`` vor deveni implicit "
+"caracterele de sfârșit de rând specifice platformei pe care lucrăm. Deși "
+"o astfel de modificare *sub capotă* (de la englezescul *behind-the-scenes*) "
+"este convenabilă atunci când avem de a face cu fișiere text, ea va corupe "
+"datele binare precum cele dintr-un fișier :file:`JPEG` ori :file:`EXE`. "
+"Aveți mare grijă să folosiți modul binar atunci când fie citiți din "
+"asemenea fișiere fie scrieți în ele."
 
 #: ../../tutorial/inputoutput.rst:352
 msgid ""
@@ -523,6 +819,13 @@ msgid ""
 ":keyword:`!with` is also much shorter than writing equivalent "
 ":keyword:`try`\\ -\\ :keyword:`finally` blocks::"
 msgstr ""
+"O bună practică ne este la îndemână prin intermediul cuvântului-cheie "
+":keyword:`with`, de întrebuințat dacă manevrăm obiecte fișier. Avantajul "
+"său constă în aceea că fișierul va fi întotdeauna închis corect la finalul "
+"execuției expresiei acestui construct, și aceasta chiar dacă a fost "
+"ridicată vreo excepție pe parcurs. În plus, folosirea lui :keyword:`!with` "
+"scurtează semnificativ codul care ar trebui scris dacă folosim constructul "
+"echivalent dat de blocurile :keyword:`try`\\ -\\ :keyword:`finally`::"
 
 #: ../../tutorial/inputoutput.rst:358
 msgid ""
@@ -533,6 +836,12 @@ msgid ""
 ">>> f.closed\n"
 "True"
 msgstr ""
+">>> with open('fișier_șantier', encoding=\"utf-8\") as f:\n"
+"...     citește_datele = f.read()\n"
+"\n"
+">>> # Putem verifica dacă fișierul a fost închis automat.\n"
+">>> f.closed\n"
+"True"
 
 #: ../../tutorial/inputoutput.rst:365
 msgid ""
@@ -540,6 +849,10 @@ msgid ""
 "``f.close()`` to close the file and immediately free up any system "
 "resources used by it."
 msgstr ""
+"În caz că nu utilizați cuvântul cheie :keyword:`with`, atunci va trebui "
+"să apelați metoda ``f.close()`` pentru a închide fișierul și a elibera "
+"de îndată eventualele resurse ale sistemului pe care manevrarea fișierului "
+"le-a blocat."
 
 #: ../../tutorial/inputoutput.rst:370
 msgid ""
@@ -548,6 +861,10 @@ msgid ""
 "not being completely written to the disk, even if the program exits "
 "successfully."
 msgstr ""
+"Apelul lui ``f.write()`` fie fără să folosim cuvântul cheie "
+":keyword:`!with` fie fără să-l însoțim de apelul lui ``f.close()`` *poate* "
+"avea drept consecință o scriere incompletă a argumentelor lui ``f.write()`` "
+"pe disc, și aceasta chiar dacă programul se va încheia corect."
 
 #: ../../tutorial/inputoutput.rst:378
 msgid ""
@@ -555,6 +872,9 @@ msgid ""
 "by calling ``f.close()``, attempts to use the file object will "
 "automatically fail. ::"
 msgstr ""
+"După ce un obiect fișier a fost închis, fie printr-o instrucție "
+":keyword:`with` fie prin apelul metodei ``f.close()``, orice încercare de "
+"a-l întrebuința va fi sortită eșecului. ::"
 
 #: ../../tutorial/inputoutput.rst:382
 msgid ""
@@ -564,16 +884,23 @@ msgid ""
 "  File \"<stdin>\", line 1, in <module>\n"
 "ValueError: I/O operation on closed file."
 msgstr ""
+">>> f.close()\n"
+">>> f.read()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"ValueError: I/O operation on closed file."
 
 #: ../../tutorial/inputoutput.rst:392
 msgid "Methods of File Objects"
-msgstr ""
+msgstr "Metodele obiectelor fișier"
 
 #: ../../tutorial/inputoutput.rst:394
 msgid ""
 "The rest of the examples in this section will assume that a file object "
 "called ``f`` has already been created."
 msgstr ""
+"Restul exemplelor din această secțiune presupune că un obiect fișier pe "
+"nume ``f`` a fost deja creat."
 
 #: ../../tutorial/inputoutput.rst:397
 msgid ""
@@ -587,6 +914,18 @@ msgid ""
 "of the file has been reached, ``f.read()`` will return an empty string "
 "(``''``).  ::"
 msgstr ""
+"Ca să citiți conținutul unui fișier, apelați ``f.read(cantitate)``, "
+"instrucțiune care citește o anumită cantitate de date și o returnează sub "
+"formă de șir de caractere (în modul text) sau sub forma unui obiect "
+"*bytes* (în modul binar). *cantitate* este un argument numeric opțional. "
+"Atunci când *cantitate* fie este omis fie este număr negativ, întregul "
+"conținut al fișierului va fi citit și apoi returnat; treaba dumneavoastră "
+"dacă fișierul în cauză se dovedește a fi de două ori mai mare ca memoria "
+"mașinii de calcul. Altfel, cel mult un număr de *cantitate* de caractere ("
+"în modul text) vor fi citite și returnate, respectiv un număr de "
+"*cantitate* de biți (în modul binar) vor fi citiți și returnați. Atunci "
+"când se va ajunge la finalul fișierului, ``f.read()`` va întoarce un șir "
+"gol (``''``). ::"
 
 #: ../../tutorial/inputoutput.rst:406
 msgid ""
@@ -595,6 +934,10 @@ msgid ""
 ">>> f.read()\n"
 "''"
 msgstr ""
+">>> f.read()\n"
+"'Acesta este întregul fișier.\\n'\n"
+">>> f.read()\n"
+"''"
 
 #: ../../tutorial/inputoutput.rst:411
 msgid ""
@@ -605,6 +948,15 @@ msgid ""
 "string, the end of the file has been reached, while a blank line is "
 "represented by ``'\\n'``, a string containing only a single newline.  ::"
 msgstr ""
+"``f.readline()`` citește un singur rând din fișier; caracterul linie-nouă "
+"(``\\n``) este păstrat la sfârșitul șirului de caractere citit, el fiind "
+"omis numai la ultimul rând al fișierului, atunci când fișierul nu se "
+"încheie cu o *linie nouă* (în englezește, ca jargon, *newline*). Procedeul "
+"în cauză face ca valoarea returnată să fie lipsită de ambiguitate; căci, "
+"dacă ``f.readline()`` returnează un șir gol înseamnă că am ajuns la "
+"finalul fișierului, în timp ce o linie goală (dintre paragrafe) va fi "
+"reprezentată de un ``'\\n'``, adică de un șir conținând numai un singur "
+"caracter, cel de linie nouă. ::"
 
 #: ../../tutorial/inputoutput.rst:418
 msgid ""
@@ -615,12 +967,21 @@ msgid ""
 ">>> f.readline()\n"
 "''"
 msgstr ""
+">>> f.readline()\n"
+"'Acesta este primul rând al fișierului.\\n'\n"
+">>> f.readline()\n"
+"'Al doilea rând al fișierului\\n'\n"
+">>> f.readline()\n"
+"''"
 
 #: ../../tutorial/inputoutput.rst:425
 msgid ""
 "For reading lines from a file, you can loop over the file object. This is"
 " memory efficient, fast, and leads to simple code::"
 msgstr ""
+"Pentru a citi mai multe linii din fișier, puteți itera de-a lungul "
+"obiectului fișier. O atare procedură este eficientă dpdv. al consumului de "
+"memorie, este rapidă și se bazează pe un cod Python simplu::"
 
 #: ../../tutorial/inputoutput.rst:428
 msgid ""
@@ -630,30 +991,44 @@ msgid ""
 "This is the first line of the file.\n"
 "Second line of the file"
 msgstr ""
+">>> for rând in f:\n"
+"...     print(rând, end='')\n"
+"...\n"
+"Acesta este primul rând al fișierului.\n"
+"Al doilea rând al fișierului"
 
 #: ../../tutorial/inputoutput.rst:434
 msgid ""
 "If you want to read all the lines of a file in a list you can also use "
 "``list(f)`` or ``f.readlines()``."
 msgstr ""
+"Dacă vă interesează să plasați toate rândurile unui fișier într-o listă, "
+"atunci ați putea folosi ``list(f)`` sau ``f.readlines()``."
 
 #: ../../tutorial/inputoutput.rst:437
 msgid ""
 "``f.write(string)`` writes the contents of *string* to the file, "
 "returning the number of characters written. ::"
 msgstr ""
+"``f.write(șir_de_caractere)`` scrie conținutul lui *șir_de_caractere* în "
+"fișier, returnând numărul de caractere scrise. ::"
 
 #: ../../tutorial/inputoutput.rst:440
 msgid ""
 ">>> f.write('This is a test\\n')\n"
 "15"
 msgstr ""
+">>> f.write('Acesta e un test\\n')\n"
+"17"
 
 #: ../../tutorial/inputoutput.rst:443
 msgid ""
 "Other types of objects need to be converted -- either to a string (in "
 "text mode) or a bytes object (in binary mode) -- before writing them::"
 msgstr ""
+"Obiectele de alt tip trebuie convertite mai întâi -- fie la șiruri de "
+"caractere (în modul text) fie la obiecte *bytes* (în modul binar) -- "
+"înainte de scrierea în fișier::"
 
 #: ../../tutorial/inputoutput.rst:446
 msgid ""
@@ -662,6 +1037,10 @@ msgid ""
 ">>> f.write(s)\n"
 "18"
 msgstr ""
+">>> valoarea = ('răspunsul', 42)\n"
+">>> s = str(valoarea)  # convertește tuplul în șir de caractere\n"
+">>> f.write(s)\n"
+"17"
 
 #: ../../tutorial/inputoutput.rst:451
 msgid ""
@@ -669,6 +1048,10 @@ msgid ""
 " in the file represented as number of bytes from the beginning of the "
 "file when in binary mode and an opaque number when in text mode."
 msgstr ""
+"``f.tell()`` returnează un număr întreg care fie indică poziția curentă în "
+"obiectul fișier precizând la câți octeți ne găsim față de începutul "
+"fișierului, atunci când fișierul a fost deschis în modul binar, fie este o "
+"valoare *opacă*, atunci când fișierul a fost deschis în modul text."
 
 #: ../../tutorial/inputoutput.rst:455
 msgid ""
@@ -680,6 +1063,13 @@ msgid ""
 "*whence* can be omitted and defaults to 0, using the beginning of the "
 "file as the reference point. ::"
 msgstr ""
+"Pentru a schimba poziția (cursorului) în obiectul fișier, întrebuințați "
+"metoda ``f.seek(deplasament, sursă)``. Poziția se calculează adunând "
+"acest *deplasament* la punctul de referință; punctul de referință este "
+"precizat prin argumentul *sursă*. Valoarea 0 a lui *sursă* înseamnă că "
+"ne vom raporta la începutul fișierului, valoarea 1 se referă la poziția "
+"curentă în fișier, iar valoarea 2 implică folosirea finalului de fișier "
+"pe post de punct de referință. ::"
 
 #: ../../tutorial/inputoutput.rst:462
 msgid ""
@@ -695,6 +1085,19 @@ msgid ""
 ">>> f.read(1)\n"
 "b'd'"
 msgstr ""
+">>> f = open('fișier_șantier', 'rb+')\n"
+">>> f.write(b'0123456789abcdef')\n"
+"16\n"
+">>> f.seek(5)      # Mergi la cel de-al 6-lea octet din fișier\n"
+"5\n"
+">>> f.read(1)\n"
+"b'5'\n"
+">>>                # Mergi la octetul situat cu 3 poziții (octeți)\n"
+">>>                # înaintea finalului\n"
+">>> f.seek(-3, 2)\n"
+"13\n"
+">>> f.read(1)\n"
+"b'd'"
 
 #: ../../tutorial/inputoutput.rst:474
 msgid ""
@@ -704,6 +1107,13 @@ msgid ""
 "valid *offset* values are those returned from the ``f.tell()``, or zero. "
 "Any other *offset* value produces undefined behaviour."
 msgstr ""
+"În fișierele text (adică, fișierele deschise fără să se utilizeze niciun "
+"``b`` în șirul de caractere al modului de deschidere) sunt permise doar "
+"poziționările raportate la începutul fișierului (singura excepție fiind cea "
+"dată de poziționarea, folosind ``seek(0, 2)``, chiar la finalul fișierului"
+"), iar valorile corecte pentru *deplasament* sunt numerele returnate de "
+"``f.tell()``, respectiv zero. Orice alt *deplasament* va cauza "
+"comportamente impredictibile."
 
 #: ../../tutorial/inputoutput.rst:480
 msgid ""
@@ -712,10 +1122,14 @@ msgid ""
 "frequently used; consult the Library Reference for a complete guide to "
 "file objects."
 msgstr ""
+"Fișierele obiect posedă diverse alte metode, precum "
+":meth:`~io.IOBase.isatty` și :meth:`~io.IOBase.truncate` care sunt mai rar "
+"întâlnite; consultați Referința bibliotecii pentru ghidul cuprinzător al "
+"obiectelor fișier."
 
 #: ../../tutorial/inputoutput.rst:488
 msgid "Saving structured data with :mod:`json`"
-msgstr ""
+msgstr "Salvarea structurilor de date cu :mod:`json`"
 
 #: ../../tutorial/inputoutput.rst:492
 msgid ""
@@ -727,6 +1141,15 @@ msgid ""
 "lists and dictionaries, parsing and serializing by hand becomes "
 "complicated."
 msgstr ""
+"Șirurile de caractere se scriu ușor într-un fișier și se citesc (la fel de) "
+"ușor dintr-un fișier. Numerele presupun un efort suplimentar, dat fiind că "
+"metoda :meth:`~io.TextIOBase.read` returnează doar șiruri de caractere, "
+"iar acestea din urmă trebuie transmise unei funcții precum :func:`int`, "
+"care funcție preia un șir ca ``'123'`` și întoarce valoarea sa numerică, "
+"adică pe 123. Atunci când vă interesează să salvați date de diverse tipuri "
+"mai sofisticate decât șirurile ori numerele, cum ar fi listele imbricate "
+"ori dicționarele de date, *parsarea* manuală și *serializarea* de mână "
+"devin niște sarcini complicate."
 
 #: ../../tutorial/inputoutput.rst:499
 msgid ""
@@ -741,6 +1164,19 @@ msgid ""
 "have been stored in a file or data, or sent over a network connection to "
 "some distant machine."
 msgstr ""
+"Ca să nu-i silească pe utilizatori să-și consume timpul scriind și "
+"corectând cod specializat în salvarea în fișiere a tipurilor complicate "
+"de date, Python-ul le permite acestora să întrebuințeze popularul format "
+"de (inter)schimb de date numit "
+"`JSON (Notația obiectelor JavaScript) <https://json.org>`_. Modulul "
+"predefinit :mod:`json` preia date Python ierarhizate și le convertește "
+"în reprezentări sub formă de șiruri de caractere; un atare proces este "
+"numit :dfn:`serializare`. Invers, reconstrucția datelor din reprezentările "
+"lor ca șiruri de caractere poartă numele de :dfn:`deserializare`. Între "
+"o serializare și deserializarea subsecventă, șirul de caractere care "
+"reprezintă un obiect Python poate fi stocat într-un fișier sau într-un "
+"flux de date, ori transmis printr-o conexiune la rețeaua Internet către o "
+"mașină de calcul aflată la distanță."
 
 #: ../../tutorial/inputoutput.rst:510
 msgid ""
@@ -748,12 +1184,19 @@ msgid ""
 " exchange.  Many programmers are already familiar with it, which makes it"
 " a good choice for interoperability."
 msgstr ""
+"Formatul JSON este utilizat frecvent de aplicațiile moderne care permit "
+"schimburi de date. Mulți programatori sunt deja familiarizați cu el, ceea "
+"ce îl face o alegere potrivită atunci când ne interesează "
+"interoperabilitatea."
 
 #: ../../tutorial/inputoutput.rst:514
 msgid ""
 "If you have an object ``x``, you can view its JSON string representation "
 "with a simple line of code::"
 msgstr ""
+"Dacă aveți la îndemână un obiect Python ``x``, atunci vă ajunge o singură "
+"linie de cod ca să-i vedeți reprezentarea JSON sub formă de șir de "
+"caractere::"
 
 #: ../../tutorial/inputoutput.rst:517
 msgid ""
@@ -762,6 +1205,10 @@ msgid ""
 ">>> json.dumps(x)\n"
 "'[1, \"simple\", \"list\"]'"
 msgstr ""
+">>> import json\n"
+">>> x = [1, 'banală', 'listă']\n"
+">>> json.dumps(x)\n"
+"'[1, \"banală\", \"listă\"]'"
 
 #: ../../tutorial/inputoutput.rst:522
 msgid ""
@@ -770,26 +1217,36 @@ msgid ""
 "  So if ``f`` is a :term:`text file` object opened for writing, we can do"
 " this::"
 msgstr ""
+"O variantă a funcției :func:`~json.dumps`, intitulată :func:`~json.dump`, "
+"serializează de-a dreptul obiectul Python într-un :term:`text file`. "
+"Așadar, dacă ``f`` este un obiect :term:`text file` deschis pentru scriere, "
+"putem proceda astfel::"
 
 #: ../../tutorial/inputoutput.rst:526
 msgid "json.dump(x, f)"
-msgstr ""
+msgstr "json.dump(x, f)"
 
 #: ../../tutorial/inputoutput.rst:528
 msgid ""
 "To decode the object again, if ``f`` is a :term:`binary file` or "
 ":term:`text file` object which has been opened for reading::"
 msgstr ""
+"Ca redecodificăm obiectul, presupunând că ``f`` este fie un obiect "
+":term:`binary file` fie un obiect :term:`text file` care a fost deja "
+"deschis pentru citire, executăm::"
 
 #: ../../tutorial/inputoutput.rst:531
 msgid "x = json.load(f)"
-msgstr ""
+msgstr "x = json.load(f)"
 
 #: ../../tutorial/inputoutput.rst:534
 msgid ""
 "JSON files must be encoded in UTF-8. Use ``encoding=\"utf-8\"`` when "
 "opening JSON file as a :term:`text file` for both of reading and writing."
 msgstr ""
+"Fișierele JSON trebuie să fie codificate UTF-8. Folosiți "
+"``encoding=\"utf-8\"`` atunci când deschideți un fișier JSON ca "
+":term:`text file` atât pentru citire cât și pentru scriere."
 
 #: ../../tutorial/inputoutput.rst:537
 msgid ""
@@ -798,10 +1255,14 @@ msgid ""
 " effort. The reference for the :mod:`json` module contains an explanation"
 " of this."
 msgstr ""
+"O asemenea tehnică simpl(ist)ă de serializare se descurcă la manevrarea "
+"listelor și a dicționarelor de date, însă serializarea în JSON a unor "
+"instanțe de clase oarecare necesită un anume efort. Referința la "
+"modulul :mod:`json` din documentație explică de ce."
 
 #: ../../tutorial/inputoutput.rst:543
 msgid ":mod:`pickle` - the pickle module"
-msgstr ""
+msgstr ":mod:`pickle` - modulul pickle"
 
 #: ../../tutorial/inputoutput.rst:545
 msgid ""
@@ -812,56 +1273,64 @@ msgid ""
 "deserializing pickle data coming from an untrusted source can execute "
 "arbitrary code, if the data was crafted by a skilled attacker."
 msgstr ""
+"Spre deosebire de :ref:`JSON <tut-json>`, *pickle* (adică, *muratul* sau "
+"*punerea la murat*) desemnează un protocol capabil să serializeze obiecte "
+"Python oricât de complicate. Din care motiv, îi este tipic (doar) Python-"
+"ului și nu poate fi utilizat la comunicarea cu aplicații scrise în alte "
+"limbaje de programare. De asemeni, este *nesigur* în mod prestabilit: "
+"deserializarea unor date puse la murat pe care le-ați obținut de la o "
+"sursă dubioasă poate provoca execuții de cod despre care (să) nu știți "
+"nimic, în caz că datele au fost preparate de un atacator îndemânatic."
 
 #: ../../tutorial/inputoutput.rst:103
 msgid "formatted string literal"
-msgstr ""
+msgstr "dată literală formatată de tipul șir de caractere"
 
 #: ../../tutorial/inputoutput.rst:103
 msgid "interpolated string literal"
-msgstr ""
+msgstr "dată literală interpolată de tipul șir de caractere"
 
 #: ../../tutorial/inputoutput.rst:103
 msgid "string"
-msgstr ""
+msgstr "șir de caractere"
 
 #: ../../tutorial/inputoutput.rst:103
 msgid "formatted literal"
-msgstr ""
+msgstr "dată literală formatată"
 
 #: ../../tutorial/inputoutput.rst:103
 msgid "interpolated literal"
-msgstr ""
+msgstr "dată literală interpolată"
 
 #: ../../tutorial/inputoutput.rst:103
 msgid "f-string"
-msgstr ""
+msgstr "f-șir"
 
 #: ../../tutorial/inputoutput.rst:103
 msgid "fstring"
-msgstr ""
+msgstr "fșir"
 
 #: ../../tutorial/inputoutput.rst:308
 msgid "built-in function"
-msgstr ""
+msgstr "funcție predefinită"
 
 #: ../../tutorial/inputoutput.rst:308
 msgid "open"
-msgstr ""
+msgstr "deschide"
 
 #: ../../tutorial/inputoutput.rst:308
 msgid "object"
-msgstr ""
+msgstr "obiect"
 
 #: ../../tutorial/inputoutput.rst:308
 msgid "file"
-msgstr ""
+msgstr "fișier"
 
 #: ../../tutorial/inputoutput.rst:490
 msgid "module"
-msgstr ""
+msgstr "modul"
 
 #: ../../tutorial/inputoutput.rst:490
 msgid "json"
-msgstr ""
+msgstr "json"
 
