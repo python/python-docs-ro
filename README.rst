@@ -23,16 +23,16 @@ astfel:
 
 - descărcăm într-un director convenabil codul-sursă al celei mai recente
   versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, 
-  `3.13.3 <https://www.python.org/downloads/source/>`_;
+  `3.13.5 <https://www.python.org/downloads/source/>`_;
 - în subdirectorul **Doc** al codului-sursă Python se găsește fișierul
   **conf.py**, la sfârșitul căruia adăugăm::
 
      # Optiuni pentru traducerea in romaneste
-     # Adaugat in [ 09.05.2025 ]
+     # Adaugat in [ 17.06.2025 ]
      # Conform [ https://www.sphinx-doc.org/en/master/usage/advanced/intl.html ]
      # -------------------------------------------------------------------------
 
-     locale_dirs = ['locale_python_3_13_3/']   # path is example but recommended.
+     locale_dirs = ['locale_python_3_13_5/']   # path is example but recommended.
      gettext_compact = False                   # optional.
      language = 'ro'
 
@@ -50,7 +50,7 @@ astfel:
 
      sphinx-intl update -p build/gettext -l ro
 
-  va produce subdirectorul **locale_python_3_13_3/ro/LC_MESSAGES** al directorului
+  va produce subdirectorul **locale_python_3_13_5/ro/LC_MESSAGES** al directorului
   **Doc**. Acesta conține fișierele PO căutate.
 
 Putem genera codul HTML al documentației folosind scriptul 
@@ -62,6 +62,23 @@ scriptul PowerShell, executăm comenzile::
     Set-ExecutionPolicy Unrestricted
     ./compilarea_traducerii
 
+Abateri de la recomandările oficiale privind traducerea
+-------------------------------------------------------
+Am optat, în versiunea de față a traducerii, pentru *versiuni românești*
+ale majorității numelor de variabile, de funcții, de clase, de argumente
+care intervin în exemplele de cod.
+Aceasta constituie o abatere de la 
+`recomandarea oficială <https://devguide.python.org/documentation/translations/translating/#code-examples>`_.
+Ea este justificată, în opinia mea, de ușurința cu care anumite idiomuri
+ale sintaxei Python-ului pot fi sesizate de către un nou-venit atunci când 
+acesta se lansează în cititul unor fragmente aleatoare de cod.
+
+Compilarea tutorialului
+-----------------------
+Tutorialul de Python, în românește, poate fi citit
+`aici <https://www.octawian.ro/fisiere/tutoriale/python/build/tutorial/>`_. 
+El trebuie considerat *șantier* (fuzzy) de către 
+eventualii săi cititori.
 
 Acord asupra contribuției aduse la documentație
 -----------------------------------------------
