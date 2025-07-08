@@ -1,5 +1,5 @@
 $director_convenabil = "C:\octavian\invatare_Python_2025\traducerea_documentatiei\proiectul_traducerii"
-$proiectul           = "$director_convenabil\Python-3.13.3\Doc"
+$proiectul           = "$director_convenabil\Python-3.13.5\Doc"
 $doctree             = "$proiectul\build\doctrees"
 $sursa               = $proiectul
 $tinta               = "$proiectul\build"
