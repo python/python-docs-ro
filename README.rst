@@ -64,7 +64,7 @@ scriptul PowerShell, executăm comenzile::
 
 Abateri de la recomandările oficiale privind traducerea
 -------------------------------------------------------
-Am optat, în versiunea de față a traducerii, pentru *versiuni românești*
+Am optat, în versiunea de față a traducerii, pentru *variante românești*
 ale majorității numelor de variabile, de funcții, de clase, de argumente
 care intervin în exemplele de cod.
 Aceasta constituie o abatere de la 
