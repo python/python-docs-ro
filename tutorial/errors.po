@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# ERORI SI EXCEPTII.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 13:08+0200\n"
+"POT-Creation-Date: 2025-06-17 17:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../tutorial/errors.rst:5
 msgid "Errors and Exceptions"
-msgstr ""
+msgstr "Erori și excepții"
 
 #: ../../tutorial/errors.rst:7
 msgid ""
@@ -31,16 +31,23 @@ msgid ""
 "least) two distinguishable kinds of errors: *syntax errors* and "
 "*exceptions*."
 msgstr ""
+"Până la momentul de față, mesajele de eroare au cam fost trecute cu "
+"vederea, însă, dacă ați încercat toate exemplele, probabil că v-ați "
+"întâlnit cu ele. Există (cel puțin) două feluri distincte de erori: "
+"*erorile de sintaxă* și *excepțiile*."
 
 #: ../../tutorial/errors.rst:15
 msgid "Syntax Errors"
-msgstr ""
+msgstr "Erori de sintaxă"
 
 #: ../../tutorial/errors.rst:17
 msgid ""
 "Syntax errors, also known as parsing errors, are perhaps the most common "
 "kind of complaint you get while you are still learning Python::"
 msgstr ""
+"Erorile de sintaxă, cunoscute și ca *erori de parsare*, sunt, de obicei, "
+"cele mai obișnuite tipuri de plângeri pe care vi le va adresa interpretorul "
+"cât timp n-ați terminat de învățat Python-ul::"
 
 #: ../../tutorial/errors.rst:20
 msgid ""
@@ -50,22 +57,41 @@ msgid ""
 "               ^^^^^\n"
 "SyntaxError: invalid syntax"
 msgstr ""
+">>> while True print('Salutare, lume')\n"
+"  File \"<stdin>\", line 1\n"
+"    while True print('Salutare, lume')\n"
+"               ^^^^^\n"
+"SyntaxError: invalid syntax"
 
 #: ../../tutorial/errors.rst:26
 msgid ""
 "The parser repeats the offending line and displays little arrows pointing"
-" at the token in the line where the error was detected.  The error may be"
-" caused by the absence of a token *before* the indicated token.  In the "
-"example, the error is detected at the function :func:`print`, since a "
-"colon (``':'``) is missing before it.  File name and line number are "
-"printed so you know where to look in case the input came from a script."
+" at the place where the error was detected.  Note that this is not always"
+" the place that needs to be fixed.  In the example, the error is detected"
+" at the function :func:`print`, since a colon (``':'``) is missing just "
+"before it."
 msgstr ""
+"*Parserul* (parte a interpretorului) afișează linia care l-a supărat și "
+"îi adaugă vârfuri de săgeată îndreptate către porțiunea din linie unde a "
+"găsit o eroare. Remarcați că porțiunea indicată nu este, neapărat, cea în "
+"care trebuie făcute corecturi. În exemplu, greșeala este detectată în "
+"dreptul funcției :func:`print`, iar aceasta deoarece semnul de punctuație "
+"*două puncte* (``':'``) lipsește chiar din fața numelui funcției."
 
-#: ../../tutorial/errors.rst:37
+#: ../../tutorial/errors.rst:31
+msgid ""
+"The file name (``<stdin>`` in our example) and line number are printed so"
+" you know where to look in case the input came from a file."
+msgstr ""
+"Numele fișierului (în cazul nostru, ``<stdin>``) și numărul liniei de cod "
+"sunt și ele afișate pentru ca dumneavoastră să știți de unde să începeți "
+"căutarea erorii atunci când codul eronat provine dintr-un fișier."
+
+#: ../../tutorial/errors.rst:38
 msgid "Exceptions"
-msgstr ""
+msgstr "Excepții"
 
-#: ../../tutorial/errors.rst:39
+#: ../../tutorial/errors.rst:40
 msgid ""
 "Even if a statement or expression is syntactically correct, it may cause "
 "an error when an attempt is made to execute it. Errors detected during "
@@ -74,8 +100,14 @@ msgid ""
 "are not handled by programs, however, and result in error messages as "
 "shown here::"
 msgstr ""
+"Chiar și atunci când o instrucțiune ori o expresie sunt corecte sintactic, "
+"ele pot cauza erori dacă încercăm să le executăm. Erorile detectate în "
+"timpul execuției codului se numesc *excepții* și nu sunt, obligatoriu, "
+"fatale: vom învăța în curând cum să le manevrăm în programele scrise în "
+"Python. Totuși, majoritatea excepțiilor nu sunt tratate de codul "
+"programului, conducând la mesaje de eroare aidoma celui arătat aici::"
 
-#: ../../tutorial/errors.rst:45
+#: ../../tutorial/errors.rst:46
 msgid ""
 ">>> 10 * (1/0)\n"
 "Traceback (most recent call last):\n"
@@ -96,8 +128,26 @@ msgid ""
 "    ~~~~^~~\n"
 "TypeError: can only concatenate str (not \"int\") to str"
 msgstr ""
+">>> 10 * (1/0)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    10 * (1/0)\n"
+"          ~^~\n"
+"ZeroDivisionError: division by zero\n"
+">>> 4 + varză*3\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    4 + varză*3\n"
+"        ^^^^^\n"
+"NameError: name 'varză' is not defined\n"
+">>> '2' + 2\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    '2' + 2\n"
+"    ~~~~^~~\n"
+"TypeError: can only concatenate str (not \"int\") to str"
 
-#: ../../tutorial/errors.rst:64
+#: ../../tutorial/errors.rst:65
 msgid ""
 "The last line of the error message indicates what happened. Exceptions "
 "come in different types, and the type is printed as part of the message: "
@@ -108,30 +158,49 @@ msgid ""
 "(although it is a useful convention). Standard exception names are built-"
 "in identifiers (not reserved keywords)."
 msgstr ""
+"Ultimul rând al mesajului de eroare ne informează despre ce s-a întâmplat. "
+"Excepțiile sunt de tipuri diferite, iar tipul lor este afișat ca parte a "
+"mesajului: tipurile excepțiilor din exemplu sunt :exc:`ZeroDivisionError`, "
+":exc:`NameError` și :exc:`TypeError`. Șirul de caractere afișat pe post de "
+"tip al excepției este numele excepției predefinite care s-a produs. Acest "
+"comportament al interpretorului este regulă în ceea ce privește excepțiile "
+"predefinite, însă se poate să nu se adeverească și pentru indiferent care "
+"excepție definită de utilizator (chiar dacă reprezintă o convenție foarte "
+"utilă). Numele de excepții standard sunt identificatori predefiniți (dar nu "
+"cuvinte cheie rezervate)."
 
-#: ../../tutorial/errors.rst:72
+#: ../../tutorial/errors.rst:73
 msgid ""
 "The rest of the line provides detail based on the type of exception and "
 "what caused it."
 msgstr ""
+"Restul rândului de mesaj oferă detalii bazate pe tipul de excepție și pe "
+"cauza (producerii) ei."
 
-#: ../../tutorial/errors.rst:75
+#: ../../tutorial/errors.rst:76
 msgid ""
 "The preceding part of the error message shows the context where the "
 "exception occurred, in the form of a stack traceback. In general it "
 "contains a stack traceback listing source lines; however, it will not "
 "display lines read from standard input."
 msgstr ""
+"Partea precedentă a mesajului de eroare ne arată contextul în care a "
+"apărut excepția, sub forma *derulării* (de la englezescul, ca jargon, "
+"*traceback*) unei *stive*. De obicei, această parte va conține derularea "
+"liniilor (rândurilor) de conținut ale stivei; cu toate acestea, nu vor fi "
+"afișate rândurile citite de la intrarea standard."
 
-#: ../../tutorial/errors.rst:80
+#: ../../tutorial/errors.rst:81
 msgid ":ref:`bltin-exceptions` lists the built-in exceptions and their meanings."
 msgstr ""
+"În :ref:`bltin-exceptions` se găsesc lista excepțiilor predefinite împreună "
+"cu semnificațiile acestora."
 
-#: ../../tutorial/errors.rst:86
+#: ../../tutorial/errors.rst:87
 msgid "Handling Exceptions"
-msgstr ""
+msgstr "Tratarea excepțiilor"
 
-#: ../../tutorial/errors.rst:88
+#: ../../tutorial/errors.rst:89
 msgid ""
 "It is possible to write programs that handle selected exceptions. Look at"
 " the following example, which asks the user for input until a valid "
@@ -140,8 +209,16 @@ msgid ""
 "that a user-generated interruption is signalled by raising the "
 ":exc:`KeyboardInterrupt` exception. ::"
 msgstr ""
+"Putem scrie programe care să trateze (doar) anumite excepții. Haideți să "
+"aruncăm o privire asupra exemplului de mai jos, în care utilizatorului i se "
+"cere să introducă numere până când un număr întreg convenabil va fi tastat, "
+"îngăduindu-i-se, în schimb, să oprească execuția programului oricând "
+"dorește (cu combinația de taste :kbd:`Control-C` sau cu orice permite "
+"sistemul de operare folosit); trebuie remarcat că întreruperea (execuției) "
+"produsă de utilizator va fi semnalată prin *ridicarea* (de la englezescul "
+"*raising*; sau *lansarea*) excepției (de tipul) :exc:`KeyboardInterrupt`. ::"
 
-#: ../../tutorial/errors.rst:94
+#: ../../tutorial/errors.rst:95
 msgid ""
 ">>> while True:\n"
 "...     try:\n"
@@ -151,40 +228,65 @@ msgid ""
 "...         print(\"Oops!  That was no valid number.  Try again...\")\n"
 "..."
 msgstr ""
+">>> while True:\n"
+"...     try:\n"
+"...         x = int(input(\"Vă rog să introduceți un număr: \"))\n"
+"...         break\n"
+"...     except ValueError:\n"
+"...         print(\"Vai! Acest număr nu e bun. Mai încercați...\")\n"
+"..."
 
-#: ../../tutorial/errors.rst:102
+#: ../../tutorial/errors.rst:103
 msgid "The :keyword:`try` statement works as follows."
-msgstr ""
+msgstr "Instrucțiunea :keyword:`try` funcționează după cum urmează."
 
-#: ../../tutorial/errors.rst:104
+#: ../../tutorial/errors.rst:105
 msgid ""
 "First, the *try clause* (the statement(s) between the :keyword:`try` and "
 ":keyword:`except` keywords) is executed."
 msgstr ""
+"Prima se execută *clauza try* (adică, grupul de instrucțiuni situate "
+"între cuvintele-cheie :keyword:`try` și :keyword:`except`)."
 
-#: ../../tutorial/errors.rst:107
+#: ../../tutorial/errors.rst:108
 msgid ""
 "If no exception occurs, the *except clause* is skipped and execution of "
 "the :keyword:`try` statement is finished."
 msgstr ""
+"Dacă nu sunt întâlnite excepții, atunci se va sări peste *clauza except*, "
+"execuția instrucțiunii :keyword:`try` încheindu-se."
 
-#: ../../tutorial/errors.rst:110
+#: ../../tutorial/errors.rst:111
 msgid ""
 "If an exception occurs during execution of the :keyword:`try` clause, the"
 " rest of the clause is skipped.  Then, if its type matches the exception "
 "named after the :keyword:`except` keyword, the *except clause* is "
 "executed, and then execution continues after the try/except block."
 msgstr ""
+"Dacă survine vreo excepție în timpul execuției clauzei :keyword:`try`, "
+"atunci se va sări peste restul clauzei. Presupunând că tipul excepției "
+"*se potrivește* (de la englezescul *match*) numelui de (tip de) excepție "
+"scris după cuvântul-cheie :keyword:`except`, se va executa *clauza except*, "
+"apoi execuția codului Python va trece la instrucțiunile situate după blocul "
+"try/except."
 
-#: ../../tutorial/errors.rst:115
+#: ../../tutorial/errors.rst:116
 msgid ""
 "If an exception occurs which does not match the exception named in the "
 "*except clause*, it is passed on to outer :keyword:`try` statements; if "
 "no handler is found, it is an *unhandled exception* and execution stops "
 "with an error message."
 msgstr ""
+"În cazul când numele excepției survenite nu se potrivește cu cel precizat "
+"în *clauza except*, acest nume va fi transmis către instrucțiunile "
+":keyword:`try` exterioare; dacă nu va fi găsit niciun *manipulator de "
+"excepție* (de la englezescul *handler*; sau *procedură de tratare a "
+"excepției*) convenabil, atunci ne vom afla în fața unei *excepții "
+"netratate* (de către codul nostru Python; sau a unei *excepții "
+"neinterceptate*) iar execuția programului se va încheia brusc, "
+"furnizându-se un mesaj de eroare."
 
-#: ../../tutorial/errors.rst:119
+#: ../../tutorial/errors.rst:120
 msgid ""
 "A :keyword:`try` statement may have more than one *except clause*, to "
 "specify handlers for different exceptions.  At most one handler will be "
@@ -193,14 +295,24 @@ msgid ""
 "statement.  An *except clause* may name multiple exceptions as a "
 "parenthesized tuple, for example::"
 msgstr ""
+"O instrucțiune :keyword:`try` poate avea mai mult de o singură *clauză "
+"except*, deținând, din acest motiv, manipulatori (de excepție) pentru "
+"felurite excepții. Cel mult unul dintre acești manipulatori va fi "
+"executat. Un manipulator tratează acea excepție care survine în timpul "
+"execuției  *clauzei try* corespunzătoare, nu și acele (eventuale) "
+"excepții care intervin în ceilalți manipulatori din aceeași instrucțiune "
+":keyword:`!try`. O *clauză except* poate numi mai multe excepții, sub "
+"forma unui tuplu încadrat de paranteze rotunde, precum::"
 
-#: ../../tutorial/errors.rst:125
+#: ../../tutorial/errors.rst:126
 msgid ""
 "... except (RuntimeError, TypeError, NameError):\n"
 "...     pass"
 msgstr ""
+"... except (RuntimeError, TypeError, NameError):\n"
+"...     pass"
 
-#: ../../tutorial/errors.rst:128
+#: ../../tutorial/errors.rst:129
 msgid ""
 "A class in an :keyword:`except` clause matches exceptions which are "
 "instances of the class itself or one of its derived classes (but not the "
@@ -208,8 +320,14 @@ msgid ""
 "match instances of its base classes). For example, the following code "
 "will print B, C, D in that order::"
 msgstr ""
+"O clasă (numită) într-o clauză :keyword:`except` li se potrivește acelor "
+"excepții care sunt instanțe ale clasei însăși ori ale vreuneia din clasele "
+"derivate din clasa în cauză (dar nu și invers -- o *clauză except* care "
+"conține numele unei clase derivate nu se va potrivi cu nicio instanță a "
+"vreunei clase de bază). De exemplu, codul următor va afișa B, C, D în exact "
+"această ordine::"
 
-#: ../../tutorial/errors.rst:133
+#: ../../tutorial/errors.rst:134
 msgid ""
 "class B(Exception):\n"
 "    pass\n"
@@ -230,22 +348,47 @@ msgid ""
 "    except B:\n"
 "        print(\"B\")"
 msgstr ""
+"class B(Exception):\n"
+"    pass\n"
+"\n"
+"class C(B):\n"
+"    pass\n"
+"\n"
+"class D(C):\n"
+"    pass\n"
+"\n"
+"for clase in [B, C, D]:\n"
+"    try:\n"
+"        raise clase()\n"
+"    except D:\n"
+"        print(\"D\")\n"
+"    except C:\n"
+"        print(\"C\")\n"
+"    except B:\n"
+"        print(\"B\")"
 
-#: ../../tutorial/errors.rst:152
+#: ../../tutorial/errors.rst:153
 msgid ""
 "Note that if the *except clauses* were reversed (with ``except B`` "
 "first), it would have printed B, B, B --- the first matching *except "
 "clause* is triggered."
 msgstr ""
+"Observați că, dacă am fi inversat *clauzele except* (așezând-o pe "
+"``except B`` prima), atunci s-ar fi afișat B, B, B --- deoarece prima "
+"*clauză except* potrivită (excepțiilor) s-ar fi declanșat."
 
-#: ../../tutorial/errors.rst:155
+#: ../../tutorial/errors.rst:156
 msgid ""
 "When an exception occurs, it may have associated values, also known as "
 "the exception's *arguments*. The presence and types of the arguments "
 "depend on the exception type."
 msgstr ""
+"Atunci când intervine o excepție, ei îi pot fi asociate diverse valori, "
+"cunoscute și sub numele de *argumente* ale excepției în cauză. Atât "
+"existența unor asemenea argumente cât și tipurile lor depind de tipul de "
+"excepție."
 
-#: ../../tutorial/errors.rst:159
+#: ../../tutorial/errors.rst:160
 msgid ""
 "The *except clause* may specify a variable after the exception name.  The"
 " variable is bound to the exception instance which typically has an "
@@ -253,8 +396,15 @@ msgid ""
 "exception types define :meth:`~object.__str__` to print all the arguments"
 " without explicitly accessing ``.args``.  ::"
 msgstr ""
+"*Clauza except* poate specifica o variabilă la dreapta numelui excepției. "
+"Această variabilă este legată de instanța excepției, excepția având, de "
+"obicei, un atribut ``args`` în care sunt stocate asemenea valori "
+"(argumente ale excepției). Din rațiuni de utilitate, tipurile *builtin* "
+"(predefinite) de excepții definesc metoda :meth:`~object.__str__` ca să "
+"putem afișa argumentele unor asemenea excepții fără să mai fie nevoie de "
+"accesarea în mod explicit a lui ``.args``.  ::"
 
-#: ../../tutorial/errors.rst:165
+#: ../../tutorial/errors.rst:166
 msgid ""
 ">>> try:\n"
 "...     raise Exception('spam', 'eggs')\n"
@@ -275,14 +425,35 @@ msgid ""
 "x = spam\n"
 "y = eggs"
 msgstr ""
+">>> try:\n"
+"...     raise Exception('șuncă presată', 'ouă')\n"
+"... except Exception as hrană:\n"
+"...     print(type(hrană))    # tipul de excepție\n"
+"...     print(hrană.args)     # valorile stocate în .args\n"
+"...     print(hrană)          # __str__ ne permite să afișăm "
+"direct argumentele,\n"
+"...                           # însă poate fi suprascrisă în "
+"moștenitorii clasei\n"
+"...     x, y = hrană.args     # despachetarea lui args\n"
+"...     print('x =', x)\n"
+"...     print('y =', y)\n"
+"...\n"
+"<class 'Exception'>\n"
+"('șuncă presată', 'ouă')\n"
+"('șuncă presată', 'ouă')\n"
+"x = șuncă presată\n"
+"y = ouă"
 
-#: ../../tutorial/errors.rst:182
+#: ../../tutorial/errors.rst:183
 msgid ""
 "The exception's :meth:`~object.__str__` output is printed as the last "
 "part ('detail') of the message for unhandled exceptions."
 msgstr ""
+"Șirul returnat de metoda :meth:`~object.__str__` a unei excepții va fi "
+"afișat ca ultimă parte (cea de 'detalii') a mesajului de eroare "
+"produs de intervenția unei *excepții netratate*."
 
-#: ../../tutorial/errors.rst:185
+#: ../../tutorial/errors.rst:186
 msgid ""
 ":exc:`BaseException` is the common base class of all exceptions. One of "
 "its subclasses, :exc:`Exception`, is the base class of all the non-fatal "
@@ -292,23 +463,41 @@ msgid ""
 ":meth:`sys.exit` and :exc:`KeyboardInterrupt` which is raised when a user"
 " wishes to interrupt the program."
 msgstr ""
+":exc:`BaseException` este clasa de bază (superclasa) a tuturor excepțiilor. "
+"Una din moștenitoarele sale, :exc:`Exception`, este clasa de bază a tuturor "
+"excepțiilor non-fatale. Excepțiile care nu-i sunt subclase (urmași) lui "
+":exc:`Exception` nu sunt, de obicei, tratate (cu manipulatori de excepție), "
+"deoarece ele sunt întrebuințate la a ne arăta că execuția programului "
+"trebuie oprită. Asemenea excepții includ :exc:`SystemExit`, ridicată de "
+":meth:`sys.exit`, respectiv :exc:`KeyboardInterrupt`, ridicată atunci când "
+"utilizatorul dorește să întrerupă programul."
 
-#: ../../tutorial/errors.rst:193
+#: ../../tutorial/errors.rst:194
 msgid ""
 ":exc:`Exception` can be used as a wildcard that catches (almost) "
 "everything. However, it is good practice to be as specific as possible "
 "with the types of exceptions that we intend to handle, and to allow any "
 "unexpected exceptions to propagate on."
 msgstr ""
+":exc:`Exception` poate fi utilizată pe post de înlocuitor (de excepții "
+"specifice) capabil să *intercepteze* (de la englezescul *catch*) aproape "
+"orice fel de excepție. Cu toate acestea, *bunele practici* recomandă să "
+"fim cât mai la obiect cu putință vizavi de tipurile de excepții pe care "
+"suntem preocupați să le tratăm, permițându-le, în schimb, celorlalte "
+"excepții să se propage."
 
-#: ../../tutorial/errors.rst:198
+#: ../../tutorial/errors.rst:199
 msgid ""
 "The most common pattern for handling :exc:`Exception` is to print or log "
 "the exception and then re-raise it (allowing a caller to handle the "
 "exception as well)::"
 msgstr ""
+"Șablonul (cel mai) obișnuit de tratare a lui :exc:`Exception` este fie "
+"prin afișarea excepției fie prin jurnalizarea ei, urmată de o nouă ridicare "
+"a excepției (ceea ce îi va permite unui apelant --- al codului --- să "
+"trateze, la rândul său, excepția)::"
 
-#: ../../tutorial/errors.rst:202
+#: ../../tutorial/errors.rst:203
 #, python-brace-format
 msgid ""
 "import sys\n"
@@ -325,16 +514,33 @@ msgid ""
 "    print(f\"Unexpected {err=}, {type(err)=}\")\n"
 "    raise"
 msgstr ""
+"import sys\n"
+"\n"
+"try:\n"
+"    f = open('fișierul_meu.txt')\n"
+"    s = f.readline()\n"
+"    i = int(s.strip())\n"
+"except OSError as eroare:\n"
+"    print(\"Eroare SO:\", eroare)\n"
+"except ValueError:\n"
+"    print(\"Data nu poate fi convertită într-un număr întreg.\")\n"
+"except Exception as eroare:\n"
+"    print(f\"O (neașteptată) {eroare=}, {type(eroare)=}\")\n"
+"    raise"
 
-#: ../../tutorial/errors.rst:216
+#: ../../tutorial/errors.rst:217
 msgid ""
 "The :keyword:`try` ... :keyword:`except` statement has an optional *else "
 "clause*, which, when present, must follow all *except clauses*.  It is "
 "useful for code that must be executed if the *try clause* does not raise "
 "an exception. For example::"
 msgstr ""
+"Instrucțiunea :keyword:`try` ... :keyword:`except` dispune și de o *clauză "
+"else* opțională, care, dacă o introducem în programul nostru, trebuie să "
+"fie poziționată *după* toate *clauzele except*. Ea este utilă atunci când "
+"execuția *clauzei try* nu va ridica nicio excepție. Ca exemplu::"
 
-#: ../../tutorial/errors.rst:221
+#: ../../tutorial/errors.rst:222
 msgid ""
 "for arg in sys.argv[1:]:\n"
 "    try:\n"
@@ -345,23 +551,41 @@ msgid ""
 "        print(arg, 'has', len(f.readlines()), 'lines')\n"
 "        f.close()"
 msgstr ""
+"for argumentul in sys.argv[1:]:\n"
+"    try:\n"
+"        f = open(argumentul, 'r')\n"
+"    except OSError:\n"
+"        print('nu poate fi deschis', argumentul)\n"
+"    else:\n"
+"        print(argumentul, 'are', len(f.readlines()), 'linii')\n"
+"        f.close()"
 
-#: ../../tutorial/errors.rst:230
+#: ../../tutorial/errors.rst:231
 msgid ""
 "The use of the :keyword:`!else` clause is better than adding additional "
 "code to the :keyword:`try` clause because it avoids accidentally catching"
 " an exception that wasn't raised by the code being protected by the "
 ":keyword:`!try` ... :keyword:`!except` statement."
 msgstr ""
+"Întrebuințarea clauzei :keyword:`!else` este mai nimerită, în practică, "
+"decât adăugirile de cod în corpul clauzei :keyword:`try` și aceasta în "
+"special pentru că se evită interceptarea unor excepții care să nu fi fost "
+"ridicate chiar de către codul pe care l-am protejat cu instrucțiunea "
+":keyword:`!try` ... :keyword:`!except`."
 
-#: ../../tutorial/errors.rst:235
+#: ../../tutorial/errors.rst:236
 msgid ""
 "Exception handlers do not handle only exceptions that occur immediately "
 "in the *try clause*, but also those that occur inside functions that are "
 "called (even indirectly) in the *try clause*. For example::"
 msgstr ""
+"Manipulatorii de excepții nu tratează doar acele excepții care intervin "
+"direct în codul din *clauza try*, ci și pe acelea care survin în codul "
+"funcțiilor apelate (fie și indirect) în cadrul *clauzei try*. Precum aici "
+"(expresia englezească *run-time*, de jargon informatic, se poate traduce "
+"prin *în timpul execuției*)::"
 
-#: ../../tutorial/errors.rst:239
+#: ../../tutorial/errors.rst:240
 msgid ""
 ">>> def this_fails():\n"
 "...     x = 1/0\n"
@@ -373,18 +597,29 @@ msgid ""
 "...\n"
 "Handling run-time error: division by zero"
 msgstr ""
+">>> def cod_care_nu_funcționează():\n"
+"...     x = 1/0\n"
+"...\n"
+">>> try:\n"
+"...     cod_care_nu_funcționează()\n"
+"... except ZeroDivisionError as eroarea:\n"
+"...     print('Tratând o eroare din timpul execuției:', eroarea)\n"
+"...\n"
+"Tratând o eroare din timpul execuției: division by zero"
 
-#: ../../tutorial/errors.rst:253
+#: ../../tutorial/errors.rst:254
 msgid "Raising Exceptions"
-msgstr ""
+msgstr "Ridicând excepții"
 
-#: ../../tutorial/errors.rst:255
+#: ../../tutorial/errors.rst:256
 msgid ""
 "The :keyword:`raise` statement allows the programmer to force a specified"
 " exception to occur. For example::"
 msgstr ""
+"Instrucțiunea :keyword:`raise` îi îngăduie programatorului să *forțeze* "
+"apariția unei anumite excepții. De exemplu::"
 
-#: ../../tutorial/errors.rst:258
+#: ../../tutorial/errors.rst:259
 msgid ""
 ">>> raise NameError('HiThere')\n"
 "Traceback (most recent call last):\n"
@@ -392,8 +627,13 @@ msgid ""
 "    raise NameError('HiThere')\n"
 "NameError: HiThere"
 msgstr ""
+">>> raise NameError('Salutare')\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    raise NameError('Salutare')\n"
+"NameError: Salutare"
 
-#: ../../tutorial/errors.rst:264
+#: ../../tutorial/errors.rst:265
 msgid ""
 "The sole argument to :keyword:`raise` indicates the exception to be "
 "raised. This must be either an exception instance or an exception class "
@@ -402,19 +642,30 @@ msgid ""
 "passed, it will be implicitly instantiated by calling its constructor "
 "with no arguments::"
 msgstr ""
+"Argumentul (unic al) lui :keyword:`raise` indică excepția care urmează "
+"a fi ridicată. Aceasta trebuie să fie sau instanța unei (clase de) excepții "
+"sau chiar o clasă de excepții (adică, o clasă derivată din "
+":class:`BaseException`, precum :exc:`Exception` ori vreunul din urmașii "
+"ei). Atunci când se transmite (drept argument unic) o clasă de "
+"excepții, aceasta va fi instanțiată în mod implicit prin apelarea "
+"constructorului fără argumente de care dispune::"
 
-#: ../../tutorial/errors.rst:270
+#: ../../tutorial/errors.rst:271
 msgid "raise ValueError  # shorthand for 'raise ValueError()'"
-msgstr ""
+msgstr "raise ValueError  # o prescurtare a lui 'raise ValueError()'"
 
-#: ../../tutorial/errors.rst:272
+#: ../../tutorial/errors.rst:273
 msgid ""
 "If you need to determine whether an exception was raised but don't intend"
 " to handle it, a simpler form of the :keyword:`raise` statement allows "
 "you to re-raise the exception::"
 msgstr ""
+"Presupunând că doriți să știți dacă s-a ridicat vreo excepție însă nu vă "
+"interesează și să o tratați, puteți folosi forma simplificată a "
+"instrucțiunii :keyword:`raise` în cadrul căreia vi se permite relansarea "
+"excepției în cauză::"
 
-#: ../../tutorial/errors.rst:276
+#: ../../tutorial/errors.rst:277
 msgid ""
 ">>> try:\n"
 "...     raise NameError('HiThere')\n"
@@ -428,19 +679,33 @@ msgid ""
 "    raise NameError('HiThere')\n"
 "NameError: HiThere"
 msgstr ""
+">>> try:\n"
+"...     raise NameError('Salutare')\n"
+"... except NameError:\n"
+"...     print('Tocmai ne-a depășit o excepție!')\n"
+"...     raise\n"
+"...\n"
+"Tocmai ne-a depășit o excepție!\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 2, in <module>\n"
+"    raise NameError('Salutare')\n"
+"NameError: Salutare"
 
-#: ../../tutorial/errors.rst:292
+#: ../../tutorial/errors.rst:293
 msgid "Exception Chaining"
-msgstr ""
+msgstr "Înlănțuirea excepțiilor"
 
-#: ../../tutorial/errors.rst:294
+#: ../../tutorial/errors.rst:295
 msgid ""
 "If an unhandled exception occurs inside an :keyword:`except` section, it "
 "will have the exception being handled attached to it and included in the "
 "error message::"
 msgstr ""
+"Atunci când o excepție netratată survine în interiorul unei secțiuni "
+"(clauze) :keyword:`except`, excepția care chiar este tratată îi va fi "
+"atașată, respectiv va fi menționată în mesajul de eroare::"
 
-#: ../../tutorial/errors.rst:298
+#: ../../tutorial/errors.rst:299
 msgid ""
 ">>> try:\n"
 "...     open(\"database.sqlite\")\n"
@@ -461,25 +726,50 @@ msgid ""
 "    raise RuntimeError(\"unable to handle error\")\n"
 "RuntimeError: unable to handle error"
 msgstr ""
+">>> try:\n"
+"...     open(\"baza_de_date.sqlite\")\n"
+"... except OSError:\n"
+"...     raise RuntimeError(\"nu putem trata eroarea\")\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 2, in <module>\n"
+"    open(\"baza_de_date.sqlite\")\n"
+"    ~~~~^^^^^^^^^^^^^^^^^^^^^^^\n"
+"FileNotFoundError: [Errno 2] No such file or directory: 'baza_de_date.sqlite'"
+"\n"
+"\n"
+"During handling of the above exception, another exception occurred:\n"
+"\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError(\"nu putem trata eroarea\")\n"
+"RuntimeError: nu putem trata eroarea"
 
-#: ../../tutorial/errors.rst:316
+#: ../../tutorial/errors.rst:317
 msgid ""
 "To indicate that an exception is a direct consequence of another, the "
 ":keyword:`raise` statement allows an optional :keyword:`from<raise>` "
 "clause::"
 msgstr ""
+"Pentru a indica faptul că o excepție este consecința directă a altei "
+"excepții, instrucțiunea :keyword:`raise` dispune de clauza opțională "
+":keyword:`from<raise>`::"
 
-#: ../../tutorial/errors.rst:319
+#: ../../tutorial/errors.rst:320
 msgid ""
 "# exc must be exception instance or None.\n"
 "raise RuntimeError from exc"
 msgstr ""
+"# excepția este fie instanța unei excepții fie None.\n"
+"raise RuntimeError from excepția"
 
-#: ../../tutorial/errors.rst:322
+#: ../../tutorial/errors.rst:323
 msgid "This can be useful when you are transforming exceptions. For example::"
 msgstr ""
+"Această clauză ne poate fi de folos atunci când transformăm excepții. Ca "
+"aici::"
 
-#: ../../tutorial/errors.rst:324
+#: ../../tutorial/errors.rst:325
 msgid ""
 ">>> def func():\n"
 "...     raise ConnectionError\n"
@@ -503,14 +793,37 @@ msgid ""
 "    raise RuntimeError('Failed to open database') from exc\n"
 "RuntimeError: Failed to open database"
 msgstr ""
+">>> def funcția():\n"
+"...     raise ConnectionError\n"
+"...\n"
+">>> try:\n"
+"...     funcția()\n"
+"... except ConnectionError as excepția:\n"
+"...     raise RuntimeError('Nu putem deschide baza de date') from excepția\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 2, in <module>\n"
+"    funcția()\n"
+"    ~~~~~~~^^\n"
+"  File \"<stdin>\", line 2, in funcția\n"
+"ConnectionError\n"
+"\n"
+"The above exception was the direct cause of the following exception:\n"
+"\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError('Nu putem deschide baza de date') from excepția\n"
+"RuntimeError: Nu putem deschide baza de date"
 
-#: ../../tutorial/errors.rst:346
+#: ../../tutorial/errors.rst:347
 msgid ""
 "It also allows disabling automatic exception chaining using the ``from "
 "None`` idiom::"
 msgstr ""
+"Tot ea ne ajută să dezafectăm înlănțuirea automată de excepții, cu ajutorul "
+"idiomului ``from None``::"
 
-#: ../../tutorial/errors.rst:349
+#: ../../tutorial/errors.rst:350
 msgid ""
 ">>> try:\n"
 "...     open('database.sqlite')\n"
@@ -522,57 +835,84 @@ msgid ""
 "    raise RuntimeError from None\n"
 "RuntimeError"
 msgstr ""
+">>> try:\n"
+"...     open('baza_de_date.sqlite')\n"
+"... except OSError:\n"
+"...     raise RuntimeError from None\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 4, in <module>\n"
+"    raise RuntimeError from None\n"
+"RuntimeError"
 
-#: ../../tutorial/errors.rst:359
+#: ../../tutorial/errors.rst:360
 msgid ""
 "For more information about chaining mechanics, see :ref:`bltin-"
 "exceptions`."
 msgstr ""
+"Pentru mai multe informații privitoare la mecanismul înlănțuirii, "
+"vezi :ref:`bltin-exceptions`."
 
-#: ../../tutorial/errors.rst:365
+#: ../../tutorial/errors.rst:366
 msgid "User-defined Exceptions"
-msgstr ""
+msgstr "Excepții definite de utilizator"
 
-#: ../../tutorial/errors.rst:367
+#: ../../tutorial/errors.rst:368
 msgid ""
 "Programs may name their own exceptions by creating a new exception class "
 "(see :ref:`tut-classes` for more about Python classes).  Exceptions "
 "should typically be derived from the :exc:`Exception` class, either "
 "directly or indirectly."
 msgstr ""
+"Programatorii își pot denumi propriile excepții prin crearea unei noi "
+"clase de excepții (a se vedea :ref:`tut-classes` pentru mai multe despre "
+"clase în Python). Excepțiile derivă, în mod obișnuit, din clasa "
+":exc:`Exception`, atât direct cât și indirect."
 
-#: ../../tutorial/errors.rst:371
+#: ../../tutorial/errors.rst:372
 msgid ""
 "Exception classes can be defined which do anything any other class can "
 "do, but are usually kept simple, often only offering a number of "
 "attributes that allow information about the error to be extracted by "
 "handlers for the exception."
 msgstr ""
+"Clasele de excepții pot realiza tot ce poate realiza oricare altă clasă "
+"în Python, însă se recomandă să fie păstrate simple, dispunând doar de "
+"un număr limitat de atribute care să le permită manipulatorilor de "
+"excepții asociați lor să extragă informații despre excepția survenită."
 
-#: ../../tutorial/errors.rst:375
+#: ../../tutorial/errors.rst:376
 msgid ""
 "Most exceptions are defined with names that end in \"Error\", similar to "
 "the naming of the standard exceptions."
 msgstr ""
+"Majoritatea excepțiilor se definesc cu nume terminate în \"Error\" "
+"(Eroare), aidoma denumirii excepțiilor standard."
 
-#: ../../tutorial/errors.rst:378
+#: ../../tutorial/errors.rst:379
 msgid ""
 "Many standard modules define their own exceptions to report errors that "
 "may occur in functions they define."
 msgstr ""
+"Multe module standard își definesc propriile excepții pentru a raporta "
+"erorile ce pot apărea la execuția funcțiilor conținute în modulele "
+"respective."
 
-#: ../../tutorial/errors.rst:385
+#: ../../tutorial/errors.rst:386
 msgid "Defining Clean-up Actions"
-msgstr ""
+msgstr "Definirea unor acțiuni de curățare"
 
-#: ../../tutorial/errors.rst:387
+#: ../../tutorial/errors.rst:388
 msgid ""
 "The :keyword:`try` statement has another optional clause which is "
 "intended to define clean-up actions that must be executed under all "
 "circumstances.  For example::"
 msgstr ""
+"Instrucțiunea :keyword:`try` posedă încă o clauză opțională, destinată "
+"(mai ales) acțiunilor de *curățare* care trebuie realizate în absolut "
+"toate împrejurările. Cum ar fi::"
 
-#: ../../tutorial/errors.rst:391
+#: ../../tutorial/errors.rst:392
 msgid ""
 ">>> try:\n"
 "...     raise KeyboardInterrupt\n"
@@ -585,8 +925,18 @@ msgid ""
 "    raise KeyboardInterrupt\n"
 "KeyboardInterrupt"
 msgstr ""
+">>> try:\n"
+"...     raise KeyboardInterrupt\n"
+"... finally:\n"
+"...     print('Adio, lume!')\n"
+"...\n"
+"Adio, lume!\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 2, in <module>\n"
+"    raise KeyboardInterrupt\n"
+"KeyboardInterrupt"
 
-#: ../../tutorial/errors.rst:402
+#: ../../tutorial/errors.rst:403
 msgid ""
 "If a :keyword:`finally` clause is present, the :keyword:`!finally` clause"
 " will execute as the last task before the :keyword:`try` statement "
@@ -594,30 +944,49 @@ msgid ""
 ":keyword:`!try` statement produces an exception. The following points "
 "discuss more complex cases when an exception occurs:"
 msgstr ""
+"Atunci când clauza :keyword:`finally` este prezentă, această clauză "
+":keyword:`!finally` va fi executată ca *ultima* activitate din cadrul "
+"instrucțiunii :keyword:`try`. Codul din clauza :keyword:`!finally` va "
+"fi rulat indiferent dacă instrucțiunea :keyword:`!try` a condus sau "
+"nu la apariția de excepții. La punctele care urmează, discutăm despre "
+"situațiile mai complicate când poate apărea vreo excepție:"
 
-#: ../../tutorial/errors.rst:408
+#: ../../tutorial/errors.rst:409
 msgid ""
 "If an exception occurs during execution of the :keyword:`!try` clause, "
 "the exception may be handled by an :keyword:`except` clause. If the "
 "exception is not handled by an :keyword:`!except` clause, the exception "
 "is re-raised after the :keyword:`!finally` clause has been executed."
 msgstr ""
+"Dacă survine o excepție în timpul executării clauzei :keyword:`!try`, "
+"excepția în cauză poate fi tratată de una din clauzele :keyword:`except`. "
+"Presupunând că excepția nu va fi interceptată de niciuna din clauzele "
+":keyword:`!except`, ea va fi relansată după încheierea execuției clauzei "
+":keyword:`!finally`."
 
-#: ../../tutorial/errors.rst:414
+
+#: ../../tutorial/errors.rst:415
 msgid ""
 "An exception could occur during execution of an :keyword:`!except` or "
 ":keyword:`!else` clause. Again, the exception is re-raised after the "
 ":keyword:`!finally` clause has been executed."
 msgstr ""
+"Se poate ca vreo excepție să survină când este executată fie una din "
+"clauzele :keyword:`!except` fie clauza :keyword:`!else`. Și aici, excepția "
+"va fi relansată după ce se va încheia executarea codului din clauza "
+":keyword:`!finally`."
 
-#: ../../tutorial/errors.rst:418
+#: ../../tutorial/errors.rst:419
 msgid ""
 "If the :keyword:`!finally` clause executes a :keyword:`break`, "
 ":keyword:`continue` or :keyword:`return` statement, exceptions are not "
 "re-raised."
 msgstr ""
+"Dacă în clauza :keyword:`!finally` se execută vreuna din instrucțiunile "
+":keyword:`break`, :keyword:`continue` ori :keyword:`return`, eventualele "
+"excepții nu vor mai fi relansate."
 
-#: ../../tutorial/errors.rst:422
+#: ../../tutorial/errors.rst:423
 msgid ""
 "If the :keyword:`!try` statement reaches a :keyword:`break`, "
 ":keyword:`continue` or :keyword:`return` statement, the "
@@ -625,20 +994,30 @@ msgid ""
 ":keyword:`!break`, :keyword:`!continue` or :keyword:`!return` statement's"
 " execution."
 msgstr ""
+"Atunci când, la execuția codului din instrucțiunea :keyword:`!try` întâlnim "
+"vreuna din instrucțiunile :keyword:`break`, :keyword:`continue` sau "
+":keyword:`return`, clauza :keyword:`!finally` va fi executată *chiar "
+"înainte* de execuția oricăreia din instrucțiunile :keyword:`!break`, "
+":keyword:`!continue` ori :keyword:`!return`."
 
-#: ../../tutorial/errors.rst:428
+#: ../../tutorial/errors.rst:429
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, "
 "the returned value will be the one from the :keyword:`!finally` clause's "
 ":keyword:`!return` statement, not the value from the :keyword:`!try` "
 "clause's :keyword:`!return` statement."
 msgstr ""
+"Dacă clauza :keyword:`!finally` include vreo instrucțiune "
+":keyword:`!return`, atunci valoarea returnată va fi cea dată de "
+"instrucțiunea :keyword:`!return` a respectivei clauze :keyword:`!finally` "
+"și nu valoarea dată de eventuala instrucțiune :keyword:`!return` a "
+"clauzei :keyword:`!try`."
 
-#: ../../tutorial/errors.rst:434
+#: ../../tutorial/errors.rst:435
 msgid "For example::"
-msgstr ""
+msgstr "Un exemplu::"
 
-#: ../../tutorial/errors.rst:436
+#: ../../tutorial/errors.rst:437
 msgid ""
 ">>> def bool_return():\n"
 "...     try:\n"
@@ -649,12 +1028,20 @@ msgid ""
 ">>> bool_return()\n"
 "False"
 msgstr ""
+">>> def întoarce_valoare_de_adevăr():\n"
+"...     try:\n"
+"...         return True\n"
+"...     finally:\n"
+"...         return False\n"
+"...\n"
+">>> întoarce_valoare_de_adevăr()\n"
+"False"
 
-#: ../../tutorial/errors.rst:445
+#: ../../tutorial/errors.rst:446
 msgid "A more complicated example::"
-msgstr ""
+msgstr "Alt exemplu, mai sofisticat::"
 
-#: ../../tutorial/errors.rst:447
+#: ../../tutorial/errors.rst:448
 msgid ""
 ">>> def divide(x, y):\n"
 "...     try:\n"
@@ -683,41 +1070,84 @@ msgid ""
 "             ~~^~~\n"
 "TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 msgstr ""
+">>> def împărțire(x, y):\n"
+"...     try:\n"
+"...         rezultat = x / y\n"
+"...     except ZeroDivisionError:\n"
+"...         print(\"împărțire la zero!\")\n"
+"...     else:\n"
+"...         print(\"rezultatul este\", rezultat)\n"
+"...     finally:\n"
+"...         print(\"executăm clauza finally\")\n"
+"...\n"
+">>> împărțire(2, 1)\n"
+"rezultatul este 2.0\n"
+"executăm clauza finally\n"
+">>> împărțire(2, 0)\n"
+"împărțire la zero!\n"
+"executăm clauza finally\n"
+">>> împărțire(\"2\", \"1\")\n"
+"executăm clauza finally\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    împărțire(\"2\", \"1\")\n"
+"    ~~~~~~~~~^^^^^^^^^^\n"
+"  File \"<stdin>\", line 3, in împărțire\n"
+"    rezultat = x / y\n"
+"               ~~^~~\n"
+"TypeError: unsupported operand type(s) for /: 'str' and 'str'"
 
-#: ../../tutorial/errors.rst:474
+#: ../../tutorial/errors.rst:475
 msgid ""
 "As you can see, the :keyword:`finally` clause is executed in any event.  "
 "The :exc:`TypeError` raised by dividing two strings is not handled by the"
 " :keyword:`except` clause and therefore re-raised after the "
 ":keyword:`!finally` clause has been executed."
 msgstr ""
+"După cum puteți vedea, clauza :keyword:`finally` a fost executată "
+"în toate situațiile. Excepția :exc:`TypeError`, ridicată de încercarea "
+"de a realiza împărțirea a două șiruri de caractere, nu este tratată de "
+"clauza :keyword:`except` și, prin urmare, a fost relansată după ce s-a "
+"încheiat execuția clauzei :keyword:`!finally`."
 
-#: ../../tutorial/errors.rst:479
+#: ../../tutorial/errors.rst:480
 msgid ""
 "In real world applications, the :keyword:`finally` clause is useful for "
 "releasing external resources (such as files or network connections), "
 "regardless of whether the use of the resource was successful."
 msgstr ""
+"În aplicațiile *din lumea reală* (sau *de producție*), clauza "
+":keyword:`finally` se întrebuințează (mai ales) la *eliberarea* resurselor "
+"externe (precum fișierele sau conexiunile la rețeaua Internet), indiferent "
+"dacă accesul la acestea a putut fi realizat."
 
-#: ../../tutorial/errors.rst:487
+#: ../../tutorial/errors.rst:488
 msgid "Predefined Clean-up Actions"
-msgstr ""
+msgstr "Acțiuni de curățare predefinite"
 
-#: ../../tutorial/errors.rst:489
+#: ../../tutorial/errors.rst:490
 msgid ""
 "Some objects define standard clean-up actions to be undertaken when the "
 "object is no longer needed, regardless of whether or not the operation "
 "using the object succeeded or failed. Look at the following example, "
 "which tries to open a file and print its contents to the screen. ::"
 msgstr ""
+"Anumite obiecte definesc acțiuni de curățare standard, acestea urmând să "
+"fie realizate atunci când nu mai avem nevoie de obiectul în cauză, "
+"indiferent dacă operația care a folosit obiectul respectiv s-a putut sau nu "
+"realiza. Să aruncăm o privire asupra exemplului de mai jos, în care se "
+"încearcă deschiderea unui fișier, urmată de afișarea conținutului "
+"acestuia. ::"
 
-#: ../../tutorial/errors.rst:494
+#: ../../tutorial/errors.rst:495
 msgid ""
 "for line in open(\"myfile.txt\"):\n"
 "    print(line, end=\"\")"
 msgstr ""
+"for rândul in open(\"fișierul_meu.txt\"):\n"
+"    print(rândul, end=\"\")"
 
-#: ../../tutorial/errors.rst:497
+#: ../../tutorial/errors.rst:498
 msgid ""
 "The problem with this code is that it leaves the file open for an "
 "indeterminate amount of time after this part of the code has finished "
@@ -726,27 +1156,42 @@ msgid ""
 "like files to be used in a way that ensures they are always cleaned up "
 "promptly and correctly. ::"
 msgstr ""
+"Scăparea (programatică) din acest cod este aceea că fișierul va fi lăsat "
+"deschis pe o durată nedeterminată după ce interpretorul a terminat de "
+"executat codul. O asemenea situație nu le impietează prea mult unor "
+"scripturi simple, însă poate deveni problematică pentru aplicații complexe. "
+"Instrucțiunea :keyword:`with` le facilitează obiectelor precum fișierele "
+"o utilizare corectă, astfel încât resursele blocate de ele să fie eliberate "
+"prompt și corect, întotdeauna."
 
-#: ../../tutorial/errors.rst:503
+#: ../../tutorial/errors.rst:504
 msgid ""
 "with open(\"myfile.txt\") as f:\n"
 "    for line in f:\n"
 "        print(line, end=\"\")"
 msgstr ""
+"with open(\"fișierul_meu.txt\") as fișier:\n"
+"    for rândul in fișier:\n"
+"        print(rândul, end=\"\")"
 
-#: ../../tutorial/errors.rst:507
+#: ../../tutorial/errors.rst:508
 msgid ""
 "After the statement is executed, the file *f* is always closed, even if a"
 " problem was encountered while processing the lines. Objects which, like "
 "files, provide predefined clean-up actions will indicate this in their "
 "documentation."
 msgstr ""
+"Odată ce instrucțiunea a fost executată, fișierul *fișier* va fi închis, în "
+"mod garantat, inclusiv în situația în care ar fi existat dificultăți la "
+"procesarea rândurilor sale. Acele obiecte care, aidoma obiectelor fișier, "
+"oferă acțiuni de curățare (eliberare de resurse) predefinite, trebuie să "
+"indice o atare capacitate în documentația aferentă."
 
-#: ../../tutorial/errors.rst:515
+#: ../../tutorial/errors.rst:516
 msgid "Raising and Handling Multiple Unrelated Exceptions"
-msgstr ""
+msgstr "Ridicarea și tratarea de excepții grupate, fără legătură una cu alta"
 
-#: ../../tutorial/errors.rst:517
+#: ../../tutorial/errors.rst:518
 msgid ""
 "There are situations where it is necessary to report several exceptions "
 "that have occurred. This is often the case in concurrency frameworks, "
@@ -754,15 +1199,27 @@ msgid ""
 "use cases where it is desirable to continue execution and collect "
 "multiple errors rather than raise the first exception."
 msgstr ""
+"Vom întâlni situații în care va fi nevoie să raportăm laolaltă apariția "
+"mai multor excepții. Un exemplu frecvent este dat de incidentele de pe "
+"platformele de programare concurentă (de la englezescul, în jargon, "
+"*concurency framework*), atunci când mai multe activități eșuează simultan, "
+"dar nu sunt rare nici cazurile când dorim ca execuția unui program să "
+"continue în pofida apariției unei erori, colectând toate erorile survenite "
+"pe parcurs în loc să lansăm o excepție chiar de la producerea primului "
+"incident."
 
-#: ../../tutorial/errors.rst:523
+#: ../../tutorial/errors.rst:524
 msgid ""
 "The builtin :exc:`ExceptionGroup` wraps a list of exception instances so "
 "that they can be raised together. It is an exception itself, so it can be"
 " caught like any other exception. ::"
 msgstr ""
+"Clasa predefinită :exc:`ExceptionGroup` aduce împreună o listă de instanțe "
+"ale unor (clase de) excepții astfel încât acestea să poată fi ridicate "
+"simultan. Ea însăși este o excepție, așadar poate fi interceptată ca orice "
+"altă excepție. ::"
 
-#: ../../tutorial/errors.rst:527
+#: ../../tutorial/errors.rst:528
 #, python-brace-format
 msgid ""
 ">>> def f():\n"
@@ -790,8 +1247,32 @@ msgid ""
 "caught <class 'ExceptionGroup'>: e\n"
 ">>>"
 msgstr ""
+">>> def funcția():\n"
+"...     excepțiile = [OSError('eroarea 1'), SystemError('eroarea 2')]\n"
+"...     raise ExceptionGroup('am avut probleme', excepțiile)\n"
+"...\n"
+">>> funcția()\n"
+"  + Exception Group Traceback (most recent call last):\n"
+"  |   File \"<stdin>\", line 1, in <module>\n"
+"  |     funcția()\n"
+"  |     ~~~~~~~^^\n"
+"  |   File \"<stdin>\", line 3, in funcția\n"
+"  |     raise ExceptionGroup('am avut probleme', excepțiile)\n"
+"  | ExceptionGroup: am avut probleme (2 sub-exceptions)\n"
+"  +-+---------------- 1 ----------------\n"
+"    | OSError: eroarea 1\n"
+"    +---------------- 2 ----------------\n"
+"    | SystemError: eroarea 2\n"
+"    +------------------------------------\n"
+">>> try:\n"
+"...     funcția()\n"
+"... except Exception as excepție:\n"
+"...     print(f'am interceptat {type(excepție)}: excepție')\n"
+"...\n"
+"am interceptat <class 'ExceptionGroup'>: excepție\n"
+">>>"
 
-#: ../../tutorial/errors.rst:552
+#: ../../tutorial/errors.rst:553
 msgid ""
 "By using ``except*`` instead of ``except``, we can selectively handle "
 "only the exceptions in the group that match a certain type. In the "
@@ -800,8 +1281,15 @@ msgid ""
 "letting all other exceptions propagate to other clauses and eventually to"
 " be reraised. ::"
 msgstr ""
+"Întrebuințându-l pe ``except*`` în locul lui ``except``, vom putea trata "
+"selectiv excepțiile, adică ne vom putea ocupa *doar* de acelea care se "
+"potrivesc unui anumit tip. În exemplul dat în continuare, care evidențiază "
+"grupuri imbricate de excepții, fiecare clauză ``except*`` extrage din "
+"aceste grupuri imbricate doar excepțiile de un anume tip, lăsându-le pe "
+"toate celelalte să se propage la restul clauzelor pentru a fi, eventual, "
+"relansate. ::"
 
-#: ../../tutorial/errors.rst:559
+#: ../../tutorial/errors.rst:560
 msgid ""
 ">>> def f():\n"
 "...     raise ExceptionGroup(\n"
@@ -844,16 +1332,61 @@ msgid ""
 "      +------------------------------------\n"
 ">>>"
 msgstr ""
+">>> def funcția():\n"
+"...     raise ExceptionGroup(\n"
+"...         \"grupul1\",\n"
+"...         [\n"
+"...             OSError(1),\n"
+"...             SystemError(2),\n"
+"...             ExceptionGroup(\n"
+"...                 \"grupul2\",\n"
+"...                 [\n"
+"...                     OSError(3),\n"
+"...                     RecursionError(4)\n"
+"...                 ]\n"
+"...             )\n"
+"...         ]\n"
+"...     )\n"
+"...\n"
+">>> try:\n"
+"...     funcția()\n"
+"... except* OSError as excepție:\n"
+"...     print(\"Au apărut erori SO\")\n"
+"... except* SystemError as excepție:\n"
+"...     print(\"Au apărut erori de sistem\")\n"
+"...\n"
+"Au apărut erori SO\n"
+"Au apărut erori de sistem\n"
+"  + Exception Group Traceback (most recent call last):\n"
+"  |   File \"<stdin>\", line 2, in <module>\n"
+"  |     funcția()\n"
+"  |     ~~~~~~~^^\n"
+"  |   File \"<stdin>\", line 2, in funcția\n"
+"  |     raise ExceptionGroup(\n"
+"  |     ...<12 lines>...\n"
+"  |     )\n"
+"  | ExceptionGroup: grupul1 (1 sub-exception)\n"
+"  +-+---------------- 1 ----------------\n"
+"    | ExceptionGroup: grupul2 (1 sub-exception)\n"
+"    +-+---------------- 1 ----------------\n"
+"      | RecursionError: 4\n"
+"      +------------------------------------\n"
+">>>"
 
-#: ../../tutorial/errors.rst:600
+#: ../../tutorial/errors.rst:601
 msgid ""
 "Note that the exceptions nested in an exception group must be instances, "
 "not types. This is because in practice the exceptions would typically be "
 "ones that have already been raised and caught by the program, along the "
 "following pattern::"
 msgstr ""
+"Să remarcăm că excepțiile imbricate într-un grup de excepții trebuie să fie "
+"instanțe (ale unor clase de excepții) și nu tipuri (adică, clase de "
+"excepții). Aceasta pentru că, în practică, asemenea excepții imbricate "
+"sunt, de obicei, acelea pe care programul deja le-a lansat și le-a "
+"interceptat, urmând șablonul de aici::"
 
-#: ../../tutorial/errors.rst:605
+#: ../../tutorial/errors.rst:606
 msgid ""
 ">>> excs = []\n"
 "... for test in tests:\n"
@@ -866,12 +1399,22 @@ msgid ""
 "...    raise ExceptionGroup(\"Test Failures\", excs)\n"
 "..."
 msgstr ""
+">>> excepțiile = []\n"
+"... for testul in testele:\n"
+"...     try:\n"
+"...         testul.run()\n"
+"...     except Exception as excepția:\n"
+"...         excepțiile.append(excepția)\n"
+"...\n"
+">>> if excepțiile:\n"
+"...    raise ExceptionGroup(\"Au căzut la test\", excepțiile)\n"
+"..."
 
-#: ../../tutorial/errors.rst:620
+#: ../../tutorial/errors.rst:621
 msgid "Enriching Exceptions with Notes"
-msgstr ""
+msgstr "Îmbogățind excepțiile cu notițe"
 
-#: ../../tutorial/errors.rst:622
+#: ../../tutorial/errors.rst:623
 msgid ""
 "When an exception is created in order to be raised, it is usually "
 "initialized with information that describes the error that has occurred. "
@@ -881,8 +1424,17 @@ msgid ""
 "notes list. The standard traceback rendering includes all notes, in the "
 "order they were added, after the exception. ::"
 msgstr ""
+"Atunci când o excepție este creată, urmând a fi lansată, ea se "
+"inițializată, de obicei, cu informații referitoare la eroarea tocmai "
+"survenită. În anumite situații, ne interesează să le adăugăm informațiilor "
+"în cauză (ale instanței excepției) detalii suplimentare, însă doar *după* "
+"ce am interceptat excepția. Pentru un atare scop, excepțiile dispun de "
+"metoda ``add_note(notițe)``, care acceptă un șir de caractere drept "
+"argument și îl adaugă listei de notițe ale excepției. Derularea tipică "
+"(a stivei) afișează toate notițele, în ordinea introducerii lor, în "
+"continuarea excepției. ::"
 
-#: ../../tutorial/errors.rst:629
+#: ../../tutorial/errors.rst:630
 msgid ""
 ">>> try:\n"
 "...     raise TypeError('bad type')\n"
@@ -899,16 +1451,35 @@ msgid ""
 "Add some more information\n"
 ">>>"
 msgstr ""
+">>> try:\n"
+"...     raise TypeError('tip greșit')\n"
+"... except Exception as excepția:\n"
+"...     excepția.add_note('Mai adaug informații')\n"
+"...     excepția.add_note('Mai adaug și alte informații')\n"
+"...     raise\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 2, in <module>\n"
+"    raise TypeError('tip greșit')\n"
+"TypeError: tip greșit\n"
+"Mai adaug informații\n"
+"Mai adaug și alte informații\n"
+">>>"
 
-#: ../../tutorial/errors.rst:644
+#: ../../tutorial/errors.rst:645
 msgid ""
 "For example, when collecting exceptions into an exception group, we may "
 "want to add context information for the individual errors. In the "
 "following each exception in the group has a note indicating when this "
 "error has occurred. ::"
 msgstr ""
+"Cu titlu de exemplu, atunci când așezăm împreună variate excepții "
+"într-un grup de excepții, este de așteptat să ne dorim să adăugăm "
+"informații contextuale pentru erorile individuale (luate în parte). "
+"În codul de mai jos, fiecare excepție din grup va fi urmată de o "
+"notiță în care se precizează când a avut loc eroarea respectivă. ::"
 
-#: ../../tutorial/errors.rst:648
+#: ../../tutorial/errors.rst:649
 #, python-brace-format
 msgid ""
 ">>> def f():\n"
@@ -957,4 +1528,48 @@ msgid ""
 "    +------------------------------------\n"
 ">>>"
 msgstr ""
-
+">>> def funcția():\n"
+"...     raise OSError('operația a dat greș')\n"
+"...\n"
+">>> excepțiile = []\n"
+">>> for i in range(3):\n"
+"...     try:\n"
+"...         funcția()\n"
+"...     except Exception as excepția:\n"
+"...         excepția.add_note(f'A survenit la iterația {i+1}')\n"
+"...         excepțiile.append(excepția)\n"
+"...\n"
+">>> raise ExceptionGroup('Au apărut probleme', excepțiile)\n"
+"  + Exception Group Traceback (most recent call last):\n"
+"  |   File \"<stdin>\", line 1, in <module>\n"
+"  |     raise ExceptionGroup('Au apărut probleme', excepțiile)\n"
+"  | ExceptionGroup: Au apărut probleme (3 sub-exceptions)\n"
+"  +-+---------------- 1 ----------------\n"
+"    | Traceback (most recent call last):\n"
+"    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     funcția()\n"
+"    |     ~~~~~~~^^\n"
+"    |   File \"<stdin>\", line 2, in funcția\n"
+"    |     raise OSError('operația a dat greș')\n"
+"    | OSError: operația a dat greș\n"
+"    | A survenit la iterația 1\n"
+"    +---------------- 2 ----------------\n"
+"    | Traceback (most recent call last):\n"
+"    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     funcția()\n"
+"    |     ~~~~~~~^^\n"
+"    |   File \"<stdin>\", line 2, in funcția\n"
+"    |     raise OSError('operația a dat greș')\n"
+"    | OSError: operația a dat greș\n"
+"    | A survenit la iterația 2\n"
+"    +---------------- 3 ----------------\n"
+"    | Traceback (most recent call last):\n"
+"    |   File \"<stdin>\", line 3, in <module>\n"
+"    |     funcția()\n"
+"    |     ~~~~~~~^^\n"
+"    |   File \"<stdin>\", line 2, in funcția\n"
+"    |     raise OSError('operația a dat greș')\n"
+"    | OSError: operația a dat greș\n"
+"    | A survenit la iterația 3\n"
+"    +------------------------------------\n"
+">>>"
