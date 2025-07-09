@@ -73,6 +73,9 @@ Ea este justificată, în opinia mea, de ușurința cu care anumite idiomuri
 ale sintaxei Python-ului pot fi sesizate de către un nou-venit atunci când 
 acesta se lansează în cititul unor fragmente aleatoare de cod.
 
+Pentru a compila *abaterile*, am operat mici modificări în fișierele
+**.rst** corespunzătoare.
+
 Compilarea tutorialului
 -----------------------
 Tutorialul de Python, în românește, poate fi citit
