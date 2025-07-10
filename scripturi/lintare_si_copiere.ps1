@@ -8,12 +8,32 @@
 # este realizata automat iar rezultatele acesteia
 # se vad aici: [ https://python-docs-translations.github.io/dashboard/metadata.html ]
 
-$fisierul_fara_extensie = $args[0]  # captarea lui un_singur_argument
-                                    # variante: nume_de_fisier
-                                    #           fara nicio extensie!
-
+$un_singur_argument      = $args[0]  # captarea lui un_singur_argument
+                                     # variante: nume_de_fisier, nume_de_director/nume_de_fisier,
+                                     #           nume_de_director\nume_de_fisier
+                                     # atentie:  fara nicio extensie dupa nume_de_fisier!
+$subdirectorul           = $null     # aici il captam pe nume_de_director                         
+$fisierul_fara_extensie  = $null     # aici il captam pe nume_de_fisier
+$componentele_numelui    = $un_singur_argument -split { $_ -eq "/" -or $_ -eq "\" } 
+$numarul_componentelor   = $componentele_numelui.Length
+if( 2 -eq $numarul_componentelor )     
+{
+    $subdirectorul          = $componentele_numelui[0]
+    $fisierul_fara_extensie = $componentele_numelui[1]
+}  
+else
+{
+    $fisierul_fara_extensie = $componentele_numelui[0]
+} 
+                         
 $directorul_traducerii   = "C:\octavian\invatare_Python_2025\traducerea_documentatiei"
-$directorul_fragmentelor = "locale_python_3_13_5\ro\LC_MESSAGES\tutorial"
+$directorul_fragmentelor = "locale_python_3_13_5\ro\LC_MESSAGES"
+
+if( 2 -eq $numarul_componentelor )
+{
+    $directorul_fragmentelor = "$directorul_fragmentelor\$subdirectorul"
+}
+
 $directorul_versiunii    = "directorul_locale_cu_traduceri\$directorul_fragmentelor"
 $proiectul_versiunii     = "proiectul_traducerii\Python-3.13.5\Doc"
 $directorul_compilarii   = "$directorul_traducerii\$proiectul_versiunii\$directorul_fragmentelor"
