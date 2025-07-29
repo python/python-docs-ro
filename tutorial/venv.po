@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# MEDII VIRTUALE SI PACHETE.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 13:08+0200\n"
+"POT-Creation-Date: 2025-06-17 17:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../../tutorial/venv.rst:6
 msgid "Virtual Environments and Packages"
-msgstr ""
+msgstr "Medii virtuale și pachete"
 
 #: ../../tutorial/venv.rst:9
 msgid "Introduction"
-msgstr ""
+msgstr "Introducere"
 
 #: ../../tutorial/venv.rst:11
 msgid ""
@@ -36,6 +36,12 @@ msgid ""
 " particular bug has been fixed or the application may be written using an"
 " obsolete version of the library's interface."
 msgstr ""
+"Aplicațiile Python folosesc adesea pachete și module care nu fac parte din "
+"biblioteca standard. În diverse situații, o aplicație necesită o versiune "
+"anumită a unei biblioteci, dat fiind că aplicația în cauză se bazează pe "
+"faptul că o defecțiune de cod, din bibliotecă, a fost corectată în "
+"versiunea respectivă sau, dimpotrivă, codul aplicației a fost realizat cu "
+"elemente dintr-o versiune depășită a interfeței bibliotecii în cauză."
 
 #: ../../tutorial/venv.rst:17
 msgid ""
@@ -45,6 +51,13 @@ msgid ""
 "requirements are in conflict and installing either version 1.0 or 2.0 "
 "will leave one application unable to run."
 msgstr ""
+"De aceea, se poate întâmpla ca o singură instalare a sistemului Python în "
+"calculatorul dumneavoastră să nu poată îndeplini în totalitate cerințele "
+"tuturor aplicațiilor pe care intenționați să le folosiți. Dacă, să zicem, "
+"aplicația A necesită versiunea 1.0 a modulului *cutare* pe când aplicația B "
+"solicită prezența versiunii 2.0 a respectivului modul, atunci cerințele "
+"intră în conflict una cu cealaltă, deci, indiferent pe care dintre "
+"versiuni am instala-o, una din aplicațiile A, B nu va putea funcționa."
 
 #: ../../tutorial/venv.rst:23
 msgid ""
@@ -52,6 +65,11 @@ msgid ""
 " a self-contained directory tree that contains a Python installation for "
 "a particular version of Python, plus a number of additional packages."
 msgstr ""
+"Soluția unei asemenea probleme este să creăm un "
+":term:`virtual environment`, adică un *arbore* de directoare în care să "
+"se găsească o instalare (auto-conținută) completă a sistemului Python "
+"corespunzând unei *versiuni* precizate a Python-ului, instalare căreia "
+"să îi fie adăugate un număr de pachete de interes particular."
 
 #: ../../tutorial/venv.rst:27
 msgid ""
@@ -62,10 +80,18 @@ msgid ""
 "application B requires a library be upgraded to version 3.0, this will "
 "not affect application A's environment."
 msgstr ""
+"Astfel, aplicații diferite vor putea fi rulate în medii virtuale diferite. "
+"Ca o rezolvare a conflictului de cerințe din exemplul anterior, aplicația A "
+"va putea dispune de propriul mediu virtual, în care a fost instalată "
+"versiunea 1.0 a modulului respectiv, în timp ce aplicația B va avea la "
+"dispoziție alt mediu virtual, cu versiunea 2.0 a aceluiași modul în "
+"funcțiune. Presupunând că, în urma unei actualizări, aplicația B va avea "
+"nevoie de versiunea 3.0 a unei biblioteci oarecare, instalarea ei nu va "
+"afecta în niciun fel mediul aplicației A."
 
 #: ../../tutorial/venv.rst:36
 msgid "Creating Virtual Environments"
-msgstr ""
+msgstr "Crearea de medii virtuale"
 
 #: ../../tutorial/venv.rst:38
 msgid ""
@@ -75,6 +101,12 @@ msgid ""
 "instance, executing the command with ``python3.12`` will install version "
 "3.12."
 msgstr ""
+"Modulul întrebuințat la crearea și administrarea *mediilor virtuale* (de "
+"*execuție*, de *testare*, șamd.) se numește :mod:`venv`. Acest :mod:`venv` "
+"va instala acea versiune de Python pe care o folosim la rularea comenzii "
+"de instalare în terminal (și pe care o putem evidenția cu opțiunea "
+":option:`--version`). De exemplu, dacă executăm comanda cu ``python3.12``, "
+"se va instala versiunea 3.12."
 
 #: ../../tutorial/venv.rst:44
 msgid ""
@@ -82,10 +114,13 @@ msgid ""
 "to place it, and run the :mod:`venv` module as a script with the "
 "directory path::"
 msgstr ""
+"Pentru a crea un mediu virtual, decideți-vă asupra unui director în care "
+"să îl plasați, apoi rulați modulul :mod:`venv` ca script, furnizându-i "
+"calea de acces către directorul convenabil::"
 
 #: ../../tutorial/venv.rst:47
 msgid "python -m venv tutorial-env"
-msgstr ""
+msgstr "python -m venv tutorialul_de_python_un_mediu_virtual"
 
 #: ../../tutorial/venv.rst:49
 msgid ""
@@ -93,6 +128,10 @@ msgid ""
 "also create directories inside it containing a copy of the Python "
 "interpreter and various supporting files."
 msgstr ""
+"Execuția comenzii (de către interpretor) va crea directorul "
+"``tutorialul_de_python_un_mediu_virtual``, dacă acesta nu există deja, apoi "
+"va crea și restul (sub)directoarelor sale, în care se vor găsi o copie a "
+"interpretorului de Python și varii fișiere ajutătoare."
 
 #: ../../tutorial/venv.rst:53
 msgid ""
@@ -102,26 +141,37 @@ msgid ""
 " also prevents clashing with ``.env`` environment variable definition "
 "files that some tooling supports."
 msgstr ""
+"O alegere frecventă în privința directorului unui mediu virtual este dată "
+"de ``.venv``. Un atare nume va face ca directorul să le fie *ascuns* "
+"comenzilor interpretorului de comenzi (de la englezescul, ca jargon "
+"informatic, *shell*) activ în terminalul din care lucrați și, din acest "
+"motiv, să nu le fie obstacol acestora, respectiv el nu va avea nevoie de "
+"explicații despre motivul pentru care există (atunci când, la câteva luni "
+"de la ultima sa folosire, veți fi uitat că face parte din sistemul de "
+"directoare). În plus, alegerea acestui nume va elimina potențialele "
+"conflicte cu fișierele ``.env``, care conțin definițiile unor variabile de "
+"mediu, cerute de diverse unelte informatice."
 
 #: ../../tutorial/venv.rst:59
 msgid "Once you've created a virtual environment, you may activate it."
 msgstr ""
+"De îndată ce ați creat un mediu virtual, îl puteți *activa*."
 
 #: ../../tutorial/venv.rst:61
 msgid "On Windows, run::"
-msgstr ""
+msgstr "În Windows, rulați::"
 
 #: ../../tutorial/venv.rst:63
 msgid "tutorial-env\\Scripts\\activate"
-msgstr ""
+msgstr "tutorialul_de_python_un_mediu_virtual\\Scripts\\activate"
 
 #: ../../tutorial/venv.rst:65
 msgid "On Unix or MacOS, run::"
-msgstr ""
+msgstr "În Unix sau MacOS, rulați::"
 
 #: ../../tutorial/venv.rst:67
 msgid "source tutorial-env/bin/activate"
-msgstr ""
+msgstr "source tutorialul_de_python_un_mediu_virtual/bin/activate"
 
 #: ../../tutorial/venv.rst:69
 msgid ""
@@ -129,6 +179,10 @@ msgid ""
 ":program:`csh` or :program:`fish` shells, there are alternate "
 "``activate.csh`` and ``activate.fish`` scripts you should use instead.)"
 msgstr ""
+"(Acest script de activare a fost scris pentru interpretorul de comenzi "
+"*bash*. Dacă îl folosiți ca interpretor fie pe :program:`csh` fie pe "
+":program:`fish`, atunci va trebui să utilizați scripturile corespunzătoare, "
+"``activate.csh`` ori ``activate.fish``.)"
 
 #: ../../tutorial/venv.rst:74
 msgid ""
@@ -137,6 +191,12 @@ msgid ""
 " that running ``python`` will get you that particular version and "
 "installation of Python. For example:"
 msgstr ""
+"Activarea mediului virtual va schimba *promptul* interpretorului de "
+"comenzi pe care îl întrebuințați în terminal pentru a vă informa ce mediu "
+"virtual este în funcțiune, respectiv va modifica mediul pentru ca rularea "
+"comenzii ``python`` să vă conducă chiar la versiunea (special) instalată "
+"de Python cu care doriți să lucrați. De exemplu:"
+
 
 #: ../../tutorial/venv.rst:79
 msgid ""
@@ -150,22 +210,32 @@ msgid ""
 "'~/envs/tutorial-env/lib/python3.5/site-packages']\n"
 ">>>"
 msgstr ""
+"$ source ~/envs/tutorialul_de_python_un_mediu_virtual/bin/activate\n"
+"(tutorialul_de_python_un_mediu_virtual) $ python\n"
+"Python 3.5.1 (default, May  6 2016, 10:59:36)\n"
+"  ...\n"
+">>> import sys\n"
+">>> sys.path\n"
+"['', '/usr/local/lib/python35.zip', ...,\n"
+"'~/envs/tutorialul_de_python_un_mediu_virtual/lib/python3.5/"
+"site-packages']\n"
+">>>"
 
 #: ../../tutorial/venv.rst:91
 msgid "To deactivate a virtual environment, type::"
-msgstr ""
+msgstr "Pentru a *dezactiva* un mediu virtual, tastați::"
 
 #: ../../tutorial/venv.rst:93
 msgid "deactivate"
-msgstr ""
+msgstr "deactivate"
 
 #: ../../tutorial/venv.rst:95
 msgid "into the terminal."
-msgstr ""
+msgstr "în (linia de comandă din) terminal."
 
 #: ../../tutorial/venv.rst:98
 msgid "Managing Packages with pip"
-msgstr ""
+msgstr "Administrarea pachetelor cu pip"
 
 #: ../../tutorial/venv.rst:100
 msgid ""
@@ -174,6 +244,11 @@ msgid ""
 "`Python Package Index <https://pypi.org>`_.  You can browse the Python "
 "Package Index by going to it in your web browser."
 msgstr ""
+"Putem instala, actualiza și elimina pachete cu ajutorul unui program "
+"intitulat :program:`pip`. În mod prestabilit, ``pip`` instalează "
+"pachete preluate din `Python Package Index <https://pypi.org>`_ "
+"(adică, *PyPI*; Catalogul pachetelor Python). Pentru a putea răsfoi "
+"catalogul, este suficient să îi vizitați pagina *web*."
 
 #: ../../tutorial/venv.rst:105
 msgid ""
@@ -181,12 +256,18 @@ msgid ""
 "\"freeze\", etc.  (Consult the :ref:`installing-index` guide for complete"
 " documentation for ``pip``.)"
 msgstr ""
+"``pip`` are un număr de sub-comenzi (cu sintaxa *pip nume_de_subcomandă*): "
+"\"install\", \"uninstall\", \"freeze\", șamd. (Consultați ghidul "
+":ref:`installing-index` pentru o documentație amănunțită referitoare la "
+"``pip``.)"
 
 #: ../../tutorial/venv.rst:109
 msgid ""
 "You can install the latest version of a package by specifying a package's"
 " name:"
 msgstr ""
+"Puteți instala cea mai recentă versiune a unui pachet (precum *novas*) "
+"specificându-i numele în comanda:"
 
 #: ../../tutorial/venv.rst:111
 msgid ""
@@ -197,12 +278,21 @@ msgid ""
 "  Running setup.py install for novas\n"
 "Successfully installed novas-3.1.1.3"
 msgstr ""
+"(tutorialul_de_python_un_mediu_virtual) $ python -m pip install novas\n"
+"Collecting novas\n"
+"  Downloading novas-3.1.1.3.tar.gz (136kB)\n"
+"Installing collected packages: novas\n"
+"  Running setup.py install for novas\n"
+"Successfully installed novas-3.1.1.3"
 
 #: ../../tutorial/venv.rst:120
 msgid ""
 "You can also install a specific version of a package by giving the "
 "package name  followed by ``==`` and the version number:"
 msgstr ""
+"De asemeni, puteți instala o anumită versiune a unui pachet (*requests*) "
+"introducându-i numele (în comandă), urmat de un ``==`` și de numărul "
+"versiunii dorite:"
 
 #: ../../tutorial/venv.rst:123
 msgid ""
@@ -212,6 +302,12 @@ msgid ""
 "Installing collected packages: requests\n"
 "Successfully installed requests-2.6.0"
 msgstr ""
+"(tutorialul_de_python_un_mediu_virtual) $ python -m pip install "
+"requests==2.6.0\n"
+"Collecting requests==2.6.0\n"
+"  Using cached requests-2.6.0-py2.py3-none-any.whl\n"
+"Installing collected packages: requests\n"
+"Successfully installed requests-2.6.0"
 
 #: ../../tutorial/venv.rst:131
 msgid ""
@@ -220,6 +316,12 @@ msgid ""
 "version number to get that version, or you can run ``python -m pip "
 "install --upgrade`` to upgrade the package to the latest version:"
 msgstr ""
+"În caz că re-executați comanda, ``pip`` vă va informa că versiunea "
+"solicitată este deja instalată, după care nu va mai face nimic. Desigur, "
+"pentru a instala altă versiune (a aceluiași pachet), va fi nevoie să îi "
+"introduceți numărul (de versiune) sau veți putea rula comanda "
+"``python -m pip install --upgrade`` pentru a *actualiza* pachetul, "
+"punându-i în uz cea mai recentă versiune:"
 
 #: ../../tutorial/venv.rst:136
 msgid ""
@@ -231,18 +333,30 @@ msgid ""
 "      Successfully uninstalled requests-2.6.0\n"
 "Successfully installed requests-2.7.0"
 msgstr ""
+"(tutorialul_de_python_un_mediu_virtual) $ python -m pip install "
+"--upgrade requests\n"
+"Collecting requests\n"
+"Installing collected packages: requests\n"
+"  Found existing installation: requests 2.6.0\n"
+"    Uninstalling requests-2.6.0:\n"
+"      Successfully uninstalled requests-2.6.0\n"
+"Successfully installed requests-2.7.0"
 
 #: ../../tutorial/venv.rst:146
 msgid ""
 "``python -m pip uninstall`` followed by one or more package names will "
 "remove the packages from the virtual environment."
 msgstr ""
+"``python -m pip uninstall`` urmat de unul ori de mai multe nume de "
+"pachete va elimina, în urma execuției, pachetele respective din mediul "
+"virtual."
 
 #: ../../tutorial/venv.rst:149
 msgid ""
 "``python -m pip show`` will display information about a particular "
 "package:"
 msgstr ""
+"``python -m pip show`` va afișa informații despre un pachet precizat:"
 
 #: ../../tutorial/venv.rst:151
 msgid ""
@@ -259,12 +373,26 @@ msgid ""
 "Location: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\n"
 "Requires:"
 msgstr ""
+"(tutorialul_de_python_un_mediu_virtual) $ python -m pip show requests\n"
+"---\n"
+"Metadata-Version: 2.0\n"
+"Name: requests\n"
+"Version: 2.7.0\n"
+"Summary: Python HTTP for Humans.\n"
+"Home-page: http://python-requests.org\n"
+"Author: Kenneth Reitz\n"
+"Author-email: me@kennethreitz.com\n"
+"License: Apache 2.0\n"
+"Location: /Users/akuchling/envs/tutorialul_de_python_un_mediu_virtual/"
+"lib/python3.4/site-packages\n"
+"Requires:"
 
 #: ../../tutorial/venv.rst:166
 msgid ""
 "``python -m pip list`` will display all of the packages installed in the "
 "virtual environment:"
 msgstr ""
+"``python -m pip list`` va afișa toate pachetele instalate în mediul virtual:"
 
 #: ../../tutorial/venv.rst:169
 msgid ""
@@ -275,6 +403,12 @@ msgid ""
 "requests (2.7.0)\n"
 "setuptools (16.0)"
 msgstr ""
+"(tutorialul_de_python_un_mediu_virtual) $ python -m pip list\n"
+"novas (3.1.1.3)\n"
+"numpy (1.9.2)\n"
+"pip (7.0.3)\n"
+"requests (2.7.0)\n"
+"setuptools (16.0)"
 
 #: ../../tutorial/venv.rst:178
 msgid ""
@@ -283,6 +417,11 @@ msgid ""
 "expects. A common convention is to put this list in a "
 "``requirements.txt`` file:"
 msgstr ""
+"``python -m pip freeze`` va produce o listă asemănătoare celei de deasupra, "
+"cu excepția faptului că formatul acestei liste este identic celui solicitat "
+"de comanda ``python -m pip install``. O convenție populară ne spune că "
+"lista produsă de *freeze* trebuie să fie salvată într-un fișier text cu "
+"nume sugestiv, precum ``cerințe.txt``:"
 
 #: ../../tutorial/venv.rst:182
 msgid ""
@@ -292,6 +431,12 @@ msgid ""
 "numpy==1.9.2\n"
 "requests==2.7.0"
 msgstr ""
+"(tutorialul_de_python_un_mediu_virtual) $ python -m pip freeze > "
+"cerințe.txt\n"
+"(tutorialul_de_python_un_mediu_virtual) $ cat cerințe.txt\n"
+"novas==3.1.1.3\n"
+"numpy==1.9.2\n"
+"requests==2.7.0"
 
 #: ../../tutorial/venv.rst:190
 msgid ""
@@ -299,6 +444,11 @@ msgid ""
 "shipped as part of an application.  Users can then install all the "
 "necessary packages with ``install -r``:"
 msgstr ""
+"În această situație, fișierul ``cerințe.txt`` va putea fi *comis* către "
+"(baza de date a platformei de ) controlul versiunii, respectiv livrat "
+"(către beneficiari) ca parte a aplicației construite de dumneavoastră. "
+"Drept urmare, utilizatorii acesteia vor putea să își instaleze pachetele "
+"de care are nevoie aplicația folosind ``install -r``:"
 
 #: ../../tutorial/venv.rst:194
 msgid ""
@@ -313,6 +463,17 @@ msgid ""
 "  Running setup.py install for novas\n"
 "Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0"
 msgstr ""
+"(tutorialul_de_python_un_mediu_virtual) $ python -m pip install -r "
+"cerințe.txt\n"
+"Collecting novas==3.1.1.3 (from -r cerințe.txt (line 1))\n"
+"  ...\n"
+"Collecting numpy==1.9.2 (from -r cerințe.txt (line 2))\n"
+"  ...\n"
+"Collecting requests==2.7.0 (from -r cerințe.txt (line 3))\n"
+"  ...\n"
+"Installing collected packages: novas, numpy, requests\n"
+"  Running setup.py install for novas\n"
+"Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0"
 
 #: ../../tutorial/venv.rst:207
 msgid ""
@@ -321,4 +482,9 @@ msgid ""
 "and want to make it available on the Python Package Index, consult the "
 "`Python packaging user guide`_."
 msgstr ""
+"``pip`` are numeroase alte opțiuni. Consultați ghidul "
+":ref:`installing-index` pentru documentația elaborată a lui ``pip``. "
+"Dacă ați construit deja un pachet Python și doriți să îl faceți disponibil "
+"în catalogul PyPI, vă recomandăm să parcurgeți materialul "
+"`Python packaging user guide`_."
 
