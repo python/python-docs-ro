@@ -8,8 +8,6 @@ on:
   push:
     branches:
       - '*'
-    paths-ignore:
-      - 'README.rst'
   workflow_dispatch:
 
 jobs:
