@@ -1,6 +1,6 @@
 # O traducere în românește a documentației limbajului Python
 
-Traducerea se realizează pe fragmente de text numite **mesaje**. Aceste mesaje se găsesc/introduc în fișiere [PO](https://www.gnu.org/software/gettext/manual/html\_node/PO-Files.html>`).
+Traducerea se realizează pe fragmente de text numite **mesaje**. Aceste mesaje se găsesc/introduc în fișiere [PO](https://www.gnu.org/software/gettext/manual/html\_node/PO-Files.html).
 
 Fișierele PO pot fi generate, dacă lucrăm sub sistemul de operare Microsoft **Windows 11**, într-un cont de **administrator**, astfel:
 - instalăm cea mai recentă versiune **stabilă** de [Python](https://www.python.org/);
@@ -12,7 +12,7 @@ Fișierele PO pot fi generate, dacă lucrăm sub sistemul de operare Microsoft *
   ```
   pip install sphinx-intl
   ```
-- descărcăm într-un director convenabil codul-sursă al celei mai recente versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, [3.13.5](https://www.python.org/downloads/source/>);
+- descărcăm într-un director convenabil codul-sursă al celei mai recente versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, [3.13.5](https://www.python.org/downloads/source/);
 - în subdirectorul **Doc** al codului-sursă Python se găsește fișierul **conf.py**, la sfârșitul căruia adăugăm:
   ```
   # Optiuni pentru traducerea in romaneste
@@ -22,7 +22,7 @@ Fișierele PO pot fi generate, dacă lucrăm sub sistemul de operare Microsoft *
   # -------------------------------------------------------------------------
  
   locale_dirs = ['locale_python_3_13_5']   # calea are titlu de exemplu, insa este cea recomandata.
-  gettext_compact = False                   # optional.
+  gettext_compact = False                  # optional.
   language = 'ro'
   ```
 - din subdirectorul **Doc**, deschidem un [terminal Windows](https://learn.microsoft.com/en-us/windows/terminal/) și executăm comanda:
