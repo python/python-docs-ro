@@ -17,6 +17,8 @@ jobs:
       fail-fast: false
       matrix:
         version: [ 3.13 ]
+        exclude: 
+        - file: "README.rst"
     continue-on-error: true
     steps:
       - uses: actions/setup-python@master
@@ -35,6 +37,8 @@ jobs:
       fail-fast: false
       matrix:
         version: [ 3.13 ]
+        exclude: 
+        - file: "README.rst"
         format: [ html, latex ]
     steps:
       - uses: actions/setup-python@master
@@ -66,6 +70,8 @@ jobs:
     strategy:
       matrix:
         version: [ 3.13 ]
+        exclude: 
+        - file: "README.rst"
     needs: [ 'build-translation' ]
     steps:
       - uses: actions/download-artifact@master
