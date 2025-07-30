@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [ '3.13' ]
+        version: [ 3.13 ]
     continue-on-error: true
     steps:
       - uses: actions/setup-python@master
@@ -34,7 +34,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [ '3.13' ]
+        version: [ 3.13 ]
         format: [ html, latex ]
     steps:
       - uses: actions/setup-python@master
@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [ '3.13' ]
+        version: [ 3.13 ]
     needs: [ 'build-translation' ]
     steps:
       - uses: actions/download-artifact@master
