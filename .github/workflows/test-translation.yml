@@ -3,11 +3,12 @@
 name: Test translation workflow
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+# schedule:
+#  - cron: '0 0 * * *'
   push:
     branches:
       - '*'
+    paths-ignore: 'README.rst'
   workflow_dispatch:
 
 jobs:
