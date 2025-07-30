@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: [ '3.14' ]
+        version: [ '3.13' ]
     continue-on-error: true
     steps:
       - uses: actions/setup-python@master
