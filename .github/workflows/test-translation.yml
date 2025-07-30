@@ -8,7 +8,6 @@ on:
   push:
     branches:
       - '*'
-    paths-ignore: "/home/runner/work/python-docs-ro/python-docs-ro/Doc/locales/ro/LC_MESSAGES/README.rst"
   workflow_dispatch:
 
 jobs:
