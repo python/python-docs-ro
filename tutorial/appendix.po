@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# ANEXA.
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 13:08+0200\n"
+"POT-Creation-Date: 2025-06-17 17:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../../tutorial/appendix.rst:5
 msgid "Appendix"
-msgstr ""
+msgstr "Anexă"
 
 #: ../../tutorial/appendix.rst:11
 msgid "Interactive Mode"
-msgstr ""
+msgstr "Modul interactiv"
 
 #: ../../tutorial/appendix.rst:13
 msgid ""
@@ -34,6 +34,11 @@ msgid ""
 "basic interpreter is supported on all platforms with minimal line control"
 " capabilities."
 msgstr ""
+"Sunt disponibile două versiuni ale *buclei* interactive :term:`REPL` "
+"(Citește-Evaluează-Afișează-Reia). Dintre ele, modalitatea clasică de "
+"utilizare a interpretorului (de Python în terminal) este suportată de "
+"toate platformele moderne de calcul, doar că dispune de capacități "
+"minimale de control al elementelor introduse în linia de comandă."
 
 #: ../../tutorial/appendix.rst:17
 msgid ""
@@ -47,6 +52,21 @@ msgid ""
 "enters \"paste mode\", which makes pasting larger blocks of code easier. "
 "Press :kbd:`F3` to return to the regular prompt."
 msgstr ""
+"Însă, atât în Windows cât și în sistemele de operare de tip Unix cu suport "
+"pentru :mod:`curses`, ne va fi pus la dispoziție, în mod predefinit, un "
+"interpretor interactiv nou. El dispune de colorarea itemilor (în linia de "
+"comandă), de editare multi-rând, de substituții în istoric, respectiv de "
+"modul *lipire* (de la englezescul, ca jargon informatic, *paste*). Pentru "
+"a dezafecta colorarea, găsiți detalii în :ref:`using-on-controlling-color`. "
+"Tastele *funcții* (tastele F: se accesează apăsând simultan :kbd:`Fn` și "
+":kbd:`F_număr`) vă vor oferi un plus de funcționalitate. Astfel, :kbd:`F1` "
+"activează  documentația interactivă de sprijin :mod:`pydoc`. :kbd:`F2` vă "
+"permite să parcurgeți istoricul liniei de comandă fără afișarea "
+"rezultatelor (execuției de comenzi) și nici a prompturilor :term:`>>>`, "
+"respectiv :term:`...`. Cu :kbd:`F3` se intră în \"modul lipire\", ceea ce "
+"va ușura lipirea unor blocuri (mai) consistente de cod. Pentru a ieși din "
+"acest mod (și a vă înapoia la promptul principal), apăsați încă o dată pe "
+"tasta  (:kbd:`Fn` + ) :kbd:`F3`."
 
 #: ../../tutorial/appendix.rst:28
 msgid ""
@@ -54,16 +74,22 @@ msgid ""
 ":kbd:`exit` or :kbd:`quit`. Adding call parentheses after those commands "
 "is not required."
 msgstr ""
+"Atunci când utilizați noul interpretor de comenzi interactiv, pentru a ieși "
+"din el trebuie să tastați fie :kbd:`exit` fie :kbd:`quit`. Adăugarea de "
+"paranteze (ca la operatorul de apel) este opțională."
 
 #: ../../tutorial/appendix.rst:32
 msgid ""
 "If the new interactive shell is not desired, it can be disabled via the "
 ":envvar:`PYTHON_BASIC_REPL` environment variable."
 msgstr ""
+"Dacă nu vă interesează acest interpretor de comenzi interactiv, atunci îl "
+"puteți dezafecta cu ajutorul variabilei de mediu "
+":envvar:`PYTHON_BASIC_REPL`."
 
 #: ../../tutorial/appendix.rst:38
 msgid "Error Handling"
-msgstr ""
+msgstr "Tratarea erorilor"
 
 #: ../../tutorial/appendix.rst:40
 msgid ""
@@ -78,6 +104,20 @@ msgid ""
 "error stream; normal output from executed commands is written to standard"
 " output."
 msgstr ""
+"Când survine o eroare, interpretorul va afișa atât un *mesaj de eroare* "
+"(corespunzător) cât și conținutul *stivei de apeluri* (de la "
+"englezescul, ca jargon informatic, *stack (back)trace*). Dacă vă aflați în "
+"modul interactiv, atunci interpretorul revine la promptul principal; în "
+"caz că programul provine dintr-un fișier, terminarea execuției se va "
+"realiza cu un *cod de ieșire* nenul, aceasta după ce a fost afișată stiva "
+"de apeluri. (Excepțiile tratate printr-o clauză :keyword:`except` dintr-o "
+"instrucțiune :keyword:`try` nu vor fi considerate, în acest context, drept "
+"erori.) Anumite erori sunt necondiționat fatale, drept pentru care ele vor "
+"cauza ieșirea din execuție cu un cod de ieșire nenul; printre ele se numără "
+"inconsistențele interne ale codului, respectiv anumite situații în care "
+"se epuizează spațiul alocat în memorie. Toate mesajele de eroare se scriu "
+"în *fluxul de eroare* (ori *canalul de eroare*) standard; încheierea "
+"corectă a execuției unei comenzi se scrie în *fluxul de ieșire* standard."
 
 #: ../../tutorial/appendix.rst:50
 msgid ""
@@ -87,20 +127,31 @@ msgid ""
 "is executing raises the :exc:`KeyboardInterrupt` exception, which may be "
 "handled by a :keyword:`try` statement."
 msgstr ""
+"Tastând *caracterul de întrerupere* (de obicei, :kbd:`Control-C` ori "
+":kbd:`Delete`) a execuției, fie la promptul primar fie la cel secundar, "
+"vom produce oprirea introducerii de caractere de la tastatură și revenirea "
+"la promptul primar. [#]_ Dacă tastăm caracterul de întrerupere în timp ce "
+"se derulează vreo execuție de comandă, atunci va fi lansată o excepție "
+":exc:`KeyboardInterrupt`, a cărei interceptare poate fi proiectată, de "
+"dumneavoastră înșivă, cu ajutorul unei instrucțiuni :keyword:`try`."
 
 #: ../../tutorial/appendix.rst:60
 msgid "Executable Python Scripts"
-msgstr ""
+msgstr "Scripturi Python executabile"
 
 #: ../../tutorial/appendix.rst:62
 msgid ""
 "On BSD'ish Unix systems, Python scripts can be made directly executable, "
 "like shell scripts, by putting the line ::"
 msgstr ""
+"În sistemele Unix de tip BSD, scripturile Python pot fi transformate în "
+"scripturi executabile direct, aidoma scripturilor interpretorului de "
+"comenzi activ în sesiunea de terminal, prin inserarea liniei de "
+"cod ::"
 
 #: ../../tutorial/appendix.rst:65
 msgid "#!/usr/bin/env python3"
-msgstr ""
+msgstr "#!/usr/bin/env python3"
 
 #: ../../tutorial/appendix.rst:67
 msgid ""
@@ -111,16 +162,30 @@ msgid ""
 " Windows (``'\\r\\n'``) line ending.  Note that the hash, or pound, "
 "character, ``'#'``, is used to start a comment in Python."
 msgstr ""
+"chiar la începutul scriptului, respectiv adăugând permisiunilor "
+"fișierului în care ați introdus scriptul și permisiunea ca acesta să "
+"poată fi executat (ceea ce înseamnă a-i atribui fișierului un *mod "
+"executabil*). Evident, am presupus că variabila de mediu :envvar:`PATH` "
+"din contul dumneavoastră de utilizator conține (și) calea de acces către "
+"interpretor. Este necesar ca simbolul bi-semn ``#!`` să fie așezat chiar "
+"la începutul fișierului. Pe anumite platforme, primul rând trebuie să se "
+"termine cu un caracter de încheiere de rând în stil Unix (adică, "
+"``'\\n'``) și nu cu cele două caractere (invizibile) care desemnează, în "
+"Windows, sfârșitul unui rând (``'\\r\\n'``). Nu uitați că *diezul*, "
+"denumit, în jargon informatic, caracter *hash*, ``'#'``, este întrebuințat "
+"în Python la începerea unui comentariu (de un rând)."
 
 #: ../../tutorial/appendix.rst:74
 msgid ""
 "The script can be given an executable mode, or permission, using the "
 ":program:`chmod` command."
 msgstr ""
+"Pentru ca un script să primească un *mod executabil*, adică pentru a i "
+"se da *permisiunea* de a fi executat, vom folosi comanda :program:`chmod`."
 
 #: ../../tutorial/appendix.rst:77
 msgid "$ chmod +x myscript.py"
-msgstr ""
+msgstr "$ chmod +x scriptul_meu.py"
 
 #: ../../tutorial/appendix.rst:81
 msgid ""
@@ -130,10 +195,16 @@ msgid ""
 "script.  The extension can also be ``.pyw``, in that case, the console "
 "window that normally appears is suppressed."
 msgstr ""
+"În sistemele Windows nu există acest \"mod executabil\". Instalatorul de "
+"Python va realiza automat asocierea fișierelor ``.py`` cu ``python.exe``, "
+"așa că, printr-un clic dublu pe  un (simbol grafic al unui) fișier Python, "
+"acesta va rula ca script. Dacă facem uz de extensia ``.pyw`` (în locul lui "
+"``.py``), atunci fereastra terminalului, care apare la orice execuție de "
+"script, va fi suprimată."
 
 #: ../../tutorial/appendix.rst:91
 msgid "The Interactive Startup File"
-msgstr ""
+msgstr "Fișierul de pornire pentru sesiunea interactivă"
 
 #: ../../tutorial/appendix.rst:93
 msgid ""
@@ -144,6 +215,14 @@ msgid ""
 "commands.  This is similar to the :file:`.profile` feature of the Unix "
 "shells."
 msgstr ""
+"Atunci când utilizați Python-ul în modul interactiv, este convenabil să "
+"aveți la îndemână un set de comenzi tipice, care să fie executate ori de "
+"câte ori porniți interpretorul. Puteți realiza așa ceva atribuindu-i "
+"unei variabile de mediu cu numele :envvar:`PYTHONSTARTUP` drept valoare "
+"numele fișierului în care ați introdus setul respectiv de comenzi. Un "
+"atare procedeu seamănă cu cel datorită căruia preparați conținutul "
+"fișierului de configurare (la nivel de cont de utilizator) "
+":file:`.profile` al interpretoarelor de comenzi din sistemele Unix."
 
 #: ../../tutorial/appendix.rst:99
 msgid ""
@@ -155,6 +234,18 @@ msgid ""
 "used without qualification in the interactive session. You can also "
 "change the prompts ``sys.ps1`` and ``sys.ps2`` in this file."
 msgstr ""
+"Fișierul (de pornire; de la englezescul, ca jargon informatic, "
+"*startup file*) va fi citit doar când deschideți o sesiune de lucru "
+"interactiv, nu și atunci când Python-ul își citește comenzile dintr-un "
+"fișier, și nici atunci când :file:`/dev/tty` este sursa explicită a "
+"comenzilor (`fișier "
+"<https://tldp.org/HOWTO/Text-Terminal-HOWTO-7.html>`_ care, altminteri, "
+"se comportă precum o sesiune interactivă). Execuția comenzilor din fișier "
+"va avea loc în același spațiu de nume unde se execută comenzile date "
+"interactiv, deci obiectele definite ori importurile făcute de comenzile "
+"din fișier vor putea fi utilizate fără *nume calificate* în timpul "
+"sesiunii interactive. De asemeni, puteți schimba promptul principal "
+" ``sys.ps1`` și promptul secundar ``sys.ps2`` în acest fișier de pornire."
 
 #: ../../tutorial/appendix.rst:107
 msgid ""
@@ -164,6 +255,13 @@ msgid ""
 "exec(open('.pythonrc.py').read())``. If you want to use the startup file "
 "in a script, you must do this explicitly in the script::"
 msgstr ""
+"Dacă doriți să fie citit și un fișier de pornire adițional, situat în "
+"directorul curent, atunci puteți realiza acest lucru introducând în "
+"fișierul de pornire global un fragment de cod aidoma acestuia: "
+"``if os.path.isfile('.pythonrc.py'): exec(open('.pythonrc.py').read())``. "
+"De asemeni, dacă sunteți interesați să întrebuințați fișierul de "
+"pornire într-un script, atunci va fi nevoie să îi adăugați acelui "
+"script un fragment de cod asemănător celui care urmează::"
 
 #: ../../tutorial/appendix.rst:113
 msgid ""
@@ -174,10 +272,16 @@ msgid ""
 "        startup_file = fobj.read()\n"
 "    exec(startup_file)"
 msgstr ""
+"import os\n"
+"numele_fișierului = os.environ.get('PYTHONSTARTUP')\n"
+"if numele_fișierului and os.path.isfile(numele_fișierului):\n"
+"    with open(numele_fișierului) as obiectul_fișier:\n"
+"        fișierul_de_pornire = obiectul_fișier.read()\n"
+"    exec(fișierul_de_pornire)"
 
 #: ../../tutorial/appendix.rst:124
 msgid "The Customization Modules"
-msgstr ""
+msgstr "Module de personalizare"
 
 #: ../../tutorial/appendix.rst:126
 msgid ""
@@ -186,6 +290,13 @@ msgid ""
 " the location of your user site-packages directory.  Start Python and run"
 " this code::"
 msgstr ""
+"Python-ul ne pune la dispoziție două *ancore* (de la englezescul, ca "
+"jargon informatic, *hook*) pentru a-l personaliza: :index:`sitecustomize` "
+"(personalizare la nivel de *sistem*, adică  *(on-)site* sau *la fața "
+"locului*) și :index:`usercustomize` (personalizare la nivel de "
+"*utilizator*). Pentru a observa funcționarea personalizării, începem prin "
+"a găsi calea de acces către directorul pachetelor disponibile *la fața "
+"locului* pentru utilizator. Astfel, vom rula codul Python de mai jos::"
 
 #: ../../tutorial/appendix.rst:130
 msgid ""
@@ -193,6 +304,10 @@ msgid ""
 ">>> site.getusersitepackages()\n"
 "'/home/user/.local/lib/python3.x/site-packages'"
 msgstr ""
+">>> import site\n"
+">>> site.getusersitepackages()\n"
+"'C:\\Users\\nume_de_utilizator\\AppData\\Roaming\\Python\\Python313"
+"\\site-packages'"
 
 #: ../../tutorial/appendix.rst:134
 msgid ""
@@ -201,6 +316,11 @@ msgid ""
 "invocation of Python, unless it is started with the :option:`-s` option "
 "to disable the automatic import."
 msgstr ""
+"Calea de acces fiind găsită, vom crea un fișier denumit "
+":file:`usercustomize.py` în directorul respectiv și vom introduce în fișier "
+"comenzile dorite. Existența acestui fișier va influența toate invocările "
+"Python-ului, cu excepția situației în care pornirea se va face cu opțiunea "
+":option:`-s`, opțiune care dezactivează importurile automate."
 
 #: ../../tutorial/appendix.rst:138
 msgid ""
@@ -209,12 +329,22 @@ msgid ""
 "and is imported before :index:`usercustomize`.  See the documentation of "
 "the :mod:`site` module for more details."
 msgstr ""
+"Ancora :index:`sitecustomize` funcționează la fel, doar că fișierul ei va "
+"fi creat de către unul din administratorii sistemului dumneavoastră de "
+"calcul și plasat într-unul din directoarele care fac parte din lista "
+"directoarelor (globale ale) pachetelor instalate la nivel de *sistem*, însă "
+"tot *la fața locului* (listă găsită cu ``site.getsitepackages()``), "
+"acest fișier :file:`sitecustomize.py` fiind importat înaintea celui "
+"corespunzând ancorei :index:`usercustomize`. A se vedea documentația "
+"modulului :mod:`site` pentru mai multe detalii."
 
 #: ../../tutorial/appendix.rst:145
 msgid "Footnotes"
-msgstr ""
+msgstr "Note de subsol"
 
 #: ../../tutorial/appendix.rst:146
 msgid "A problem with the GNU Readline package may prevent this."
 msgstr ""
+"O anumită defecțiune din pachetul GNU Readline ar putea să împiedice "
+"aceasta."
 
