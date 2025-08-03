@@ -2636,7 +2636,7 @@ msgstr ""
 
 #: ../../tutorial/controlflow.rst:1150
 msgid "Footnotes"
-msgstr "Note de sunsol"
+msgstr "Note de subsol"
 
 #: ../../tutorial/controlflow.rst:1151
 msgid ""
