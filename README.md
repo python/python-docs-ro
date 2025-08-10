@@ -12,16 +12,16 @@ Fișierele PO pot fi generate, dacă lucrăm sub sistemul de operare Microsoft *
   ```
   pip install sphinx-intl
   ```
-- descărcăm într-un director convenabil codul-sursă al celei mai recente versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, [3.13.5](https://www.python.org/downloads/source/);
+- descărcăm într-un director convenabil codul-sursă al celei mai recente versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, [3.13.6](https://www.python.org/downloads/source/);
 - în subdirectorul **Doc** al codului-sursă Python se găsește fișierul **conf.py**, la sfârșitul căruia adăugăm:
   ```
   # Optiuni pentru traducerea in romaneste
-  # Adaugat in [ 17.06.2025 ]
+  # Adaugat in [ 10.08.2025 ]
 
   # Conform [ https://www.sphinx-doc.org/en/master/usage/advanced/intl.html ]
   # -------------------------------------------------------------------------
  
-  locale_dirs = ['locale_python_3_13_5']   # calea are titlu de exemplu, insa este cea recomandata.
+  locale_dirs = ['locale_python_3_13_6']   # calea are titlu de exemplu, insa este cea recomandata.
   gettext_compact = False                  # optional.
   language = 'ro'
   ```
@@ -34,7 +34,7 @@ Fișierele PO pot fi generate, dacă lucrăm sub sistemul de operare Microsoft *
   ```
   sphinx-intl update -p build/gettext -l ro
   ```
-  va produce subdirectorul **locale_python_3_13_5/ro/LC_MESSAGES** al directorului **Doc**. Acesta conține fișierele PO căutate.
+  va produce subdirectorul **locale_python_3_13_6/ro/LC_MESSAGES** al directorului **Doc**. Acesta conține fișierele PO căutate.
 
 Putem genera codul HTML al documentației folosind scriptul **scripturi/compilarea_traducerii.ps1** din acest proiect. Astfel, într-un terminal Windows cu **drepturi de administrator** (tastele Win + X, A), deschis din directorul unde se găsește scriptul PowerShell, executăm comenzile:
 ```
