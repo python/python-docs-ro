@@ -617,9 +617,9 @@ msgid ""
 msgstr ""
 "Python-ul își administrează memoria în mod automat (realizând atât "
 "*contorizarea referințelor* pentru majoritatea obiectelor cât și "
-":term:`garbage collection` pentru eliminarea *circularităților*). "
-"Orice zonă de memorie (rezervată) va fi eliberată la puțin timp după ce a "
-"fost eliminată (și) ultima referință la ea."
+":term:`colectarea gunoiului <garbage collection>` pentru eliminarea "
+"*circularităților*). Orice zonă de memorie (rezervată) va fi eliberată "
+"la puțin timp după ce a fost eliminată (și) ultima referință la ea."
 
 #: ../../tutorial/stdlib2.rst:255
 msgid ""
