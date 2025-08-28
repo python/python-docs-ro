@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../tutorial/whatnow.rst:14
 msgid ":ref:`library-index`:"
-msgstr ":ref:`library-index`:"
+msgstr ":ref:`Biblioteca standard a Python-ului<library-index>`:"
 
 #: ../../tutorial/whatnow.rst:16
 msgid ""
@@ -73,8 +73,8 @@ msgid ""
 ":ref:`installing-index` explains how to install additional modules "
 "written by other Python users."
 msgstr ""
-":ref:`installing-index` vă lămurește cum să instalați module diverse, "
-"scrise de alți utilizatori de Python."
+":ref:`Instalarea modulelor Python <installing-index>` vă lămurește cum să "
+"instalați module diverse, scrise de alți utilizatori de Python."
 
 #: ../../tutorial/whatnow.rst:27
 msgid ""
@@ -82,9 +82,10 @@ msgid ""
 "semantics.  It's heavy reading, but is useful as a complete guide to the "
 "language itself."
 msgstr ""
-":ref:`reference-index`: O explicație detaliată a sintaxei și a semanticii "
-"limbajului de programare Python. Este o lectură dificilă, însă utilă ca "
-"sursă completă a (informațiilor dedicate) însuși limbajului de programare."
+":ref:`Referința limbajului Python <reference-index>`: O explicație "
+"detaliată a sintaxei și a semanticii limbajului de programare Python. Este "
+"o lectură dificilă, însă utilă ca sursă completă a (informațiilor dedicate) "
+"însuși limbajului de programare."
 
 #: ../../tutorial/whatnow.rst:31
 msgid "More Python resources:"
@@ -183,10 +184,10 @@ msgid ""
 "the questions that come up again and again, and may already contain the "
 "solution for your problem."
 msgstr ""
-"Înainte să postați, nu uitați să parcurgeți lista "
-":ref:`Întrebări adresate frecvent <faq-index>` (denumită, pe scurt, FAQ). "
-"Răspunsurile din FAQ lămuresc multe din chestiunile ridicate de "
-"întrebările care reapar periodic, deci se prea poate ca ele să conțină "
+"Înainte să postați, nu uitați să parcurgeți lista de "
+":ref:`Întrebări frecvent formulate <faq-index>` (denumită, pe scurt, "
+"FAQ/IFF). Răspunsurile din FAQ/IFF lămuresc multe din chestiunile ridicate "
+"de întrebările care reapar periodic, deci se prea poate ca ele să conțină "
 "și vreo soluție la problema cu care tocmai vă confruntați."
 
 #: ../../tutorial/whatnow.rst:70
