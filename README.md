@@ -12,16 +12,16 @@ Fișierele PO pot fi generate, dacă lucrăm sub sistemul de operare Microsoft *
   ```
   pip install sphinx-intl
   ```
-- descărcăm într-un director convenabil codul-sursă al celei mai recente versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, [3.13.6](https://www.python.org/downloads/source/);
+- descărcăm într-un director convenabil codul-sursă al celei mai recente versiuni **stabile** de Python (aceeași ca mai sus); de exemplu, [3.13.7](https://www.python.org/downloads/source/);
 - în subdirectorul **Doc** al codului-sursă Python se găsește fișierul **conf.py**, la sfârșitul căruia adăugăm:
   ```
   # Optiuni pentru traducerea in romaneste
-  # Adaugat in [ 10.08.2025 ]
+  # Adaugat in [ 26.08.2025 ]
 
   # Conform [ https://www.sphinx-doc.org/en/master/usage/advanced/intl.html ]
   # -------------------------------------------------------------------------
  
-  locale_dirs = ['locale_python_3_13_6']   # calea are titlu de exemplu, insa este cea recomandata.
+  locale_dirs = ['locale_python_3_13_7']   # calea are titlu de exemplu, insa este cea recomandata.
   gettext_compact = False                  # optional.
   language = 'ro'
   ```
@@ -34,7 +34,7 @@ Fișierele PO pot fi generate, dacă lucrăm sub sistemul de operare Microsoft *
   ```
   sphinx-intl update -p build/gettext -l ro
   ```
-  va produce subdirectorul **locale_python_3_13_6/ro/LC_MESSAGES** al directorului **Doc**. Acesta conține fișierele PO căutate.
+  va produce subdirectorul **locale_python_3_13_7/ro/LC_MESSAGES** al directorului **Doc**. Acesta conține fișierele PO căutate.
 
 Putem genera codul HTML al documentației folosind scriptul **scripturi/compilarea_traducerii.ps1** din acest proiect. Astfel, într-un terminal Windows cu **drepturi de administrator** (tastele Win + X, A), deschis din directorul unde se găsește scriptul PowerShell, executăm comenzile:
 ```
@@ -45,31 +45,21 @@ Set-ExecutionPolicy Unrestricted
  
 Am optat, în versiunea de față a traducerii, pentru *variante românești* ale majorității numelor de variabile, de funcții, de clase, de argumente care intervin în exemplele de cod. Aceasta constituie o abatere de la [recomandarea oficială](https://devguide.python.org/documentation/translations/translating/#code-examples). Ea este justificată, în opinia mea, de ușurința cu care anumite idiomuri ale sintaxei Python-ului pot fi sesizate de către un nou-venit atunci când acesta se lansează în cititul unor fragmente aleatoare de cod.
 
-Pentru a compila *abaterile*, am operat mici modificări în fișierele **.rst** corespunzătoare.
+Pentru a compila *abaterile*, am operat mici modificări în fișierele **.rst** corespunzătoare. Găsirea lor se poate realiza ușor folosind scriptul **scripturi/modificari_rst.ps1** din acest proiect.
 
 ## Compilarea tutorialului
 
 Tutorialul de Python, în românește, poate fi citit [aici](https://www.octawian.ro/fisiere/tutoriale/python/build/tutorial/). El trebuie considerat *șantier* (fuzzy) de către eventualii săi cititori.
+
+## Dicționare
+
+Ajutorul **principal** în chestiuni delicate, precum *Este permis acest neologism?*, *Cu câți de e se scrie cuvântul nu-știu-care?* și multele altele, ne vine de la [dexonline.ro](https://dexonline.ro/). Un sprijin de nelepădat, dat în scris, este lucrarea *Dicționar de calculatoare englez-român*, datorată dlui. inginer Nicolae Ionescu-Cruțan și apărută la Editura NICULESCU, în anul 2007, în ediție revizuită și adăugită. Pentru sinonime, antonime și exemple fine, ca și pentru descoperirea *cuvintelor compuse* prezente în jargonul informatic, nu se poate fără [Merriam-Webster](https://www.merriam-webster.com/).
 
 ## Acord asupra contribuției aduse la documentație
 
 NOTĂ PRIVIND LICENȚA TRADUCERILOR: documentația Python este întreținută de o rețea globală de voluntari. Prin publicarea acestui proiect pe Transifex, GitHub sau în alt loc public și prin invitația adresată dumneavoastră de a participa la el vă propunem un acord în baza căruia dumneavoastră vă veți oferi îmbunătățirile aduse documentației Python sau traducerii acesteia spre folosință de către PSF sub licența CC0 (disponibilă la adresa https://creativecommons.org/publicdomain/zero/1.0/legalcode). În schimb, veți putea pretinde recunoaștere asupra porțiunii din traducere la care ați contribuit și, dacă traducerea dumneavoastră este acceptată de către PSF, veți putea (fără a fi obligat la aceasta) să transmiteți o corecție cuprinzând adnotarea potrivită a fișierului Misc/ACKS sau TRANSLATORS. Deși nimic din acest acord asupra contribuției aduse la documentație nu obligă PSF să încorporeze textul contribuției dumneavoastră, participarea dumneavoastră la comunitatea Python este binevenită și apreciată.
 
 Consfințiți acceptarea acestui acord prin transmiterea muncii dumneavoastră către PSF pentru a fi inclusă în documentație.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
