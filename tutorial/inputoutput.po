@@ -136,7 +136,7 @@ msgstr ""
 "gol la numerele pozitive și de un semn minus la cele negative. În același "
 "timp, codul din exemplu va afișa valoarea lui ``procentaj`` înmulțită cu "
 "100 și urmată de două zecimale, respectiv de semnul procent (a se vedea "
-":ref:`formatspec` pentru detalii)."
+":ref:`Mini-limbajul specificației de format <formatspec>` pentru detalii)."
 
 #: ../../tutorial/inputoutput.rst:57
 msgid ""
@@ -378,7 +378,8 @@ msgstr ""
 "A se vedea :ref:`expresii auto-documentate <bpo-36817-whatsnew>` pentru "
 "mai multe informații privind specificatorul ``=``. Pentru o descriere "
 "cuprinzătoare a tuturor acestor specificații de format, consultați "
-"ghidul de referință despre :ref:`formatspec`."
+"ghidul de referință despre :ref:`Mini-limbajul specificației de format "
+"<formatspec>`."
 
 #: ../../tutorial/inputoutput.rst:166
 msgid "The String format() Method"
@@ -584,7 +585,8 @@ msgid ""
 " :ref:`formatstrings`."
 msgstr ""
 "Pentru o dare de seamă elaborată asupra formatării șirurilor de caractere "
-"folosind :meth:`str.format`, a se vedea :ref:`formatstrings`."
+"folosind :meth:`str.format`, a se vedea :ref:`Sintaxa șirurilor de format "
+"<formatstrings>`."
 
 #: ../../tutorial/inputoutput.rst:243
 msgid "Manual String Formatting"
@@ -723,7 +725,8 @@ msgstr ""
 #: ../../tutorial/inputoutput.rst:300
 msgid "More information can be found in the :ref:`old-string-formatting` section."
 msgstr ""
-"Mai multe informații se găsesc în secțiunea :ref:`old-string-formatting`."
+"Mai multe informații se găsesc în secțiunea :ref:`Formatarea șirurilor de "
+"caractere în vechiul stil printf <old-string-formatting>`."
 
 #: ../../tutorial/inputoutput.rst:306
 msgid "Reading and Writing Files"
@@ -735,9 +738,9 @@ msgid ""
 "with two positional arguments and one keyword argument: ``open(filename, "
 "mode, encoding=None)``"
 msgstr ""
-":func:`open` returnează un :term:`file object` și este utilizată de obicei "
-"cu două argumente poziționale și un argument cuvânt-cheie: ``open("
-"nume_de_fișier, mod_de_deschidere, encoding=None)``"
+":func:`open` returnează un :term:`obiect fișier <file object>` și este "
+"utilizată de obicei cu două argumente poziționale și un argument "
+"cuvânt-cheie: ``open(nume_de_fișier, mod_de_deschidere, encoding=None)``"
 
 #: ../../tutorial/inputoutput.rst:318
 msgid ">>> f = open('workfile', 'w', encoding=\"utf-8\")"
@@ -786,8 +789,8 @@ msgstr ""
 "dacă nu aveți, realmente, nevoie de vreo codificare specială. Adăugând "
 "sufixul ``'b'`` la modul de deschidere, fișierul în cauză va fi deschis în "
 ":dfn:`modul binar`. Datele accesate în modul binar sunt citite și scrise "
-"sub formă de obiecte :class:`bytes`. Nu vi se permite să specificați care "
-"este *codificarea* dacă deschideți fișierul în modul binar."
+"sub formă de obiecte :class:`octeți <bytes>`. Nu vi se permite să "
+"specificați care este *codificarea* dacă deschideți fișierul în modul binar."
 
 #: ../../tutorial/inputoutput.rst:344
 msgid ""
@@ -1218,9 +1221,9 @@ msgid ""
 " this::"
 msgstr ""
 "O variantă a funcției :func:`~json.dumps`, intitulată :func:`~json.dump`, "
-"serializează de-a dreptul obiectul Python într-un :term:`text file`. "
-"Așadar, dacă ``f`` este un obiect :term:`text file` deschis pentru scriere, "
-"putem proceda astfel::"
+"serializează de-a dreptul obiectul Python într-un :term:`fișier text "
+"<text file>`. Așadar, dacă ``f`` este un obiect :term:`fișier text "
+"<text file>` deschis pentru scriere, putem proceda astfel::"
 
 #: ../../tutorial/inputoutput.rst:526
 msgid "json.dump(x, f)"
@@ -1232,8 +1235,8 @@ msgid ""
 ":term:`text file` object which has been opened for reading::"
 msgstr ""
 "Ca redecodificăm obiectul, presupunând că ``f`` este fie un obiect "
-":term:`binary file` fie un obiect :term:`text file` care a fost deja "
-"deschis pentru citire, executăm::"
+":term:`fișier binar <binary file>` fie un obiect :term:`fișier text "
+"<text file>` care a fost deja deschis pentru citire, executăm::"
 
 #: ../../tutorial/inputoutput.rst:531
 msgid "x = json.load(f)"
@@ -1246,7 +1249,7 @@ msgid ""
 msgstr ""
 "Fișierele JSON trebuie să fie codificate UTF-8. Folosiți "
 "``encoding=\"utf-8\"`` atunci când deschideți un fișier JSON ca "
-":term:`text file` atât pentru citire cât și pentru scriere."
+":term:`fișier text <text file>` atât pentru citire cât și pentru scriere."
 
 #: ../../tutorial/inputoutput.rst:537
 msgid ""
