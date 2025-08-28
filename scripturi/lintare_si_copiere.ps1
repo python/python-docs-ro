@@ -27,7 +27,7 @@ else
 } 
                          
 $directorul_traducerii   = "C:\octavian\invatare_Python_2025\traducerea_documentatiei"
-$directorul_fragmentelor = "locale_python_3_13_6\ro\LC_MESSAGES"
+$directorul_fragmentelor = "locale_python_3_13_7\ro\LC_MESSAGES"
 
 if( 2 -eq $numarul_componentelor )
 {
@@ -35,7 +35,7 @@ if( 2 -eq $numarul_componentelor )
 }
 
 $directorul_versiunii    = "directorul_locale_cu_traduceri\$directorul_fragmentelor"
-$proiectul_versiunii     = "proiectul_traducerii\Python-3.13.6\Doc"
+$proiectul_versiunii     = "proiectul_traducerii\Python-3.13.7\Doc"
 $directorul_compilarii   = "$directorul_traducerii\$proiectul_versiunii\$directorul_fragmentelor"
 $ce_traduc               = "$directorul_traducerii\$directorul_versiunii\$fisierul_fara_extensie.po"
 $ce_compilez             = "$directorul_compilarii\$fisierul_fara_extensie.po"
@@ -62,4 +62,5 @@ else
 }
  
 Set-ExecutionPolicy Restricted
+
 
