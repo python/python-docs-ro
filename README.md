@@ -53,7 +53,7 @@ Tutorialul de Python, în românește, poate fi citit [aici](https://www.octawia
 
 ## Dicționare
 
-Ajutorul **principal** în chestiuni delicate, precum *Este permis acest neologism?*, *Cu câți de e se scrie cuvântul nu-știu-care?* și multele altele, ne vine de la [dexonline.ro](https://dexonline.ro/). Un sprijin de nelepădat, dat în scris, este lucrarea *Dicționar de calculatoare englez-român*, datorată dlui. inginer Nicolae Ionescu-Cruțan și apărută la Editura NICULESCU, în anul 2007, în ediție revizuită și adăugită. Pentru sinonime, antonime și exemple fine, ca și pentru descoperirea *cuvintelor compuse* prezente în jargonul informatic, nu se poate fără [Merriam-Webster](https://www.merriam-webster.com/).
+Ajutorul **principal** în chestiuni delicate, precum *Este permis acest neologism?*, *Cu câți de e se scrie cuvântul nu-știu-care?* și multe altele, ne vine de la [dexonline.ro](https://dexonline.ro/). Un sprijin de nelepădat, dat în scris, este lucrarea *Dicționar de calculatoare englez-român*, datorată dlui. inginer Nicolae Ionescu-Cruțan și apărută la Editura NICULESCU, în anul 2007, în ediție revizuită și adăugită. Pentru sinonime, antonime și exemple fine, ca și pentru descoperirea *cuvintelor compuse* prezente în jargonul informatic, nu se poate fără [Merriam-Webster](https://www.merriam-webster.com/).
 
 ## Acord asupra contribuției aduse la documentație
 
