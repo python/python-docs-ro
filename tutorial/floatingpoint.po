@@ -393,7 +393,7 @@ msgstr ""
 "zecimale dorit. Chiar dacă funcția :func:`str` este, de obicei, "
 "suficientă, pentru un control mai fin al printării consultați "
 "specificatorii de format ai metodei :meth:`str.format` din "
-":ref:`formatstrings`."
+":ref:`Sintaxa șirurilor de format <formatstrings>`."
 
 #: ../../tutorial/floatingpoint.rst:169
 msgid ""
