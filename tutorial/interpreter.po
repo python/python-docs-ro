@@ -70,8 +70,8 @@ msgstr ""
 ":ref:`Microsoft Store <windows-store>` este disponibilă comanda "
 "|python_x_dot_y_literal|. Dacă ați instalat :ref:`lansatorul py.exe "
 "<launcher>`, atunci puteți folosi comanda :file:`py`. Vedeți "
-":ref:`setting-envvars` pentru alte modalități de a lansa "
-"în execuție Python-ul."
+":ref:`Excurs: setarea variabilelor de mediu <setting-envvars>` pentru "
+"alte modalități de a lansa în execuție Python-ul."
 
 #: ../../tutorial/interpreter.rst:31
 msgid ""
@@ -106,11 +106,11 @@ msgstr ""
 " Cea mai rapidă cale de a vedea dacă este permisă editarea liniei de "
 "comandă este să tastați :kbd:`Control-P` la primul prompt de Python "
 "la care ajungeți. Dacă se aude un bip, atunci dispuneți de editare "
-"a liniei de comandă; vedeți Apendicele :ref:`tut-interacting` "
-"pentru o prezentare a tastelor. În schimb, dacă fie nu se întâmplă "
-"nimic fie ecoul va fi un ``^P``, nu aveți editare în linie de "
-"comandă; tot ce puteți face este să folosiți backspace-ul pentru "
-"eliminarea de caractere din linia curentă."
+"a liniei de comandă; vedeți Apendicele :ref:`tut-interacting` pentru o "
+"prezentare a tastelor. În schimb, dacă fie nu se întâmplă nimic fie "
+"ecoul va fi un ``^P``, nu aveți editare în linie de comandă; tot ce "
+"puteți face este să folosiți backspace-ul pentru eliminarea de caractere "
+"din linia curentă."
 
 #: ../../tutorial/interpreter.rst:46
 msgid ""
@@ -166,7 +166,7 @@ msgstr ""
 #: ../../tutorial/interpreter.rst:65
 msgid "All command line options are described in :ref:`using-on-general`."
 msgstr "Toate opțiunile din linia de comandă sunt descrise în "
-":ref:`using-on-general`."
+":ref:`Linia de comandă și mediul de execuție <using-on-general>`."
 
 #: ../../tutorial/interpreter.rst:71
 msgid "Argument Passing"
@@ -317,7 +317,8 @@ msgstr "# -*- coding: codificare -*-"
 #: ../../tutorial/interpreter.rst:145
 msgid "where *encoding* is one of the valid :mod:`codecs` supported by Python."
 msgstr ""
-"unde *codificare* este unul dintre :mod:`codecs` valide permise de Python."
+"unde *codificare* este unul dintre :mod:`codec-urile <codecs>` (adică, un "
+"*codificator-decodificator*) valide permise de Python."
 
 #: ../../tutorial/interpreter.rst:147
 msgid ""
@@ -365,3 +366,5 @@ msgstr ""
 "În Unix, interpretorul de Python 3.x nu este instalat implicit cu "
 "numele de executabil ``python``, astfel că nu se va intra în conflict "
 "(de nume) cu niciun executabil de Python 2.x deja instalat."
+
+
