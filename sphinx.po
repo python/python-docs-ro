@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
+# SPHINX (PAGINA DE DESCHIDERE, PAGINA DE DESCARCARE, ETC).
 # Copyright (C) 2001-2025, Python Software Foundation
 # This file is distributed under the same license as the Python package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Octavian Mustafa <octawian@yahoo.com>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 18:20+0300\n"
+"POT-Creation-Date: 2025-08-26 12:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ro\n"
-"Language-Team: ro <LL@li.org>\n"
+"Language-Team: ro <octawian@yahoo.com>\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
 " < 20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -20,16 +20,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
+#: ../../tools/templates/_docs_by_version.html:10
+msgid "Stable"
+msgstr ""
+
+#: ../../tools/templates/_docs_by_version.html:11
+msgid "In development"
+msgstr ""
+
 #: ../../tools/templates/customsourcelink.html:3
-msgid "This Page"
+msgid "This page"
 msgstr ""
 
 #: ../../tools/templates/customsourcelink.html:5
-msgid "Report a Bug"
+msgid "Report a bug"
 msgstr ""
 
 #: ../../tools/templates/customsourcelink.html:8
-msgid "Show Source"
+msgid "Show source"
 msgstr ""
 
 #: ../../tools/templates/download.html:2
@@ -39,35 +47,38 @@ msgstr ""
 
 #: ../../tools/templates/download.html:30
 #, python-format
-msgid "Download Python %(dl_version)s Documentation"
-msgstr ""
+msgid "Download Python %(dl_version)s documentation"
+msgstr "Descărcați documentația pentru Python %(dl_version)s"
 
 #: ../../tools/templates/download.html:32
 #, python-format
 msgid "Last updated on: %(last_updated)s."
-msgstr ""
+msgstr "Ultima modificare în: %(last_updated)s."
 
 #: ../../tools/templates/download.html:34
 msgid ""
 "To download an archive containing all the documents for this version of\n"
 "Python in one of various formats, follow one of links in this table."
 msgstr ""
+"Pentru a descărca o arhivă conținând (toate) documentele versiunii prezente "
+"a Python-ului într-unul din formatele populare, utilizați unul din "
+"linkurile (una din hiperlegăturile) din acest tabel."
 
 #: ../../tools/templates/download.html:39
 msgid "Format"
-msgstr ""
+msgstr "Formatul"
 
 #: ../../tools/templates/download.html:40
 msgid "Packed as .zip"
-msgstr ""
+msgstr "Împachetat ca .zip"
 
 #: ../../tools/templates/download.html:41
 msgid "Packed as .tar.bz2"
-msgstr ""
+msgstr "Împachetat ca .tar.bz2"
 
 #: ../../tools/templates/download.html:44
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #: ../../tools/templates/download.html:45
 #, python-format
@@ -75,6 +86,8 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
 "pdf-a4.zip\">Download</a> (ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
+"pdf-a4.zip\">Descărcați</a> (aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:46
 #, python-format
@@ -82,10 +95,12 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
 "pdf-a4.tar.bz2\">Download</a> (ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
+"pdf-a4.tar.bz2\">Descărcați</a> (aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:49
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: ../../tools/templates/download.html:50
 #, python-format
@@ -93,6 +108,8 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Download</a> "
 "(ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-html.zip\">Descărcați</a> "
+"(aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:51
 #, python-format
@@ -100,10 +117,12 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
 "html.tar.bz2\">Download</a> (ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
+"html.tar.bz2\">Descărcați</a> (aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:54
 msgid "Plain text"
-msgstr ""
+msgstr "Text simplu"
 
 #: ../../tools/templates/download.html:55
 #, python-format
@@ -111,6 +130,8 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Download</a> "
 "(ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-text.zip\">Descărcați</a> "
+"(aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:56
 #, python-format
@@ -118,10 +139,12 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
 "text.tar.bz2\">Download</a> (ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
+"text.tar.bz2\">Descărcați</a> (aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:59
 msgid "Texinfo"
-msgstr ""
+msgstr "Texinfo"
 
 #: ../../tools/templates/download.html:60
 #, python-format
@@ -129,6 +152,8 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
 "texinfo.zip\">Download</a> (ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
+"texinfo.zip\">Descărcați</a> (aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:61
 #, python-format
@@ -136,10 +161,12 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
 "texinfo.tar.bz2\">Download</a> (ca. %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs-"
+"texinfo.tar.bz2\">Descărcați</a> (aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:64
 msgid "EPUB"
-msgstr ""
+msgstr "EPUB"
 
 #: ../../tools/templates/download.html:65
 #, python-format
@@ -147,14 +174,16 @@ msgid ""
 "<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Download</a> (ca."
 " %(download_size)s MiB)"
 msgstr ""
+"<a href=\"%(dl_base)s/python-%(dl_version)s-docs.epub\">Descărcați</a> "
+"(aprox. %(download_size)s MiB)"
 
 #: ../../tools/templates/download.html:70
 msgid "These archives contain all the content in the documentation."
-msgstr ""
+msgstr "Aceste arhive conțin întreg conținutul documentației."
 
 #: ../../tools/templates/download.html:73
 msgid "Unpacking"
-msgstr ""
+msgstr "Despachetarea"
 
 #: ../../tools/templates/download.html:75
 msgid ""
@@ -166,16 +195,25 @@ msgid ""
 " the\n"
 "best compression and fastest download times."
 msgstr ""
+"Utilizatorii de Unix ar trebui să descarce arhivele .tar.bz2; acestea sunt "
+"arhive tar bzip-ate și pot fi manevrate în modul obișnuit cu programele tar "
+"și bzip2. Puteți întrebuința, dacă doriți, (și) programul de de-zip-are "
+"<a href=\"https://infozip.sourceforge.net\">Info-ZIP</a> la manevrarea "
+"arhivelor ZIP. Arhivele .tar.bz2 dispun de cea mai bună (rată de) compresie "
+"și de cele mai scurte intervale de timp la descărcare."
 
 #: ../../tools/templates/download.html:81
 msgid ""
 "Windows users can use the ZIP archives since those are customary on that\n"
 "platform. These are created on Unix using the Info-ZIP zip program."
 msgstr ""
+"Utilizatorii de Windows pot folosi arhivele ZIP dat fiind că acest tip de "
+"arhivă este întrebuințat în mod obișnuit pe respectiva platformă (de "
+"calcul). Arhivele de față sunt create în Unix folosind programul Info-ZIP."
 
 #: ../../tools/templates/download.html:85
 msgid "Problems"
-msgstr ""
+msgstr "Dificultăți"
 
 #: ../../tools/templates/download.html:87
 msgid ""
@@ -183,6 +221,10 @@ msgid ""
 "send\n"
 "email to <a href=\"mailto:docs@python.org\">docs@python.org</a>."
 msgstr ""
+"Dacă doriți să faceți comentarii ori dacă aveți sugestii privind "
+"documentația Python-ului, vă rugăm să ni le trimiteți la adresa de poștă "
+"electronică (e-mailul) "
+"<a href=\"mailto:docs@python.org\">docs@python.org</a>."
 
 #: ../../tools/templates/dummy.html:6
 msgid "Availability"
@@ -281,15 +323,17 @@ msgstr ""
 #, python-format
 msgid "Welcome! This is the official documentation for Python %(release)s."
 msgstr ""
+"Bine ați venit! Aceasta este documentația oficială pentru Python "
+"%(release)s."
 
 #: ../../tools/templates/indexcontent.html:23
 msgid "Documentation sections:"
-msgstr ""
+msgstr "Secțiunile documentației:"
 
 #: ../../tools/templates/indexcontent.html:26
 #, python-format
 msgid "What's new in Python %(version)s?"
-msgstr ""
+msgstr "Ce este nou în Python %(version)s?"
 
 #: ../../tools/templates/indexcontent.html:27
 #, python-format
@@ -297,166 +341,171 @@ msgid ""
 "Or <a href=\"%(whatsnew_index)s\">all \"What's new\" documents since "
 "Python 2.0</a>"
 msgstr ""
+"Sau <a href=\"%(whatsnew_index)s\"> toate documentele cu \"Ce este nou\" "
+"de la Python 2.0 și până astăzi</a>"
 
 #: ../../tools/templates/indexcontent.html:28
 msgid "Tutorial"
-msgstr ""
+msgstr "Un tutorial"
 
 #: ../../tools/templates/indexcontent.html:29
 msgid "Start here: a tour of Python's syntax and features"
 msgstr ""
+"Porniți de aici: să facem cunoștință cu sintaxa și cu "
+"puterile Python-ului"
 
 #: ../../tools/templates/indexcontent.html:30
 msgid "Library reference"
-msgstr ""
+msgstr "Referința bibliotecii"
 
 #: ../../tools/templates/indexcontent.html:31
 msgid "Standard library and builtins"
-msgstr ""
+msgstr "Biblioteca standard și predefinitele"
 
 #: ../../tools/templates/indexcontent.html:32
 msgid "Language reference"
-msgstr ""
+msgstr "Referința limbajului"
 
 #: ../../tools/templates/indexcontent.html:33
 msgid "Syntax and language elements"
-msgstr ""
+msgstr "Sintaxă și elemente de limbaj"
 
 #: ../../tools/templates/indexcontent.html:34
 msgid "Python setup and usage"
-msgstr ""
+msgstr "Setările și utilizarea Python-ului"
 
 #: ../../tools/templates/indexcontent.html:35
 msgid "How to install, configure, and use Python"
-msgstr ""
+msgstr "Cum să instalăm, să configurăm și să întrebuințăm Python-ul"
 
 #: ../../tools/templates/indexcontent.html:36
 msgid "Python HOWTOs"
-msgstr ""
+msgstr "CUM-SE-FACE-ASTA în Python"
 
 #: ../../tools/templates/indexcontent.html:37
 msgid "In-depth topic manuals"
-msgstr ""
+msgstr "Manuale detaliate privind diferite subiecte"
 
 #: ../../tools/templates/indexcontent.html:39
 msgid "Installing Python modules"
-msgstr ""
+msgstr "Instalarea modulelor Python"
 
 #: ../../tools/templates/indexcontent.html:40
 msgid "Third-party modules and PyPI.org"
-msgstr ""
+msgstr "Module ale unor terțe părți și PyPI.org"
 
 #: ../../tools/templates/indexcontent.html:41
 msgid "Distributing Python modules"
-msgstr ""
+msgstr "Distribuirea modulelor Python"
 
 #: ../../tools/templates/indexcontent.html:42
 msgid "Publishing modules for use by other people"
-msgstr ""
+msgstr "Cum trebuie publicate modulele pentru a fi folosite de către alți "
+"oameni"
 
 #: ../../tools/templates/indexcontent.html:43
 msgid "Extending and embedding"
-msgstr ""
+msgstr "Extinderi și scufundări"
 
 #: ../../tools/templates/indexcontent.html:44
 msgid "For C/C++ programmers"
-msgstr ""
+msgstr "Pentru programatorii în C/C++"
 
 #: ../../tools/templates/indexcontent.html:45
 msgid "Python's C API"
-msgstr ""
+msgstr "API-ul (IPA) C al Python-ului"
 
 #: ../../tools/templates/indexcontent.html:46
 msgid "C API reference"
-msgstr ""
+msgstr "Referința API-ului C"
 
 #: ../../tools/templates/indexcontent.html:47
 msgid "FAQs"
-msgstr ""
+msgstr "FAQ/IFF"
 
 #: ../../tools/templates/indexcontent.html:48
 msgid "Frequently asked questions (with answers!)"
-msgstr ""
+msgstr "Întrebări frecvent formulate (și răspunsuri la ele!)"
 
 #: ../../tools/templates/indexcontent.html:49
 msgid "Deprecations"
-msgstr ""
+msgstr "Ieșiri din uz"
 
 #: ../../tools/templates/indexcontent.html:50
 msgid "Deprecated functionality"
-msgstr ""
+msgstr "Funcționalități ieșite din uz"
 
 #: ../../tools/templates/indexcontent.html:54
 msgid "Indices, glossary, and search:"
-msgstr ""
+msgstr "Indecși, glosar și pagină de căutare:"
 
 #: ../../tools/templates/indexcontent.html:57
 msgid "Global module index"
-msgstr ""
+msgstr "Indexul global al modulelor"
 
 #: ../../tools/templates/indexcontent.html:58
 msgid "All modules and libraries"
-msgstr ""
+msgstr "Toate modulele și bibliotecile"
 
 #: ../../tools/templates/indexcontent.html:59
 msgid "General index"
-msgstr ""
+msgstr "Indexul general"
 
 #: ../../tools/templates/indexcontent.html:60
 msgid "All functions, classes, and terms"
-msgstr ""
+msgstr "Toate funcțiile, clasele și termenii"
 
 #: ../../tools/templates/indexcontent.html:61
 msgid "Glossary"
-msgstr ""
+msgstr "Glosarul"
 
 #: ../../tools/templates/indexcontent.html:62
 msgid "Terms explained"
-msgstr ""
+msgstr "Explicația termenilor"
 
 #: ../../tools/templates/indexcontent.html:64
 msgid "Search page"
-msgstr ""
+msgstr "Pagina de căutare"
 
 #: ../../tools/templates/indexcontent.html:65
 msgid "Search this documentation"
-msgstr ""
+msgstr "Căutare în documentația de față"
 
 #: ../../tools/templates/indexcontent.html:66
 msgid "Complete table of contents"
-msgstr ""
+msgstr "Tabla de materii completă"
 
 #: ../../tools/templates/indexcontent.html:67
 msgid "Lists all sections and subsections"
-msgstr ""
+msgstr "Lista tuturor secțiunilor și a subsecțiunilor"
 
 #: ../../tools/templates/indexcontent.html:71
 msgid "Project information:"
-msgstr ""
+msgstr "Informații despre proiect:"
 
 #: ../../tools/templates/indexcontent.html:74
 msgid "Reporting issues"
-msgstr ""
+msgstr "Cum se raportează erorile"
 
 #: ../../tools/templates/indexcontent.html:75
-msgid "Contributing to Docs"
-msgstr ""
+msgid "Contributing to docs"
+msgstr "Cum se contribuie la documentație"
 
 #: ../../tools/templates/indexcontent.html:76
 msgid "Download the documentation"
-msgstr ""
+msgstr "De unde se descarcă documentația"
 
 #: ../../tools/templates/indexcontent.html:78
 msgid "History and license of Python"
-msgstr ""
+msgstr "Istoricul și licența Python-ului"
 
 #: ../../tools/templates/indexcontent.html:79
 msgid "Copyright"
-msgstr ""
+msgstr "Drepturile de autor"
 
 #: ../../tools/templates/indexcontent.html:80
 msgid "About the documentation"
-msgstr ""
+msgstr "Despre această documentație"
 
 #: ../../tools/templates/indexsidebar.html:2
 msgid "Download these documents"
@@ -466,41 +515,33 @@ msgstr ""
 msgid "Docs by version"
 msgstr ""
 
-#: ../../tools/templates/indexsidebar.html:5
-msgid "Stable"
-msgstr ""
-
-#: ../../tools/templates/indexsidebar.html:6
-msgid "In development"
-msgstr ""
-
 #: ../../tools/templates/indexsidebar.html:7
 msgid "All versions"
 msgstr ""
 
-#: ../../tools/templates/indexsidebar.html:10
+#: ../../tools/templates/indexsidebar.html:9
 msgid "Other resources"
 msgstr ""
 
+#: ../../tools/templates/indexsidebar.html:12
+msgid "PEP index"
+msgstr ""
+
 #: ../../tools/templates/indexsidebar.html:13
-msgid "PEP Index"
+msgid "Beginner's guide"
 msgstr ""
 
 #: ../../tools/templates/indexsidebar.html:14
-msgid "Beginner's Guide"
+msgid "Book list"
 msgstr ""
 
 #: ../../tools/templates/indexsidebar.html:15
-msgid "Book List"
+msgid "Audio/visual talks"
 msgstr ""
 
 #: ../../tools/templates/indexsidebar.html:16
-msgid "Audio/Visual Talks"
-msgstr ""
-
-#: ../../tools/templates/indexsidebar.html:17
-msgid "Python Developer’s Guide"
-msgstr ""
+msgid "Python developer’s guide"
+msgstr "Ghidul dezvoltatorului de Python"
 
 #: ../../tools/templates/layout.html:6
 msgid ""
