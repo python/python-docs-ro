@@ -31,7 +31,7 @@ else
 } 
                          
 $directorul_traducerii             = "C:\octavian\invatare_Python_2025\traducerea_documentatiei"
-$directorul_fisierului_nemodificat = "Python-3.13.6\Doc"
+$directorul_fisierului_nemodificat = "Python-3.13.7\Doc"
 $directorul_fisierului_modificat   = "proiectul_traducerii\Python-3.13.7\Doc"
 
 if( 2 -eq $numarul_componentelor )
@@ -48,3 +48,4 @@ Set-Location $directorul_traducerii
 git diff --no-index $fisierul_nemodificat $fisierul_modificat
 Set-Location $directorul_scriptului
 Set-ExecutionPolicy Restricted
+
