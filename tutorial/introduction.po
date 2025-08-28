@@ -88,7 +88,7 @@ msgid ""
 "text = \"# This is not a comment because it's inside quotes.\""
 msgstr ""
 "# acesta este primul comentariu\n"
-"spam = 1  # iar acesta este cel de-al doilea comentariu\n"
+"sâc = 1   # iar acesta este cel de-al doilea comentariu\n"
 "          # ... și acum un al treilea!\n"
 "text = \"# Acesta nu e un comentariu pentru că este pus între ghilimele.\""
 
@@ -160,7 +160,8 @@ msgid ""
 "the remainder you can use ``%``::"
 msgstr ""
 "Împărțirea (``/``) întoarce întotdeauna un număr în virgulă mobilă. Pentru "
-"a face :term:`floor division` și a obține un rezultat întreg va trebui să "
+"a găsi :term:`partea întreagă la împărțirea cu rest <floor division>`, cu "
+"alte cuvinte, pentru a obține un rezultat întreg al împărțirii va trebui să "
 "folosiți operatorul ``//``; pentru calculul restului, utilizați-l pe "
 "``%``::"
 
@@ -464,8 +465,9 @@ msgid ""
 msgstr ""
 "Există o subtilitate vizavi de șirurile brute de caractere: un șir brut de "
 "caractere nu se poate termina cu un număr impar de caractere ``\\``; vedeți "
-":ref:`rubrica FAQ <faq-programming-raw-string-backslash>` pentru mai "
-"multe informații și tehnici de evitare a dificultăților."
+":ref:`rubrica FAQ/IFF (întrebări formulate frecvent) "
+"<faq-programming-raw-string-backslash>` pentru mai multe informații și "
+"tehnici de evitare a dificultăților."
 
 #: ../../tutorial/introduction.rst:198
 msgid ""
@@ -828,8 +830,8 @@ msgid ""
 "error::"
 msgstr ""
 "Șirurile de caractere Python nu pot fi modificate --- ele sunt "
-":term:`immutable`. De aceea, atribuirea de valori unei poziții indexate "
-"dintr-un șir de caractere va produce o eroare::"
+":term:`imutabile <immutable>`. De aceea, atribuirea de valori unei poziții "
+"indexate dintr-un șir de caractere va produce o eroare::"
 
 #: ../../tutorial/introduction.rst:339
 msgid ""
@@ -889,7 +891,7 @@ msgstr ""
 
 #: ../../tutorial/introduction.rst:364
 msgid ":ref:`textseq`"
-msgstr ":ref:`textseq`"
+msgstr ":ref:`Tipul secvență de text -- str <textseq>`"
 
 #: ../../tutorial/introduction.rst:365
 msgid ""
@@ -901,7 +903,7 @@ msgstr ""
 
 #: ../../tutorial/introduction.rst:368
 msgid ":ref:`string-methods`"
-msgstr ":ref:`string-methods`"
+msgstr ":ref:`Metodele șirurilor de caractere <string-methods>`"
 
 #: ../../tutorial/introduction.rst:369
 msgid ""
@@ -913,7 +915,7 @@ msgstr ""
 
 #: ../../tutorial/introduction.rst:372
 msgid ":ref:`f-strings`"
-msgstr ":ref:`f-strings`"
+msgstr ":ref:`f-șiruri <f-strings>`"
 
 #: ../../tutorial/introduction.rst:373
 msgid "String literals that have embedded expressions."
@@ -922,7 +924,7 @@ msgstr ""
 
 #: ../../tutorial/introduction.rst:375
 msgid ":ref:`formatstrings`"
-msgstr ":ref:`formatstrings`"
+msgstr ":ref:`Sintaxa șirurilor de format <formatstrings>`"
 
 #: ../../tutorial/introduction.rst:376
 msgid "Information about string formatting with :meth:`str.format`."
@@ -931,7 +933,9 @@ msgstr ""
 
 #: ../../tutorial/introduction.rst:378
 msgid ":ref:`old-string-formatting`"
-msgstr ":ref:`old-string-formatting`"
+msgstr ""
+":ref:`Formatarea șirurilor de caractere în vechiul stil printf "
+"<old-string-formatting>`"
 
 #: ../../tutorial/introduction.rst:379
 msgid ""
@@ -975,8 +979,8 @@ msgid ""
 "Like strings (and all other built-in :term:`sequence` types), lists can "
 "be indexed and sliced::"
 msgstr ""
-"Aidoma șirurilor de caractere (și a tuturor tipurilor :term:`sequence` "
-"predefinite), listele pot fi atât indexate cât și tranșate::"
+"Aidoma șirurilor de caractere (și a tuturor tipurilor :term:`secvență "
+"<sequence>` predefinite), listele pot fi atât indexate cât și tranșate::"
 
 #: ../../tutorial/introduction.rst:400
 msgid ""
@@ -1012,9 +1016,9 @@ msgid ""
 "Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
 "type, i.e. it is possible to change their content::"
 msgstr ""
-"Spre deosebire de șirurile de caractere, care sunt :term:`immutable`, "
-"listele sunt un tip :term:`mutable`, adică este posibil să le modificăm "
-"conținutul::"
+"Spre deosebire de șirurile de caractere, care sunt :term:`imutabile "
+"<immutable>`, listele sunt un tip :term:`mutabil <mutable>`, adică este "
+"posibil să le modificăm conținutul::"
 
 #: ../../tutorial/introduction.rst:415
 msgid ""
