@@ -193,8 +193,8 @@ msgstr ""
 #: ../../tutorial/errors.rst:81
 msgid ":ref:`bltin-exceptions` lists the built-in exceptions and their meanings."
 msgstr ""
-"În :ref:`bltin-exceptions` se găsesc lista excepțiilor predefinite împreună "
-"cu semnificațiile acestora."
+"În :ref:`Excepții predefinite <bltin-exceptions>` se găsesc lista excepțiilor "
+"predefinite împreună cu semnificațiile acestora."
 
 #: ../../tutorial/errors.rst:87
 msgid "Handling Exceptions"
@@ -851,7 +851,7 @@ msgid ""
 "exceptions`."
 msgstr ""
 "Pentru mai multe informații privitoare la mecanismul înlănțuirii, "
-"vezi :ref:`bltin-exceptions`."
+"vezi :ref:`Excepții predefinite <bltin-exceptions>`."
 
 #: ../../tutorial/errors.rst:366
 msgid "User-defined Exceptions"
@@ -1573,3 +1573,5 @@ msgstr ""
 "    | A survenit la iterația 3\n"
 "    +------------------------------------\n"
 ">>>"
+
+
