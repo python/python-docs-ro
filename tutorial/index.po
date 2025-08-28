@@ -30,7 +30,7 @@ msgid ""
 "language, **not** *beginners* who are new to programming."
 msgstr ""
 "Tutorialul de față a fost gândit pentru *programatorii* nou-veniți în "
-"lumea Python, dar **nu** pentru *începătorii* nou-veniți în lumea "
+"lumea Python-ului, dar **nu** pentru *începătorii* nou-veniți în lumea "
 "programării."
 
 #: ../../tutorial/index.rst:11
@@ -102,10 +102,13 @@ msgid ""
 "depth."
 msgstr ""
 "Pentru o descriere a obiectelor și modulelor standard, vedeți "
-":ref:`library-index`. :ref:`reference-index` conține o definiție mai "
+":ref:`Biblioteca standard a Python-ului <library-index>`. :ref:`Referința "
+"limbajului Python <reference-index>` conține o definiție mai "
 "formalizată a limbajului. Pentru a scrie extensii în C sau în C++, "
-"citiți :ref:`extending-index` și :ref:`c-api-index`. Există, de asemenea, "
-"mai multe cărți care studiază Python-ul în profunzime."
+"citiți :ref:`Extinzând și scufundând interpretorul de Python "
+"<extending-index>` și :ref:`Manualul de referință al API-ului C al "
+"Python-ului <c-api-index>`. Există, de asemenea, mai multe cărți care "
+"studiază Python-ul în profunzime."
 
 #: ../../tutorial/index.rst:38
 msgid ""
@@ -124,8 +127,9 @@ msgstr ""
 "specificul limbajului. După citirea lui, veți putea citi și scrie "
 "module și programe Python, respectiv veți fi pregătit să învățați mai "
 "multe despre diversele module de bibliotecă Python descrise în "
-":ref:`library-index`."
+":ref:`Biblioteca standard a Python-ului <library-index>`."
 
 #: ../../tutorial/index.rst:45
 msgid "The :ref:`glossary` is also worth going through."
-msgstr ":ref:`glossary` merită, de asemenea, parcurs."
+msgstr ":ref:`Glosarul <glossary>` merită, de asemenea, parcurs."
+
