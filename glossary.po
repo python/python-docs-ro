@@ -195,7 +195,7 @@ msgid "asynchronous generator iterator"
 msgstr "iterator al unui generator asincron"
 
 #: ../../glossary.rst:105
-msgid "An object created by a :term:`asynchronous generator` function."
+msgid "An object created by an :term:`asynchronous generator` function."
 msgstr ""
 
 #: ../../glossary.rst:107
