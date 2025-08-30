@@ -521,15 +521,15 @@ msgstr ""
 #: ../../library/functions.rst:124
 msgid ""
 "Convert an integer number to a binary string prefixed with \"0b\". The "
-"result is a valid Python expression. If *x* is not a Python :class:`int` "
+"result is a valid Python expression. If *integer* is not a Python :class:`int` "
 "object, it has to define an :meth:`~object.__index__` method that returns"
 " an integer. Some examples:"
 msgstr ""
 "Convertește un număr întreg la un șir de caractere binare prefixat cu "
-"\"0b\". Rezultatul este o expresie validă în Python. Dacă *x* nu este "
-"un obiect Python din clasa :class:`int`, atunci el trebuie să fie un "
-"obiect care definește o metodă :meth:`~object.__index__` ce returnează "
-"numere întregi. Câteva exemple:"
+"\"0b\". Rezultatul este o expresie validă în Python. Dacă *integer* (adică, "
+"*un întreg*) nu este un obiect Python din clasa :class:`int`, atunci el "
+"trebuie să fie un obiect care definește o metodă :meth:`~object.__index__` "
+"ce returnează numere întregi. Câteva exemple:"
 
 #: ../../library/functions.rst:134
 msgid ""
@@ -539,8 +539,8 @@ msgstr ""
 "Fără legătură cu faptul că poate nu vă place respectivul prefix \"0b\", "
 "întrebuințați-o pe cea (mai) convenabilă dintre modalitățile de mai jos."
 
-#: ../../library/functions.rst:141 ../../library/functions.rst:942
-#: ../../library/functions.rst:1323
+#: ../../library/functions.rst:141 ../../library/functions.rst:940
+#: ../../library/functions.rst:1321
 msgid "See also :func:`format` for more information."
 msgstr "Vedeți și :func:`format` pentru mai multe informații."
 
@@ -562,7 +562,7 @@ msgstr ""
 "Nu poate fi moștenită. Singurele sale instanțe sunt ``False`` și ``True`` "
 "(consultați :ref:`Tipul boolean -- bool <typebool>`)."
 
-#: ../../library/functions.rst:156 ../../library/functions.rst:807
+#: ../../library/functions.rst:156 ../../library/functions.rst:805
 msgid "The parameter is now positional-only."
 msgstr "Parametrul este acum numai pozițional."
 
@@ -620,7 +620,7 @@ msgstr ""
 "Lansează un :ref:`eveniment de auditare <auditing>` ``builtins.breakpoint`` "
 "cu argumentul ``breakpointhook``."
 
-#: ../../library/functions.rst:190
+#: ../../library/functions.rst:189
 msgid ""
 "Return a new array of bytes.  The :class:`bytearray` class is a mutable "
 "sequence of integers in the range 0 <= x < 256.  It has most of the usual"
@@ -636,7 +636,7 @@ msgstr ""
 ":class:`bytes`, după cum se poate vedea în :ref:`Operații cu octeți și cu "
 "tablouri de octeți <bytes-methods>`."
 
-#: ../../library/functions.rst:195
+#: ../../library/functions.rst:194
 msgid ""
 "The optional *source* parameter can be used to initialize the array in a "
 "few different ways:"
@@ -644,7 +644,7 @@ msgstr ""
 "Parametrul opțional *source* (adică, *sursa*) poate fi folosit la "
 "inițializarea tabloului în câteva feluri (diferite):"
 
-#: ../../library/functions.rst:198
+#: ../../library/functions.rst:197
 msgid ""
 "If it is a *string*, you must also give the *encoding* (and optionally, "
 "*errors*) parameters; :func:`bytearray` then converts the string to bytes"
@@ -656,7 +656,7 @@ msgstr ""
 ":func:`bytearray` va converti șirul de caractere în octeți pe baza metodei "
 ":meth:`str.encode`."
 
-#: ../../library/functions.rst:202
+#: ../../library/functions.rst:201
 msgid ""
 "If it is an *integer*, the array will have that size and will be "
 "initialized with null bytes."
@@ -664,7 +664,7 @@ msgstr ""
 "Dacă este *număr întreg*, atunci tabloul va avea dimensiunea dată de el și va "
 "fi inițializat cu octeți *null*."
 
-#: ../../library/functions.rst:205
+#: ../../library/functions.rst:204
 msgid ""
 "If it is an object conforming to the :ref:`buffer interface "
 "<bufferobjects>`, a read-only buffer of the object will be used to "
@@ -675,7 +675,7 @@ msgstr ""
 "doar-de-citit al obiectului respectiv va fi folosit la inițializarea "
 "tabloului de octeți."
 
-#: ../../library/functions.rst:208
+#: ../../library/functions.rst:207
 msgid ""
 "If it is an *iterable*, it must be an iterable of integers in the range "
 "``0 <= x < 256``, which are used as the initial contents of the array."
@@ -685,20 +685,20 @@ msgstr ""
 "din plaja de valori ``0 <= x < 256``, aceste numere alcătuind conținutul "
 "inițial al tabloului."
 
-#: ../../library/functions.rst:211
+#: ../../library/functions.rst:210
 msgid "Without an argument, an array of size 0 is created."
 msgstr ""
 "Dacă nu introducem niciun argument, atunci va fi creat un tablou de "
 "dimensiune 0 (*gol*)."
 
-#: ../../library/functions.rst:213
+#: ../../library/functions.rst:212
 msgid "See also :ref:`binaryseq` and :ref:`typebytearray`."
 msgstr ""
 "Vedeți, de asemeni, :ref:`Tipuri de secvențe binare -- octeți, tablouri de "
 "octeți, vederi de memorie <binaryseq>` și :ref:`Obiecte tablou de octeți "
 "<typebytearray>`."
 
-#: ../../library/functions.rst:222
+#: ../../library/functions.rst:220
 msgid ""
 "Return a new \"bytes\" object which is an immutable sequence of integers "
 "in the range ``0 <= x < 256``.  :class:`bytes` is an immutable version of"
@@ -711,7 +711,7 @@ msgstr ""
 "-- astfel, ea posedă aceleași metode non-mutabile și are același "
 "comportament la indexare și la tranșare precum cea din urmă."
 
-#: ../../library/functions.rst:227
+#: ../../library/functions.rst:225
 msgid ""
 "Accordingly, constructor arguments are interpreted as for "
 ":func:`bytearray`."
@@ -719,14 +719,14 @@ msgstr ""
 "Ca atare, argumentele constructorului se interpretează la fel ca la "
 ":func:`bytearray`."
 
-#: ../../library/functions.rst:229
+#: ../../library/functions.rst:227
 msgid "Bytes objects can also be created with literals, see :ref:`strings`."
 msgstr ""
 "Obiecte *octeți* pot fi create și cu valori literale, a se vedea "
 ":ref:`Valori literale din șiruri de caractere și din octeți <strings>`."
 
 
-#: ../../library/functions.rst:231
+#: ../../library/functions.rst:229
 msgid "See also :ref:`binaryseq`, :ref:`typebytes`, and :ref:`bytes-methods`."
 msgstr ""
 "A se vedea, de asemeni, :ref:`Tipuri de secvențe binare -- octeți, tablouri "
@@ -734,7 +734,7 @@ msgstr ""
 "<typebytes>`, precum și :ref:`Operații cu octeți și cu tablouri de octeți "
 "<bytes-methods>`."
 
-#: ../../library/functions.rst:236
+#: ../../library/functions.rst:234
 msgid ""
 "Return :const:`True` if the *object* argument appears callable, "
 ":const:`False` if not.  If this returns ``True``, it is still possible "
@@ -752,7 +752,7 @@ msgstr ""
 "apelabile dacă provin dintr-o clasă care posedă o metodă "
 ":meth:`~object.__call__`."
 
-#: ../../library/functions.rst:242
+#: ../../library/functions.rst:240
 msgid ""
 "This function was first removed in Python 3.0 and then brought back in "
 "Python 3.2."
@@ -760,34 +760,33 @@ msgstr ""
 "Această funcție a fost mai întâi eliminată din Python 3.0 și apoi "
 "reintrodusă în Python 3.2."
 
-#: ../../library/functions.rst:249
+#: ../../library/functions.rst:247
 msgid ""
-"Return the string representing a character whose Unicode code point is "
-"the integer *i*.  For example, ``chr(97)`` returns the string ``'a'``, "
-"while ``chr(8364)`` returns the string ``'€'``. This is the inverse of "
+"Return the string representing a character with the specified Unicode "
+"code point. For example, ``chr(97)`` returns the string ``'a'``, while "
+"``chr(8364)`` returns the string ``'€'``. This is the inverse of "
 ":func:`ord`."
 msgstr ""
 "Întoarce șirul de caractere prin care este desemnat caracterul având "
 "*valoarea* (sau *codul de caracter* ori *punctul de cod* din planul "
-"multilingvistic) Unicode dată de numărul întreg *i*. De exemplu, "
+"multilingvistic) Unicode dată de numărul întreg specificat. De exemplu, "
 "``chr(97)`` va returna șirul de caractere ``'a'``, în timp ce ``chr(8364)`` "
 "va întoarce șirul de caractere ``'€'``. Este inversa funcției :func:`ord`."
 
-#: ../../library/functions.rst:253
+#: ../../library/functions.rst:251
 msgid ""
 "The valid range for the argument is from 0 through 1,114,111 (0x10FFFF in"
-" base 16).  :exc:`ValueError` will be raised if *i* is outside that "
-"range."
+" base 16).  :exc:`ValueError` will be raised if it is outside that range."
 msgstr ""
 "Domeniul de valori al argumentului ține de la 0 și până la, inclusiv, "
 "1,114,111 (adică, 0x10FFFF în baza de numerație 16). Pentru valori ale lui "
-"*i* din afara acestui domeniu va fi lansată o excepție :exc:`ValueError`."
+"din afara acestui domeniu va fi lansată o excepție :exc:`ValueError`."
 
-#: ../../library/functions.rst:259
+#: ../../library/functions.rst:257
 msgid "Transform a method into a class method."
 msgstr "Transformă o metodă într-o metodă de clasă."
 
-#: ../../library/functions.rst:261
+#: ../../library/functions.rst:259
 msgid ""
 "A class method receives the class as an implicit first argument, just "
 "like an instance method receives the instance. To declare a class method,"
@@ -797,7 +796,7 @@ msgstr ""
 "implicit, tot așa cum unei metode de instanță îi va fi transmisă instanța. "
 "Pentru a declara o metodă de clasă, întrebuințați idiomul care urmează::"
 
-#: ../../library/functions.rst:265
+#: ../../library/functions.rst:263
 msgid ""
 "class C:\n"
 "    @classmethod\n"
@@ -807,7 +806,7 @@ msgstr ""
 "    @classmethod\n"
 "    def f(cls, argumentul1, argumentul2): ..."
 
-#: ../../library/functions.rst:269
+#: ../../library/functions.rst:267
 msgid ""
 "The ``@classmethod`` form is a function :term:`decorator` -- see "
 ":ref:`function` for details."
@@ -815,7 +814,7 @@ msgstr ""
 "Formula ``@classmethod`` este un :term:`decorator <decorator>` de "
 "funcție -- vedeți :ref:`Definiții de funcții <function>` pentru detalii."
 
-#: ../../library/functions.rst:272
+#: ../../library/functions.rst:270
 msgid ""
 "A class method can be called either on the class (such as ``C.f()``) or "
 "on an instance (such as ``C().f()``).  The instance is ignored except for"
@@ -829,7 +828,7 @@ msgstr ""
 "clasă derivată (din clasa în care a fost definită metoda), obiectul clasă "
 "derivată îi va fi transmis metodei pe post de prim argument implicit."
 
-#: ../../library/functions.rst:277
+#: ../../library/functions.rst:275
 msgid ""
 "Class methods are different than C++ or Java static methods. If you want "
 "those, see :func:`staticmethod` in this section. For more information on "
@@ -841,7 +840,7 @@ msgstr ""
 "multe informații relative la metodele de clasă pot fi citite în "
 ":ref:`Ierarhia standard a tipurilor <types>`."
 
-#: ../../library/functions.rst:281
+#: ../../library/functions.rst:279
 msgid ""
 "Class methods can now wrap other :term:`descriptors <descriptor>` such as"
 " :func:`property`."
@@ -849,7 +848,7 @@ msgstr ""
 "Metodele de clasă pot cuprinde, de acum, și alți "
 ":term:`descriptori <descriptor>`, precum :func:`property`."
 
-#: ../../library/functions.rst:285
+#: ../../library/functions.rst:283
 msgid ""
 "Class methods now inherit the method attributes "
 "(:attr:`~function.__module__`, :attr:`~function.__name__`, "
@@ -863,7 +862,7 @@ msgstr ""
 ":attr:`~function.__annotations__`), respectiv posedă un atribut "
 "``__wrapped__`` nou."
 
-#: ../../library/functions.rst:292
+#: ../../library/functions.rst:290
 msgid ""
 "Class methods can no longer wrap other :term:`descriptors <descriptor>` "
 "such as :func:`property`."
@@ -871,7 +870,7 @@ msgstr ""
 "Metodele de clasă nu mai pot cuprinde alți "
 ":term:`descriptori <descriptor>`, cum ar fi :func:`property`."
 
-#: ../../library/functions.rst:299
+#: ../../library/functions.rst:297
 msgid ""
 "Compile the *source* into a code or AST object.  Code objects can be "
 "executed by :func:`exec` or :func:`eval`.  *source* can either be a "
@@ -886,7 +885,7 @@ msgstr ""
 "Vizitați documentația modulului :mod:`ast` pentru informații referitoare la "
 "cum trebuie procedat cu obiectele AST."
 
-#: ../../library/functions.rst:304
+#: ../../library/functions.rst:302
 msgid ""
 "The *filename* argument should give the file from which the code was "
 "read; pass some recognizable value if it wasn't read from a file "
@@ -897,7 +896,7 @@ msgstr ""
 "valoare recognoscibilă în caz că acest cod nu a fost citit din vreun "
 "fișier (``'<string>'`` este folosit frecvent)."
 
-#: ../../library/functions.rst:308
+#: ../../library/functions.rst:306
 msgid ""
 "The *mode* argument specifies what kind of code must be compiled; it can "
 "be ``'exec'`` if *source* consists of a sequence of statements, "
@@ -913,7 +912,7 @@ msgstr ""
 "iterativă (în acest ultim caz, formulele expresiilor care se evaluează "
 "drept ceva diferit de ``None`` vor fi afișate ca atare)."
 
-#: ../../library/functions.rst:314
+#: ../../library/functions.rst:312
 msgid ""
 "The optional arguments *flags* and *dont_inherit* control which "
 ":ref:`compiler options <ast-compiler-flags>` should be activated and "
@@ -943,7 +942,7 @@ msgstr ""
 "indicatoarele (caracteristici viitoare și setări de compilator) din codul "
 "exterior (cel din care s-a făcut apelul) vor fi ignorate."
 
-#: ../../library/functions.rst:325
+#: ../../library/functions.rst:323
 msgid ""
 "Compiler options and future statements are specified by bits which can be"
 " bitwise ORed together to specify multiple options. The bitfield required"
@@ -963,7 +962,7 @@ msgstr ""
 ":ref:`Setările de compilator <ast-compiler-flags>` se află în modulul "
 ":mod:`ast`, unde au primit prefixul ``PyCF_``."
 
-#: ../../library/functions.rst:333
+#: ../../library/functions.rst:331
 msgid ""
 "The argument *optimize* specifies the optimization level of the compiler;"
 " the default value of ``-1`` selects the optimization level of the "
@@ -979,7 +978,7 @@ msgstr ""
 "eliminate, ``__debug__`` are valoarea logică fals) sau ``2`` (sunt "
 "eliminate inclusiv *docstring*-urile)."
 
-#: ../../library/functions.rst:339
+#: ../../library/functions.rst:337
 msgid ""
 "This function raises :exc:`SyntaxError` if the compiled source is "
 "invalid, and :exc:`ValueError` if the source contains null bytes."
@@ -988,7 +987,7 @@ msgstr ""
 "compilată nu este validă, respectiv o excepție :exc:`ValueError` "
 "atunci când sursa conține octeți *null*."
 
-#: ../../library/functions.rst:342
+#: ../../library/functions.rst:340
 msgid ""
 "If you want to parse Python code into its AST representation, see "
 ":func:`ast.parse`."
@@ -996,7 +995,7 @@ msgstr ""
 "Dacă doriți să parsați codul Python sub forma unei reprezentări AST, "
 "consultați :func:`ast.parse`."
 
-#: ../../library/functions.rst:345 ../../library/functions.rst:347
+#: ../../library/functions.rst:343 ../../library/functions.rst:345
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``compile`` with arguments "
 "``source`` and ``filename``. This event may also be raised by implicit "
@@ -1006,7 +1005,7 @@ msgstr ""
 "argumentele ``source`` și ``filename``. Un astfel de eveniment poate fi "
 "lansat și de o compilare implicită."
 
-#: ../../library/functions.rst:353
+#: ../../library/functions.rst:351
 msgid ""
 "When compiling a string with multi-line code in ``'single'`` or "
 "``'eval'`` mode, input must be terminated by at least one newline "
@@ -1019,7 +1018,7 @@ msgstr ""
 "la deosebirea dintre instrucțiunile incomplete și cele complete în modulul "
 ":mod:`code`."
 
-#: ../../library/functions.rst:360
+#: ../../library/functions.rst:358
 msgid ""
 "It is possible to crash the Python interpreter with a sufficiently "
 "large/complex string when compiling to an AST object due to stack depth "
@@ -1030,7 +1029,7 @@ msgstr ""
 "AST și aceasta din cauza restricțiilor privitoare la stiva de apeluri ale "
 "compilatorului AST al Python-ului."
 
-#: ../../library/functions.rst:364
+#: ../../library/functions.rst:362
 msgid ""
 "Allowed use of Windows and Mac newlines.  Also, input in ``'exec'`` mode "
 "does not have to end in a newline anymore.  Added the *optimize* "
@@ -1040,7 +1039,7 @@ msgstr ""
 "datele de intrare în modul ``'exec'`` nu mai trebuie să se termine cu un "
 "caracter rând-nou. A fost adăugat parametrul *optimize*."
 
-#: ../../library/functions.rst:368
+#: ../../library/functions.rst:366
 msgid ""
 "Previously, :exc:`TypeError` was raised when null bytes were encountered "
 "in *source*."
@@ -1048,7 +1047,7 @@ msgstr ""
 "Până acum, o excepție :exc:`TypeError` era lansată atunci când se întâlneau "
 "octeți *null* în *source*."
 
-#: ../../library/functions.rst:372
+#: ../../library/functions.rst:370
 msgid ""
 "``ast.PyCF_ALLOW_TOP_LEVEL_AWAIT`` can now be passed in flags to enable "
 "support for top-level ``await``, ``async for``, and ``async with``."
@@ -1057,7 +1056,7 @@ msgstr ""
 "*flags* ca să se activeze suportul pentru ``await``, ``async for`` "
 "și ``async with`` la nivel global."
 
-#: ../../library/functions.rst:381
+#: ../../library/functions.rst:379
 msgid ""
 "Convert a single string or number to a complex number, or create a "
 "complex number from real and imaginary parts."
@@ -1066,12 +1065,12 @@ msgstr ""
 "într-un număr complex, respectiv creează un număr complex din părțile "
 "sale reală și imaginară."
 
-#: ../../library/functions.rst:384 ../../library/functions.rst:752
-#: ../../library/functions.rst:998
+#: ../../library/functions.rst:382 ../../library/functions.rst:750
+#: ../../library/functions.rst:996
 msgid "Examples:"
 msgstr "Exemple:"
 
-#: ../../library/functions.rst:386
+#: ../../library/functions.rst:384
 msgid ""
 ">>> complex('+1.23')\n"
 "(1.23+0j)\n"
@@ -1107,7 +1106,7 @@ msgstr ""
 ">>> complex(-1.23, 4.5)\n"
 "(-1.23+4.5j)"
 
-#: ../../library/functions.rst:405
+#: ../../library/functions.rst:403
 msgid ""
 "If the argument is a string, it must contain either a real part (in the "
 "same format as for :func:`float`) or an imaginary part (in the same "
@@ -1140,7 +1139,7 @@ msgstr ""
 "aceasta după ce atât parantezele cât și prefixele ori sufixele date de "
 "spații goale vor fi fost eliminate:"
 
-#: ../../library/functions.rst:424
+#: ../../library/functions.rst:422
 msgid ""
 "If the argument is a number, the constructor serves as a numeric "
 "conversion like :class:`int` and :class:`float`. For a general Python "
@@ -1158,7 +1157,7 @@ msgstr ""
 ":meth:`!__float__` nu este definită, atunci se va regresa până la "
 ":meth:`~object.__index__`."
 
-#: ../../library/functions.rst:433
+#: ../../library/functions.rst:431
 msgid ""
 "If two arguments are provided or keyword arguments are used, each "
 "argument may be any numeric type (including complex). If both arguments "
@@ -1182,26 +1181,26 @@ msgstr ""
 "real, doar partea sa reală (adică, numărul însuși) va fi folosită la "
 "calcularea expresiilor anterioare."
 
-#: ../../library/functions.rst:443
+#: ../../library/functions.rst:441
 msgid "If all arguments are omitted, returns ``0j``."
 msgstr ""
 "Dacă nu se dă niciun argument, atunci va fi întors ``0j``."
 
-#: ../../library/functions.rst:445
+#: ../../library/functions.rst:443
 msgid "The complex type is described in :ref:`typesnumeric`."
 msgstr ""
 "Tipul (de date *număr*) *complex* este prezentat în "
 ":ref:`Tipuri numerice -- int, float, complex <typesnumeric>`."
 
-#: ../../library/functions.rst:447 ../../library/functions.rst:804
-#: ../../library/functions.rst:1047
+#: ../../library/functions.rst:445 ../../library/functions.rst:802
+#: ../../library/functions.rst:1045
 msgid "Grouping digits with underscores as in code literals is allowed."
 msgstr ""
 "Este permisă scrierea numerelor grupând cifrele acestora în seturi "
 "separate de caractere bară-jos, la fel ca în cazul valorilor literale "
 "folosite în cod."
 
-#: ../../library/functions.rst:450
+#: ../../library/functions.rst:448
 msgid ""
 "Falls back to :meth:`~object.__index__` if :meth:`~object.__complex__` "
 "and :meth:`~object.__float__` are not defined."
@@ -1209,7 +1208,7 @@ msgstr ""
 "Regresează până la :meth:`~object.__index__` atunci când metodele "
 ":meth:`~object.__complex__` și :meth:`~object.__float__` nu sunt definite."
 
-#: ../../library/functions.rst:457
+#: ../../library/functions.rst:455
 msgid ""
 "This is a relative of :func:`setattr`.  The arguments are an object and a"
 " string.  The string must be the name of one of the object's attributes."
@@ -1225,7 +1224,7 @@ msgstr ""
 "x.nu_știu_ce``. *name* nu trebuie să fie neapărat un identificator Python "
 "(a se vedea :func:`setattr`)."
 
-#: ../../library/functions.rst:470
+#: ../../library/functions.rst:468
 msgid ""
 "Create a new dictionary.  The :class:`dict` object is the dictionary "
 "class. See :class:`dict` and :ref:`typesmapping` for documentation about "
@@ -1235,7 +1234,7 @@ msgstr ""
 "dicționar. Vedeți :class:`dict` și  :ref:`Tipuri de asociere -- dict "
 "<typesmapping>` pentru documentații referitoare la această clasă."
 
-#: ../../library/functions.rst:473
+#: ../../library/functions.rst:471
 msgid ""
 "For other containers see the built-in :class:`list`, :class:`set`, and "
 ":class:`tuple` classes, as well as the :mod:`collections` module."
@@ -1244,7 +1243,7 @@ msgstr ""
 "predefinite :class:`list`, :class:`set`, respectiv :class:`tuple` cât și "
 "modulul :mod:`collections`."
 
-#: ../../library/functions.rst:480
+#: ../../library/functions.rst:478
 msgid ""
 "Without arguments, return the list of names in the current local scope.  "
 "With an argument, attempt to return a list of valid attributes for that "
@@ -1255,7 +1254,7 @@ msgstr ""
 "argumentul, se va încerca întoarcerea unei liste cuprinzând atributele "
 "valide ale obiectului precizat de respectivul argument."
 
-#: ../../library/functions.rst:483
+#: ../../library/functions.rst:481
 msgid ""
 "If the object has a method named :meth:`~object.__dir__`, this method "
 "will be called and must return the list of attributes. This allows "
@@ -1271,7 +1270,7 @@ msgstr ""
 ":func:`~object.__getattribute__` să personalizeze felul în care :func:`dir` "
 "dă raportul în privința atributelor."
 
-#: ../../library/functions.rst:490
+#: ../../library/functions.rst:488
 msgid ""
 "If the object does not provide :meth:`~object.__dir__`, the function "
 "tries its best to gather information from the object's "
@@ -1286,7 +1285,7 @@ msgstr ""
 "completă și ar putea avea și greșeli în caz că obiectul dat ca argument "
 "posedă o funcție :func:`~object.__getattr__` personalizată."
 
-#: ../../library/functions.rst:496
+#: ../../library/functions.rst:494
 msgid ""
 "The default :func:`dir` mechanism behaves differently with different "
 "types of objects, as it attempts to produce the most relevant, rather "
@@ -1296,7 +1295,7 @@ msgstr ""
 "la tip de obiecte la tip de obiecte, căci el se străduie să procure "
 "informații definitorii mai degrabă decât informații complete:"
 
-#: ../../library/functions.rst:500
+#: ../../library/functions.rst:498
 msgid ""
 "If the object is a module object, the list contains the names of the "
 "module's attributes."
@@ -1304,7 +1303,7 @@ msgstr ""
 "Când obiectul (dat ca argument) este un obiect modul, lista va conține "
 "numele atributelor modulului respectiv."
 
-#: ../../library/functions.rst:503
+#: ../../library/functions.rst:501
 msgid ""
 "If the object is a type or class object, the list contains the names of "
 "its attributes, and recursively of the attributes of its bases."
@@ -1313,7 +1312,7 @@ msgstr ""
 "cuprinde numele atributelor acestuia/acesteia, împreună cu atributele "
 "strămoșilor lui/ei, obținute în mod recursiv."
 
-#: ../../library/functions.rst:506
+#: ../../library/functions.rst:504
 msgid ""
 "Otherwise, the list contains the object's attributes' names, the names of"
 " its class's attributes, and recursively of the attributes of its class's"
@@ -1324,12 +1323,12 @@ msgstr ""
 "precum și, în mod recursiv, numele atributelor pe care le posedă strămoșii "
 "clasei obiectului."
 
-#: ../../library/functions.rst:510
+#: ../../library/functions.rst:508
 msgid "The resulting list is sorted alphabetically.  For example:"
 msgstr ""
 "Lista rezultată va fi ordonată în mod alfabetic. De exemplu:"
 
-#: ../../library/functions.rst:530
+#: ../../library/functions.rst:528
 msgid ""
 "Because :func:`dir` is supplied primarily as a convenience for use at an "
 "interactive prompt, it tries to supply an interesting set of names more "
@@ -1347,7 +1346,7 @@ msgstr ""
 "exemplu, atributele de meta-clasă vor lipsi din lista de rezultate atunci "
 "când argumentul este o clasă."
 
-#: ../../library/functions.rst:540
+#: ../../library/functions.rst:538
 msgid ""
 "Take two (non-complex) numbers as arguments and return a pair of numbers "
 "consisting of their quotient and remainder when using integer division.  "
@@ -1373,7 +1372,7 @@ msgstr ""
 "același semn cu *b*, respectiv va fi îndeplinită *restricția* restului unei "
 "împărțiri: ``0 <= abs(a % b) < abs(b)``."
 
-#: ../../library/functions.rst:552
+#: ../../library/functions.rst:550
 msgid ""
 "Return an enumerate object. *iterable* must be a sequence, an "
 ":term:`iterator`, or some other object which supports iteration. The "
@@ -1389,11 +1388,11 @@ msgstr ""
 "împreună cu câte una din valorile ce se obțin iterând de-a lungul lui "
 "*iterable*."
 
-#: ../../library/functions.rst:564
+#: ../../library/functions.rst:562
 msgid "Equivalent to::"
 msgstr "Rezultatul este echivalent cu::"
 
-#: ../../library/functions.rst:566
+#: ../../library/functions.rst:564
 msgid ""
 "def enumerate(iterable, start=0):\n"
 "    n = start\n"
@@ -1411,15 +1410,15 @@ msgstr ""
 msgid "Parametrii"
 msgstr "Argumentele"
 
-#: ../../library/functions.rst:576
+#: ../../library/functions.rst:574
 msgid "A Python expression."
 msgstr "O expresie Python."
 
-#: ../../library/functions.rst:580
+#: ../../library/functions.rst:578
 msgid "The global namespace (default: ``None``)."
 msgstr "Spațiul de nume global (predefinit: ``None``)."
 
-#: ../../library/functions.rst:584
+#: ../../library/functions.rst:582
 msgid "The local namespace (default: ``None``)."
 msgstr "Spațiul de nume local (predefinit: ``None``)."
 
@@ -1427,7 +1426,7 @@ msgstr "Spațiul de nume local (predefinit: ``None``)."
 msgid "Întoarce"
 msgstr "Returnează"
 
-#: ../../library/functions.rst:588
+#: ../../library/functions.rst:586
 msgid "The result of the evaluated expression."
 msgstr "Valoarea rezultată din evaluarea expresiei."
 
@@ -1435,11 +1434,11 @@ msgstr "Valoarea rezultată din evaluarea expresiei."
 msgid "raises"
 msgstr "lansează"
 
-#: ../../library/functions.rst:589
+#: ../../library/functions.rst:587
 msgid "Syntax errors are reported as exceptions."
 msgstr "Erorile de sintaxă se raportează drept excepții."
 
-#: ../../library/functions.rst:593 ../../library/functions.rst:654
+#: ../../library/functions.rst:591 ../../library/functions.rst:652
 msgid ""
 "This function executes arbitrary code. Calling it with user-supplied "
 "input may lead to security vulnerabilities."
@@ -1448,7 +1447,7 @@ msgstr ""
 "intrare oferite de către un utilizator oarecare poate conduce la "
 "vulnerabilități de securitate."
 
-#: ../../library/functions.rst:596
+#: ../../library/functions.rst:594
 msgid ""
 "The *expression* argument is parsed and evaluated as a Python expression "
 "(technically speaking, a condition list) using the *globals* and *locals*"
@@ -1486,11 +1485,11 @@ msgstr ""
 "deja referențiate în domeniul din care se apelează :func:`eval` (de "
 "exemplu, printr-o instrucțiune :keyword:`nonlocal`)."
 
-#: ../../library/functions.rst:612
+#: ../../library/functions.rst:610
 msgid "Example:"
 msgstr "Exemplu:"
 
-#: ../../library/functions.rst:618
+#: ../../library/functions.rst:616
 msgid ""
 "This function can also be used to execute arbitrary code objects (such as"
 " those created by :func:`compile`).  In this case, pass a code object "
@@ -1505,7 +1504,7 @@ msgstr ""
 "``'exec'`` dată argumentului *mode*, valoarea returnată de :func:`eval` va "
 "fi ``None``."
 
-#: ../../library/functions.rst:623
+#: ../../library/functions.rst:621
 msgid ""
 "Hints: dynamic execution of statements is supported by the :func:`exec` "
 "function.  The :func:`globals` and :func:`locals` functions return the "
@@ -1519,7 +1518,7 @@ msgstr ""
 "vor trebui utilizate de către oricare din funcțiile :func:`eval` și "
 ":func:`exec`."
 
-#: ../../library/functions.rst:628
+#: ../../library/functions.rst:626
 msgid ""
 "If the given source is a string, then leading and trailing spaces and "
 "tabs are stripped."
@@ -1527,7 +1526,7 @@ msgstr ""
 "În caz că argumentul *source* este șir de caractere, eventualele spații "
 "goale, respectiv tabulatoare, care ar încadra șirul, vor fi eliminate."
 
-#: ../../library/functions.rst:631
+#: ../../library/functions.rst:629
 msgid ""
 "See :func:`ast.literal_eval` for a function that can safely evaluate "
 "strings with expressions containing only literals."
@@ -1536,8 +1535,8 @@ msgstr ""
 "capabile să evalueze în siguranță șirurile de caractere prin folosirea "
 "doar a unor valori literale."
 
-#: ../../library/functions.rst:634 ../../library/functions.rst:636
-#: ../../library/functions.rst:696 ../../library/functions.rst:698
+#: ../../library/functions.rst:632 ../../library/functions.rst:634
+#: ../../library/functions.rst:694 ../../library/functions.rst:696
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``exec`` with the code object "
 "as the argument. Code compilation events may also be raised."
@@ -1546,14 +1545,14 @@ msgstr ""
 "cod în cauză drept argument. Evenimente provocate de compilarea codului "
 "pot fi, de asemenea, lansate."
 
-#: ../../library/functions.rst:641 ../../library/functions.rst:718
+#: ../../library/functions.rst:641 ../../library/functions.rst:716
 msgid "The *globals* and *locals* arguments can now be passed as keywords."
 msgstr ""
 "Argumentele *globals* și *locals* pot fi transmise, de acum, sub formă de "
 "(argumente) cuvinte-cheie."
 
 
-#: ../../library/functions.rst:645 ../../library/functions.rst:722
+#: ../../library/functions.rst:645 ../../library/functions.rst:720
 msgid ""
 "The semantics of the default *locals* namespace have been adjusted as "
 "described for the :func:`locals` builtin."
@@ -1561,7 +1560,7 @@ msgstr ""
 "Semantica spațiului de nume *locals* predefinit a fost ajustată conform "
 "descrierii din documentația *builtin*-ului :func:`locals`."
 
-#: ../../library/functions.rst:657
+#: ../../library/functions.rst:655
 msgid ""
 "This function supports dynamic execution of Python code. *source* must be"
 " either a string or a code object.  If it is a string, the string is "
@@ -1588,7 +1587,7 @@ msgstr ""
 "iar aceasta inclusiv în situația includerii lor în codul transmis funcției "
 ":func:`exec`. Valoarea returnată este ``None``."
 
-#: ../../library/functions.rst:668
+#: ../../library/functions.rst:666
 msgid ""
 "In all cases, if the optional parts are omitted, the code is executed in "
 "the current scope.  If only *globals* is provided, it must be a "
@@ -1608,7 +1607,7 @@ msgstr ""
 "(orice) obiect mapare. Amintiți-vă că, la nivel de modul, mărimile globale "
 "și cele locale se găsesc în același dicționar."
 
-#: ../../library/functions.rst:678
+#: ../../library/functions.rst:676
 msgid ""
 "When ``exec`` gets two separate objects as *globals* and *locals*, the "
 "code will be executed as if it were embedded in a class definition. This "
@@ -1624,7 +1623,7 @@ msgstr ""
 "variabilele \"de top\" sunt tratate întotdeauna ca variabile de clasă "
 "în codul unei definiții de clasă)."
 
-#: ../../library/functions.rst:684
+#: ../../library/functions.rst:682
 msgid ""
 "If the *globals* dictionary does not contain a value for the key "
 "``__builtins__``, a reference to the dictionary of the built-in module "
@@ -1641,7 +1640,7 @@ msgstr ""
 "propriul dumneavoastră dicționar ``__builtins__`` în (maparea) "
 "*globals* înainte de a transmiterea acesteia către funcția :func:`exec`."
 
-#: ../../library/functions.rst:690
+#: ../../library/functions.rst:688
 msgid ""
 "The *closure* argument specifies a closure--a tuple of cellvars. It's "
 "only valid when the *object* is a code object containing :term:`free "
@@ -1657,7 +1656,7 @@ msgstr ""
 "tuplului trebuie să îi corespundă precis lungimii atributului "
 ":attr:`~codeobject.co_freevars` al obiectului cod."
 
-#: ../../library/functions.rst:703
+#: ../../library/functions.rst:701
 msgid ""
 "The built-in functions :func:`globals` and :func:`locals` return the "
 "current global and local namespace, respectively, which may be useful to "
@@ -1669,7 +1668,7 @@ msgstr ""
 "trebui transmise drept cel de-al doilea și cel de-al treilea din "
 "argumentele lui :func:`exec`."
 
-#: ../../library/functions.rst:709
+#: ../../library/functions.rst:707
 msgid ""
 "The default *locals* act as described for function :func:`locals` below. "
 "Pass an explicit *locals* dictionary if you need to see effects of the "
@@ -1680,11 +1679,11 @@ msgstr ""
 "omonim) ca să vedeți efectul codului asupra lui *locals* după ce "
 "interpretorul va reveni de la execuția (codului) funcției :func:`exec`."
 
-#: ../../library/functions.rst:713
+#: ../../library/functions.rst:711
 msgid "Added the *closure* parameter."
 msgstr "Adăugat parametrul *closure*."
 
-#: ../../library/functions.rst:728
+#: ../../library/functions.rst:726
 msgid ""
 "Construct an iterator from those elements of *iterable* for which "
 "*function* is true.  *iterable* may be either a sequence, a container "
@@ -1699,7 +1698,7 @@ msgstr ""
 "``None``, vom socoti că el desemnează funcția identitate, așadar, toate "
 "elementele lui *iterable* care au valoarea logică fals vor fi eliminate."
 
-#: ../../library/functions.rst:734
+#: ../../library/functions.rst:732
 msgid ""
 "Note that ``filter(function, iterable)`` is equivalent to the generator "
 "expression ``(item for item in iterable if function(item))`` if function "
@@ -1712,7 +1711,7 @@ msgstr ""
 "``(itemul for itemul in iterable if itemul)`` dacă *function* este "
 "``None``."
 
-#: ../../library/functions.rst:739
+#: ../../library/functions.rst:737
 msgid ""
 "See :func:`itertools.filterfalse` for the complementary function that "
 "returns elements of *iterable* for which *function* is false."
@@ -1721,13 +1720,13 @@ msgstr ""
 "care va returna acele elemente ale lui *iterable* pentru care *function* va "
 "avea valoarea logică fals."
 
-#: ../../library/functions.rst:750
+#: ../../library/functions.rst:748
 msgid "Return a floating-point number constructed from a number or a string."
 msgstr ""
 "Returnează un număr în virgulă mobilă construit fie dintr-un șir de "
 "caractere fie dintr-un număr."
 
-#: ../../library/functions.rst:754
+#: ../../library/functions.rst:752
 msgid ""
 ">>> float('+1.23')\n"
 "1.23\n"
@@ -1751,7 +1750,7 @@ msgstr ""
 ">>> float('-Infinity')\n"
 "-inf"
 
-#: ../../library/functions.rst:767
+#: ../../library/functions.rst:765
 msgid ""
 "If the argument is a string, it should contain a decimal number, "
 "optionally preceded by a sign, and optionally embedded in whitespace.  "
@@ -1772,7 +1771,7 @@ msgstr ""
 "de mai jos, iar aceasta după ce prefixele și sufixele (eventuale) formate "
 "cu spații goale vor fi fost eliminate:"
 
-#: ../../library/functions.rst:788
+#: ../../library/functions.rst:786
 msgid ""
 "Case is not significant, so, for example, \"inf\", \"Inf\", \"INFINITY\","
 " and \"iNfINity\" are all acceptable spellings for positive infinity."
@@ -1781,7 +1780,7 @@ msgstr ""
 "de exemplu, \"inf\", \"Inf\", \"INFINITY\", respectiv \"iNfINity\" sunt cu "
 "toatele formulări acceptabile pentru plus infinit."
 
-#: ../../library/functions.rst:791
+#: ../../library/functions.rst:789
 msgid ""
 "Otherwise, if the argument is an integer or a floating-point number, a "
 "floating-point number with the same value (within Python's floating-point"
@@ -1795,7 +1794,7 @@ msgstr ""
 "plajei de valori valide ale *float*-urilor din Python, va fi lansată o "
 "excepție :exc:`OverflowError`."
 
-#: ../../library/functions.rst:796
+#: ../../library/functions.rst:794
 msgid ""
 "For a general Python object ``x``, ``float(x)`` delegates to "
 "``x.__float__()``.  If :meth:`~object.__float__` is not defined then it "
@@ -1805,25 +1804,25 @@ msgstr ""
 "``x.__float__()``. Dacă :meth:`~object.__float__` nu este definită, atunci "
 "se va regresa până la :meth:`~object.__index__`."
 
-#: ../../library/functions.rst:800
+#: ../../library/functions.rst:798
 msgid "If no argument is given, ``0.0`` is returned."
 msgstr ""
 "Dacă nu se dau argumente, va fi returnată valoarea ``0.0``."
 
-#: ../../library/functions.rst:802
+#: ../../library/functions.rst:800
 msgid "The float type is described in :ref:`typesnumeric`."
 msgstr ""
 "Tipul *float* (adică, numere *în virgulă mobilă*) este prezentat în "
 ":ref:`Tipuri numerice -- int, float, complex <typesnumeric>`."
 
-#: ../../library/functions.rst:810
+#: ../../library/functions.rst:808
 msgid ""
 "Falls back to :meth:`~object.__index__` if :meth:`~object.__float__` is "
 "not defined."
 msgstr "Regresează până la :meth:`~object.__index__` în caz că nu este "
 "definită :meth:`~object.__float__`."
 
-#: ../../library/functions.rst:820
+#: ../../library/functions.rst:818
 msgid ""
 "Convert a *value* to a \"formatted\" representation, as controlled by "
 "*format_spec*.  The interpretation of *format_spec* will depend on the "
@@ -1838,7 +1837,7 @@ msgstr ""
 "majoritatea tipurilor de date predefinite: :ref:`Mini-limbajul "
 "specificației de format <formatspec>`."
 
-#: ../../library/functions.rst:825
+#: ../../library/functions.rst:823
 msgid ""
 "The default *format_spec* is an empty string which usually gives the same"
 " effect as calling :func:`str(value) <str>`."
@@ -1847,7 +1846,7 @@ msgstr ""
 "va produce un efect (al apelului funcției de față) similar celui al "
 "apelării lui :func:`str(value) <str>`."
 
-#: ../../library/functions.rst:828
+#: ../../library/functions.rst:826
 msgid ""
 "A call to ``format(value, format_spec)`` is translated to "
 "``type(value).__format__(value, format_spec)`` which bypasses the "
@@ -1866,7 +1865,7 @@ msgstr ""
 "la :mod:`object` , respectiv atunci când cel puțin unul dintre (argumentul) "
 "*format_spec* și valoarea de returnat nu este șir de caractere."
 
-#: ../../library/functions.rst:835
+#: ../../library/functions.rst:833
 msgid ""
 "``object().__format__(format_spec)`` raises :exc:`TypeError` if "
 "*format_spec* is not an empty string."
@@ -1874,7 +1873,7 @@ msgstr ""
 "``object().__format__(format_spec)`` lansează o excepție :exc:`TypeError` "
 "atunci când *format_spec* nu este un șir de caractere vid."
 
-#: ../../library/functions.rst:844
+#: ../../library/functions.rst:842
 msgid ""
 "Return a new :class:`frozenset` object, optionally with elements taken "
 "from *iterable*.  ``frozenset`` is a built-in class.  See "
@@ -1887,7 +1886,7 @@ msgstr ""
 "setul și setul înghețat <types-set>` pentru documentații referitoare la "
 "această clasă."
 
-#: ../../library/functions.rst:848
+#: ../../library/functions.rst:846
 msgid ""
 "For other containers see the built-in :class:`set`, :class:`list`, "
 ":class:`tuple`, and :class:`dict` classes, as well as the "
@@ -1897,7 +1896,7 @@ msgstr ""
 ":class:`list`, :class:`tuple` și :class:`dict`, respectiv modulul "
 ":mod:`collections`."
 
-#: ../../library/functions.rst:856
+#: ../../library/functions.rst:854
 msgid ""
 "Return the value of the named attribute of *object*.  *name* must be a "
 "string. If the string is the name of one of the object's attributes, the "
@@ -1918,7 +1917,7 @@ msgstr ""
 ":exc:`AttributeError`. (Șirul de caractere) *name* nu trebuie să fie "
 "neapărat un identificator Python (a se vedea :func:`setattr`)."
 
-#: ../../library/functions.rst:865
+#: ../../library/functions.rst:863
 msgid ""
 "Since :ref:`private name mangling <private-name-mangling>` happens at "
 "compilation time, one must manually mangle a private attribute's "
@@ -1931,7 +1930,7 @@ msgstr ""
 "prefixate de două caractere bară-jos) pentru a-l putea găsi cu "
 ":func:`getattr`."
 
-#: ../../library/functions.rst:873
+#: ../../library/functions.rst:871
 msgid ""
 "Return the dictionary implementing the current module namespace. For code"
 " within functions, this is set when the function is defined and remains "
@@ -1943,7 +1942,7 @@ msgstr ""
 "definirii funcției și va rămâne neschimbat indiferent de unde va fi "
 "apelată funcția în cauză."
 
-#: ../../library/functions.rst:880
+#: ../../library/functions.rst:878
 msgid ""
 "The arguments are an object and a string.  The result is ``True`` if the "
 "string is the name of one of the object's attributes, ``False`` if not. "
@@ -1957,7 +1956,7 @@ msgstr ""
 "implementată sub forma apelului ``getattr(object, name)`` urmat de "
 "observarea eventualei lansări a unei excepții :exc:`AttributeError`.)"
 
-#: ../../library/functions.rst:888
+#: ../../library/functions.rst:886
 msgid ""
 "Return the hash value of the object (if it has one).  Hash values are "
 "integers.  They are used to quickly compare dictionary keys during a "
@@ -1972,7 +1971,7 @@ msgstr ""
 "efectuării comparației, dispun de aceeași valoare *hash* (chiar dacă "
 "sunt de tipuri diferite, precum numerele 1 și 1.0)."
 
-#: ../../library/functions.rst:895
+#: ../../library/functions.rst:893
 msgid ""
 "For objects with custom :meth:`~object.__hash__` methods, note that "
 ":func:`hash` truncates the return value based on the bit width of the "
@@ -1984,7 +1983,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Bit-length>`_ (a unui număr întreg fără "
 "semn) de pe mașina (de calcul) gazdă."
 
-#: ../../library/functions.rst:902
+#: ../../library/functions.rst:900
 msgid ""
 "Invoke the built-in help system.  (This function is intended for "
 "interactive use.)  If no argument is given, the interactive help system "
@@ -2004,7 +2003,7 @@ msgstr ""
 "argumentul este orice alt obiect, o pagină de asistență relativă la el va "
 "fi generată (și afișată)."
 
-#: ../../library/functions.rst:909
+#: ../../library/functions.rst:907
 msgid ""
 "Note that if a slash(/) appears in the parameter list of a function when "
 "invoking :func:`help`, it means that the parameters prior to the slash "
@@ -2018,7 +2017,7 @@ msgstr ""
 ":ref:`itemul privitor la parametrii numai-poziționali din lista FAQ/IFF "
 "(Întrebări frecvent formulate) <faq-positional-only-arguments>`."
 
-#: ../../library/functions.rst:914
+#: ../../library/functions.rst:912
 msgid ""
 "This function is added to the built-in namespace by the :mod:`site` "
 "module."
@@ -2026,7 +2025,7 @@ msgstr ""
 "Această funcție i-a fost adăugată spațiului de nume predefinit de către "
 "modulul :mod:`site`."
 
-#: ../../library/functions.rst:916
+#: ../../library/functions.rst:914
 msgid ""
 "Changes to :mod:`pydoc` and :mod:`inspect` mean that the reported "
 "signatures for callables are now more comprehensive and consistent."
@@ -2036,19 +2035,20 @@ msgstr ""
 "prototipurile (sau *signaturile*) unor *apelabili* sunt, de acum, mai "
 "detaliate și cu un plus de consistență."
 
-#: ../../library/functions.rst:923
+#: ../../library/functions.rst:921
 msgid ""
 "Convert an integer number to a lowercase hexadecimal string prefixed with"
-" \"0x\". If *x* is not a Python :class:`int` object, it has to define an "
-":meth:`~object.__index__` method that returns an integer. Some examples:"
+" \"0x\". If *integer* is not a Python :class:`int` object, it has to "
+"define an :meth:`~object.__index__` method that returns an integer. Some "
+"examples:"
 msgstr ""
 "Convertește un număr întreg într-un șir de caractere hexazecimale, scris cu "
-"litere mici și având prefixul \"0x\". În caz că *x* nu este obiect al "
-"clasei Python :class:`int`, atunci el trebuie să posede măcar o metodă "
-":meth:`~object.__index__` care să returneze numere întregi. Câteva exemple:"
+"litere mici și având prefixul \"0x\". În caz că *integer* (adică, "
+"*un întreg*) nu este obiect al clasei Python :class:`int`, atunci el "
+"trebuie să posede măcar o metodă :meth:`~object.__index__` care să "
+"returneze numere întregi. Câteva exemple:"
 
-
-#: ../../library/functions.rst:932
+#: ../../library/functions.rst:930
 msgid ""
 "If you want to convert an integer number to an uppercase or lower "
 "hexadecimal string with prefix or not, you can use either of the "
@@ -2059,7 +2059,7 @@ msgstr ""
 "prefixat fie fără prefix, atunci vă sunt la îndemână modalitățile de mai "
 "jos:"
 
-#: ../../library/functions.rst:944
+#: ../../library/functions.rst:942
 msgid ""
 "See also :func:`int` for converting a hexadecimal string to an integer "
 "using a base of 16."
@@ -2068,7 +2068,7 @@ msgstr ""
 "caractere hexazecimale într-un număr întreg (care a fost) scris (ca șir) în "
 "baza de numerație 16."
 
-#: ../../library/functions.rst:949
+#: ../../library/functions.rst:947
 msgid ""
 "To obtain a hexadecimal string representation for a float, use the "
 ":meth:`float.hex` method."
@@ -2076,7 +2076,7 @@ msgstr ""
 "Pentru a obține reprezentarea ca șir de caractere hexazecimale a unui "
 "număr în virgulă mobilă, utilizați metoda :meth:`float.hex`."
 
-#: ../../library/functions.rst:955
+#: ../../library/functions.rst:953
 msgid ""
 "Return the \"identity\" of an object.  This is an integer which is "
 "guaranteed to be unique and constant for this object during its lifetime."
@@ -2089,13 +2089,13 @@ msgstr ""
 "existenței acestuia din urmă. Două obiecte cu existențe care nu se suprapun "
 "pot deține aceeași valoare a lui :func:`id`."
 
-#: ../../library/functions.rst:960
+#: ../../library/functions.rst:958
 msgid "This is the address of the object in memory."
 msgstr ""
 "Aceasta (adică, \"identitatea\"; detaliu de implementare a CPython-ului) "
 "este (momentan) adresa obiectului în memorie."
 
-#: ../../library/functions.rst:962
+#: ../../library/functions.rst:960
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``builtins.id`` with argument "
 "``id``."
@@ -2103,7 +2103,7 @@ msgstr ""
 "Lansează un :ref:`eveniment de auditare <auditing>` ``builtins.id`` cu "
 "argumentul ``id``."
 
-#: ../../library/functions.rst:968
+#: ../../library/functions.rst:966
 msgid ""
 "If the *prompt* argument is present, it is written to standard output "
 "without a trailing newline.  The function then reads a line from input, "
@@ -2118,7 +2118,7 @@ msgstr ""
 "va returna rezultatul convertirii. Când se ajunge la EOF (caracterul final-"
 "de-fișier), va fi lansată o excepție :exc:`EOFError`. De exemplu::"
 
-#: ../../library/functions.rst:973
+#: ../../library/functions.rst:971
 msgid ""
 ">>> s = input('--> ')\n"
 "--> Monty Python's Flying Circus\n"
@@ -2130,7 +2130,7 @@ msgstr ""
 ">>> s\n"
 "\"Circul zburător Monty Python\""
 
-#: ../../library/functions.rst:978
+#: ../../library/functions.rst:976
 msgid ""
 "If the :mod:`readline` module was loaded, then :func:`input` will use it "
 "to provide elaborate line editing and history features."
@@ -2139,7 +2139,7 @@ msgstr ""
 ":func:`input` îl va întrebuința pentru a ne pune la dispoziție capabilități "
 "sofisticate de editare a liniei de comandă precum și a istoricului."
 
-#: ../../library/functions.rst:981 ../../library/functions.rst:983
+#: ../../library/functions.rst:979 ../../library/functions.rst:981
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``builtins.input`` with "
 "argument ``prompt`` before reading input"
@@ -2147,7 +2147,7 @@ msgstr ""
 "Lansează un :ref:`eveniment de auditare <auditing>` ``builtins.input`` "
 "cu argumentul ``prompt`` înainte de citirea datelor de intrare."
 
-#: ../../library/functions.rst:986 ../../library/functions.rst:988
+#: ../../library/functions.rst:984 ../../library/functions.rst:986
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``builtins.input/result`` with"
 " the result after successfully reading input."
@@ -2156,7 +2156,7 @@ msgstr ""
 "``builtins.input/result`` cu rezultatul (drept argument) după ce datele de "
 "intrare au fost citite cu succes."
 
-#: ../../library/functions.rst:995
+#: ../../library/functions.rst:993
 msgid ""
 "Return an integer object constructed from a number or a string, or return"
 " ``0`` if no arguments are given."
@@ -2165,7 +2165,7 @@ msgstr ""
 "(argumentul *number*) fie dintr-un șir de caractere (argumentul *string*), "
 "respectiv returnează ``0`` atunci când nu se dau argumente."
 
-#: ../../library/functions.rst:1000
+#: ../../library/functions.rst:998
 msgid ""
 ">>> int(123.45)\n"
 "123\n"
@@ -2193,7 +2193,7 @@ msgstr ""
 ">>> int('01110011', base=2)\n"
 "115"
 
-#: ../../library/functions.rst:1015
+#: ../../library/functions.rst:1013
 msgid ""
 "If the argument defines :meth:`~object.__int__`, ``int(x)`` returns "
 "``x.__int__()``.  If the argument defines :meth:`~object.__index__`, it "
@@ -2210,7 +2210,7 @@ msgstr ""
 "(argumente) în virgulă mobilă, trunchierea se face prin lipsă când "
 "numerele sunt pozitive, respectiv prin adaos când sunt negative."
 
-#: ../../library/functions.rst:1021
+#: ../../library/functions.rst:1019
 msgid ""
 "If the argument is not a number or if *base* is given, then it must be a "
 "string, :class:`bytes`, or :class:`bytearray` instance representing an "
@@ -2229,7 +2229,7 @@ msgstr ""
 "avea (caracterele) cifrele grupate în seturi separate prin caractere "
 "bară-jos."
 
-#: ../../library/functions.rst:1027
+#: ../../library/functions.rst:1025
 msgid ""
 "A base-n integer string contains digits, each representing a value from 0"
 " to n-1. The values 0--9 can be represented by any Unicode decimal digit."
@@ -2261,13 +2261,13 @@ msgstr ""
 "``int('010', 0)`` nu va fi acceptat, în timp ce atât ``int('010')`` cât "
 "și ``int('010', 8)`` vor fi acceptate."
 
-#: ../../library/functions.rst:1038
+#: ../../library/functions.rst:1036
 msgid "The integer type is described in :ref:`typesnumeric`."
 msgstr ""
 "Tipul (de date *număr*) *întreg* este prezentat în :ref:`Tipuri numerice -- "
 "int, float, complex <typesnumeric>`."
 
-#: ../../library/functions.rst:1040
+#: ../../library/functions.rst:1038
 msgid ""
 "If *base* is not an instance of :class:`int` and the *base* object has a "
 ":meth:`base.__index__ <object.__index__>` method, that method is called "
@@ -2282,11 +2282,11 @@ msgstr ""
 "întrebuințau metoda :meth:`base.__int__ <object.__int__>` în locul "
 "metodei :meth:`base.__index__ <object.__index__>`."
 
-#: ../../library/functions.rst:1050
+#: ../../library/functions.rst:1048
 msgid "The first parameter is now positional-only."
 msgstr "Primul parametru (ori *argument*) este, de acum, numai-pozițional."
 
-#: ../../library/functions.rst:1053
+#: ../../library/functions.rst:1051
 msgid ""
 "Falls back to :meth:`~object.__index__` if :meth:`~object.__int__` is not"
 " defined."
@@ -2294,11 +2294,11 @@ msgstr ""
 "Regresează până la :meth:`~object.__index__` atunci când nu este definită "
 ":meth:`~object.__int__`."
 
-#: ../../library/functions.rst:1056
+#: ../../library/functions.rst:1054
 msgid "The delegation to :meth:`~object.__trunc__` is deprecated."
 msgstr "Delegarea lui :meth:`~object.__trunc__` este scoasă din uz."
 
-#: ../../library/functions.rst:1059
+#: ../../library/functions.rst:1057
 msgid ""
 ":class:`int` string inputs and string representations can be limited to "
 "help avoid denial of service attacks. A :exc:`ValueError` is raised when "
@@ -2317,7 +2317,7 @@ msgstr ""
 ":ref:`restricții de lungime la conversia dintre șiruri și întregi "
 "<int_max_str_digits>`."
 
-#: ../../library/functions.rst:1069
+#: ../../library/functions.rst:1068
 msgid ""
 "Return ``True`` if the *object* argument is an instance of the "
 "*classinfo* argument, or of a (direct, indirect, or :term:`virtual "
@@ -2345,11 +2345,11 @@ msgstr ""
 "date) invalid dacă (acesta) a trecut cu succes de vreo filtrare "
 "(precedentă)."
 
-#: ../../library/functions.rst:1080 ../../library/functions.rst:1094
+#: ../../library/functions.rst:1079 ../../library/functions.rst:1093
 msgid "*classinfo* can be a :ref:`types-union`."
 msgstr "*classinfo* poate fi un (obiect) :ref:`tip uniune <types-union>`."
 
-#: ../../library/functions.rst:1086
+#: ../../library/functions.rst:1085
 msgid ""
 "Return ``True`` if *class* is a subclass (direct, indirect, or "
 ":term:`virtual <abstract base class>`) of *classinfo*.  A class is "
@@ -2368,43 +2368,43 @@ msgstr ""
 "care îl alcătuiesc pe *classinfo*. În restul cazurilor, va fi lansată o "
 "excepție :exc:`TypeError`."
 
-#: ../../library/functions.rst:1101
+#: ../../library/functions.rst:1100
 msgid ""
 "Return an :term:`iterator` object.  The first argument is interpreted "
 "very differently depending on the presence of the second argument. "
-"Without a second argument, *object* must be a collection object which "
-"supports the :term:`iterable` protocol (the :meth:`~object.__iter__` "
-"method), or it must support the sequence protocol (the "
-":meth:`~object.__getitem__` method with integer arguments starting at "
-"``0``).  If it does not support either of those protocols, "
+"Without a second argument, the single argument must be a collection "
+"object which supports the :term:`iterable` protocol (the "
+":meth:`~object.__iter__` method), or it must support the sequence "
+"protocol (the :meth:`~object.__getitem__` method with integer arguments "
+"starting at ``0``).  If it does not support either of those protocols, "
 ":exc:`TypeError` is raised. If the second argument, *sentinel*, is given,"
-" then *object* must be a callable object.  The iterator created in this "
-"case will call *object* with no arguments for each call to its "
-":meth:`~iterator.__next__` method; if the value returned is equal to "
+" then the first argument must be a callable object.  The iterator created"
+" in this case will call *callable* with no arguments for each call to its"
+" :meth:`~iterator.__next__` method; if the value returned is equal to "
 "*sentinel*, :exc:`StopIteration` will be raised, otherwise the value will"
 " be returned."
 msgstr ""
 "Întoarce un obiect :term:`iterator <iterator>`. Primul argument va fi "
 "interpretat diferit în funcție de prezența celui de-al doilea argument. "
-"Fără cel de-al doilea argument, (argumentul) *object* (adică, *obiectul*) "
+"Fără cel de-al doilea argument, primul argument "
 "trebuie să fie un obiect colecție, care să suporte fie protocolul de "
 ":term:`iterabil <iterable>` (cu alte cuvinte, metoda "
 ":meth:`~object.__iter__`) fie pe cel de secvență (adică, metoda "
 ":meth:`~object.__getitem__`, cu argumente numere întregi începând de la "
 "``0``). În caz că niciunul din protocoale nu este suportat, se va lansa "
 "o excepție :exc:`TypeError`. Dacă argumentul al doilea, *sentinel* "
-"(adică, *santinela*), este dat, atunci (argumentul) *object* trebuie să "
+"(adică, *santinela*), este dat, atunci primul argument trebuie să "
 "fie un obiect apelabil. Iteratorul creat în această situație îl va apela "
-"pe *object* fără argumente ori de câte ori va exista un apel al metodei "
-"sale :meth:`~iterator.__next__`; dacă valoarea de returnat va fi egală cu "
-"cea a lui *sentinel*, se va lansa o excepție :exc:`StopIteration`, în caz "
-"contrar valoarea urmând a fi returnată."
+"pe *callable* (adică, *apelabilul*) fără argumente ori de câte ori va "
+"exista un apel al metodei sale :meth:`~iterator.__next__`; dacă valoarea "
+"de returnat va fi egală cu cea a lui *sentinel*, se va lansa o excepție "
+":exc:`StopIteration`, în caz contrar valoarea urmând a fi returnată."
 
-#: ../../library/functions.rst:1115
+#: ../../library/functions.rst:1114
 msgid "See also :ref:`typeiter`."
 msgstr "A se vedea și :ref:`Tipuri de iterator <typeiter>`."
 
-#: ../../library/functions.rst:1117
+#: ../../library/functions.rst:1116
 msgid ""
 "One useful application of the second form of :func:`iter` is to build a "
 "block-reader. For example, reading fixed-width blocks from a binary "
@@ -2415,7 +2415,7 @@ msgstr ""
 "citirea unor blocuri (de date) de lungime fixă din fișierul binar al unei "
 "baze de date, citire efectuată până la întâlnirea finalului de fișier::"
 
-#: ../../library/functions.rst:1121
+#: ../../library/functions.rst:1120
 msgid ""
 "from functools import partial\n"
 "with open('mydata.db', 'rb') as f:\n"
@@ -2427,7 +2427,7 @@ msgstr ""
 "    for blocul in iter(partial(fișierul.read, 64), b''):\n"
 "        procesează_blocul_de_date(blocul)"
 
-#: ../../library/functions.rst:1129
+#: ../../library/functions.rst:1128
 msgid ""
 "Return the length (the number of items) of an object.  The argument may "
 "be a sequence (such as a string, bytes, tuple, list, or range) or a "
@@ -2438,7 +2438,7 @@ msgstr ""
 "*octeți*, un tuplu, o listă ori o *plajă de valori*) sau o colecție (cum "
 "ar fi un dicționar de date, un set, respectiv un *set înghețat*)."
 
-#: ../../library/functions.rst:1135
+#: ../../library/functions.rst:1134
 msgid ""
 "``len`` raises :exc:`OverflowError` on lengths larger than "
 ":data:`sys.maxsize`, such as :class:`range(2 ** 100) <range>`."
@@ -2448,7 +2448,7 @@ msgstr ""
 "decât :data:`sys.maxsize`; ca, de exemplu, "
 ":class:`range(2 ** 100) <range>`."
 
-#: ../../library/functions.rst:1144
+#: ../../library/functions.rst:1142
 msgid ""
 "Rather than being a function, :class:`list` is actually a mutable "
 "sequence type, as documented in :ref:`typesseq-list` and :ref:`typesseq`."
@@ -2458,7 +2458,7 @@ msgstr ""
 "documentațiile din :ref:`Liste <typesseq-list>` și din :ref:`Tipuri "
 "secvență -- lista, tuplul, plaja de valori <typesseq>`."
 
-#: ../../library/functions.rst:1150
+#: ../../library/functions.rst:1148
 msgid ""
 "Return a mapping object representing the current local symbol table, with"
 " variable names as the keys, and their currently bound references as the "
@@ -2468,7 +2468,7 @@ msgstr ""
 "de simboluri locale aflate în vigoare, cu numele variabilelor drept chei și "
 "cu referințele curente ale acestor variabile drept valori."
 
-#: ../../library/functions.rst:1154
+#: ../../library/functions.rst:1152
 msgid ""
 "At module scope, as well as when using :func:`exec` or :func:`eval` with "
 "a single namespace, this function returns the same namespace as "
@@ -2479,7 +2479,7 @@ msgstr ""
 "de nume, funcția de față va returna același spațiu de nume ca și "
 ":func:`globals`."
 
-#: ../../library/functions.rst:1158
+#: ../../library/functions.rst:1156
 msgid ""
 "At class scope, it returns the namespace that will be passed to the "
 "metaclass constructor."
@@ -2488,7 +2488,7 @@ msgstr ""
 "va returna spațiul de nume care urmează a fi transmis constructorului "
 "meta-clasei."
 
-#: ../../library/functions.rst:1161
+#: ../../library/functions.rst:1159
 msgid ""
 "When using ``exec()`` or ``eval()`` with separate local and global "
 "arguments, it returns the local namespace passed in to the function call."
@@ -2497,7 +2497,7 @@ msgstr ""
 "și *globals* diferite, funcția de față va returna spațiul de nume local "
 "aflat în vigoare la apelul ei."
 
-#: ../../library/functions.rst:1164
+#: ../../library/functions.rst:1162
 msgid ""
 "In all of the above cases, each call to ``locals()`` in a given frame of "
 "execution will return the *same* mapping object. Changes made through the"
@@ -2515,7 +2515,7 @@ msgstr ""
 "relative la variabile locale vor afecta de îndată conținutul obiectului "
 "mapare întors (de funcția de față)."
 
-#: ../../library/functions.rst:1171
+#: ../../library/functions.rst:1169
 msgid ""
 "In an :term:`optimized scope` (including functions, generators, and "
 "coroutines), each call to ``locals()`` instead returns a fresh dictionary"
@@ -2535,7 +2535,7 @@ msgstr ""
 "(obiecte) celulă non-locale *nu* vor afecta conținutul niciunuia din "
 "dicționarele (de date) returnate anterior."
 
-#: ../../library/functions.rst:1180
+#: ../../library/functions.rst:1178
 msgid ""
 "Calling ``locals()`` as part of a comprehension in a function, generator,"
 " or coroutine is equivalent to calling it in the containing scope, except"
@@ -2551,7 +2551,7 @@ msgstr ""
 "(funcția de față) se comportă ca și cum comprehensiunea ar funcționa ca o "
 "funcție imbricată."
 
-#: ../../library/functions.rst:1186
+#: ../../library/functions.rst:1184
 msgid ""
 "Calling ``locals()`` as part of a generator expression is equivalent to "
 "calling it in a nested generator function."
@@ -2559,7 +2559,7 @@ msgstr ""
 "Apelarea lui ``locals()`` ca parte a unei expresii generatoare este la fel "
 "cu apelarea ei din codul unei funcții generatoare imbricate."
 
-#: ../../library/functions.rst:1189
+#: ../../library/functions.rst:1187
 msgid ""
 "The behaviour of ``locals()`` in a comprehension has been updated as "
 "described in :pep:`709`."
@@ -2567,7 +2567,7 @@ msgstr ""
 "Comportamentul lui ``locals()`` într-o comprehensiune a fost actualizat în "
 "conformitate cu descrierea făcută în :pep:`709`."
 
-#: ../../library/functions.rst:1193
+#: ../../library/functions.rst:1191
 msgid ""
 "As part of :pep:`667`, the semantics of mutating the mapping objects "
 "returned from this function are now defined. The behavior in "
@@ -2583,7 +2583,7 @@ msgstr ""
 "valabilitate rămâne neschimbat relativ la versiunile precedente (ale "
 "Python-ului)."
 
-#: ../../library/functions.rst:1203
+#: ../../library/functions.rst:1201
 msgid ""
 "Return an iterator that applies *function* to every item of *iterable*, "
 "yielding the results.  If additional *iterables* arguments are passed, "
@@ -2604,7 +2604,7 @@ msgstr ""
 "dinainte sub formă de tupluri de argumente, a se consulta "
 ":func:`itertools.starmap`\\."
 
-#: ../../library/functions.rst:1215
+#: ../../library/functions.rst:1213
 msgid ""
 "Return the largest item in an iterable or the largest of two or more "
 "arguments."
@@ -2613,7 +2613,7 @@ msgstr ""
 "*iterabilul*) sau pe cel mai mare dintre două sau mai multe argumente (ne "
 "referim la *arg1*, *arg2*, *args*)."
 
-#: ../../library/functions.rst:1218
+#: ../../library/functions.rst:1216
 msgid ""
 "If one positional argument is provided, it should be an :term:`iterable`."
 " The largest item in the iterable is returned.  If two or more positional"
@@ -2625,7 +2625,7 @@ msgstr ""
 "Când se transmit două sau mai multe argumente (numai) poziționale, cel mai "
 "mare dintre aceste argumente poziționale va fi returnat."
 
-#: ../../library/functions.rst:1223 ../../library/functions.rst:1261
+#: ../../library/functions.rst:1221 ../../library/functions.rst:1259
 msgid ""
 "There are two optional keyword-only arguments. The *key* argument "
 "specifies a one-argument ordering function like that used for "
@@ -2641,7 +2641,7 @@ msgstr ""
 "vid însă (valoarea lui) *de obicei* nu este transmisă, va fi lansată o "
 "excepție :exc:`ValueError`."
 
-#: ../../library/functions.rst:1229
+#: ../../library/functions.rst:1227
 msgid ""
 "If multiple items are maximal, the function returns the first one "
 "encountered.  This is consistent with other sort-stability preserving "
@@ -2654,17 +2654,17 @@ msgstr ""
 "mod uniform precum ``sorted(iterable, key=keyfunc, reverse=True)[0]`` și "
 "``heapq.nlargest(1, iterable, key=keyfunc)``."
 
-#: ../../library/functions.rst:1234 ../../library/functions.rst:1272
+#: ../../library/functions.rst:1232 ../../library/functions.rst:1270
 msgid "Added the *default* keyword-only parameter."
 msgstr ""
 "Adăugat argumentul numai cuvânt-cheie *default*."
 
-#: ../../library/functions.rst:1237 ../../library/functions.rst:1275
+#: ../../library/functions.rst:1235 ../../library/functions.rst:1273
 msgid "The *key* can be ``None``."
 msgstr ""
 "(Argumentul) *key* poate fi ``None``."
 
-#: ../../library/functions.rst:1245
+#: ../../library/functions.rst:1243
 msgid ""
 "Return a \"memory view\" object created from the given argument.  See "
 ":ref:`typememoryview` for more information."
@@ -2673,7 +2673,7 @@ msgstr ""
 "transmis. Consultați :ref:`Vederi de memorie <typememoryview>` pentru mai "
 "multe informații."
 
-#: ../../library/functions.rst:1253
+#: ../../library/functions.rst:1251
 msgid ""
 "Return the smallest item in an iterable or the smallest of two or more "
 "arguments."
@@ -2682,7 +2682,7 @@ msgstr ""
 "*iterabilul*) sau pe cel mai mic dintre două sau mai multe argumente (ne "
 "referim la *arg1*, *arg2*, *args*)."
 
-#: ../../library/functions.rst:1256
+#: ../../library/functions.rst:1254
 msgid ""
 "If one positional argument is provided, it should be an :term:`iterable`."
 " The smallest item in the iterable is returned.  If two or more "
@@ -2694,7 +2694,7 @@ msgstr ""
 "Când se transmit două sau mai multe argumente (numai) poziționale, cel mai "
 "mic dintre aceste argumente poziționale va fi returnat."
 
-#: ../../library/functions.rst:1267
+#: ../../library/functions.rst:1265
 msgid ""
 "If multiple items are minimal, the function returns the first one "
 "encountered.  This is consistent with other sort-stability preserving "
@@ -2707,7 +2707,7 @@ msgstr ""
 "mod uniform precum ``sorted(iterable, key=keyfunc)[0]`` și "
 "``heapq.nsmallest(1, iterable, key=keyfunc)``."
 
-#: ../../library/functions.rst:1282
+#: ../../library/functions.rst:1280
 msgid ""
 "Retrieve the next item from the :term:`iterator` by calling its "
 ":meth:`~iterator.__next__` method.  If *default* is given, it is returned"
@@ -2719,7 +2719,7 @@ msgstr ""
 "se încheie iteratorul, în caz contrar fiind lansată o excepție "
 ":exc:`StopIteration`."
 
-#: ../../library/functions.rst:1289
+#: ../../library/functions.rst:1287
 msgid ""
 "This is the ultimate base class of all other classes. It has methods that"
 " are common to all instances of Python classes. When the constructor is "
@@ -2731,7 +2731,7 @@ msgstr ""
 "când constructorul (ei) este apelat, el va returna un obiect nou, fără "
 "niciun fel de particularitate. Constructorul (ei) nu acceptă argumente."
 
-#: ../../library/functions.rst:1296
+#: ../../library/functions.rst:1294
 msgid ""
 ":class:`object` instances do *not* have :attr:`~object.__dict__` "
 "attributes, so you can't assign arbitrary attributes to an instance of "
@@ -2741,20 +2741,20 @@ msgstr ""
 ":attr:`~object.__dict__`, motiv pentru care nu-i veți putea atribui "
 "niciun atribut oarecare vreunei instanțe a lui :class:`object`."
 
-#: ../../library/functions.rst:1303
+#: ../../library/functions.rst:1301
 msgid ""
 "Convert an integer number to an octal string prefixed with \"0o\".  The "
-"result is a valid Python expression. If *x* is not a Python :class:`int` "
-"object, it has to define an :meth:`~object.__index__` method that returns"
-" an integer. For example:"
+"result is a valid Python expression. If *integer* is not a Python "
+":class:`int` object, it has to define an :meth:`~object.__index__` method"
+" that returns an integer. For example:"
 msgstr ""
 "Convertește un număr întreg la un șir de caractere octale prefixat cu "
 "\"0o\". Rezultatul este o expresie Python validă. În caz că (argumentul) "
-"*x* nu este obiect al clasei Python :class:`int`, el trebuie să dețină "
-"o metodă :meth:`~object.__index__` care returnează numere întregi. De "
-"exemplu:"
+"*integer* (adică, *un întreg*) nu este obiect al clasei Python "
+":class:`int`, el trebuie să dețină o metodă :meth:`~object.__index__` care "
+"returnează numere întregi. De exemplu:"
 
-#: ../../library/functions.rst:1313
+#: ../../library/functions.rst:1311
 msgid ""
 "If you want to convert an integer number to an octal string either with "
 "the prefix \"0o\" or not, you can use either of the following ways."
@@ -2763,7 +2763,7 @@ msgstr ""
 "octale, cu sau fără prefixul \"0o\", puteți întrebuința una dintre "
 "modalitățile care urmează."
 
-#: ../../library/functions.rst:1330
+#: ../../library/functions.rst:1328
 msgid ""
 "Open *file* and return a corresponding :term:`file object`.  If the file "
 "cannot be opened, an :exc:`OSError` is raised. See :ref:`tut-files` for "
@@ -2775,7 +2775,7 @@ msgstr ""
 ":ref:`tut-files` pentru mai multe exemple privitoare la cum se folosește "
 "funcția de față."
 
-#: ../../library/functions.rst:1334
+#: ../../library/functions.rst:1332
 msgid ""
 "*file* is a :term:`path-like object` giving the pathname (absolute or "
 "relative to the current working directory) of the file to be opened or an"
@@ -2793,7 +2793,7 @@ msgstr ""
 "atunci când se va închide obiectul I/E returnat, cu excepția situației când "
 "(argumentul) *closefd* este setat la ``False``.)"
 
-#: ../../library/functions.rst:1340
+#: ../../library/functions.rst:1338
 msgid ""
 "*mode* is an optional string that specifies the mode in which the file is"
 " opened.  It defaults to ``'r'`` which means open for reading in text "
@@ -2821,77 +2821,77 @@ msgstr ""
 "scrieri de biți în formă brută, utilizați modul binar și lăsați-l pe "
 "*encoding* nespecificat.) Modurile disponibile sunt:"
 
-#: ../../library/functions.rst:1357
+#: ../../library/functions.rst:1355
 msgid "Character"
 msgstr "Caracterul"
 
-#: ../../library/functions.rst:1357
+#: ../../library/functions.rst:1355
 msgid "Meaning"
 msgstr "Semnificația"
 
-#: ../../library/functions.rst:1359
+#: ../../library/functions.rst:1357
 msgid "``'r'``"
 msgstr "``'r'``"
 
-#: ../../library/functions.rst:1359
+#: ../../library/functions.rst:1357
 msgid "open for reading (default)"
 msgstr "deschidere pentru citire (implicită)"
 
-#: ../../library/functions.rst:1360
+#: ../../library/functions.rst:1358
 msgid "``'w'``"
 msgstr "``'w'``"
 
-#: ../../library/functions.rst:1360
+#: ../../library/functions.rst:1358
 msgid "open for writing, truncating the file first"
 msgstr ""
 "deschidere pentru scriere, ștergând întâi ceea ce s-a scris deja"
 
-#: ../../library/functions.rst:1361
+#: ../../library/functions.rst:1359
 msgid "``'x'``"
 msgstr "``'x'``"
 
-#: ../../library/functions.rst:1361
+#: ../../library/functions.rst:1359
 msgid "open for exclusive creation, failing if the file already exists"
 msgstr ""
 "deschidere cu crearea fișierului (nou), nu va reuși dacă fișierul există "
 "deja"
 
-#: ../../library/functions.rst:1362
+#: ../../library/functions.rst:1360
 msgid "``'a'``"
 msgstr "``'a'``"
 
-#: ../../library/functions.rst:1362
+#: ../../library/functions.rst:1360
 msgid "open for writing, appending to the end of file if it exists"
 msgstr ""
 "deschidere pentru scriere, va adăuga conținutul la sfârșit dacă fișierul "
 "există"
 
-#: ../../library/functions.rst:1363
+#: ../../library/functions.rst:1361
 msgid "``'b'``"
 msgstr "``'b'``"
 
-#: ../../library/functions.rst:1363 ../../library/functions.rst:1507
+#: ../../library/functions.rst:1361 ../../library/functions.rst:1505
 msgid "binary mode"
 msgstr "modul binar"
 
-#: ../../library/functions.rst:1364
+#: ../../library/functions.rst:1362
 msgid "``'t'``"
 msgstr "``'t'``"
 
-#: ../../library/functions.rst:1364
+#: ../../library/functions.rst:1362
 msgid "text mode (default)"
 msgstr "modul text (implicit)"
 
-#: ../../library/functions.rst:1365
+#: ../../library/functions.rst:1363
 msgid "``'+'``"
 msgstr "``'+'``"
 
-#: ../../library/functions.rst:1365
+#: ../../library/functions.rst:1363
 msgid "open for updating (reading and writing)"
 msgstr ""
 "deschidere pentru actualizare (citire și scriere)"
 
-#: ../../library/functions.rst:1368
+#: ../../library/functions.rst:1366
 msgid ""
 "The default mode is ``'r'`` (open for reading text, a synonym of "
 "``'rt'``). Modes ``'w+'`` and ``'w+b'`` open and truncate the file.  "
@@ -2901,7 +2901,7 @@ msgstr ""
 "mod sinonim cu ``'rt'``). Modurile ``'w+'`` și ``'w+b'`` deschid "
 "fișierul însă îi trunchiază conținutul."
 
-#: ../../library/functions.rst:1372
+#: ../../library/functions.rst:1370
 msgid ""
 "As mentioned in the :ref:`io-overview`, Python distinguishes between "
 "binary and text I/O.  Files opened in binary mode (including ``'b'`` in "
@@ -2923,7 +2923,7 @@ msgstr ""
 "calcul) pe care lucrăm fie conform unei codificări anumite dacă aceasta "
 "din urmă este specificată în *encoding*."
 
-#: ../../library/functions.rst:1382
+#: ../../library/functions.rst:1380
 msgid ""
 "Python doesn't depend on the underlying operating system's notion of text"
 " files; all the processing is done by Python itself, and is therefore "
@@ -2934,7 +2934,7 @@ msgstr ""
 "efectuează de către Python, fiind, așadar, independentă de platforma (de "
 "calcul)."
 
-#: ../../library/functions.rst:1386
+#: ../../library/functions.rst:1384
 msgid ""
 "*buffering* is an optional integer used to set the buffering policy.  "
 "Pass 0 to switch buffering off (only allowed in binary mode), 1 to select"
@@ -2963,7 +2963,7 @@ msgstr ""
 "*buffering*, politica implicită de memorare temporară va funcționa după cum "
 "urmează:"
 
-#: ../../library/functions.rst:1396
+#: ../../library/functions.rst:1394
 msgid ""
 "Binary files are buffered in fixed-size chunks; the size of the buffer is"
 " chosen using a heuristic trying to determine the underlying device's "
@@ -2978,7 +2978,7 @@ msgstr ""
 "memoria-tampon are o lungime cuprinsă, de obicei, între 4096 și 8192 de "
 "octeți."
 
-#: ../../library/functions.rst:1401
+#: ../../library/functions.rst:1399
 msgid ""
 "\"Interactive\" text files (files for which :meth:`~io.IOBase.isatty` "
 "returns ``True``) use line buffering.  Other text files use the policy "
@@ -2989,7 +2989,7 @@ msgstr ""
 "temporară a rândului (de text). Alte fișier text utilizează politica "
 "prezentată mai sus în cazul fișierelor binare."
 
-#: ../../library/functions.rst:1405
+#: ../../library/functions.rst:1403
 msgid ""
 "*encoding* is the name of the encoding used to decode or encode the file."
 " This should only be used in text mode.  The default encoding is platform"
@@ -3005,7 +3005,7 @@ msgstr ""
 ":term:`codificările de text <text encoding>` suportate de Python. "
 "Consultați modulul :mod:`codecs` pentru lista codificărilor acceptate."
 
-#: ../../library/functions.rst:1411
+#: ../../library/functions.rst:1409
 msgid ""
 "*errors* is an optional string that specifies how encoding and decoding "
 "errors are to be handled—this cannot be used in binary mode. A variety of"
@@ -3022,7 +3022,7 @@ msgstr ""
 "care a fost deja înregistrat cu :func:`codecs.register_error`, este "
 "acceptat. Printre numele standard avem:"
 
-#: ../../library/functions.rst:1419
+#: ../../library/functions.rst:1417
 msgid ""
 "``'strict'`` to raise a :exc:`ValueError` exception if there is an "
 "encoding error.  The default value of ``None`` has the same effect."
@@ -3031,7 +3031,7 @@ msgstr ""
 "când survine o eroare de codificare. Valoarea implicită de ``None`` "
 "(a lui *errors*) va produce același efect."
 
-#: ../../library/functions.rst:1423
+#: ../../library/functions.rst:1421
 msgid ""
 "``'ignore'`` ignores errors.  Note that ignoring encoding errors can lead"
 " to data loss."
@@ -3040,7 +3040,7 @@ msgstr ""
 "ignorarea erorilor de codificare (a datelor) poate conduce la pierderi de "
 "date."
 
-#: ../../library/functions.rst:1426
+#: ../../library/functions.rst:1424
 msgid ""
 "``'replace'`` causes a replacement marker (such as ``'?'``) to be "
 "inserted where there is malformed data."
@@ -3048,7 +3048,7 @@ msgstr ""
 "``'replace'`` (utilizat deoarece) cauzează inserarea unui marcaj înlocuitor "
 "(cum ar fi ``'?'``) acolo unde datele sunt malformate."
 
-#: ../../library/functions.rst:1429
+#: ../../library/functions.rst:1427
 msgid ""
 "``'surrogateescape'`` will represent any incorrect bytes as low surrogate"
 " code units ranging from U+DC80 to U+DCFF. These surrogate code units "
@@ -3067,7 +3067,7 @@ msgstr ""
 "atare capacitate este utilă la procesarea fișierelor cărora nu le cunoaștem "
 "codificarea."
 
-#: ../../library/functions.rst:1436
+#: ../../library/functions.rst:1434
 #, python-brace-format
 msgid ""
 "``'xmlcharrefreplace'`` is only supported when writing to a file. "
@@ -3080,7 +3080,7 @@ msgstr ""
 "List_of_XML_and_HTML_character_entity_references>`_ corespunzătoare "
 ":samp:`&#{nnn};`."
 
-#: ../../library/functions.rst:1440
+#: ../../library/functions.rst:1438
 msgid ""
 "``'backslashreplace'`` replaces malformed data by Python's backslashed "
 "escape sequences."
@@ -3088,7 +3088,7 @@ msgstr ""
 "``'backslashreplace'`` (utilizat pentru că) va înlocui datele malformate "
 "cu secvențe *escape*, realizate în Python cu caractere bară-oblică-inversă."
 
-#: ../../library/functions.rst:1443
+#: ../../library/functions.rst:1441
 #, python-brace-format
 msgid ""
 "``'namereplace'`` (also only supported when writing) replaces unsupported"
@@ -3098,7 +3098,7 @@ msgstr ""
 "(utilizat pentru că) va înlocui caracterele care nu pot fi procesate "
 "cu secvențe escape (de eludare) ``\\N{...}``."
 
-#: ../../library/functions.rst:1451
+#: ../../library/functions.rst:1449
 msgid ""
 "*newline* determines how to parse newline characters from the stream. It "
 "can be ``None``, ``''``, ``'\\n'``, ``'\\r'``, and ``'\\r\\n'``.  It "
@@ -3109,7 +3109,7 @@ msgstr ""
 "``None``, ``''``, ``'\\n'``, ``'\\r'`` și ``'\\r\\n'``. (Parsarea) "
 "funcționează după cum urmează:"
 
-#: ../../library/functions.rst:1455
+#: ../../library/functions.rst:1453
 msgid ""
 "When reading input from the stream, if *newline* is ``None``, universal "
 "newlines mode is enabled.  Lines in the input can end in ``'\\n'``, "
@@ -3132,7 +3132,7 @@ msgstr ""
 "caractere dat (adică, cel al setării) iar finalurile de rând i se vor "
 "returna apelantului (tot) fără să fi fost modificate."
 
-#: ../../library/functions.rst:1463
+#: ../../library/functions.rst:1461
 msgid ""
 "When writing output to the stream, if *newline* is ``None``, any "
 "``'\\n'`` characters written are translated to the system default line "
@@ -3149,7 +3149,7 @@ msgstr ""
 "atunci fiecare caracter ``'\\n'`` care este scris va fi înlocuit cu "
 "valoarea respectivă (a setării lui *newline*)."
 
-#: ../../library/functions.rst:1469
+#: ../../library/functions.rst:1467
 msgid ""
 "If *closefd* is ``False`` and a file descriptor rather than a filename "
 "was given, the underlying file descriptor will be kept open when the file"
@@ -3164,7 +3164,7 @@ msgstr ""
 "neapărat ``True`` (valoarea sa implicită); în caz contrar, va fi lansată "
 "o eroare (excepție)."
 
-#: ../../library/functions.rst:1474
+#: ../../library/functions.rst:1472
 msgid ""
 "A custom opener can be used by passing a callable as *opener*. The "
 "underlying file descriptor for the file object is then obtained by "
@@ -3182,13 +3182,13 @@ msgstr ""
 "dispoziție aceeași funcționalitate precum cea a setării (lui *opener*) la "
 "``None``)."
 
-#: ../../library/functions.rst:1480
+#: ../../library/functions.rst:1478
 msgid "The newly created file is :ref:`non-inheritable <fd_inheritance>`."
 msgstr ""
 "Fișierul nou creat este :ref:`de nemoștenit <fd_inheritance>` (de către "
 "alte procese; non-succesoral)."
 
-#: ../../library/functions.rst:1482
+#: ../../library/functions.rst:1480
 msgid ""
 "The following example uses the :ref:`dir_fd <dir_fd>` parameter of the "
 ":func:`os.open` function to open a file relative to a given directory::"
@@ -3196,7 +3196,7 @@ msgstr ""
 "Exemplul următor utilizează parametrul :ref:`dir_fd <dir_fd>` al funcției "
 ":func:`os.open` pentru a deschide un fișier situat într-un director dat::"
 
-#: ../../library/functions.rst:1485
+#: ../../library/functions.rst:1483
 msgid ""
 ">>> import os\n"
 ">>> dir_fd = os.open('somedir', os.O_RDONLY)\n"
@@ -3221,7 +3221,7 @@ msgstr ""
 "...\n"
 ">>> os.close(descriptorul_directorului)  # evitați pierderea resursei"
 
-#: ../../library/functions.rst:1495
+#: ../../library/functions.rst:1493
 msgid ""
 "The type of :term:`file object` returned by the :func:`open` function "
 "depends on the mode.  When :func:`open` is used to open a file in a text "
@@ -3250,7 +3250,7 @@ msgstr ""
 "este dezafectată, va fi întors însăși fluxul brut de date, o subclasă a lui "
 ":class:`io.RawIOBase`, adică :class:`io.FileIO`."
 
-#: ../../library/functions.rst:1516
+#: ../../library/functions.rst:1514
 msgid ""
 "See also the file handling modules, such as :mod:`fileinput`, :mod:`io` "
 "(where :func:`open` is declared), :mod:`os`, :mod:`os.path`, "
@@ -3260,7 +3260,7 @@ msgstr ""
 ":mod:`fileinput`, :mod:`io` (în care este declarată :func:`open`), "
 ":mod:`os`, :mod:`os.path`, :mod:`tempfile` și :mod:`shutil`."
 
-#: ../../library/functions.rst:1520
+#: ../../library/functions.rst:1518
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``open`` with arguments "
 "``path``, ``mode``, ``flags``."
@@ -3268,7 +3268,7 @@ msgstr ""
 "Lansează un :ref:`eveniment de auditare <auditing>` ``open`` cu argumentele "
 "``path``, ``mode``, ``flags``."
 
-#: ../../library/functions.rst:1522
+#: ../../library/functions.rst:1520
 msgid ""
 "The ``mode`` and ``flags`` arguments may have been modified or inferred "
 "from the original call."
@@ -3276,21 +3276,21 @@ msgstr ""
 "Argumentele ``mode`` și ``flags`` pot sau să sufere modificări sau să "
 "parvină din apelul original."
 
-#: ../../library/functions.rst:1527
+#: ../../library/functions.rst:1525
 msgid "The *opener* parameter was added."
 msgstr "A fost adăugat parametrul *opener*."
 
-#: ../../library/functions.rst:1528
+#: ../../library/functions.rst:1526
 msgid "The ``'x'`` mode was added."
 msgstr "A fost adăugat modul ``'x'``"
 
-#: ../../library/functions.rst:1529
+#: ../../library/functions.rst:1527
 msgid ":exc:`IOError` used to be raised, it is now an alias of :exc:`OSError`."
 msgstr ""
 "Până acum era lansată excepția :exc:`IOError`, excepție care este, de acum, "
 "un pseudonim al lui :exc:`OSError`."
 
-#: ../../library/functions.rst:1530
+#: ../../library/functions.rst:1528
 msgid ""
 ":exc:`FileExistsError` is now raised if the file opened in exclusive "
 "creation mode (``'x'``) already exists."
@@ -3299,11 +3299,11 @@ msgstr ""
 "care dorim să-l deschidem în modul deschidere-cu-creare (``'x'``) există "
 "deja."
 
-#: ../../library/functions.rst:1535
+#: ../../library/functions.rst:1533
 msgid "The file is now non-inheritable."
 msgstr "Fișierul este, de acum, *de nemoștenit*."
 
-#: ../../library/functions.rst:1539
+#: ../../library/functions.rst:1537
 msgid ""
 "If the system call is interrupted and the signal handler does not raise "
 "an exception, the function now retries the system call instead of raising"
@@ -3315,19 +3315,19 @@ msgstr ""
 "lanseze o excepție :exc:`InterruptedError` (consultați :pep:`475` pentru "
 "motivație)."
 
-#: ../../library/functions.rst:1542
+#: ../../library/functions.rst:1540
 msgid "The ``'namereplace'`` error handler was added."
 msgstr ""
 "A fost adăugată rutina de tratare a erorii (înregistrată ca) "
 "``'namereplace'``."
 
-#: ../../library/functions.rst:1546
+#: ../../library/functions.rst:1544
 msgid "Support added to accept objects implementing :class:`os.PathLike`."
 msgstr ""
 "Suport adăugat pentru acceptarea de obiecte care implementează clasa "
 "(abstractă) :class:`os.PathLike`."
 
-#: ../../library/functions.rst:1547
+#: ../../library/functions.rst:1545
 msgid ""
 "On Windows, opening a console buffer may return a subclass of "
 ":class:`io.RawIOBase` other than :class:`io.FileIO`."
@@ -3336,16 +3336,16 @@ msgstr ""
 "poate returna o subclasă a lui :class:`io.RawIOBase` diferită de "
 ":class:`io.FileIO`."
 
-#: ../../library/functions.rst:1550
+#: ../../library/functions.rst:1548
 msgid "The ``'U'`` mode has been removed."
 msgstr "A fost eliminat modul ``'U'``."
 
-#: ../../library/functions.rst:1555
+#: ../../library/functions.rst:1553
 msgid "Return the ordinal value of a character."
 msgstr ""
 "Returnează *valoarea ordinală* a unui caracter (Unicode)."
 
-#: ../../library/functions.rst:1557
+#: ../../library/functions.rst:1555
 msgid ""
 "If the argument is a one-character string, return the Unicode code point "
 "of that character.  For example, ``ord('a')`` returns the integer ``97`` "
@@ -3359,7 +3359,7 @@ msgstr ""
 "``97`` iar ``ord('€')`` (simbolul Euro) returnează ``8364``. Este inversa "
 "funcției :func:`chr`."
 
-#: ../../library/functions.rst:1562
+#: ../../library/functions.rst:1560
 msgid ""
 "If the argument is a :class:`bytes` or :class:`bytearray` object of "
 "length 1, return its single byte value. For example, ``ord(b'a')`` "
@@ -3369,7 +3369,7 @@ msgstr ""
 "obiect :class:`bytearray` de lungime 1, se va returna valoarea octetului "
 "său. Ca exemplu, ``ord(b'a')`` întoarce numărul întreg ``97``."
 
-#: ../../library/functions.rst:1569
+#: ../../library/functions.rst:1567
 msgid ""
 "Return *base* to the power *exp*; if *mod* is present, return *base* to "
 "the power *exp*, modulo *mod* (computed more efficiently than ``pow(base,"
@@ -3385,7 +3385,7 @@ msgstr ""
 "funcției de față, adică ``pow(base, exp)``, este echivalentă cu utilizarea "
 "operatorului putere: ``base**exp``."
 
-#: ../../library/functions.rst:1574
+#: ../../library/functions.rst:1572
 msgid ""
 "When arguments are builtin numeric types with mixed operand types, the "
 "coercion rules for binary arithmetic operators apply.  For :class:`int` "
@@ -3416,7 +3416,7 @@ msgstr ""
 "sub formă de număr în virgulă mobilă (adică, de *float*). Astfel, "
 "``pow(-9, 2.0)`` returnează ``81.0``."
 
-#: ../../library/functions.rst:1586
+#: ../../library/functions.rst:1584
 msgid ""
 "For :class:`int` operands *base* and *exp*, if *mod* is present, *mod* "
 "must also be of integer type and *mod* must be nonzero. If *mod* is "
@@ -3433,13 +3433,13 @@ msgstr ""
 "`simetricul <https://ro.wikipedia.org/wiki/Element_simetric>`_ lui *base* "
 "la operația de înmulțire modulo *mod*."
 
-#: ../../library/functions.rst:1592
+#: ../../library/functions.rst:1590
 msgid "Here's an example of computing an inverse for ``38`` modulo ``97``::"
 msgstr ""
 "Iată un exemplu de calcul al lui *inv_base*, și anume inversul "
 "(simetricul) lui ``38`` (la înmulțirea) modulo ``97``::"
 
-#: ../../library/functions.rst:1594
+#: ../../library/functions.rst:1592
 msgid ""
 ">>> pow(38, -1, mod=97)\n"
 "23\n"
@@ -3451,7 +3451,7 @@ msgstr ""
 ">>> 23 * 38 % 97 == 1\n"
 "True"
 
-#: ../../library/functions.rst:1599
+#: ../../library/functions.rst:1597
 msgid ""
 "For :class:`int` operands, the three-argument form of ``pow`` now allows "
 "the second argument to be negative, permitting computation of modular "
@@ -3461,7 +3461,7 @@ msgstr ""
 "acceptă, de acum, valori negative ale celui de-al doilea argument, "
 "permițând astfel calculul elementelor simetrice la înmulțirea modulară."
 
-#: ../../library/functions.rst:1604
+#: ../../library/functions.rst:1602
 msgid ""
 "Allow keyword arguments.  Formerly, only positional arguments were "
 "supported."
@@ -3469,7 +3469,7 @@ msgstr ""
 "Permite argumente (numai) cuvânt-cheie. Până acum, erau admise doar "
 "argumente (numai) poziționale."
 
-#: ../../library/functions.rst:1611
+#: ../../library/functions.rst:1609
 msgid ""
 "Print *objects* to the text stream *file*, separated by *sep* and "
 "followed by *end*.  *sep*, *end*, *file*, and *flush*, if present, must "
@@ -3482,7 +3482,7 @@ msgstr ""
 "dorim să le transmitem, trebuie date sub formă de argumente (numai) "
 "cuvânt-cheie."
 
-#: ../../library/functions.rst:1615
+#: ../../library/functions.rst:1613
 msgid ""
 "All non-keyword arguments are converted to strings like :func:`str` does "
 "and written to the stream, separated by *sep* and followed by *end*.  "
@@ -3498,7 +3498,7 @@ msgstr ""
 "întrebuințeze valorile implicite (prestabilite). Dacă nu sunt furnizate "
 "*objects*, :func:`print` va scrie doar *end* (în flux)."
 
-#: ../../library/functions.rst:1621
+#: ../../library/functions.rst:1619
 msgid ""
 "The *file* argument must be an object with a ``write(string)`` method; if"
 " it is not present or ``None``, :data:`sys.stdout` will be used.  Since "
@@ -3515,7 +3515,7 @@ msgstr ""
 "trebuie folosită cu obiecte fișier (deschise) în modul binar. Pentru astfel "
 "de situații, întrebuințați-o pe ``file.write(...)``."
 
-#: ../../library/functions.rst:1626
+#: ../../library/functions.rst:1624
 msgid ""
 "Output buffering is usually determined by *file*. However, if *flush* is "
 "true, the stream is forcibly flushed."
@@ -3526,15 +3526,15 @@ msgstr ""
 "valoarea logică adevărat, în fluxul de ieșire se va scrie fără temporizare "
 "(adică, fără folosirea unei memorii-tampon)."
 
-#: ../../library/functions.rst:1630
+#: ../../library/functions.rst:1628
 msgid "Added the *flush* keyword argument."
 msgstr "Adăugat argumentul (numai) cuvânt-cheie *flush*."
 
-#: ../../library/functions.rst:1636
+#: ../../library/functions.rst:1634
 msgid "Return a property attribute."
 msgstr "Returnează atributul (unei clase) dat de (un obiect) proprietate."
 
-#: ../../library/functions.rst:1638
+#: ../../library/functions.rst:1636
 msgid ""
 "*fget* is a function for getting an attribute value.  *fset* is a "
 "function for setting an attribute value. *fdel* is a function for "
@@ -3549,13 +3549,13 @@ msgstr ""
 "de crearea unui *docstring* (adică, a unui *șir de documentație*) privitor "
 "la atribut."
 
-#: ../../library/functions.rst:1642
+#: ../../library/functions.rst:1640
 msgid "A typical use is to define a managed attribute ``x``::"
 msgstr ""
 "O întrebuințare tipică este la definirea atributului *manageriat* (de la "
 "englezescul, ca jargon informatic, *managed*) ``x``::"
 
-#: ../../library/functions.rst:1644
+#: ../../library/functions.rst:1642
 msgid ""
 "class C:\n"
 "    def __init__(self):\n"
@@ -3588,7 +3588,7 @@ msgstr ""
 "    x = property(citește_l_pe_x, setează_l_pe_x, șterge_l_pe_x, \\\n"
 "                \"Eu sunt proprietatea 'x'.\")"
 
-#: ../../library/functions.rst:1659
+#: ../../library/functions.rst:1657
 msgid ""
 "If *c* is an instance of *C*, ``c.x`` will invoke the getter, ``c.x = "
 "value`` will invoke the setter, and ``del c.x`` the deleter."
@@ -3597,7 +3597,7 @@ msgstr ""
 "*getter*, ``c.x = valoarea_cutare`` îl va invoca pe *setter*, respectiv "
 "``del c.x`` îl va invoca pe *deleter*."
 
-#: ../../library/functions.rst:1662
+#: ../../library/functions.rst:1660
 msgid ""
 "If given, *doc* will be the docstring of the property attribute. "
 "Otherwise, the property will copy *fget*'s docstring (if it exists).  "
@@ -3610,7 +3610,7 @@ msgstr ""
 "crearea facilă de proprietăți doar-de-citit utilizând-o pe :func:`property` "
 "drept :term:`decorator <decorator>`::"
 
-#: ../../library/functions.rst:1666
+#: ../../library/functions.rst:1664
 msgid ""
 "class Parrot:\n"
 "    def __init__(self):\n"
@@ -3630,7 +3630,7 @@ msgstr ""
 "        \"\"\"Citirea valorii actuale a voltajului.\"\"\"\n"
 "        return self._voltaj"
 
-#: ../../library/functions.rst:1675
+#: ../../library/functions.rst:1673
 msgid ""
 "The ``@property`` decorator turns the :meth:`!voltage` method into a "
 "\"getter\" for a read-only attribute with the same name, and it sets the "
@@ -3641,7 +3641,7 @@ msgstr ""
 "respectiv setează *docstring*-ul lui *voltajul* la (valoarea) \"Citirea "
 "valorii actuale a voltajului.\"."
 
-#: ../../library/functions.rst:1683
+#: ../../library/functions.rst:1681
 msgid ""
 "A property object has ``getter``, ``setter``, and ``deleter`` methods "
 "usable as decorators that create a copy of the property with the "
@@ -3655,7 +3655,7 @@ msgstr ""
 "corespunzătoare setată la funcția decorată. Cea mai bună explicație (a "
 "acestui mecanism) este oferită de exemplul care urmează:"
 
-#: ../../library/functions.rst:1688
+#: ../../library/functions.rst:1686
 msgid ""
 "class C:\n"
 "    def __init__(self):\n"
@@ -3691,7 +3691,7 @@ msgstr ""
 "    def x(self):\n"
 "        del self._x"
 
-#: ../../library/functions.rst:1707
+#: ../../library/functions.rst:1705
 msgid ""
 "This code is exactly equivalent to the first example.  Be sure to give "
 "the additional functions the same name as the original property (``x`` in"
@@ -3701,7 +3701,7 @@ msgstr ""
 "Asigurați-vă că le-ați dat funcțiilor adiționale exact numele proprietății "
 "originale (în cazul nostru, ``x``)."
 
-#: ../../library/functions.rst:1711
+#: ../../library/functions.rst:1709
 msgid ""
 "The returned property object also has the attributes ``fget``, ``fset``, "
 "and ``fdel`` corresponding to the constructor arguments."
@@ -3710,12 +3710,12 @@ msgstr ""
 "``fget``, ``fset`` și ``fdel`` chiar valorile transmise argumentelor "
 "corespunzătoare ale constructorului clasei sale (funcția de față)."
 
-#: ../../library/functions.rst:1714
+#: ../../library/functions.rst:1712
 msgid "The docstrings of property objects are now writeable."
 msgstr "Șirurile de documentație (*docstring*-urile) obiectelor proprietate "
 "pot fi, de acum, modificate (ulterior creării obiectelor respective)."
 
-#: ../../library/functions.rst:1719
+#: ../../library/functions.rst:1717
 msgid ""
 "Attribute holding the name of the property. The name of the property can "
 "be changed at runtime."
@@ -3723,7 +3723,7 @@ msgstr ""
 "Atribut a cărui valoare este numele proprietății. Această valoare poate "
 "fi schimbată chiar în timpul execuției (programului)."
 
-#: ../../library/functions.rst:1730
+#: ../../library/functions.rst:1728
 msgid ""
 "Rather than being a function, :class:`range` is actually an immutable "
 "sequence type, as documented in :ref:`typesseq-range` and "
@@ -3734,7 +3734,7 @@ msgstr ""
 "documentațiile din :ref:`Plaje de valori <typesseq-range>` și din "
 ":ref:`Tipuri secvență -- lista, tuplul, plaja de valori <typesseq>`."
 
-#: ../../library/functions.rst:1736
+#: ../../library/functions.rst:1734
 msgid ""
 "Return a string containing a printable representation of an object.  For "
 "many types, this function makes an attempt to return a string that would "
@@ -3760,13 +3760,13 @@ msgstr ""
 ":meth:`~object.__repr__`. Dacă :func:`sys.displayhook` este inaccesibilă, "
 "atunci funcția de față va lansa o excepție :exc:`RuntimeError`."
 
-#: ../../library/functions.rst:1747
+#: ../../library/functions.rst:1745
 msgid "This class has a custom representation that can be evaluated::"
 msgstr ""
 "Clasa de față posedă o reprezentare personalizată, care poate fi evaluată "
 "(prin aplicarea lui :func:`!eval`)::"
 
-#: ../../library/functions.rst:1749
+#: ../../library/functions.rst:1747
 #, python-brace-format
 msgid ""
 "class Person:\n"
@@ -3785,21 +3785,21 @@ msgstr ""
 "   def __repr__(self):\n"
 "      return f\"Persoana('{self.numele}', {self.vârsta})\""
 
-#: ../../library/functions.rst:1760
+#: ../../library/functions.rst:1758
 msgid ""
-"Return a reverse :term:`iterator`.  *seq* must be an object which has a "
-":meth:`~object.__reversed__` method or supports the sequence protocol "
-"(the :meth:`~object.__len__` method and the :meth:`~object.__getitem__` "
-"method with integer arguments starting at ``0``)."
+"Return a reverse :term:`iterator`.  The argument must be an object which "
+"has a :meth:`~object.__reversed__` method or supports the sequence "
+"protocol (the :meth:`~object.__len__` method and the "
+":meth:`~object.__getitem__` method with integer arguments starting at "
+"``0``)."
 msgstr ""
-"Returnează un :term:`iterator <iterator>` în sens invers. (Argumentul) "
-"*seq* (adică, *secvența*) trebuie să fie un obiect care sau dispune de "
-"o metodă :meth:`~object.__reversed__` sau suportă protocolul de "
-"secvență (adică, metodele :meth:`~object.__len__` și "
-":meth:`~object.__getitem__` cu argumente (numere) întregi care încep de "
-"la ``0``)."
+"Returnează un :term:`iterator <iterator>` în sens invers. Argumentul "
+"trebuie să fie un obiect care sau dispune de o metodă "
+":meth:`~object.__reversed__` sau suportă protocolul de secvență (adică, "
+"metodele :meth:`~object.__len__` și :meth:`~object.__getitem__` cu "
+"argumente (numere) întregi care încep de la ``0``)."
 
-#: ../../library/functions.rst:1768
+#: ../../library/functions.rst:1766
 msgid ""
 "Return *number* rounded to *ndigits* precision after the decimal point.  "
 "If *ndigits* is omitted or is ``None``, it returns the nearest integer to"
@@ -3811,7 +3811,7 @@ msgstr ""
 "În caz că (argumentul) *ndigits* lipsește ori este ``None``, va fi "
 "returnat numărul întreg cel mai apropiat de data de intrare."
 
-#: ../../library/functions.rst:1772
+#: ../../library/functions.rst:1770
 msgid ""
 "For the built-in types supporting :func:`round`, values are rounded to "
 "the closest multiple of 10 to the power minus *ndigits*; if two multiples"
@@ -3834,7 +3834,7 @@ msgstr ""
 "``None``, atunci valoarea returnată va fi număr întreg. În restul "
 "cazurilor, valoarea întoarsă va fi de același tip (de date) cu *number*."
 
-#: ../../library/functions.rst:1781
+#: ../../library/functions.rst:1779
 msgid ""
 "For a general Python object ``number``, ``round`` delegates to "
 "``number.__round__``."
@@ -3842,7 +3842,7 @@ msgstr ""
 "Pentru un obiect Python oarecare, intitulat ``number``, ``round`` i se va "
 "delega lui ``number.__round__``."
 
-#: ../../library/functions.rst:1786
+#: ../../library/functions.rst:1784
 msgid ""
 "The behavior of :func:`round` for floats can be surprising: for example, "
 "``round(2.675, 2)`` gives ``2.67`` instead of the expected ``2.68``. This"
@@ -3857,7 +3857,7 @@ msgstr ""
 "din fracțiile zecimale nu pot fi reprezentate exact în virgulă mobilă. "
 "Consultați :ref:`tut-fp-issues` pentru mai multe informații."
 
-#: ../../library/functions.rst:1798
+#: ../../library/functions.rst:1795
 msgid ""
 "Return a new :class:`set` object, optionally with elements taken from "
 "*iterable*.  ``set`` is a built-in class.  See :class:`set` and :ref"
@@ -3869,7 +3869,7 @@ msgstr ""
 "mulțime -- setul, setul înghețat <types-set>` pentru documentații "
 "referitoare la această clasă."
 
-#: ../../library/functions.rst:1802
+#: ../../library/functions.rst:1799
 msgid ""
 "For other containers see the built-in :class:`frozenset`, :class:`list`, "
 ":class:`tuple`, and :class:`dict` classes, as well as the "
@@ -3879,7 +3879,7 @@ msgstr ""
 ":class:`frozenset`, :class:`list`, :class:`tuple` și :class:`dict`, cât și "
 "modulul :mod:`collections`."
 
-#: ../../library/functions.rst:1809
+#: ../../library/functions.rst:1806
 msgid ""
 "This is the counterpart of :func:`getattr`.  The arguments are an object,"
 " a string, and an arbitrary value.  The string may name an existing "
@@ -3896,7 +3896,7 @@ msgstr ""
 "``setattr(x, 'nu_știu_ce', 123)`` este echivalentă cu "
 "``x.nu_știu_ce = 123``."
 
-#: ../../library/functions.rst:1815
+#: ../../library/functions.rst:1812
 msgid ""
 "*name* need not be a Python identifier as defined in :ref:`identifiers` "
 "unless the object chooses to enforce that, for example in a custom "
@@ -3914,7 +3914,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B>`_ (``.``), însă "
 "va putea fi accesat utilizând :func:`getattr` șamd."
 
-#: ../../library/functions.rst:1823
+#: ../../library/functions.rst:1820
 msgid ""
 "Since :ref:`private name mangling <private-name-mangling>` happens at "
 "compilation time, one must manually mangle a private attribute's "
@@ -3927,7 +3927,7 @@ msgstr ""
 "prefixate de două caractere bară-jos) pentru a-l putea seta cu "
 ":func:`setattr`."
 
-#: ../../library/functions.rst:1832
+#: ../../library/functions.rst:1829
 msgid ""
 "Return a :term:`slice` object representing the set of indices specified "
 "by ``range(start, stop, step)``.  The *start* and *step* arguments "
@@ -3937,7 +3937,7 @@ msgstr ""
 "precizați de ``range(start, stop, step)``. Argumentele *start* și *step* "
 "(adică, *pasul*) îl au pe ``None`` drept valoare implicită."
 
-#: ../../library/functions.rst:1836
+#: ../../library/functions.rst:1833
 msgid ""
 "Slice objects have read-only data attributes :attr:`!start`, "
 ":attr:`!stop`, and :attr:`!step` which merely return the argument values "
@@ -3951,7 +3951,7 @@ msgstr ""
 "ele sunt întrebuințate de NumPy precum și de alte pachete ale unor terțe "
 "părți."
 
-#: ../../library/functions.rst:1845
+#: ../../library/functions.rst:1842
 msgid ""
 "Slice objects are also generated when extended indexing syntax is used.  "
 "For example: ``a[start:stop:step]`` or ``a[start:stop, i]``.  See "
@@ -3964,7 +3964,7 @@ msgstr ""
 "variantă (alternativă) a funcției de față, variantă care returnează un "
 ":term:`iterator <iterator>`."
 
-#: ../../library/functions.rst:1850
+#: ../../library/functions.rst:1847
 msgid ""
 "Slice objects are now :term:`hashable` (provided :attr:`~slice.start`, "
 ":attr:`~slice.stop`, and :attr:`~slice.step` are hashable)."
@@ -3973,19 +3973,19 @@ msgstr ""
 "(cu condiția ca atributele :attr:`~slice.start`, :attr:`~slice.stop` și "
 ":attr:`~slice.step` să fie ele însele identificabile prin funcții *hash*)."
 
-#: ../../library/functions.rst:1856
+#: ../../library/functions.rst:1853
 msgid "Return a new sorted list from the items in *iterable*."
 msgstr ""
 "Returnează o listă sortată nouă plecând de la itemii (argumentu)lui "
 "*iterable* (adică, *iterabilul*)."
 
-#: ../../library/functions.rst:1858
+#: ../../library/functions.rst:1855
 msgid "Has two optional arguments which must be specified as keyword arguments."
 msgstr ""
 "Posedă două argumente opționale care trebuie utilizate doar sub formă de "
 "argumente cuvânt-cheie."
 
-#: ../../library/functions.rst:1860
+#: ../../library/functions.rst:1857
 msgid ""
 "*key* specifies a function of one argument that is used to extract a "
 "comparison key from each element in *iterable* (for example, "
@@ -3998,7 +3998,7 @@ msgstr ""
 "``key=str.lower``). Valoarea sa prestabilită este ``None`` (situație în "
 "care elementele vor fi comparate în mod direct)."
 
-#: ../../library/functions.rst:1864
+#: ../../library/functions.rst:1861
 msgid ""
 "*reverse* is a boolean value.  If set to ``True``, then the list elements"
 " are sorted as if each comparison were reversed."
@@ -4007,7 +4007,7 @@ msgstr ""
 "adevăr. Dacă este setat la ``True``, atunci elementele listei (care urmează "
 "a fi returnată) vor fi sortate inversându-se fiecare comparație (a lor)."
 
-#: ../../library/functions.rst:1867
+#: ../../library/functions.rst:1864
 msgid ""
 "Use :func:`functools.cmp_to_key` to convert an old-style *cmp* function "
 "to a *key* function."
@@ -4016,7 +4016,7 @@ msgstr ""
 "funcție *cmp* (adică, *de comparație*) din vechiul stil la o funcție "
 "*key*."
 
-#: ../../library/functions.rst:1870
+#: ../../library/functions.rst:1867
 msgid ""
 "The built-in :func:`sorted` function is guaranteed to be stable. A sort "
 "is stable if it guarantees not to change the relative order of elements "
@@ -4030,7 +4030,7 @@ msgstr ""
 "fi, sortarea (angajaților) întâi pe departamente, apoi pe niveluri de "
 "salarizare)."
 
-#: ../../library/functions.rst:1875
+#: ../../library/functions.rst:1872
 msgid ""
 "The sort algorithm uses only ``<`` comparisons between items.  While "
 "defining an :meth:`~object.__lt__` method will suffice for sorting, "
@@ -4056,7 +4056,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Reflective_programming>`_ ale metodei "
 ":meth:`~object.__gt__`."
 
-#: ../../library/functions.rst:1884
+#: ../../library/functions.rst:1881
 msgid ""
 "For sorting examples and a brief sorting tutorial, see "
 ":ref:`sortinghowto`."
@@ -4064,11 +4064,11 @@ msgstr ""
 "Pentru exemple de sortare și pentru un scurt tutorial privind sortarea, "
 "consultați :ref:`Tehnici de sortare <sortinghowto>`."
 
-#: ../../library/functions.rst:1888
+#: ../../library/functions.rst:1885
 msgid "Transform a method into a static method."
 msgstr "Transformă o metodă într-o metodă statică."
 
-#: ../../library/functions.rst:1890
+#: ../../library/functions.rst:1887
 msgid ""
 "A static method does not receive an implicit first argument. To declare a"
 " static method, use this idiom::"
@@ -4077,7 +4077,7 @@ msgstr ""
 "metode oarecare). Pentru declararea unei metode statice, folosiți idiomul "
 "care urmează::"
 
-#: ../../library/functions.rst:1893
+#: ../../library/functions.rst:1890
 msgid ""
 "class C:\n"
 "    @staticmethod\n"
@@ -4087,7 +4087,7 @@ msgstr ""
 "    @staticmethod\n"
 "    def f(argumentul_1, argumentul_2, argumentul_N): ..."
 
-#: ../../library/functions.rst:1897
+#: ../../library/functions.rst:1894
 msgid ""
 "The ``@staticmethod`` form is a function :term:`decorator` -- see "
 ":ref:`function` for details."
@@ -4096,7 +4096,7 @@ msgstr ""
 "de funcție -- a se vedea :ref:`Definiții de funcții <function>` pentru "
 "detalii."
 
-#: ../../library/functions.rst:1900
+#: ../../library/functions.rst:1897
 msgid ""
 "A static method can be called either on the class (such as ``C.f()``) or "
 "on an instance (such as ``C().f()``). Moreover, the static method "
@@ -4109,7 +4109,7 @@ msgstr ""
 "metodei statice, astfel că acesta poate fi utilizat în definiția clasei "
 "(sub forma lui ``f()``)."
 
-#: ../../library/functions.rst:1905
+#: ../../library/functions.rst:1902
 msgid ""
 "Static methods in Python are similar to those found in Java or C++. Also,"
 " see :func:`classmethod` for a variant that is useful for creating "
@@ -4120,7 +4120,7 @@ msgstr ""
 "mecanismului de față) care ne poate fi de folos la crearea unor "
 "constructori de clase (alternativi)."
 
-#: ../../library/functions.rst:1909
+#: ../../library/functions.rst:1906
 msgid ""
 "Like all decorators, it is also possible to call ``staticmethod`` as a "
 "regular function and do something with its result.  This is needed in "
@@ -4136,7 +4136,7 @@ msgstr ""
 "clasei în cauză). Dacă vă găsiți într-o asemenea situație, faceți uz de "
 "idiomul de aici::"
 
-#: ../../library/functions.rst:1915
+#: ../../library/functions.rst:1912
 msgid ""
 "def regular_function():\n"
 "    ...\n"
@@ -4150,13 +4150,13 @@ msgstr ""
 "class C:\n"
 "    metoda = staticmethod(funcția_obișnuită)"
 
-#: ../../library/functions.rst:1921
+#: ../../library/functions.rst:1918
 msgid "For more information on static methods, see :ref:`types`."
 msgstr ""
 "Pentru mai multe informații relative la metodele statice, vedeți "
 ":ref:`Ierarhia standard a tipurilor <types>`."
 
-#: ../../library/functions.rst:1923
+#: ../../library/functions.rst:1920
 msgid ""
 "Static methods now inherit the method attributes "
 "(:attr:`~function.__module__`, :attr:`~function.__name__`, "
@@ -4170,13 +4170,13 @@ msgstr ""
 ":attr:`~function.__annotations__`), respectiv dispun de un nou atribut, "
 "``__wrapped__``, și pot fi apelate ca funcții obișnuite."
 
-#: ../../library/functions.rst:1939
+#: ../../library/functions.rst:1938
 msgid "Return a :class:`str` version of *object*.  See :func:`str` for details."
 msgstr ""
 "Returnează o (reprezentare în) formă de :class:`str` a (argumentu)lui "
 "*object* (adică, *obiectul*). Consultați :func:`str` pentru detalii."
 
-#: ../../library/functions.rst:1941
+#: ../../library/functions.rst:1940
 msgid ""
 "``str`` is the built-in string :term:`class`.  For general information "
 "about strings, see :ref:`textseq`."
@@ -4185,7 +4185,7 @@ msgstr ""
 "informații generale referitoare la șirurile de caractere, vedeți "
 ":ref:`Tipul secvență de text -- str <textseq>`."
 
-#: ../../library/functions.rst:1947
+#: ../../library/functions.rst:1946
 msgid ""
 "Sums *start* and the items of an *iterable* from left to right and "
 "returns the total.  The *iterable*'s items are normally numbers, and the "
@@ -4197,7 +4197,7 @@ msgstr ""
 "obicei, numere în timp ce (argumentu)lui *start* nu i se permite să fie șir "
 "de caractere."
 
-#: ../../library/functions.rst:1951
+#: ../../library/functions.rst:1950
 msgid ""
 "For some use cases, there are good alternatives to :func:`sum`. The "
 "preferred, fast way to concatenate a sequence of strings is by calling "
@@ -4212,12 +4212,12 @@ msgstr ""
 ":func:`math.fsum`\\. Ca să concatenați un șir de iterabili, luați-o în "
 "considerare pe :func:`itertools.chain`."
 
-#: ../../library/functions.rst:1957
+#: ../../library/functions.rst:1956
 msgid "The *start* parameter can be specified as a keyword argument."
 msgstr ""
 "Parametrul *start* se poate preciza ca argument (numai) cuvânt-cheie."
 
-#: ../../library/functions.rst:1960
+#: ../../library/functions.rst:1959
 msgid ""
 "Summation of floats switched to an algorithm that gives higher accuracy "
 "and better commutativity on most builds."
@@ -4226,7 +4226,7 @@ msgstr ""
 "algoritm (nou) care oferă mai multă acuratețe și o comutativitate "
 "mai avantajoasă pentru majoritatea distribuțiilor executabile."
 
-#: ../../library/functions.rst:1967
+#: ../../library/functions.rst:1966
 msgid ""
 "Return a proxy object that delegates method calls to a parent or sibling "
 "class of *type*.  This is useful for accessing inherited methods that "
@@ -4239,7 +4239,7 @@ msgstr ""
 "versiunii originale a) acelor metode moștenite de clasa în cauză însă pe "
 "care aceasta le-a suprascris."
 
-#: ../../library/functions.rst:1971
+#: ../../library/functions.rst:1970
 msgid ""
 "The *object_or_type* determines the :term:`method resolution order` to be"
 " searched.  The search starts from the class right after the *type*."
@@ -4249,7 +4249,7 @@ msgstr ""
 "le căutăm. Căutarea începe de la clasa situată (în raport cu această ordine "
 "de rezolvare) imediat după (clasa) *type*."
 
-#: ../../library/functions.rst:1975
+#: ../../library/functions.rst:1974
 msgid ""
 "For example, if :attr:`~type.__mro__` of *object_or_type* is ``D -> B -> "
 "C -> A -> object`` and the value of *type* is ``B``, then :func:`super` "
@@ -4260,7 +4260,7 @@ msgstr ""
 "valoarea (argumentu)lui *type* este ``B``, atunci :func:`super` caută "
 "(să rezolve) în ordinea ``C -> A -> object``."
 
-#: ../../library/functions.rst:1979
+#: ../../library/functions.rst:1978
 msgid ""
 "The :attr:`~type.__mro__` attribute of the class corresponding to "
 "*object_or_type* lists the method resolution search order used by both "
@@ -4273,7 +4273,7 @@ msgstr ""
 "Atributul este dinamic și se poate modifica ori de câte ori ierarhia "
 "claselor, dată de mecanismul moștenirii, va fi actualizată."
 
-#: ../../library/functions.rst:1984
+#: ../../library/functions.rst:1983
 msgid ""
 "If the second argument is omitted, the super object returned is unbound."
 "  If the second argument is an object, ``isinstance(obj, type)`` must be "
@@ -4288,7 +4288,7 @@ msgstr ""
 "``issubclass(type2, type)`` trebuie să fie adevărat (ceea ce are utilitate "
 "în aplicațiile privitoare la metodele de clasă)."
 
-#: ../../library/functions.rst:1989
+#: ../../library/functions.rst:1988
 msgid ""
 "When called directly within an ordinary method of a class, both arguments"
 " may be omitted (\"zero-argument :func:`!super`\"). In this case, *type* "
@@ -4310,7 +4310,7 @@ msgstr ""
 "expresiile generatoare, care expresii creează, în mod implicit, funcții "
 "imbricate.)"
 
-#: ../../library/functions.rst:1996
+#: ../../library/functions.rst:1995
 msgid ""
 "There are two typical use cases for *super*.  In a class hierarchy with "
 "single inheritance, *super* can be used to refer to parent classes "
@@ -4325,7 +4325,7 @@ msgstr ""
 "mai ușor de întreținut. Această uzanță merge aproape în paralel cu felul în "
 "care se lucrează cu *super* în alte limbaje de programare."
 
-#: ../../library/functions.rst:2001
+#: ../../library/functions.rst:2000
 msgid ""
 "The second use case is to support cooperative multiple inheritance in a "
 "dynamic execution environment.  This use case is unique to Python and is "
@@ -4356,13 +4356,13 @@ msgstr ""
 "petrecute în ierarhia claselor, schimbare care poate include și clase frate "
 "ce nu vor fi cunoscute înainte de momentul execuției)."
 
-#: ../../library/functions.rst:2011
+#: ../../library/functions.rst:2010
 msgid "For both use cases, a typical superclass call looks like this::"
 msgstr ""
 "În ambele cazuri de întrebuințare, un apel tipic al (metodei "
 ":func:`!metoda` a) superclasei ``B`` arată așa::"
 
-#: ../../library/functions.rst:2013
+#: ../../library/functions.rst:2012
 msgid ""
 "class C(B):\n"
 "    def method(self, arg):\n"
@@ -4374,7 +4374,7 @@ msgstr ""
 "        super().metoda(argumentul)    # Face același lucru ca:\n"
 "                                      # super(C, self).metoda(argumentul)"
 
-#: ../../library/functions.rst:2018
+#: ../../library/functions.rst:2017
 msgid ""
 "In addition to method lookups, :func:`super` also works for attribute "
 "lookups.  One possible use case for this is calling :term:`descriptors "
@@ -4385,7 +4385,7 @@ msgstr ""
 "dat de apelarea :term:`descriptorilor <descriptor>` dintr-o clasă părinte "
 "ori dintr-o clasă frate."
 
-#: ../../library/functions.rst:2022
+#: ../../library/functions.rst:2021
 msgid ""
 "Note that :func:`super` is implemented as part of the binding process for"
 " explicit dotted attribute lookups such as ``super().__getitem__(name)``."
@@ -4404,7 +4404,7 @@ msgstr ""
 "proiectată pentru căutările implicite care utilizează instrucțiuni ori "
 "operatori ca în ``super()[name]``."
 
-#: ../../library/functions.rst:2030
+#: ../../library/functions.rst:2029
 msgid ""
 "Also note that, aside from the zero argument form, :func:`super` is not "
 "limited to use inside methods.  The two argument form specifies the "
@@ -4423,7 +4423,7 @@ msgstr ""
 "atât la rezolvarea corectă a clasei care se definește cât și la "
 "accesarea instanței curente (a clasei) în căutarea unor metode obișnuite."
 
-#: ../../library/functions.rst:2037
+#: ../../library/functions.rst:2036
 msgid ""
 "For practical suggestions on how to design cooperative classes using "
 ":func:`super`, see `guide to using super() "
@@ -4434,7 +4434,7 @@ msgstr ""
 "a lui super() "
 "<https://rhettinger.wordpress.com/2011/05/26/super-considered-super/>`_."
 
-#: ../../library/functions.rst:2047
+#: ../../library/functions.rst:2045
 msgid ""
 "Rather than being a function, :class:`tuple` is actually an immutable "
 "sequence type, as documented in :ref:`typesseq-tuple` and "
@@ -4445,7 +4445,7 @@ msgstr ""
 "documentațiile din :ref:`Tupluri <typesseq-tuple>` și din :ref:`Tipuri "
 "secvență -- lista, tuplul, plaja de valori <typesseq>`."
 
-#: ../../library/functions.rst:2056
+#: ../../library/functions.rst:2054
 msgid ""
 "With one argument, return the type of an *object*.  The return value is a"
 " type object and generally the same object as returned by "
@@ -4456,7 +4456,7 @@ msgstr ""
 "obiect *type* (adică, *tip de date*) și, în general, chiar obiectul pe "
 "care l-ar returna :attr:`object.__class__`."
 
-#: ../../library/functions.rst:2060
+#: ../../library/functions.rst:2058
 msgid ""
 "The :func:`isinstance` built-in function is recommended for testing the "
 "type of an object, because it takes subclasses into account."
@@ -4465,7 +4465,7 @@ msgstr ""
 "(de date al) unui obiect, dat fiind că ea va lua în considerare și "
 "subclasele."
 
-#: ../../library/functions.rst:2063
+#: ../../library/functions.rst:2061
 msgid ""
 "With three arguments, return a new type object.  This is essentially a "
 "dynamic form of the :keyword:`class` statement. The *name* string is the "
@@ -4492,12 +4492,12 @@ msgstr ""
 "să devină atributul :attr:`~type.__dict__`. Următoarele două instrucțiuni "
 "creează obiecte :class:`!type` identice:"
 
-#: ../../library/functions.rst:2078
+#: ../../library/functions.rst:2076
 msgid "See also:"
 msgstr ""
 "Vedeți și:"
 
-#: ../../library/functions.rst:2080
+#: ../../library/functions.rst:2078
 msgid ""
 ":ref:`Documentation on attributes and methods on classes <class-attrs-"
 "and-methods>`."
@@ -4505,11 +4505,11 @@ msgstr ""
 ":ref:`Documentație referitoare la atributele și metodele claselor "
 "<class-attrs-and-methods>`"
 
-#: ../../library/functions.rst:2081
+#: ../../library/functions.rst:2079
 msgid ":ref:`bltin-type-objects`"
 msgstr ":ref:`Obiecte tip <bltin-type-objects>`"
 
-#: ../../library/functions.rst:2083
+#: ../../library/functions.rst:2081
 msgid ""
 "Keyword arguments provided to the three argument form are passed to the "
 "appropriate metaclass machinery (usually "
@@ -4522,13 +4522,13 @@ msgstr ""
 "în același mod în care se procedează cu (argumentele) cuvintele-cheie "
 "din definiția unei clase oarecare (excepție făcând *metaclass*)."
 
-#: ../../library/functions.rst:2088
+#: ../../library/functions.rst:2086
 msgid "See also :ref:`class-customization`."
 msgstr ""
 "Consultați și :ref:`Personalizarea creării unei clase "
 "<class-customization>`."
 
-#: ../../library/functions.rst:2090
+#: ../../library/functions.rst:2088
 msgid ""
 "Subclasses of :class:`!type` which don't override ``type.__new__`` may no"
 " longer use the one-argument form to get the type of an object."
@@ -4537,7 +4537,7 @@ msgstr ""
 "nu mai pot utiliza forma cu un singur argument (a funcției de față) pentru "
 "a obține tipul (de date al) unui obiect."
 
-#: ../../library/functions.rst:2097
+#: ../../library/functions.rst:2095
 msgid ""
 "Return the :attr:`~object.__dict__` attribute for a module, class, "
 "instance, or any other object with a :attr:`!__dict__` attribute."
@@ -4546,7 +4546,7 @@ msgstr ""
 "al unei instanțe, precum și al oricărui alt (argument) *object* (adică, "
 "*obiectul*) care dispune de un atribut :attr:`!__dict__`."
 
-#: ../../library/functions.rst:2100
+#: ../../library/functions.rst:2098
 msgid ""
 "Objects such as modules and instances have an updateable "
 ":attr:`~object.__dict__` attribute; however, other objects may have write"
@@ -4561,13 +4561,13 @@ msgstr ""
 ":class:`types.MappingProxyType` pentru a împiedica actualizarea în mod "
 "direct a dicționarelor respective)."
 
-#: ../../library/functions.rst:2105
+#: ../../library/functions.rst:2103
 msgid "Without an argument, :func:`vars` acts like :func:`locals`."
 msgstr ""
 "Dacă nu i se transmit parametri, funcția :func:`vars` se va comporta precum "
 ":func:`locals`."
 
-#: ../../library/functions.rst:2107
+#: ../../library/functions.rst:2105
 msgid ""
 "A :exc:`TypeError` exception is raised if an object is specified but it "
 "doesn't have a :attr:`~object.__dict__` attribute (for example, if its "
@@ -4578,7 +4578,7 @@ msgstr ""
 "de exemplu, atunci când clasa lui își definește atributul "
 ":attr:`~object.__slots__`)."
 
-#: ../../library/functions.rst:2113
+#: ../../library/functions.rst:2111
 msgid ""
 "The result of calling this function without an argument has been updated "
 "as described for the :func:`locals` builtin."
@@ -4587,7 +4587,7 @@ msgstr ""
 "parametru a fost actualizat după cum este prezentat în documentația "
 "funcției predefinite :func:`locals`."
 
-#: ../../library/functions.rst:2119
+#: ../../library/functions.rst:2117
 msgid ""
 "Iterate over several iterables in parallel, producing tuples with an item"
 " from each one."
@@ -4595,14 +4595,14 @@ msgstr ""
 "Iterează în paralel, de-a lungul mai multor iterabili, producând tupluri "
 "formate din itemi preluați din fiecare iterabil."
 
-#: ../../library/functions.rst:2122
+#: ../../library/functions.rst:2120
 msgid "Example::"
 msgstr "Exemplu (originalul face aluzie la versuri intraductibile dintr-un "
 "`cântec de grădiniță "
 "<https://en.wikipedia.org/wiki/What_Are_Little_Boys_Made_Of%3F>`_ "
 "englezesc)::"
 
-#: ../../library/functions.rst:2124
+#: ../../library/functions.rst:2122
 msgid ""
 ">>> for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):\n"
 "...     print(item)\n"
@@ -4619,7 +4619,7 @@ msgstr ""
 "(2, 'floricele')\n"
 "(3, 'și restul bezele')"
 
-#: ../../library/functions.rst:2131
+#: ../../library/functions.rst:2129
 msgid ""
 "More formally: :func:`zip` returns an iterator of tuples, where the "
 "*i*-th tuple contains the *i*-th element from each of the argument "
@@ -4630,7 +4630,7 @@ msgstr ""
 "unul într-un singur iterabil, pe poziția a *i*-a în iterabilii transmiși "
 "ca parametri."
 
-#: ../../library/functions.rst:2134
+#: ../../library/functions.rst:2132
 msgid ""
 "Another way to think of :func:`zip` is that it turns rows into columns, "
 "and columns into rows.  This is similar to `transposing a matrix "
@@ -4641,7 +4641,7 @@ msgstr ""
 "la fel cu ce se întâmplă atunci când construim `transpusa unei matrice "
 "<https://en.wikipedia.org/wiki/Transpose>`_."
 
-#: ../../library/functions.rst:2138
+#: ../../library/functions.rst:2136
 msgid ""
 ":func:`zip` is lazy: The elements won't be processed until the iterable "
 "is iterated on, e.g. by a :keyword:`!for` loop or by wrapping in a "
@@ -4652,7 +4652,7 @@ msgstr ""
 "când întrebuințăm o buclă :keyword:`!for` ori când ne includem într-o "
 ":class:`listă <list>`."
 
-#: ../../library/functions.rst:2142
+#: ../../library/functions.rst:2140
 msgid ""
 "One thing to consider is that the iterables passed to :func:`zip` could "
 "have different lengths; sometimes by design, and sometimes because of a "
@@ -4665,7 +4665,7 @@ msgstr ""
 "iterabili. Python-ul oferă trei abordări diferite ale unei asemenea "
 "probleme:"
 
-#: ../../library/functions.rst:2147
+#: ../../library/functions.rst:2145
 msgid ""
 "By default, :func:`zip` stops when the shortest iterable is exhausted. It"
 " will ignore the remaining items in the longer iterables, cutting off the"
@@ -4678,7 +4678,7 @@ msgstr ""
 "un `vers intraductibil <https://en.wikipedia.org/wiki/Fee-fi-fo-fum>`_ al "
 "unui basm englezesc)::"
 
-#: ../../library/functions.rst:2151
+#: ../../library/functions.rst:2149
 msgid ""
 ">>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))\n"
 "[(0, 'fee'), (1, 'fi'), (2, 'fo')]"
@@ -4686,7 +4686,7 @@ msgstr ""
 ">>> list(zip(range(3), ['bum', 'paf', 'trosc', 'pleosc']))\n"
 "[(0, 'bum'), (1, 'paf'), (2, 'trosc')]"
 
-#: ../../library/functions.rst:2154
+#: ../../library/functions.rst:2152
 msgid ""
 ":func:`zip` is often used in cases where the iterables are assumed to be "
 "of equal length.  In such cases, it's recommended to use the "
@@ -4697,7 +4697,7 @@ msgstr ""
 "opțiunea ``strict=True`` (vizavi de argumentul *strict*). Datele de "
 "ieșire vor fi la fel ca în urma uzului obișnuit al lui :func:`zip`::"
 
-#: ../../library/functions.rst:2158
+#: ../../library/functions.rst:2156
 msgid ""
 ">>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))\n"
 "[('a', 1), ('b', 2), ('c', 3)]"
@@ -4705,7 +4705,7 @@ msgstr ""
 ">>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))\n"
 "[('a', 1), ('b', 2), ('c', 3)]"
 
-#: ../../library/functions.rst:2161
+#: ../../library/functions.rst:2159
 msgid ""
 "Unlike the default behavior, it raises a :exc:`ValueError` if one "
 "iterable is exhausted before the others:"
@@ -4714,7 +4714,7 @@ msgstr ""
 "va fi lansată o excepție :exc:`ValueError` în caz că sfârșitul vreunuia din "
 "iterabili va fi atins înainte de sfârșitul celorlalți:"
 
-#: ../../library/functions.rst:2179
+#: ../../library/functions.rst:2177
 msgid ""
 "Without the ``strict=True`` argument, any bug that results in iterables "
 "of different lengths will be silenced, possibly manifesting as a hard-to-"
@@ -4725,7 +4725,7 @@ msgstr ""
 "prezența, existând însă pericolul ca ele să se manifeste în alte zone ale "
 "programului sub forma unor defecțiuni cu origine greu de localizat."
 
-#: ../../library/functions.rst:2183
+#: ../../library/functions.rst:2181
 msgid ""
 "Shorter iterables can be padded with a constant value to make all the "
 "iterables have the same length.  This is done by "
@@ -4735,7 +4735,7 @@ msgstr ""
 "aduce la lungimea convenită, aceeași pentru toți. O atare întreprindere se "
 "bazează pe :func:`itertools.zip_longest`."
 
-#: ../../library/functions.rst:2187
+#: ../../library/functions.rst:2185
 msgid ""
 "Edge cases: With a single iterable argument, :func:`zip` returns an "
 "iterator of 1-tuples.  With no arguments, it returns an empty iterator."
@@ -4744,11 +4744,11 @@ msgstr ""
 "argument), :func:`zip` va returna un iterator de 1-tupluri. Dacă nu le dăm "
 "valori argumentelor, atunci va fi returnat un iterator vid (gol)."
 
-#: ../../library/functions.rst:2190
+#: ../../library/functions.rst:2188
 msgid "Tips and tricks:"
 msgstr "Sfaturi și trucuri:"
 
-#: ../../library/functions.rst:2192
+#: ../../library/functions.rst:2190
 msgid ""
 "The left-to-right evaluation order of the iterables is guaranteed. This "
 "makes possible an idiom for clustering a data series into n-length groups"
@@ -4766,7 +4766,7 @@ msgstr ""
 "iteratorului. Ca urmare, datele de intrare vor fi împărțite în calupuri "
 "(blocuri) de lungime ``n``."
 
-#: ../../library/functions.rst:2198
+#: ../../library/functions.rst:2196
 msgid ""
 ":func:`zip` in conjunction with the ``*`` operator can be used to unzip a"
 " list::"
@@ -4775,7 +4775,7 @@ msgstr ""
 "realiza o operație inversă: separarea, adică :func:`!unzip`, componentelor "
 "unei liste (de tupluri)::"
 
-#: ../../library/functions.rst:2201
+#: ../../library/functions.rst:2199
 msgid ""
 ">>> x = [1, 2, 3]\n"
 ">>> y = [4, 5, 6]\n"
@@ -4793,11 +4793,11 @@ msgstr ""
 ">>> x == list(x2) and y == list(y2)\n"
 "True"
 
-#: ../../library/functions.rst:2209
+#: ../../library/functions.rst:2207
 msgid "Added the ``strict`` argument."
 msgstr "Adăugat argumentul ``strict``."
 
-#: ../../library/functions.rst:2221
+#: ../../library/functions.rst:2219
 msgid ""
 "This is an advanced function that is not needed in everyday Python "
 "programming, unlike :func:`importlib.import_module`."
@@ -4805,7 +4805,7 @@ msgstr ""
 "Aceasta este o funcție avansată, de care nu va fi nevoie la programarea "
 "de zi cu zi în Python, spre deosebire de :func:`importlib.import_module`."
 
-#: ../../library/functions.rst:2224
+#: ../../library/functions.rst:2222
 msgid ""
 "This function is invoked by the :keyword:`import` statement.  It can be "
 "replaced (by importing the :mod:`builtins` module and assigning to "
@@ -4828,7 +4828,7 @@ msgstr ""
 "în vigoare. Utilizarea directă a lui :func:`__import__` trebuie, de "
 "asemenea, înlocuită cu apelarea lui :func:`importlib.import_module`."
 
-#: ../../library/functions.rst:2233
+#: ../../library/functions.rst:2231
 msgid ""
 "The function imports the module *name*, potentially using the given "
 "*globals* and *locals* to determine how to interpret the name in a "
@@ -4848,7 +4848,7 @@ msgstr ""
 "*globals* îl utilizează doar la determinarea contextului de pachet cerut de "
 "instrucțiunea :keyword:`import`."
 
-#: ../../library/functions.rst:2240
+#: ../../library/functions.rst:2238
 msgid ""
 "*level* specifies whether to use absolute or relative imports. ``0`` (the"
 " default) means only perform absolute imports.  Positive values for "
@@ -4864,7 +4864,7 @@ msgstr ""
 "directorul modulului din care a fost apelată :func:`__import__` (de "
 "consultat :pep:`328` pentru detalii)."
 
-#: ../../library/functions.rst:2246
+#: ../../library/functions.rst:2244
 msgid ""
 "When the *name* variable is of the form ``package.module``, normally, the"
 " top-level package (the name up till the first dot) is returned, *not* "
@@ -4878,7 +4878,7 @@ msgstr ""
 "acestea, atunci când dispunem de un argument *fromlist* nevid, modulul "
 "numit de *name* va fi cel returnat."
 
-#: ../../library/functions.rst:2251
+#: ../../library/functions.rst:2249
 msgid ""
 "For example, the statement ``import spam`` results in bytecode resembling"
 " the following code::"
@@ -4888,23 +4888,23 @@ msgstr ""
 "de produse alimentare), instrucțiunea ``import conserva`` ne va conduce la "
 "un cod de octeți asemănător codului următor::"
 
-#: ../../library/functions.rst:2254
+#: ../../library/functions.rst:2252
 msgid "spam = __import__('spam', globals(), locals(), [], 0)"
 msgstr ""
 "conserva = __import__('conserva', globals(), locals(), [], 0)"
 
-#: ../../library/functions.rst:2256
+#: ../../library/functions.rst:2254
 msgid "The statement ``import spam.ham`` results in this call::"
 msgstr ""
 "Instrucțiunea ``import conserva.șunca``, la rândul său, ne va conduce la "
 "apelul de mai jos::"
 
-#: ../../library/functions.rst:2258
+#: ../../library/functions.rst:2256
 msgid "spam = __import__('spam.ham', globals(), locals(), [], 0)"
 msgstr ""
 "conserva = __import__('conserva.șunca', globals(), locals(), [], 0)"
 
-#: ../../library/functions.rst:2260
+#: ../../library/functions.rst:2258
 msgid ""
 "Note how :func:`__import__` returns the toplevel module here because this"
 " is the object that is bound to a name by the :keyword:`import` "
@@ -4914,7 +4914,7 @@ msgstr ""
 "nivelul cel mai înalt și aceasta deoarece el este obiectul legat de un "
 "nume prin intermediul instrucțiunii :keyword:`import`."
 
-#: ../../library/functions.rst:2263
+#: ../../library/functions.rst:2261
 msgid ""
 "On the other hand, the statement ``from spam.ham import eggs, sausage as "
 "saus`` results in ::"
@@ -4922,7 +4922,7 @@ msgstr ""
 "Pe de altă parte, instrucțiunea ``from conserva.șunca import ouăle, "
 "cârnatul as cârnu`` ne va conduce la ::"
 
-#: ../../library/functions.rst:2266
+#: ../../library/functions.rst:2264
 msgid ""
 "_temp = __import__('spam.ham', globals(), locals(), ['eggs', 'sausage'], "
 "0)\n"
@@ -4934,7 +4934,7 @@ msgstr ""
 "ouăle = _temp.ouăle\n"
 "cârnu = _temp.cârnatul"
 
-#: ../../library/functions.rst:2270
+#: ../../library/functions.rst:2268
 msgid ""
 "Here, the ``spam.ham`` module is returned from :func:`__import__`.  From "
 "this object, the names to import are retrieved and assigned to their "
@@ -4944,7 +4944,7 @@ msgstr ""
 ":func:`__import__`. Din acest obiect, numele de importat vor fi extrase și "
 "apoi atribuite numelor corespunzătoare lor."
 
-#: ../../library/functions.rst:2274
+#: ../../library/functions.rst:2272
 msgid ""
 "If you simply want to import a module (potentially within a package) by "
 "name, use :func:`importlib.import_module`."
@@ -4953,7 +4953,7 @@ msgstr ""
 "anumit pachet) folosindu-i numele, atunci (rezumați-vă să) utilizați "
 "funcția :func:`importlib.import_module`."
 
-#: ../../library/functions.rst:2277
+#: ../../library/functions.rst:2275
 msgid ""
 "Negative values for *level* are no longer supported (which also changes "
 "the default value to 0)."
@@ -4961,7 +4961,7 @@ msgstr ""
 "Valorile negative ale (argumentu)lui *level* nu mai sunt suportate (fapt "
 "care duce la folosirea lui 0 ca valoare prestabilită a argumentului)."
 
-#: ../../library/functions.rst:2281
+#: ../../library/functions.rst:2279
 msgid ""
 "When the command line options :option:`-E` or :option:`-I` are being "
 "used, the environment variable :envvar:`PYTHONCASEOK` is now ignored."
@@ -4970,11 +4970,11 @@ msgstr ""
 ":option:`-E` și :option:`-I`, va fi ignorată variabila de mediu "
 ":envvar:`PYTHONCASEOK`."
 
-#: ../../library/functions.rst:2286
+#: ../../library/functions.rst:2284
 msgid "Footnotes"
 msgstr "Note de subsol"
 
-#: ../../library/functions.rst:2287
+#: ../../library/functions.rst:2285
 msgid ""
 "Note that the parser only accepts the Unix-style end of line convention. "
 "If you are reading the code from a file, make sure to use newline "
@@ -4991,107 +4991,107 @@ msgstr ""
 msgid "Boolean"
 msgstr "boolean"
 
-#: ../../library/functions.rst:154 ../../library/functions.rst:2054
+#: ../../library/functions.rst:154 ../../library/functions.rst:2052
 msgid "type"
 msgstr "tip (de date)"
 
-#: ../../library/functions.rst:648
+#: ../../library/functions.rst:646
 msgid "built-in function"
 msgstr "funcție predefinită"
 
-#: ../../library/functions.rst:648
+#: ../../library/functions.rst:646
 msgid "exec"
 msgstr "exec"
 
-#: ../../library/functions.rst:746
+#: ../../library/functions.rst:744
 msgid "NaN"
 msgstr "NaN"
 
-#: ../../library/functions.rst:746
+#: ../../library/functions.rst:744
 msgid "Infinity"
 msgstr "Infinity"
 
-#: ../../library/functions.rst:814
+#: ../../library/functions.rst:812
 msgid "__format__"
 msgstr "__format__"
 
-#: ../../library/functions.rst:814 ../../library/functions.rst:1931
+#: ../../library/functions.rst:812 ../../library/functions.rst:1928
 msgid "string"
 msgstr "șir de caractere"
 
-#: ../../library/functions.rst:814
+#: ../../library/functions.rst:812
 msgid "format() (built-in function)"
 msgstr "format() (funcție predefinită)"
 
-#: ../../library/functions.rst:1325
+#: ../../library/functions.rst:1323
 msgid "file object"
 msgstr "obiect fișier"
 
-#: ../../library/functions.rst:1325 ../../library/functions.rst:1446
+#: ../../library/functions.rst:1323 ../../library/functions.rst:1444
 msgid "open() built-in function"
 msgstr "open() funcție predefinită"
 
-#: ../../library/functions.rst:1353
+#: ../../library/functions.rst:1351
 msgid "file"
 msgstr "fișier"
 
-#: ../../library/functions.rst:1353
+#: ../../library/functions.rst:1351
 msgid "modes"
 msgstr "moduri"
 
-#: ../../library/functions.rst:1446
+#: ../../library/functions.rst:1444
 msgid "universal newlines"
 msgstr "caractere rând-nou universale"
 
-#: ../../library/functions.rst:1507
+#: ../../library/functions.rst:1505
 msgid "line-buffered I/O"
 msgstr "I/E cu memorie-tampon pentru rând"
 
-#: ../../library/functions.rst:1507
+#: ../../library/functions.rst:1505
 msgid "unbuffered I/O"
 msgstr "I/E fără memorare temporară"
 
-#: ../../library/functions.rst:1507
+#: ../../library/functions.rst:1505
 msgid "buffer size, I/O"
 msgstr "mărimea memoriei-tampon, I/E"
 
-#: ../../library/functions.rst:1507
+#: ../../library/functions.rst:1505
 msgid "I/O control"
 msgstr "controlul I/E"
 
-#: ../../library/functions.rst:1507
+#: ../../library/functions.rst:1505
 msgid "buffering"
 msgstr "memorare temporară"
 
-#: ../../library/functions.rst:1507
+#: ../../library/functions.rst:1505
 msgid "text mode"
 msgstr "mod text"
 
-#: ../../library/functions.rst:1507 ../../library/functions.rst:2215
+#: ../../library/functions.rst:1505 ../../library/functions.rst:2213
 msgid "module"
 msgstr "modul"
 
-#: ../../library/functions.rst:1507
+#: ../../library/functions.rst:1505
 msgid "sys"
 msgstr "sys"
 
-#: ../../library/functions.rst:1931
+#: ../../library/functions.rst:1928
 msgid "str() (built-in function)"
 msgstr "str() (funcție predefinită)"
 
-#: ../../library/functions.rst:2054
+#: ../../library/functions.rst:2052
 msgid "object"
 msgstr "obiect"
 
-#: ../../library/functions.rst:2215
+#: ../../library/functions.rst:2213
 msgid "statement"
 msgstr "instrucțiune"
 
-#: ../../library/functions.rst:2215
+#: ../../library/functions.rst:2213
 msgid "import"
 msgstr "import"
 
-#: ../../library/functions.rst:2215
+#: ../../library/functions.rst:2213
 msgid "builtins"
 msgstr "predefinite(le)"
 
