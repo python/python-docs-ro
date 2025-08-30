@@ -108,7 +108,7 @@ msgstr ""
 
 #: ../../tutorial/floatingpoint.rst:49
 msgid "0.0001100110011001100110011001100110011001100110011..."
-msgstr ""
+msgstr "0.0001100110011001100110011001100110011001100110011..."
 
 #: ../../tutorial/floatingpoint.rst:51
 msgid ""
