@@ -1036,7 +1036,7 @@ msgid ""
 ":meth:`list.append` *method* (we will see more about methods later)::"
 msgstr ""
 "De asemenea, puteți adăuga itemi noi la sfârșitul listei, folosind "
-"*metoda* :meth:`!list.append` (vom discuta mai multe despre metode "
+"*metoda* :meth:`list.append` (vom discuta mai multe despre metode "
 "ulterior)::"
 
 #: ../../tutorial/introduction.rst:425
