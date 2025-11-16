@@ -6,7 +6,7 @@
 #
 # Lintarea fisierelor traducerii care au fost urcate pe GitHub 
 # este realizata automat iar rezultatele acesteia
-# se vad aici: [ https://python-docs-translations.github.io/dashboard/metadata.html ]
+# se vad aici: [ https://translations.python.org/build-details.html ]
 
 $un_singur_argument      = $args[0]  # captarea lui un_singur_argument
                                      # variante: nume_de_fisier, nume_de_director/nume_de_fisier,
